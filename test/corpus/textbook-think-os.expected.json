@@ -1,0 +1,342 @@
+{
+  "description": "textbook: textbook-think-os",
+  "category": "textbook",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Preface",
+      "page": 5,
+      "level": 0
+    },
+    {
+      "title": "Using the code",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "Compilation",
+      "page": 13,
+      "level": 0
+    },
+    {
+      "title": "Compiled and interpreted languages",
+      "page": 13,
+      "level": 1
+    },
+    {
+      "title": "Static types",
+      "page": 13,
+      "level": 1
+    },
+    {
+      "title": "The compilation process",
+      "page": 15,
+      "level": 1
+    },
+    {
+      "title": "Object code",
+      "page": 16,
+      "level": 1
+    },
+    {
+      "title": "Assembly code",
+      "page": 17,
+      "level": 1
+    },
+    {
+      "title": "Preprocessing",
+      "page": 18,
+      "level": 1
+    },
+    {
+      "title": "Understanding errors",
+      "page": 18,
+      "level": 1
+    },
+    {
+      "title": "Processes",
+      "page": 21,
+      "level": 0
+    },
+    {
+      "title": "Abstraction and virtualization",
+      "page": 21,
+      "level": 1
+    },
+    {
+      "title": "Isolation",
+      "page": 22,
+      "level": 1
+    },
+    {
+      "title": "UNIX processes",
+      "page": 24,
+      "level": 1
+    },
+    {
+      "title": "Virtual memory",
+      "page": 27,
+      "level": 0
+    },
+    {
+      "title": "A bit of information theory",
+      "page": 27,
+      "level": 1
+    },
+    {
+      "title": "Memory and storage",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Address spaces",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Memory segments",
+      "page": 29,
+      "level": 1
+    },
+    {
+      "title": "Static local variables",
+      "page": 32,
+      "level": 1
+    },
+    {
+      "title": "Address translation",
+      "page": 32,
+      "level": 1
+    },
+    {
+      "title": "Files and file systems",
+      "page": 35,
+      "level": 0
+    },
+    {
+      "title": "Disk performance",
+      "page": 37,
+      "level": 1
+    },
+    {
+      "title": "Disk metadata",
+      "page": 39,
+      "level": 1
+    },
+    {
+      "title": "Block allocation",
+      "page": 40,
+      "level": 1
+    },
+    {
+      "title": "Everything is a file?",
+      "page": 40,
+      "level": 1
+    },
+    {
+      "title": "More bits and bytes",
+      "page": 43,
+      "level": 0
+    },
+    {
+      "title": "Representing integers",
+      "page": 43,
+      "level": 1
+    },
+    {
+      "title": "Bitwise operators",
+      "page": 44,
+      "level": 1
+    },
+    {
+      "title": "Representing floating-point numbers",
+      "page": 45,
+      "level": 1
+    },
+    {
+      "title": "Unions and memory errors",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Representing strings",
+      "page": 48,
+      "level": 1
+    },
+    {
+      "title": "Memory management",
+      "page": 51,
+      "level": 0
+    },
+    {
+      "title": "Memory errors",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "Memory leaks",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "Implementation",
+      "page": 55,
+      "level": 1
+    },
+    {
+      "title": "Caching",
+      "page": 57,
+      "level": 0
+    },
+    {
+      "title": "How programs run",
+      "page": 57,
+      "level": 1
+    },
+    {
+      "title": "Cache performance",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Locality",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Measuring cache performance",
+      "page": 60,
+      "level": 1
+    },
+    {
+      "title": "Programming for cache performance",
+      "page": 63,
+      "level": 1
+    },
+    {
+      "title": "The memory hierarchy",
+      "page": 64,
+      "level": 1
+    },
+    {
+      "title": "Caching policy",
+      "page": 65,
+      "level": 1
+    },
+    {
+      "title": "Paging",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Multitasking",
+      "page": 69,
+      "level": 0
+    },
+    {
+      "title": "Hardware state",
+      "page": 70,
+      "level": 1
+    },
+    {
+      "title": "Context switching",
+      "page": 70,
+      "level": 1
+    },
+    {
+      "title": "The process life cycle",
+      "page": 71,
+      "level": 1
+    },
+    {
+      "title": "Scheduling",
+      "page": 72,
+      "level": 1
+    },
+    {
+      "title": "Real-time scheduling",
+      "page": 74,
+      "level": 1
+    },
+    {
+      "title": "Threads",
+      "page": 75,
+      "level": 0
+    },
+    {
+      "title": "Creating threads",
+      "page": 76,
+      "level": 1
+    },
+    {
+      "title": "Creating threads",
+      "page": 76,
+      "level": 1
+    },
+    {
+      "title": "Joining threads",
+      "page": 78,
+      "level": 1
+    },
+    {
+      "title": "Synchronization errors",
+      "page": 79,
+      "level": 1
+    },
+    {
+      "title": "Mutex",
+      "page": 81,
+      "level": 1
+    },
+    {
+      "title": "Condition variables",
+      "page": 83,
+      "level": 0
+    },
+    {
+      "title": "The work queue",
+      "page": 83,
+      "level": 1
+    },
+    {
+      "title": "Producers and consumers",
+      "page": 86,
+      "level": 1
+    },
+    {
+      "title": "Mutual exclusion",
+      "page": 87,
+      "level": 1
+    },
+    {
+      "title": "Condition variables",
+      "page": 89,
+      "level": 1
+    },
+    {
+      "title": "Condition variable implementation",
+      "page": 92,
+      "level": 1
+    },
+    {
+      "title": "Semaphores in C",
+      "page": 93,
+      "level": 0
+    },
+    {
+      "title": "POSIX Semaphores",
+      "page": 93,
+      "level": 1
+    },
+    {
+      "title": "Producers and consumers with semaphores",
+      "page": 95,
+      "level": 1
+    },
+    {
+      "title": "Make your own semaphores",
+      "page": 97,
+      "level": 1
+    }
+  ]
+}

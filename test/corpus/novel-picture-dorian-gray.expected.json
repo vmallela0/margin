@@ -1,0 +1,77 @@
+{
+  "description": "novel: novel-picture-dorian-gray",
+  "category": "novel",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "The Picture of Dorian Gray ",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "Chapter I",
+      "page": 2,
+      "level": 1
+    },
+    {
+      "title": "Chapter II",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "Chapter III",
+      "page": 41,
+      "level": 1
+    },
+    {
+      "title": "Chapter IV",
+      "page": 61,
+      "level": 1
+    },
+    {
+      "title": "Chapter V",
+      "page": 69,
+      "level": 1
+    },
+    {
+      "title": "Chapter VI",
+      "page": 84,
+      "level": 1
+    },
+    {
+      "title": "Chapter VII",
+      "page": 102,
+      "level": 1
+    },
+    {
+      "title": "Chapter VIII",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Chapter IX",
+      "page": 127,
+      "level": 1
+    },
+    {
+      "title": "Chapter X",
+      "page": 152,
+      "level": 1
+    },
+    {
+      "title": "Chapter XI",
+      "page": 161,
+      "level": 1
+    },
+    {
+      "title": "Chapter XII",
+      "page": 170,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIII",
+      "page": 186,
+      "level": 1
+    }
+  ]
+}

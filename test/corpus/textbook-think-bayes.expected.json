@@ -1,0 +1,752 @@
+{
+  "description": "textbook: textbook-think-bayes",
+  "category": "textbook",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Preface",
+      "page": 5,
+      "level": 0
+    },
+    {
+      "title": "My theory, which is mine",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "Modeling and approximation",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "Working with the code",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "Code style",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "Prerequisites",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "Bayes's Theorem",
+      "page": 19,
+      "level": 0
+    },
+    {
+      "title": "Conditional probability",
+      "page": 19,
+      "level": 1
+    },
+    {
+      "title": "Conjoint probability",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "The cookie problem",
+      "page": 21,
+      "level": 1
+    },
+    {
+      "title": "Bayes's theorem",
+      "page": 21,
+      "level": 1
+    },
+    {
+      "title": "The diachronic interpretation",
+      "page": 23,
+      "level": 1
+    },
+    {
+      "title": "The M&M problem",
+      "page": 24,
+      "level": 1
+    },
+    {
+      "title": "The Monty Hall problem",
+      "page": 26,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Computational Statistics",
+      "page": 29,
+      "level": 0
+    },
+    {
+      "title": "Distributions",
+      "page": 29,
+      "level": 1
+    },
+    {
+      "title": "The cookie problem",
+      "page": 30,
+      "level": 1
+    },
+    {
+      "title": "The Bayesian framework",
+      "page": 31,
+      "level": 1
+    },
+    {
+      "title": "The Monty Hall problem",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "Encapsulating the framework",
+      "page": 34,
+      "level": 1
+    },
+    {
+      "title": "The M&M problem",
+      "page": 35,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 36,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 36,
+      "level": 1
+    },
+    {
+      "title": "Estimation",
+      "page": 39,
+      "level": 0
+    },
+    {
+      "title": "The dice problem",
+      "page": 39,
+      "level": 1
+    },
+    {
+      "title": "The locomotive problem",
+      "page": 40,
+      "level": 1
+    },
+    {
+      "title": "What about that prior?",
+      "page": 43,
+      "level": 1
+    },
+    {
+      "title": "An alternative prior",
+      "page": 43,
+      "level": 1
+    },
+    {
+      "title": "Credible intervals",
+      "page": 45,
+      "level": 1
+    },
+    {
+      "title": "Cumulative distribution functions",
+      "page": 46,
+      "level": 1
+    },
+    {
+      "title": "The German tank problem",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 48,
+      "level": 1
+    },
+    {
+      "title": "More Estimation",
+      "page": 51,
+      "level": 0
+    },
+    {
+      "title": "The Euro problem",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "Summarizing the posterior",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "Swamping the priors",
+      "page": 55,
+      "level": 1
+    },
+    {
+      "title": "Optimization",
+      "page": 55,
+      "level": 1
+    },
+    {
+      "title": "The beta distribution",
+      "page": 57,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Odds and Addends",
+      "page": 61,
+      "level": 0
+    },
+    {
+      "title": "Odds",
+      "page": 61,
+      "level": 1
+    },
+    {
+      "title": "The odds form of Bayes's theorem",
+      "page": 62,
+      "level": 1
+    },
+    {
+      "title": "Oliver's blood",
+      "page": 63,
+      "level": 1
+    },
+    {
+      "title": "Addends",
+      "page": 64,
+      "level": 1
+    },
+    {
+      "title": "Maxima",
+      "page": 68,
+      "level": 1
+    },
+    {
+      "title": "Mixtures",
+      "page": 70,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 72,
+      "level": 1
+    },
+    {
+      "title": "Decision Analysis",
+      "page": 73,
+      "level": 0
+    },
+    {
+      "title": "The Price is Right problem",
+      "page": 73,
+      "level": 1
+    },
+    {
+      "title": "The prior",
+      "page": 74,
+      "level": 1
+    },
+    {
+      "title": "Probability density functions",
+      "page": 75,
+      "level": 1
+    },
+    {
+      "title": "Representing PDFs",
+      "page": 75,
+      "level": 1
+    },
+    {
+      "title": "Modeling the contestants",
+      "page": 78,
+      "level": 1
+    },
+    {
+      "title": "Likelihood",
+      "page": 80,
+      "level": 1
+    },
+    {
+      "title": "Update",
+      "page": 81,
+      "level": 1
+    },
+    {
+      "title": "Optimal bidding",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 85,
+      "level": 1
+    },
+    {
+      "title": "Prediction",
+      "page": 87,
+      "level": 0
+    },
+    {
+      "title": "The Boston Bruins problem",
+      "page": 87,
+      "level": 1
+    },
+    {
+      "title": "Poisson processes",
+      "page": 88,
+      "level": 1
+    },
+    {
+      "title": "The posteriors",
+      "page": 89,
+      "level": 1
+    },
+    {
+      "title": "The distribution of goals",
+      "page": 90,
+      "level": 1
+    },
+    {
+      "title": "The probability of winning",
+      "page": 92,
+      "level": 1
+    },
+    {
+      "title": "Sudden death",
+      "page": 93,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 94,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 95,
+      "level": 1
+    },
+    {
+      "title": "Observer Bias",
+      "page": 97,
+      "level": 0
+    },
+    {
+      "title": "The Red Line problem",
+      "page": 97,
+      "level": 1
+    },
+    {
+      "title": "The model",
+      "page": 97,
+      "level": 1
+    },
+    {
+      "title": "Wait times",
+      "page": 99,
+      "level": 1
+    },
+    {
+      "title": "Predicting wait times",
+      "page": 102,
+      "level": 1
+    },
+    {
+      "title": "Estimating the arrival rate",
+      "page": 104,
+      "level": 1
+    },
+    {
+      "title": "Incorporating uncertainty",
+      "page": 107,
+      "level": 1
+    },
+    {
+      "title": "Decision analysis",
+      "page": 108,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 111,
+      "level": 1
+    },
+    {
+      "title": "Two Dimensions",
+      "page": 113,
+      "level": 0
+    },
+    {
+      "title": "Paintball",
+      "page": 113,
+      "level": 1
+    },
+    {
+      "title": "The suite",
+      "page": 114,
+      "level": 1
+    },
+    {
+      "title": "Trigonometry",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Likelihood",
+      "page": 117,
+      "level": 1
+    },
+    {
+      "title": "Joint distributions",
+      "page": 118,
+      "level": 1
+    },
+    {
+      "title": "Conditional distributions",
+      "page": 118,
+      "level": 1
+    },
+    {
+      "title": "Credible intervals",
+      "page": 120,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 122,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 123,
+      "level": 1
+    },
+    {
+      "title": "Approximate Bayesian Computation",
+      "page": 125,
+      "level": 0
+    },
+    {
+      "title": "The Variability Hypothesis",
+      "page": 125,
+      "level": 1
+    },
+    {
+      "title": "Mean and standard deviation",
+      "page": 126,
+      "level": 1
+    },
+    {
+      "title": "Update",
+      "page": 128,
+      "level": 1
+    },
+    {
+      "title": "The posterior distribution of CV",
+      "page": 129,
+      "level": 1
+    },
+    {
+      "title": "Underflow",
+      "page": 129,
+      "level": 1
+    },
+    {
+      "title": "Log-likelihood",
+      "page": 131,
+      "level": 1
+    },
+    {
+      "title": "A little optimization",
+      "page": 132,
+      "level": 1
+    },
+    {
+      "title": "ABC",
+      "page": 134,
+      "level": 1
+    },
+    {
+      "title": "Robust estimation",
+      "page": 135,
+      "level": 1
+    },
+    {
+      "title": "Who is more variable?",
+      "page": 138,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 139,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 140,
+      "level": 1
+    },
+    {
+      "title": "Hypothesis Testing",
+      "page": 141,
+      "level": 0
+    },
+    {
+      "title": "Back to the Euro problem",
+      "page": 141,
+      "level": 1
+    },
+    {
+      "title": "Making a fair comparison",
+      "page": 142,
+      "level": 1
+    },
+    {
+      "title": "The triangle prior",
+      "page": 144,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 145,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 145,
+      "level": 1
+    },
+    {
+      "title": "Evidence",
+      "page": 147,
+      "level": 0
+    },
+    {
+      "title": "Interpreting SAT scores",
+      "page": 147,
+      "level": 1
+    },
+    {
+      "title": "The scale",
+      "page": 148,
+      "level": 1
+    },
+    {
+      "title": "The prior",
+      "page": 148,
+      "level": 1
+    },
+    {
+      "title": "Posterior",
+      "page": 150,
+      "level": 1
+    },
+    {
+      "title": "A better model",
+      "page": 152,
+      "level": 1
+    },
+    {
+      "title": "Calibration",
+      "page": 154,
+      "level": 1
+    },
+    {
+      "title": "Posterior distribution of efficacy",
+      "page": 155,
+      "level": 1
+    },
+    {
+      "title": "Predictive distribution",
+      "page": 157,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 158,
+      "level": 1
+    },
+    {
+      "title": "Simulation",
+      "page": 161,
+      "level": 0
+    },
+    {
+      "title": "The Kidney Tumor problem",
+      "page": 161,
+      "level": 1
+    },
+    {
+      "title": "A simple model",
+      "page": 162,
+      "level": 1
+    },
+    {
+      "title": "A more general model",
+      "page": 164,
+      "level": 1
+    },
+    {
+      "title": "Implementation",
+      "page": 166,
+      "level": 1
+    },
+    {
+      "title": "Caching the joint distribution",
+      "page": 167,
+      "level": 1
+    },
+    {
+      "title": "Conditional distributions",
+      "page": 168,
+      "level": 1
+    },
+    {
+      "title": "Serial Correlation",
+      "page": 169,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 173,
+      "level": 1
+    },
+    {
+      "title": "A Hierarchical Model",
+      "page": 175,
+      "level": 0
+    },
+    {
+      "title": "The Geiger counter problem",
+      "page": 175,
+      "level": 1
+    },
+    {
+      "title": "Start simple",
+      "page": 176,
+      "level": 1
+    },
+    {
+      "title": "Make it hierarchical",
+      "page": 177,
+      "level": 1
+    },
+    {
+      "title": "A little optimization",
+      "page": 178,
+      "level": 1
+    },
+    {
+      "title": "Extracting the posteriors",
+      "page": 179,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 180,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 181,
+      "level": 1
+    },
+    {
+      "title": "Dealing with Dimensions",
+      "page": 183,
+      "level": 0
+    },
+    {
+      "title": "Belly button bacteria",
+      "page": 183,
+      "level": 1
+    },
+    {
+      "title": "Lions and tigers and bears",
+      "page": 184,
+      "level": 1
+    },
+    {
+      "title": "The hierarchical version",
+      "page": 186,
+      "level": 1
+    },
+    {
+      "title": "Random sampling",
+      "page": 188,
+      "level": 1
+    },
+    {
+      "title": "Optimization",
+      "page": 190,
+      "level": 1
+    },
+    {
+      "title": "Collapsing the hierarchy",
+      "page": 191,
+      "level": 1
+    },
+    {
+      "title": "One more problem",
+      "page": 193,
+      "level": 1
+    },
+    {
+      "title": "We're not done yet",
+      "page": 195,
+      "level": 1
+    },
+    {
+      "title": "The belly button data",
+      "page": 196,
+      "level": 1
+    },
+    {
+      "title": "Predictive distributions",
+      "page": 199,
+      "level": 1
+    },
+    {
+      "title": "Joint posterior",
+      "page": 203,
+      "level": 1
+    },
+    {
+      "title": "Coverage",
+      "page": 204,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 206,
+      "level": 1
+    }
+  ]
+}

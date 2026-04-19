@@ -1,0 +1,3347 @@
+{
+  "description": "manual: manual-gdb",
+  "category": "manual",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Summary of gdb",
+      "page": 19,
+      "level": 0
+    },
+    {
+      "title": "Free Software",
+      "page": 19,
+      "level": 1
+    },
+    {
+      "title": "Free Software Needs Free Documentation",
+      "page": 19,
+      "level": 1
+    },
+    {
+      "title": "Contributors to gdb",
+      "page": 21,
+      "level": 1
+    },
+    {
+      "title": "A Sample gdb Session",
+      "page": 25,
+      "level": 0
+    },
+    {
+      "title": "Getting In and Out of gdb",
+      "page": 29,
+      "level": 0
+    },
+    {
+      "title": "Invoking gdb",
+      "page": 29,
+      "level": 1
+    },
+    {
+      "title": "Choosing Files",
+      "page": 30,
+      "level": 2
+    },
+    {
+      "title": "Choosing Modes",
+      "page": 31,
+      "level": 2
+    },
+    {
+      "title": "What gdb Does During Startup",
+      "page": 35,
+      "level": 2
+    },
+    {
+      "title": "Initialization Files",
+      "page": 36,
+      "level": 2
+    },
+    {
+      "title": "Home directory early initialization files",
+      "page": 36,
+      "level": 3
+    },
+    {
+      "title": "System wide initialization files",
+      "page": 37,
+      "level": 3
+    },
+    {
+      "title": "Home directory initialization file",
+      "page": 37,
+      "level": 3
+    },
+    {
+      "title": "Local directory initialization file",
+      "page": 38,
+      "level": 3
+    },
+    {
+      "title": "Quitting gdb",
+      "page": 38,
+      "level": 1
+    },
+    {
+      "title": "Shell Commands",
+      "page": 38,
+      "level": 1
+    },
+    {
+      "title": "Logging Output",
+      "page": 40,
+      "level": 1
+    },
+    {
+      "title": "gdb Commands",
+      "page": 41,
+      "level": 0
+    },
+    {
+      "title": "Command Syntax",
+      "page": 41,
+      "level": 1
+    },
+    {
+      "title": "Command Settings",
+      "page": 41,
+      "level": 1
+    },
+    {
+      "title": "Command Completion",
+      "page": 42,
+      "level": 1
+    },
+    {
+      "title": "Filenames As Command Arguments",
+      "page": 45,
+      "level": 1
+    },
+    {
+      "title": "Command options",
+      "page": 46,
+      "level": 1
+    },
+    {
+      "title": "Getting Help",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Running Programs Under gdb",
+      "page": 51,
+      "level": 0
+    },
+    {
+      "title": "Compiling for Debugging",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "Starting your Program",
+      "page": 52,
+      "level": 1
+    },
+    {
+      "title": "Your Program's Arguments",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "Your Program's Environment",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "Your Program's Working Directory",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "Your Program's Input and Output",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Debugging an Already-running Process",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Killing the Child Process",
+      "page": 60,
+      "level": 1
+    },
+    {
+      "title": "Debugging Multiple Inferiors Connections and Programs",
+      "page": 61,
+      "level": 1
+    },
+    {
+      "title": "Inferior-Specific Breakpoints",
+      "page": 65,
+      "level": 2
+    },
+    {
+      "title": "Debugging Programs with Multiple Threads",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Debugging Forks",
+      "page": 72,
+      "level": 1
+    },
+    {
+      "title": "Setting a Bookmark to Return to Later",
+      "page": 74,
+      "level": 1
+    },
+    {
+      "title": "A Non-obvious Benefit of Using Checkpoints",
+      "page": 76,
+      "level": 2
+    },
+    {
+      "title": "Stopping and Continuing",
+      "page": 77,
+      "level": 0
+    },
+    {
+      "title": "Breakpoints, Watchpoints, and Catchpoints",
+      "page": 77,
+      "level": 1
+    },
+    {
+      "title": "Setting Breakpoints",
+      "page": 78,
+      "level": 2
+    },
+    {
+      "title": "Setting Watchpoints",
+      "page": 86,
+      "level": 2
+    },
+    {
+      "title": "Setting Catchpoints",
+      "page": 89,
+      "level": 2
+    },
+    {
+      "title": "Deleting Breakpoints",
+      "page": 93,
+      "level": 2
+    },
+    {
+      "title": "Disabling Breakpoints",
+      "page": 94,
+      "level": 2
+    },
+    {
+      "title": "Break Conditions",
+      "page": 96,
+      "level": 2
+    },
+    {
+      "title": "Breakpoint Command Lists",
+      "page": 97,
+      "level": 2
+    },
+    {
+      "title": "Dynamic Printf",
+      "page": 99,
+      "level": 2
+    },
+    {
+      "title": "How to save breakpoints to a file",
+      "page": 100,
+      "level": 2
+    },
+    {
+      "title": "Static Probe Points",
+      "page": 101,
+      "level": 2
+    },
+    {
+      "title": "``Cannot insert breakpoints''",
+      "page": 102,
+      "level": 2
+    },
+    {
+      "title": "``Breakpoint address adjusted...''",
+      "page": 103,
+      "level": 2
+    },
+    {
+      "title": "Continuing and Stepping",
+      "page": 103,
+      "level": 1
+    },
+    {
+      "title": "Skipping Over Functions and Files",
+      "page": 107,
+      "level": 1
+    },
+    {
+      "title": "Signals",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "Stopping and Starting Multi-thread Programs",
+      "page": 113,
+      "level": 1
+    },
+    {
+      "title": "All-Stop Mode",
+      "page": 114,
+      "level": 2
+    },
+    {
+      "title": "Non-Stop Mode",
+      "page": 115,
+      "level": 2
+    },
+    {
+      "title": "Background Execution",
+      "page": 116,
+      "level": 2
+    },
+    {
+      "title": "Thread-Specific Breakpoints",
+      "page": 117,
+      "level": 2
+    },
+    {
+      "title": "Interrupted System Calls",
+      "page": 118,
+      "level": 2
+    },
+    {
+      "title": "Observer Mode",
+      "page": 118,
+      "level": 2
+    },
+    {
+      "title": "Running programs backward",
+      "page": 121,
+      "level": 0
+    },
+    {
+      "title": "Recording Inferior's Execution and Replaying It",
+      "page": 123,
+      "level": 0
+    },
+    {
+      "title": "Examining the Stack",
+      "page": 133,
+      "level": 0
+    },
+    {
+      "title": "Stack Frames",
+      "page": 133,
+      "level": 1
+    },
+    {
+      "title": "Backtraces",
+      "page": 134,
+      "level": 1
+    },
+    {
+      "title": "Selecting a Frame",
+      "page": 137,
+      "level": 1
+    },
+    {
+      "title": "Information About a Frame",
+      "page": 139,
+      "level": 1
+    },
+    {
+      "title": "Applying a Command to Several Frames.",
+      "page": 140,
+      "level": 1
+    },
+    {
+      "title": "Management of Frame Filters.",
+      "page": 142,
+      "level": 1
+    },
+    {
+      "title": "Examining Source Files",
+      "page": 145,
+      "level": 0
+    },
+    {
+      "title": "Printing Source Lines",
+      "page": 145,
+      "level": 1
+    },
+    {
+      "title": "Location Specifications",
+      "page": 146,
+      "level": 1
+    },
+    {
+      "title": "Linespec Locations",
+      "page": 147,
+      "level": 2
+    },
+    {
+      "title": "Explicit Locations",
+      "page": 149,
+      "level": 2
+    },
+    {
+      "title": "Address Locations",
+      "page": 150,
+      "level": 2
+    },
+    {
+      "title": "Editing Source Files",
+      "page": 150,
+      "level": 1
+    },
+    {
+      "title": "Choosing your Editor",
+      "page": 151,
+      "level": 2
+    },
+    {
+      "title": "Searching Source Files",
+      "page": 151,
+      "level": 1
+    },
+    {
+      "title": "Specifying Source Directories",
+      "page": 151,
+      "level": 1
+    },
+    {
+      "title": "Source and Machine Code",
+      "page": 155,
+      "level": 1
+    },
+    {
+      "title": "Disable Reading Source Code",
+      "page": 160,
+      "level": 1
+    },
+    {
+      "title": "Examining Data",
+      "page": 161,
+      "level": 0
+    },
+    {
+      "title": "Expressions",
+      "page": 165,
+      "level": 1
+    },
+    {
+      "title": "Ambiguous Expressions",
+      "page": 166,
+      "level": 1
+    },
+    {
+      "title": "Program Variables",
+      "page": 167,
+      "level": 1
+    },
+    {
+      "title": "Artificial Arrays",
+      "page": 170,
+      "level": 1
+    },
+    {
+      "title": "Output Formats",
+      "page": 170,
+      "level": 1
+    },
+    {
+      "title": "Examining Memory",
+      "page": 172,
+      "level": 1
+    },
+    {
+      "title": "Memory Tagging",
+      "page": 175,
+      "level": 1
+    },
+    {
+      "title": "Automatic Display",
+      "page": 176,
+      "level": 1
+    },
+    {
+      "title": "Print Settings",
+      "page": 177,
+      "level": 1
+    },
+    {
+      "title": "Pretty Printing",
+      "page": 188,
+      "level": 1
+    },
+    {
+      "title": "Pretty-Printer Introduction",
+      "page": 188,
+      "level": 2
+    },
+    {
+      "title": "Pretty-Printer Example",
+      "page": 188,
+      "level": 2
+    },
+    {
+      "title": "Pretty-Printer Commands",
+      "page": 189,
+      "level": 2
+    },
+    {
+      "title": "Value History",
+      "page": 190,
+      "level": 1
+    },
+    {
+      "title": "Convenience Variables",
+      "page": 191,
+      "level": 1
+    },
+    {
+      "title": "Convenience Functions",
+      "page": 195,
+      "level": 1
+    },
+    {
+      "title": "Registers",
+      "page": 199,
+      "level": 1
+    },
+    {
+      "title": "Floating Point Hardware",
+      "page": 201,
+      "level": 1
+    },
+    {
+      "title": "Vector Unit",
+      "page": 201,
+      "level": 1
+    },
+    {
+      "title": "Operating System Auxiliary Information",
+      "page": 201,
+      "level": 1
+    },
+    {
+      "title": "Memory Region Attributes",
+      "page": 204,
+      "level": 1
+    },
+    {
+      "title": "Attributes",
+      "page": 204,
+      "level": 2
+    },
+    {
+      "title": "Memory Access Mode",
+      "page": 205,
+      "level": 3
+    },
+    {
+      "title": "Memory Access Size",
+      "page": 205,
+      "level": 3
+    },
+    {
+      "title": "Data Cache",
+      "page": 205,
+      "level": 3
+    },
+    {
+      "title": "Memory Access Checking",
+      "page": 205,
+      "level": 2
+    },
+    {
+      "title": "Copy Between Memory and a File",
+      "page": 206,
+      "level": 1
+    },
+    {
+      "title": "How to Produce a Core File from Your Program",
+      "page": 206,
+      "level": 1
+    },
+    {
+      "title": "Character Sets",
+      "page": 208,
+      "level": 1
+    },
+    {
+      "title": "Caching Data of Targets",
+      "page": 210,
+      "level": 1
+    },
+    {
+      "title": "Search Memory",
+      "page": 211,
+      "level": 1
+    },
+    {
+      "title": "Value Sizes",
+      "page": 213,
+      "level": 1
+    },
+    {
+      "title": "Debugging Optimized Code",
+      "page": 215,
+      "level": 0
+    },
+    {
+      "title": "Inline Functions",
+      "page": 215,
+      "level": 1
+    },
+    {
+      "title": "Tail Call Frames",
+      "page": 216,
+      "level": 1
+    },
+    {
+      "title": "C Preprocessor Macros",
+      "page": 219,
+      "level": 0
+    },
+    {
+      "title": "Tracepoints",
+      "page": 223,
+      "level": 0
+    },
+    {
+      "title": "Commands to Set Tracepoints",
+      "page": 223,
+      "level": 1
+    },
+    {
+      "title": "Create and Delete Tracepoints",
+      "page": 224,
+      "level": 2
+    },
+    {
+      "title": "Enable and Disable Tracepoints",
+      "page": 226,
+      "level": 2
+    },
+    {
+      "title": "Tracepoint Passcounts",
+      "page": 226,
+      "level": 2
+    },
+    {
+      "title": "Tracepoint Conditions",
+      "page": 227,
+      "level": 2
+    },
+    {
+      "title": "Trace State Variables",
+      "page": 227,
+      "level": 2
+    },
+    {
+      "title": "Tracepoint Action Lists",
+      "page": 228,
+      "level": 2
+    },
+    {
+      "title": "Listing Tracepoints",
+      "page": 230,
+      "level": 2
+    },
+    {
+      "title": "Listing Static Tracepoint Markers",
+      "page": 231,
+      "level": 2
+    },
+    {
+      "title": "Starting and Stopping Trace Experiments",
+      "page": 232,
+      "level": 2
+    },
+    {
+      "title": "Tracepoint Restrictions",
+      "page": 234,
+      "level": 2
+    },
+    {
+      "title": "Using the Collected Data",
+      "page": 235,
+      "level": 1
+    },
+    {
+      "title": "tfind n",
+      "page": 235,
+      "level": 2
+    },
+    {
+      "title": "tdump",
+      "page": 237,
+      "level": 2
+    },
+    {
+      "title": "save tracepoints filename",
+      "page": 238,
+      "level": 2
+    },
+    {
+      "title": "Convenience Variables for Tracepoints",
+      "page": 238,
+      "level": 1
+    },
+    {
+      "title": "Using Trace Files",
+      "page": 239,
+      "level": 1
+    },
+    {
+      "title": "Debugging Programs That Use Overlays",
+      "page": 241,
+      "level": 0
+    },
+    {
+      "title": "How Overlays Work",
+      "page": 241,
+      "level": 1
+    },
+    {
+      "title": "Overlay Commands",
+      "page": 242,
+      "level": 1
+    },
+    {
+      "title": "Automatic Overlay Debugging",
+      "page": 244,
+      "level": 1
+    },
+    {
+      "title": "Overlay Sample Program",
+      "page": 245,
+      "level": 1
+    },
+    {
+      "title": "Using gdb with Different Languages",
+      "page": 247,
+      "level": 0
+    },
+    {
+      "title": "Switching Between Source Languages",
+      "page": 247,
+      "level": 1
+    },
+    {
+      "title": "List of Filename Extensions and Languages",
+      "page": 247,
+      "level": 2
+    },
+    {
+      "title": "Setting the Working Language",
+      "page": 248,
+      "level": 2
+    },
+    {
+      "title": "Having gdb Infer the Source Language",
+      "page": 248,
+      "level": 2
+    },
+    {
+      "title": "Displaying the Language",
+      "page": 249,
+      "level": 1
+    },
+    {
+      "title": "Type and Range Checking",
+      "page": 249,
+      "level": 1
+    },
+    {
+      "title": "An Overview of Type Checking",
+      "page": 249,
+      "level": 2
+    },
+    {
+      "title": "An Overview of Range Checking",
+      "page": 250,
+      "level": 2
+    },
+    {
+      "title": "Supported Languages",
+      "page": 251,
+      "level": 1
+    },
+    {
+      "title": "C and C++",
+      "page": 251,
+      "level": 2
+    },
+    {
+      "title": "C and C++ Operators",
+      "page": 251,
+      "level": 3
+    },
+    {
+      "title": "C and C++ Constants",
+      "page": 253,
+      "level": 3
+    },
+    {
+      "title": "C++ Expressions",
+      "page": 254,
+      "level": 3
+    },
+    {
+      "title": "C and C++ Defaults",
+      "page": 255,
+      "level": 3
+    },
+    {
+      "title": "C and C++ Type and Range Checks",
+      "page": 255,
+      "level": 3
+    },
+    {
+      "title": "gdb and C",
+      "page": 255,
+      "level": 3
+    },
+    {
+      "title": "gdb Features for C++",
+      "page": 255,
+      "level": 3
+    },
+    {
+      "title": "Decimal Floating Point format",
+      "page": 257,
+      "level": 3
+    },
+    {
+      "title": "D",
+      "page": 258,
+      "level": 2
+    },
+    {
+      "title": "Go",
+      "page": 258,
+      "level": 2
+    },
+    {
+      "title": "Objective-C",
+      "page": 258,
+      "level": 2
+    },
+    {
+      "title": "Method Names in Commands",
+      "page": 259,
+      "level": 3
+    },
+    {
+      "title": "The Print Command With Objective-C",
+      "page": 259,
+      "level": 3
+    },
+    {
+      "title": "OpenCL C",
+      "page": 259,
+      "level": 2
+    },
+    {
+      "title": "OpenCL C Datatypes",
+      "page": 260,
+      "level": 3
+    },
+    {
+      "title": "OpenCL C Expressions",
+      "page": 260,
+      "level": 3
+    },
+    {
+      "title": "OpenCL C Operators",
+      "page": 260,
+      "level": 3
+    },
+    {
+      "title": "Fortran",
+      "page": 260,
+      "level": 2
+    },
+    {
+      "title": "Fortran Types",
+      "page": 260,
+      "level": 3
+    },
+    {
+      "title": "Fortran Operators and Expressions",
+      "page": 261,
+      "level": 3
+    },
+    {
+      "title": "Fortran Intrinsics",
+      "page": 261,
+      "level": 3
+    },
+    {
+      "title": "Special Fortran Commands",
+      "page": 262,
+      "level": 3
+    },
+    {
+      "title": "Pascal",
+      "page": 263,
+      "level": 2
+    },
+    {
+      "title": "Rust",
+      "page": 263,
+      "level": 2
+    },
+    {
+      "title": "Modula-2",
+      "page": 264,
+      "level": 2
+    },
+    {
+      "title": "Operators",
+      "page": 264,
+      "level": 3
+    },
+    {
+      "title": "Built-in Functions and Procedures",
+      "page": 265,
+      "level": 3
+    },
+    {
+      "title": "Constants",
+      "page": 266,
+      "level": 3
+    },
+    {
+      "title": "Modula-2 Types",
+      "page": 267,
+      "level": 3
+    },
+    {
+      "title": "Modula-2 Defaults",
+      "page": 268,
+      "level": 3
+    },
+    {
+      "title": "Deviations from Standard Modula-2",
+      "page": 269,
+      "level": 3
+    },
+    {
+      "title": "Modula-2 Type and Range Checks",
+      "page": 269,
+      "level": 3
+    },
+    {
+      "title": "The Scope Operators :: and .",
+      "page": 269,
+      "level": 3
+    },
+    {
+      "title": "gdb and Modula-2",
+      "page": 270,
+      "level": 3
+    },
+    {
+      "title": "Ada",
+      "page": 270,
+      "level": 2
+    },
+    {
+      "title": "Introduction",
+      "page": 270,
+      "level": 3
+    },
+    {
+      "title": "Omissions from Ada",
+      "page": 270,
+      "level": 3
+    },
+    {
+      "title": "Additions to Ada",
+      "page": 272,
+      "level": 3
+    },
+    {
+      "title": "Overloading support for Ada",
+      "page": 273,
+      "level": 3
+    },
+    {
+      "title": "Stopping at the Very Beginning",
+      "page": 274,
+      "level": 3
+    },
+    {
+      "title": "Ada Exceptions",
+      "page": 274,
+      "level": 3
+    },
+    {
+      "title": "Extensions for Ada Tasks",
+      "page": 274,
+      "level": 3
+    },
+    {
+      "title": "Tasking Support when Debugging Core Files",
+      "page": 278,
+      "level": 3
+    },
+    {
+      "title": "Tasking Support when using the Ravenscar Profile",
+      "page": 279,
+      "level": 3
+    },
+    {
+      "title": "Ada Source Character Set",
+      "page": 279,
+      "level": 3
+    },
+    {
+      "title": "Known Peculiarities of Ada Mode",
+      "page": 280,
+      "level": 3
+    },
+    {
+      "title": "Unsupported Languages",
+      "page": 281,
+      "level": 1
+    },
+    {
+      "title": "Examining the Symbol Table",
+      "page": 283,
+      "level": 0
+    },
+    {
+      "title": "Altering Execution",
+      "page": 297,
+      "level": 0
+    },
+    {
+      "title": "Assignment to Variables",
+      "page": 297,
+      "level": 1
+    },
+    {
+      "title": "Continuing at a Different Address",
+      "page": 298,
+      "level": 1
+    },
+    {
+      "title": "Giving your Program a Signal",
+      "page": 299,
+      "level": 1
+    },
+    {
+      "title": "Returning from a Function",
+      "page": 300,
+      "level": 1
+    },
+    {
+      "title": "Calling Program Functions",
+      "page": 301,
+      "level": 1
+    },
+    {
+      "title": "Calling functions with no debug info",
+      "page": 304,
+      "level": 2
+    },
+    {
+      "title": "Patching Programs",
+      "page": 305,
+      "level": 1
+    },
+    {
+      "title": "Compiling and injecting code in gdb",
+      "page": 305,
+      "level": 1
+    },
+    {
+      "title": "Compilation options for the compile command",
+      "page": 307,
+      "level": 2
+    },
+    {
+      "title": "Caveats when using the compile command",
+      "page": 307,
+      "level": 2
+    },
+    {
+      "title": "Compiler search for the compile command",
+      "page": 309,
+      "level": 2
+    },
+    {
+      "title": "gdb Files",
+      "page": 311,
+      "level": 0
+    },
+    {
+      "title": "Commands to Specify Files",
+      "page": 311,
+      "level": 1
+    },
+    {
+      "title": "File Caching",
+      "page": 320,
+      "level": 1
+    },
+    {
+      "title": "Debugging Information in Separate Files",
+      "page": 321,
+      "level": 1
+    },
+    {
+      "title": "Debugging information in a special section",
+      "page": 324,
+      "level": 1
+    },
+    {
+      "title": "Index Files Speed Up gdb",
+      "page": 325,
+      "level": 1
+    },
+    {
+      "title": "Automatic symbol index cache",
+      "page": 326,
+      "level": 2
+    },
+    {
+      "title": "Building the index with GNU gold",
+      "page": 327,
+      "level": 2
+    },
+    {
+      "title": "Extensions to .debug_names",
+      "page": 327,
+      "level": 1
+    },
+    {
+      "title": "Errors Reading Symbol Files",
+      "page": 328,
+      "level": 1
+    },
+    {
+      "title": "GDB Data Files",
+      "page": 330,
+      "level": 1
+    },
+    {
+      "title": "Specifying a Debugging Target",
+      "page": 331,
+      "level": 0
+    },
+    {
+      "title": "Active Targets",
+      "page": 331,
+      "level": 1
+    },
+    {
+      "title": "Commands for Managing Targets",
+      "page": 331,
+      "level": 1
+    },
+    {
+      "title": "Choosing Target Byte Order",
+      "page": 334,
+      "level": 1
+    },
+    {
+      "title": "Debugging Remote Programs",
+      "page": 335,
+      "level": 0
+    },
+    {
+      "title": "Connecting to a Remote Target",
+      "page": 335,
+      "level": 1
+    },
+    {
+      "title": "Types of Remote Connections",
+      "page": 335,
+      "level": 2
+    },
+    {
+      "title": "Host and Target Files",
+      "page": 336,
+      "level": 2
+    },
+    {
+      "title": "Remote Connection Commands",
+      "page": 337,
+      "level": 2
+    },
+    {
+      "title": "Sending files to a remote system",
+      "page": 340,
+      "level": 1
+    },
+    {
+      "title": "Using the gdbserver Program",
+      "page": 340,
+      "level": 1
+    },
+    {
+      "title": "Running gdbserver",
+      "page": 341,
+      "level": 2
+    },
+    {
+      "title": "Attaching to a Running Program",
+      "page": 341,
+      "level": 3
+    },
+    {
+      "title": "TCP port allocation lifecycle of gdbserver",
+      "page": 342,
+      "level": 3
+    },
+    {
+      "title": "Other Command-Line Arguments for gdbserver",
+      "page": 342,
+      "level": 3
+    },
+    {
+      "title": "Connecting to gdbserver",
+      "page": 343,
+      "level": 2
+    },
+    {
+      "title": "Monitor Commands for gdbserver",
+      "page": 344,
+      "level": 2
+    },
+    {
+      "title": "Tracepoints support in gdbserver",
+      "page": 345,
+      "level": 2
+    },
+    {
+      "title": "Remote Configuration",
+      "page": 346,
+      "level": 1
+    },
+    {
+      "title": "Implementing a Remote Stub",
+      "page": 353,
+      "level": 1
+    },
+    {
+      "title": "What the Stub Can Do for You",
+      "page": 354,
+      "level": 2
+    },
+    {
+      "title": "What You Must Do for the Stub",
+      "page": 354,
+      "level": 2
+    },
+    {
+      "title": "Putting it All Together",
+      "page": 356,
+      "level": 2
+    },
+    {
+      "title": "Configuration-Specific Information",
+      "page": 357,
+      "level": 0
+    },
+    {
+      "title": "Native",
+      "page": 357,
+      "level": 1
+    },
+    {
+      "title": "BSD libkvm Interface",
+      "page": 357,
+      "level": 2
+    },
+    {
+      "title": "Process Information",
+      "page": 357,
+      "level": 2
+    },
+    {
+      "title": "Features for Debugging djgpp Programs",
+      "page": 359,
+      "level": 2
+    },
+    {
+      "title": "Features for Debugging MS Windows PE Executables",
+      "page": 362,
+      "level": 2
+    },
+    {
+      "title": "Support for DLLs without Debugging Symbols",
+      "page": 363,
+      "level": 3
+    },
+    {
+      "title": "DLL Name Prefixes",
+      "page": 364,
+      "level": 3
+    },
+    {
+      "title": "Working with Minimal Symbols",
+      "page": 364,
+      "level": 3
+    },
+    {
+      "title": "Commands Specific to gnu Hurd Systems",
+      "page": 365,
+      "level": 2
+    },
+    {
+      "title": "Darwin",
+      "page": 367,
+      "level": 2
+    },
+    {
+      "title": "FreeBSD",
+      "page": 368,
+      "level": 2
+    },
+    {
+      "title": "Embedded Operating Systems",
+      "page": 368,
+      "level": 1
+    },
+    {
+      "title": "Embedded Processors",
+      "page": 368,
+      "level": 1
+    },
+    {
+      "title": "Synopsys ARC",
+      "page": 368,
+      "level": 2
+    },
+    {
+      "title": "ARM",
+      "page": 369,
+      "level": 2
+    },
+    {
+      "title": "BPF",
+      "page": 370,
+      "level": 2
+    },
+    {
+      "title": "M68k",
+      "page": 370,
+      "level": 2
+    },
+    {
+      "title": "MicroBlaze",
+      "page": 370,
+      "level": 2
+    },
+    {
+      "title": "MIPS Embedded",
+      "page": 371,
+      "level": 2
+    },
+    {
+      "title": "OpenRISC 1000",
+      "page": 371,
+      "level": 2
+    },
+    {
+      "title": "PowerPC Embedded",
+      "page": 372,
+      "level": 2
+    },
+    {
+      "title": "Atmel AVR",
+      "page": 373,
+      "level": 2
+    },
+    {
+      "title": "CRIS",
+      "page": 373,
+      "level": 2
+    },
+    {
+      "title": "Renesas Super-H",
+      "page": 374,
+      "level": 2
+    },
+    {
+      "title": "Architectures",
+      "page": 374,
+      "level": 1
+    },
+    {
+      "title": "AArch64",
+      "page": 374,
+      "level": 2
+    },
+    {
+      "title": "AArch64 Scalable Vector Extension",
+      "page": 374,
+      "level": 3
+    },
+    {
+      "title": "AArch64 Scalable Matrix Extension",
+      "page": 375,
+      "level": 3
+    },
+    {
+      "title": "AArch64 Scalable Matrix Extension 2",
+      "page": 377,
+      "level": 3
+    },
+    {
+      "title": "AArch64 Pointer Authentication",
+      "page": 377,
+      "level": 3
+    },
+    {
+      "title": "AArch64 Memory Tagging Extension",
+      "page": 378,
+      "level": 3
+    },
+    {
+      "title": "AArch64 Guarded Control Stack",
+      "page": 378,
+      "level": 3
+    },
+    {
+      "title": "AArch64 Floating Point Mode Register",
+      "page": 379,
+      "level": 3
+    },
+    {
+      "title": "x86",
+      "page": 379,
+      "level": 2
+    },
+    {
+      "title": "x87 registers",
+      "page": 379,
+      "level": 3
+    },
+    {
+      "title": "Intel Control-Flow Enforcement Technology.",
+      "page": 379,
+      "level": 3
+    },
+    {
+      "title": "Alpha",
+      "page": 380,
+      "level": 2
+    },
+    {
+      "title": "MIPS",
+      "page": 380,
+      "level": 2
+    },
+    {
+      "title": "HPPA",
+      "page": 382,
+      "level": 2
+    },
+    {
+      "title": "PowerPC",
+      "page": 382,
+      "level": 2
+    },
+    {
+      "title": "Sparc64",
+      "page": 382,
+      "level": 2
+    },
+    {
+      "title": "ADI Support",
+      "page": 382,
+      "level": 3
+    },
+    {
+      "title": "S12Z",
+      "page": 383,
+      "level": 2
+    },
+    {
+      "title": "AMD GPU",
+      "page": 383,
+      "level": 2
+    },
+    {
+      "title": "AMD GPU Architectures",
+      "page": 383,
+      "level": 3
+    },
+    {
+      "title": "AMD GPU Device Driver and AMD ROCm Runtime",
+      "page": 383,
+      "level": 3
+    },
+    {
+      "title": "AMD GPU Wavefronts",
+      "page": 384,
+      "level": 3
+    },
+    {
+      "title": "AMD GPU Code Objects",
+      "page": 384,
+      "level": 3
+    },
+    {
+      "title": "AMD GPU Entity Target Identifiers and Convenience Variables",
+      "page": 384,
+      "level": 3
+    },
+    {
+      "title": "AMD GPU Signals",
+      "page": 385,
+      "level": 3
+    },
+    {
+      "title": "AMD GPU Memory Violation Reporting",
+      "page": 385,
+      "level": 3
+    },
+    {
+      "title": "AMD GPU Logging",
+      "page": 386,
+      "level": 3
+    },
+    {
+      "title": "AMD GPU Restrictions",
+      "page": 386,
+      "level": 3
+    },
+    {
+      "title": "RISC-V",
+      "page": 387,
+      "level": 2
+    },
+    {
+      "title": "Controlling gdb",
+      "page": 389,
+      "level": 0
+    },
+    {
+      "title": "Prompt",
+      "page": 389,
+      "level": 1
+    },
+    {
+      "title": "Command Editing",
+      "page": 389,
+      "level": 1
+    },
+    {
+      "title": "Command History",
+      "page": 390,
+      "level": 1
+    },
+    {
+      "title": "Screen Size",
+      "page": 392,
+      "level": 1
+    },
+    {
+      "title": "Output Styling",
+      "page": 393,
+      "level": 1
+    },
+    {
+      "title": "Numbers",
+      "page": 397,
+      "level": 1
+    },
+    {
+      "title": "Configuring the Current ABI",
+      "page": 398,
+      "level": 1
+    },
+    {
+      "title": "Automatically loading associated files",
+      "page": 399,
+      "level": 1
+    },
+    {
+      "title": "Automatically loading init file in the current directory",
+      "page": 401,
+      "level": 2
+    },
+    {
+      "title": "Automatically loading thread debugging library",
+      "page": 401,
+      "level": 2
+    },
+    {
+      "title": "Security restriction for auto-loading",
+      "page": 402,
+      "level": 2
+    },
+    {
+      "title": "Displaying files tried for auto-load",
+      "page": 403,
+      "level": 2
+    },
+    {
+      "title": "Optional Warnings and Messages",
+      "page": 404,
+      "level": 1
+    },
+    {
+      "title": "Optional Messages about Internal Happenings",
+      "page": 405,
+      "level": 1
+    },
+    {
+      "title": "Other Miscellaneous Settings",
+      "page": 411,
+      "level": 1
+    },
+    {
+      "title": "Extending gdb",
+      "page": 415,
+      "level": 0
+    },
+    {
+      "title": "Canned Sequences of Commands",
+      "page": 415,
+      "level": 1
+    },
+    {
+      "title": "User-defined Commands",
+      "page": 415,
+      "level": 2
+    },
+    {
+      "title": "User-defined Command Hooks",
+      "page": 418,
+      "level": 2
+    },
+    {
+      "title": "Command Files",
+      "page": 419,
+      "level": 2
+    },
+    {
+      "title": "Commands for Controlled Output",
+      "page": 421,
+      "level": 2
+    },
+    {
+      "title": "Controlling auto-loading native gdb scripts",
+      "page": 423,
+      "level": 2
+    },
+    {
+      "title": "Command Aliases",
+      "page": 423,
+      "level": 1
+    },
+    {
+      "title": "Default Arguments",
+      "page": 424,
+      "level": 2
+    },
+    {
+      "title": "Extending gdb using Python",
+      "page": 425,
+      "level": 1
+    },
+    {
+      "title": "Python Commands",
+      "page": 426,
+      "level": 2
+    },
+    {
+      "title": "Python API",
+      "page": 427,
+      "level": 2
+    },
+    {
+      "title": "Basic Python",
+      "page": 428,
+      "level": 3
+    },
+    {
+      "title": "Threading in GDB",
+      "page": 433,
+      "level": 3
+    },
+    {
+      "title": "Exception Handling",
+      "page": 434,
+      "level": 3
+    },
+    {
+      "title": "Values From Inferior",
+      "page": 435,
+      "level": 3
+    },
+    {
+      "title": "Types In Python",
+      "page": 443,
+      "level": 3
+    },
+    {
+      "title": "Pretty Printing API",
+      "page": 448,
+      "level": 3
+    },
+    {
+      "title": "Selecting Pretty-Printers",
+      "page": 450,
+      "level": 3
+    },
+    {
+      "title": "Writing a Pretty-Printer",
+      "page": 451,
+      "level": 3
+    },
+    {
+      "title": "Type Printing API",
+      "page": 453,
+      "level": 3
+    },
+    {
+      "title": "Filtering Frames",
+      "page": 454,
+      "level": 3
+    },
+    {
+      "title": "Decorating Frames",
+      "page": 456,
+      "level": 3
+    },
+    {
+      "title": "Writing a Frame Filter",
+      "page": 459,
+      "level": 3
+    },
+    {
+      "title": "Unwinding Frames in Python",
+      "page": 463,
+      "level": 3
+    },
+    {
+      "title": "Xmethods In Python",
+      "page": 468,
+      "level": 3
+    },
+    {
+      "title": "Xmethod API",
+      "page": 469,
+      "level": 3
+    },
+    {
+      "title": "Writing an Xmethod",
+      "page": 470,
+      "level": 3
+    },
+    {
+      "title": "Inferiors In Python",
+      "page": 473,
+      "level": 3
+    },
+    {
+      "title": "Events In Python",
+      "page": 476,
+      "level": 3
+    },
+    {
+      "title": "Threads In Python",
+      "page": 482,
+      "level": 3
+    },
+    {
+      "title": "Recordings In Python",
+      "page": 485,
+      "level": 3
+    },
+    {
+      "title": "CLI Commands In Python",
+      "page": 488,
+      "level": 3
+    },
+    {
+      "title": "gdb/mi Commands In Python",
+      "page": 492,
+      "level": 3
+    },
+    {
+      "title": "gdb/mi Notifications In Python",
+      "page": 495,
+      "level": 3
+    },
+    {
+      "title": "Parameters In Python",
+      "page": 495,
+      "level": 3
+    },
+    {
+      "title": "Writing new convenience functions",
+      "page": 501,
+      "level": 3
+    },
+    {
+      "title": "Program Spaces In Python",
+      "page": 502,
+      "level": 3
+    },
+    {
+      "title": "Objfiles In Python",
+      "page": 505,
+      "level": 3
+    },
+    {
+      "title": "Accessing inferior stack frames from Python",
+      "page": 507,
+      "level": 3
+    },
+    {
+      "title": "Accessing blocks from Python",
+      "page": 511,
+      "level": 3
+    },
+    {
+      "title": "Python representation of Symbols",
+      "page": 513,
+      "level": 3
+    },
+    {
+      "title": "Symbol table representation in Python",
+      "page": 517,
+      "level": 3
+    },
+    {
+      "title": "Manipulating line tables using Python",
+      "page": 519,
+      "level": 3
+    },
+    {
+      "title": "Manipulating breakpoints using Python",
+      "page": 520,
+      "level": 3
+    },
+    {
+      "title": "Finish Breakpoints",
+      "page": 525,
+      "level": 3
+    },
+    {
+      "title": "Python representation of lazy strings",
+      "page": 525,
+      "level": 3
+    },
+    {
+      "title": "Python representation of colors",
+      "page": 526,
+      "level": 3
+    },
+    {
+      "title": "Python representation of styles",
+      "page": 527,
+      "level": 3
+    },
+    {
+      "title": "Python representation of architectures",
+      "page": 529,
+      "level": 3
+    },
+    {
+      "title": "Registers In Python",
+      "page": 531,
+      "level": 3
+    },
+    {
+      "title": "Connections In Python",
+      "page": 531,
+      "level": 3
+    },
+    {
+      "title": "Implementing new TUI windows",
+      "page": 533,
+      "level": 3
+    },
+    {
+      "title": "Instruction Disassembly In Python",
+      "page": 535,
+      "level": 3
+    },
+    {
+      "title": "Missing Debug Info In Python",
+      "page": 543,
+      "level": 3
+    },
+    {
+      "title": "Missing Objfiles In Python",
+      "page": 545,
+      "level": 3
+    },
+    {
+      "title": "Core Files In Python",
+      "page": 548,
+      "level": 3
+    },
+    {
+      "title": "Python Auto-loading",
+      "page": 549,
+      "level": 2
+    },
+    {
+      "title": "Python modules",
+      "page": 550,
+      "level": 2
+    },
+    {
+      "title": "gdb.printing",
+      "page": 550,
+      "level": 3
+    },
+    {
+      "title": "gdb.types",
+      "page": 551,
+      "level": 3
+    },
+    {
+      "title": "gdb.prompt",
+      "page": 552,
+      "level": 3
+    },
+    {
+      "title": "gdb.ptwrite",
+      "page": 553,
+      "level": 3
+    },
+    {
+      "title": "Extending gdb using Guile",
+      "page": 555,
+      "level": 1
+    },
+    {
+      "title": "Guile Introduction",
+      "page": 555,
+      "level": 2
+    },
+    {
+      "title": "Guile Commands",
+      "page": 555,
+      "level": 2
+    },
+    {
+      "title": "Guile API",
+      "page": 556,
+      "level": 2
+    },
+    {
+      "title": "Basic Guile",
+      "page": 556,
+      "level": 3
+    },
+    {
+      "title": "Guile Configuration",
+      "page": 558,
+      "level": 3
+    },
+    {
+      "title": "GDB Scheme Data Types",
+      "page": 559,
+      "level": 3
+    },
+    {
+      "title": "Guile Exception Handling",
+      "page": 560,
+      "level": 3
+    },
+    {
+      "title": "Values From Inferior In Guile",
+      "page": 562,
+      "level": 3
+    },
+    {
+      "title": "Arithmetic In Guile",
+      "page": 567,
+      "level": 3
+    },
+    {
+      "title": "Types In Guile",
+      "page": 568,
+      "level": 3
+    },
+    {
+      "title": "Guile Pretty Printing API",
+      "page": 573,
+      "level": 3
+    },
+    {
+      "title": "Selecting Guile Pretty-Printers",
+      "page": 575,
+      "level": 3
+    },
+    {
+      "title": "Writing a Guile Pretty-Printer",
+      "page": 576,
+      "level": 3
+    },
+    {
+      "title": "Commands In Guile",
+      "page": 578,
+      "level": 3
+    },
+    {
+      "title": "Parameters In Guile",
+      "page": 582,
+      "level": 3
+    },
+    {
+      "title": "Program Spaces In Guile",
+      "page": 584,
+      "level": 3
+    },
+    {
+      "title": "Objfiles In Guile",
+      "page": 585,
+      "level": 3
+    },
+    {
+      "title": "Accessing inferior stack frames from Guile.",
+      "page": 586,
+      "level": 3
+    },
+    {
+      "title": "Accessing blocks from Guile.",
+      "page": 589,
+      "level": 3
+    },
+    {
+      "title": "Guile representation of Symbols.",
+      "page": 591,
+      "level": 3
+    },
+    {
+      "title": "Symbol table representation in Guile.",
+      "page": 594,
+      "level": 3
+    },
+    {
+      "title": "Manipulating breakpoints using Guile",
+      "page": 595,
+      "level": 3
+    },
+    {
+      "title": "Guile representation of lazy strings.",
+      "page": 599,
+      "level": 3
+    },
+    {
+      "title": "Guile representation of architectures",
+      "page": 600,
+      "level": 3
+    },
+    {
+      "title": "Disassembly In Guile",
+      "page": 602,
+      "level": 3
+    },
+    {
+      "title": "I/O Ports in Guile",
+      "page": 603,
+      "level": 3
+    },
+    {
+      "title": "Memory Ports in Guile",
+      "page": 603,
+      "level": 3
+    },
+    {
+      "title": "Iterators In Guile",
+      "page": 604,
+      "level": 3
+    },
+    {
+      "title": "Colors In Guile",
+      "page": 606,
+      "level": 3
+    },
+    {
+      "title": "Guile Auto-loading",
+      "page": 607,
+      "level": 2
+    },
+    {
+      "title": "Guile Modules",
+      "page": 607,
+      "level": 2
+    },
+    {
+      "title": "Guile Printing Module",
+      "page": 608,
+      "level": 3
+    },
+    {
+      "title": "Guile Types Module",
+      "page": 608,
+      "level": 3
+    },
+    {
+      "title": "Auto-loading extensions",
+      "page": 609,
+      "level": 1
+    },
+    {
+      "title": "The objfile-gdb.ext file",
+      "page": 609,
+      "level": 2
+    },
+    {
+      "title": "The .debug_gdb_scripts section",
+      "page": 610,
+      "level": 2
+    },
+    {
+      "title": "Script File Entries",
+      "page": 610,
+      "level": 3
+    },
+    {
+      "title": "Script Text Entries",
+      "page": 611,
+      "level": 3
+    },
+    {
+      "title": "Which flavor to choose?",
+      "page": 612,
+      "level": 2
+    },
+    {
+      "title": "Multiple Extension Languages",
+      "page": 612,
+      "level": 1
+    },
+    {
+      "title": "Python comes first",
+      "page": 612,
+      "level": 2
+    },
+    {
+      "title": "Command Interpreters",
+      "page": 613,
+      "level": 0
+    },
+    {
+      "title": "gdb Text User Interface",
+      "page": 615,
+      "level": 0
+    },
+    {
+      "title": "TUI Overview",
+      "page": 615,
+      "level": 1
+    },
+    {
+      "title": "TUI Key Bindings",
+      "page": 616,
+      "level": 1
+    },
+    {
+      "title": "TUI Single Key Mode",
+      "page": 617,
+      "level": 1
+    },
+    {
+      "title": "TUI Mouse Support",
+      "page": 618,
+      "level": 1
+    },
+    {
+      "title": "TUI-specific Commands",
+      "page": 618,
+      "level": 1
+    },
+    {
+      "title": "TUI Configuration Variables",
+      "page": 621,
+      "level": 1
+    },
+    {
+      "title": "Using gdb under gnu Emacs",
+      "page": 623,
+      "level": 0
+    },
+    {
+      "title": "The gdb/mi Interface",
+      "page": 625,
+      "level": 0
+    },
+    {
+      "title": "Function and Purpose",
+      "page": 625,
+      "level": 1
+    },
+    {
+      "title": "Notation and Terminology",
+      "page": 625,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi General Design",
+      "page": 625,
+      "level": 1
+    },
+    {
+      "title": "Context management",
+      "page": 626,
+      "level": 2
+    },
+    {
+      "title": "Threads and Frames",
+      "page": 626,
+      "level": 3
+    },
+    {
+      "title": "Language",
+      "page": 627,
+      "level": 3
+    },
+    {
+      "title": "Asynchronous command execution and non-stop mode",
+      "page": 627,
+      "level": 2
+    },
+    {
+      "title": "Thread groups",
+      "page": 628,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Command Syntax",
+      "page": 628,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Input Syntax",
+      "page": 629,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Output Syntax",
+      "page": 629,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Compatibility with CLI",
+      "page": 631,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Development and Front Ends",
+      "page": 631,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Output Records",
+      "page": 633,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Result Records",
+      "page": 633,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Stream Records",
+      "page": 633,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Async Records",
+      "page": 634,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Breakpoint Information",
+      "page": 638,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Frame Information",
+      "page": 641,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Thread Information",
+      "page": 641,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Ada Exception Information",
+      "page": 642,
+      "level": 2
+    },
+    {
+      "title": "Simple Examples of gdb/mi Interaction",
+      "page": 642,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Command Description Format",
+      "page": 643,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Breakpoint Commands",
+      "page": 643,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Catchpoint Commands",
+      "page": 654,
+      "level": 1
+    },
+    {
+      "title": "Shared Library gdb/mi Catchpoints",
+      "page": 654,
+      "level": 2
+    },
+    {
+      "title": "Ada Exception gdb/mi Catchpoints",
+      "page": 655,
+      "level": 2
+    },
+    {
+      "title": "C++ Exception gdb/mi Catchpoints",
+      "page": 656,
+      "level": 2
+    },
+    {
+      "title": "gdb/mi Program Context",
+      "page": 658,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Thread Commands",
+      "page": 661,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Ada Tasking Commands",
+      "page": 662,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Program Execution",
+      "page": 663,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Stack Manipulation Commands",
+      "page": 670,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Variable Objects",
+      "page": 676,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Data Manipulation",
+      "page": 687,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Tracepoint Commands",
+      "page": 697,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Symbol Query Commands",
+      "page": 702,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi File Commands",
+      "page": 710,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Target Manipulation Commands",
+      "page": 714,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi File Transfer Commands",
+      "page": 718,
+      "level": 1
+    },
+    {
+      "title": "Ada Exceptions gdb/mi Commands",
+      "page": 719,
+      "level": 1
+    },
+    {
+      "title": "gdb/mi Support Commands",
+      "page": 720,
+      "level": 1
+    },
+    {
+      "title": "Miscellaneous gdb/mi Commands",
+      "page": 722,
+      "level": 1
+    },
+    {
+      "title": "gdb Annotations",
+      "page": 731,
+      "level": 0
+    },
+    {
+      "title": "What is an Annotation?",
+      "page": 731,
+      "level": 1
+    },
+    {
+      "title": "The Server Prefix",
+      "page": 732,
+      "level": 1
+    },
+    {
+      "title": "Annotation for gdb Input",
+      "page": 732,
+      "level": 1
+    },
+    {
+      "title": "Errors",
+      "page": 733,
+      "level": 1
+    },
+    {
+      "title": "Invalidation Notices",
+      "page": 733,
+      "level": 1
+    },
+    {
+      "title": "Running the Program",
+      "page": 733,
+      "level": 1
+    },
+    {
+      "title": "Displaying Source",
+      "page": 734,
+      "level": 1
+    },
+    {
+      "title": "Debugger Adapter Protocol",
+      "page": 735,
+      "level": 0
+    },
+    {
+      "title": "JIT Compilation Interface",
+      "page": 737,
+      "level": 0
+    },
+    {
+      "title": "JIT Declarations",
+      "page": 737,
+      "level": 1
+    },
+    {
+      "title": "Registering Code",
+      "page": 738,
+      "level": 1
+    },
+    {
+      "title": "Unregistering Code",
+      "page": 738,
+      "level": 1
+    },
+    {
+      "title": "Custom Debug Info",
+      "page": 738,
+      "level": 1
+    },
+    {
+      "title": "Using JIT Debug Info Readers",
+      "page": 739,
+      "level": 2
+    },
+    {
+      "title": "Writing JIT Debug Info Readers",
+      "page": 739,
+      "level": 2
+    },
+    {
+      "title": "In-Process Agent",
+      "page": 741,
+      "level": 0
+    },
+    {
+      "title": "In-Process Agent Protocol",
+      "page": 741,
+      "level": 1
+    },
+    {
+      "title": "IPA Protocol Objects",
+      "page": 742,
+      "level": 2
+    },
+    {
+      "title": "IPA Protocol Commands",
+      "page": 743,
+      "level": 2
+    },
+    {
+      "title": "Reporting Bugs in gdb",
+      "page": 745,
+      "level": 0
+    },
+    {
+      "title": "Have You Found a Bug?",
+      "page": 745,
+      "level": 1
+    },
+    {
+      "title": "How to Report Bugs",
+      "page": 745,
+      "level": 1
+    },
+    {
+      "title": "Command Line Editing",
+      "page": 749,
+      "level": 0
+    },
+    {
+      "title": "Introduction to Line Editing",
+      "page": 749,
+      "level": 1
+    },
+    {
+      "title": "Readline Interaction",
+      "page": 749,
+      "level": 1
+    },
+    {
+      "title": "Readline Bare Essentials",
+      "page": 749,
+      "level": 2
+    },
+    {
+      "title": "Readline Movement Commands",
+      "page": 750,
+      "level": 2
+    },
+    {
+      "title": "Readline Killing Commands",
+      "page": 750,
+      "level": 2
+    },
+    {
+      "title": "Readline Arguments",
+      "page": 751,
+      "level": 2
+    },
+    {
+      "title": "Searching for Commands in the History",
+      "page": 751,
+      "level": 2
+    },
+    {
+      "title": "Readline Init File",
+      "page": 752,
+      "level": 1
+    },
+    {
+      "title": "Readline Init File Syntax",
+      "page": 752,
+      "level": 2
+    },
+    {
+      "title": "Conditional Init Constructs",
+      "page": 761,
+      "level": 2
+    },
+    {
+      "title": "Sample Init File",
+      "page": 762,
+      "level": 2
+    },
+    {
+      "title": "Bindable Readline Commands",
+      "page": 765,
+      "level": 1
+    },
+    {
+      "title": "Commands For Moving",
+      "page": 765,
+      "level": 2
+    },
+    {
+      "title": "Commands For Manipulating The History",
+      "page": 766,
+      "level": 2
+    },
+    {
+      "title": "Commands For Changing Text",
+      "page": 767,
+      "level": 2
+    },
+    {
+      "title": "Killing And Yanking",
+      "page": 769,
+      "level": 2
+    },
+    {
+      "title": "Specifying Numeric Arguments",
+      "page": 770,
+      "level": 2
+    },
+    {
+      "title": "Letting Readline Type For You",
+      "page": 770,
+      "level": 2
+    },
+    {
+      "title": "Keyboard Macros",
+      "page": 771,
+      "level": 2
+    },
+    {
+      "title": "Some Miscellaneous Commands",
+      "page": 771,
+      "level": 2
+    },
+    {
+      "title": "Readline vi Mode",
+      "page": 773,
+      "level": 1
+    },
+    {
+      "title": "Using History Interactively",
+      "page": 775,
+      "level": 0
+    },
+    {
+      "title": "History Expansion",
+      "page": 775,
+      "level": 1
+    },
+    {
+      "title": "Event Designators",
+      "page": 775,
+      "level": 2
+    },
+    {
+      "title": "Word Designators",
+      "page": 776,
+      "level": 2
+    },
+    {
+      "title": "Modifiers",
+      "page": 776,
+      "level": 2
+    },
+    {
+      "title": "In Memoriam",
+      "page": 779,
+      "level": 0
+    },
+    {
+      "title": "Formatting Documentation",
+      "page": 781,
+      "level": 0
+    },
+    {
+      "title": "Installing gdb",
+      "page": 783,
+      "level": 0
+    },
+    {
+      "title": "Requirements for Building gdb",
+      "page": 783,
+      "level": 1
+    },
+    {
+      "title": "Invoking the gdb configure Script",
+      "page": 785,
+      "level": 1
+    },
+    {
+      "title": "Compiling gdb in Another Directory",
+      "page": 786,
+      "level": 1
+    },
+    {
+      "title": "Specifying Names for Hosts and Targets",
+      "page": 787,
+      "level": 1
+    },
+    {
+      "title": "configure Options",
+      "page": 787,
+      "level": 1
+    },
+    {
+      "title": "System-wide configuration and settings",
+      "page": 791,
+      "level": 1
+    },
+    {
+      "title": "Installed System-wide Configuration Scripts",
+      "page": 792,
+      "level": 2
+    },
+    {
+      "title": "Maintenance Commands",
+      "page": 793,
+      "level": 0
+    },
+    {
+      "title": "gdb Remote Serial Protocol",
+      "page": 811,
+      "level": 0
+    },
+    {
+      "title": "Overview",
+      "page": 811,
+      "level": 1
+    },
+    {
+      "title": "Standard Replies",
+      "page": 812,
+      "level": 1
+    },
+    {
+      "title": "Packets",
+      "page": 813,
+      "level": 1
+    },
+    {
+      "title": "Stop Reply Packets",
+      "page": 823,
+      "level": 1
+    },
+    {
+      "title": "General Query Packets",
+      "page": 827,
+      "level": 1
+    },
+    {
+      "title": "Architecture-Specific Protocol Details",
+      "page": 855,
+      "level": 1
+    },
+    {
+      "title": "ARM-specific Protocol Details",
+      "page": 855,
+      "level": 2
+    },
+    {
+      "title": "ARM Breakpoint Kinds",
+      "page": 856,
+      "level": 3
+    },
+    {
+      "title": "ARM Memory Tag Types",
+      "page": 856,
+      "level": 3
+    },
+    {
+      "title": "MIPS-specific Protocol Details",
+      "page": 856,
+      "level": 2
+    },
+    {
+      "title": "MIPS Register Packet Format",
+      "page": 856,
+      "level": 3
+    },
+    {
+      "title": "MIPS Breakpoint Kinds",
+      "page": 856,
+      "level": 3
+    },
+    {
+      "title": "Tracepoint Packets",
+      "page": 856,
+      "level": 1
+    },
+    {
+      "title": "Relocate instruction reply packet",
+      "page": 863,
+      "level": 2
+    },
+    {
+      "title": "Host I/O Packets",
+      "page": 863,
+      "level": 1
+    },
+    {
+      "title": "Interrupts",
+      "page": 865,
+      "level": 1
+    },
+    {
+      "title": "Notification Packets",
+      "page": 866,
+      "level": 1
+    },
+    {
+      "title": "Remote Protocol Support for Non-Stop Mode",
+      "page": 868,
+      "level": 1
+    },
+    {
+      "title": "Packet Acknowledgment",
+      "page": 869,
+      "level": 1
+    },
+    {
+      "title": "Examples",
+      "page": 869,
+      "level": 1
+    },
+    {
+      "title": "File-I/O Remote Protocol Extension",
+      "page": 870,
+      "level": 1
+    },
+    {
+      "title": "File-I/O Overview",
+      "page": 870,
+      "level": 2
+    },
+    {
+      "title": "Protocol Basics",
+      "page": 870,
+      "level": 2
+    },
+    {
+      "title": "The F Request Packet",
+      "page": 871,
+      "level": 2
+    },
+    {
+      "title": "The F Reply Packet",
+      "page": 871,
+      "level": 2
+    },
+    {
+      "title": "The Ctrl-C Message",
+      "page": 872,
+      "level": 2
+    },
+    {
+      "title": "Console I/O",
+      "page": 872,
+      "level": 2
+    },
+    {
+      "title": "List of Supported Calls",
+      "page": 872,
+      "level": 2
+    },
+    {
+      "title": "open",
+      "page": 872,
+      "level": 3
+    },
+    {
+      "title": "close",
+      "page": 874,
+      "level": 3
+    },
+    {
+      "title": "read",
+      "page": 874,
+      "level": 3
+    },
+    {
+      "title": "write",
+      "page": 874,
+      "level": 3
+    },
+    {
+      "title": "lseek",
+      "page": 875,
+      "level": 3
+    },
+    {
+      "title": "rename",
+      "page": 875,
+      "level": 3
+    },
+    {
+      "title": "unlink",
+      "page": 876,
+      "level": 3
+    },
+    {
+      "title": "stat/fstat",
+      "page": 876,
+      "level": 3
+    },
+    {
+      "title": "gettimeofday",
+      "page": 877,
+      "level": 3
+    },
+    {
+      "title": "isatty",
+      "page": 877,
+      "level": 3
+    },
+    {
+      "title": "system",
+      "page": 877,
+      "level": 3
+    },
+    {
+      "title": "Protocol-specific Representation of Datatypes",
+      "page": 878,
+      "level": 2
+    },
+    {
+      "title": "Integral Datatypes",
+      "page": 878,
+      "level": 3
+    },
+    {
+      "title": "Pointer Values",
+      "page": 878,
+      "level": 3
+    },
+    {
+      "title": "Memory Transfer",
+      "page": 878,
+      "level": 3
+    },
+    {
+      "title": "struct stat",
+      "page": 879,
+      "level": 3
+    },
+    {
+      "title": "struct timeval",
+      "page": 879,
+      "level": 3
+    },
+    {
+      "title": "Constants",
+      "page": 880,
+      "level": 2
+    },
+    {
+      "title": "Open Flags",
+      "page": 880,
+      "level": 3
+    },
+    {
+      "title": "mode_t Values",
+      "page": 880,
+      "level": 3
+    },
+    {
+      "title": "Errno Values",
+      "page": 880,
+      "level": 3
+    },
+    {
+      "title": "Lseek Flags",
+      "page": 881,
+      "level": 3
+    },
+    {
+      "title": "Limits",
+      "page": 881,
+      "level": 3
+    },
+    {
+      "title": "File-I/O Examples",
+      "page": 881,
+      "level": 2
+    },
+    {
+      "title": "Library List Format",
+      "page": 881,
+      "level": 1
+    },
+    {
+      "title": "Library List Format for SVR4 Targets",
+      "page": 882,
+      "level": 1
+    },
+    {
+      "title": "Memory Map Format",
+      "page": 883,
+      "level": 1
+    },
+    {
+      "title": "Thread List Format",
+      "page": 884,
+      "level": 1
+    },
+    {
+      "title": "Traceframe Info Format",
+      "page": 885,
+      "level": 1
+    },
+    {
+      "title": "Branch Trace Format",
+      "page": 885,
+      "level": 1
+    },
+    {
+      "title": "Branch Trace Configuration Format",
+      "page": 886,
+      "level": 1
+    },
+    {
+      "title": "The GDB Agent Expression Mechanism",
+      "page": 887,
+      "level": 0
+    },
+    {
+      "title": "General Bytecode Design",
+      "page": 887,
+      "level": 1
+    },
+    {
+      "title": "Bytecode Descriptions",
+      "page": 889,
+      "level": 1
+    },
+    {
+      "title": "Using Agent Expressions",
+      "page": 894,
+      "level": 1
+    },
+    {
+      "title": "Varying Target Capabilities",
+      "page": 895,
+      "level": 1
+    },
+    {
+      "title": "Rationale",
+      "page": 895,
+      "level": 1
+    },
+    {
+      "title": "Target Descriptions",
+      "page": 899,
+      "level": 0
+    },
+    {
+      "title": "Retrieving Descriptions",
+      "page": 899,
+      "level": 1
+    },
+    {
+      "title": "Target Description Format",
+      "page": 899,
+      "level": 1
+    },
+    {
+      "title": "Inclusion",
+      "page": 900,
+      "level": 2
+    },
+    {
+      "title": "Architecture",
+      "page": 900,
+      "level": 2
+    },
+    {
+      "title": "OS ABI",
+      "page": 901,
+      "level": 2
+    },
+    {
+      "title": "Compatible Architecture",
+      "page": 901,
+      "level": 2
+    },
+    {
+      "title": "Features",
+      "page": 901,
+      "level": 2
+    },
+    {
+      "title": "Types",
+      "page": 901,
+      "level": 2
+    },
+    {
+      "title": "Registers",
+      "page": 902,
+      "level": 2
+    },
+    {
+      "title": "Predefined Target Types",
+      "page": 903,
+      "level": 1
+    },
+    {
+      "title": "Enum Target Types",
+      "page": 904,
+      "level": 1
+    },
+    {
+      "title": "Standard Target Features",
+      "page": 905,
+      "level": 1
+    },
+    {
+      "title": "AArch64 Features",
+      "page": 905,
+      "level": 2
+    },
+    {
+      "title": "AArch64 core registers feature",
+      "page": 905,
+      "level": 3
+    },
+    {
+      "title": "AArch64 floating-point registers feature",
+      "page": 905,
+      "level": 3
+    },
+    {
+      "title": "AArch64 SVE registers feature",
+      "page": 906,
+      "level": 3
+    },
+    {
+      "title": "AArch64 Pointer Authentication registers feature",
+      "page": 907,
+      "level": 3
+    },
+    {
+      "title": "AArch64 TLS registers feature",
+      "page": 907,
+      "level": 3
+    },
+    {
+      "title": "AArch64 MTE registers feature",
+      "page": 908,
+      "level": 3
+    },
+    {
+      "title": "AArch64 SME registers feature",
+      "page": 908,
+      "level": 3
+    },
+    {
+      "title": "AArch64 SME2 registers feature",
+      "page": 908,
+      "level": 3
+    },
+    {
+      "title": "AArch64 GCS registers feature",
+      "page": 909,
+      "level": 3
+    },
+    {
+      "title": "AArch64 FPMR feature",
+      "page": 909,
+      "level": 3
+    },
+    {
+      "title": "Alpha Features",
+      "page": 910,
+      "level": 2
+    },
+    {
+      "title": "ARC Features",
+      "page": 910,
+      "level": 2
+    },
+    {
+      "title": "ARM Features",
+      "page": 911,
+      "level": 2
+    },
+    {
+      "title": "Core register set for non-M-profile",
+      "page": 911,
+      "level": 3
+    },
+    {
+      "title": "Core register set for M-profile",
+      "page": 911,
+      "level": 3
+    },
+    {
+      "title": "FPA registers feature (obsolete)",
+      "page": 912,
+      "level": 3
+    },
+    {
+      "title": "M-profile Vector Extension (MVE)",
+      "page": 912,
+      "level": 3
+    },
+    {
+      "title": "XScale iwMMXt feature",
+      "page": 912,
+      "level": 3
+    },
+    {
+      "title": "Vector Floating-Point (VFP) feature",
+      "page": 913,
+      "level": 3
+    },
+    {
+      "title": "NEON architecture feature",
+      "page": 913,
+      "level": 3
+    },
+    {
+      "title": "M-profile Pointer Authentication and Branch Target Identification feature",
+      "page": 913,
+      "level": 3
+    },
+    {
+      "title": "M-profile system registers feature",
+      "page": 913,
+      "level": 3
+    },
+    {
+      "title": "M-profile Security Extensions feature",
+      "page": 914,
+      "level": 3
+    },
+    {
+      "title": "TLS registers feature",
+      "page": 914,
+      "level": 3
+    },
+    {
+      "title": "i386 Features",
+      "page": 914,
+      "level": 2
+    },
+    {
+      "title": "LoongArch Features",
+      "page": 915,
+      "level": 2
+    },
+    {
+      "title": "MicroBlaze Features",
+      "page": 916,
+      "level": 2
+    },
+    {
+      "title": "MIPS Features",
+      "page": 916,
+      "level": 2
+    },
+    {
+      "title": "M68K Features",
+      "page": 916,
+      "level": 2
+    },
+    {
+      "title": "NDS32 Features",
+      "page": 916,
+      "level": 2
+    },
+    {
+      "title": "Openrisc 1000 Features",
+      "page": 917,
+      "level": 2
+    },
+    {
+      "title": "PowerPC Features",
+      "page": 917,
+      "level": 2
+    },
+    {
+      "title": "RISC-V Features",
+      "page": 918,
+      "level": 2
+    },
+    {
+      "title": "RX Features",
+      "page": 919,
+      "level": 2
+    },
+    {
+      "title": "S/390 and System z Features",
+      "page": 919,
+      "level": 2
+    },
+    {
+      "title": "Sparc Features",
+      "page": 919,
+      "level": 2
+    },
+    {
+      "title": "TMS320C6x Features",
+      "page": 920,
+      "level": 2
+    },
+    {
+      "title": "Operating System Information",
+      "page": 921,
+      "level": 0
+    },
+    {
+      "title": "Process list",
+      "page": 921,
+      "level": 1
+    },
+    {
+      "title": "Trace File Format",
+      "page": 923,
+      "level": 0
+    },
+    {
+      "title": ".gdb_index section format",
+      "page": 925,
+      "level": 0
+    },
+    {
+      "title": "Download debugging resources with Debuginfod",
+      "page": 929,
+      "level": 0
+    },
+    {
+      "title": "Debuginfod Settings",
+      "page": 929,
+      "level": 1
+    },
+    {
+      "title": "Manual pages",
+      "page": 931,
+      "level": 0
+    },
+    {
+      "title": "GNU GENERAL PUBLIC LICENSE",
+      "page": 941,
+      "level": 0
+    },
+    {
+      "title": "GNU Free Documentation License",
+      "page": 953,
+      "level": 0
+    },
+    {
+      "title": "Concept Index",
+      "page": 961,
+      "level": 0
+    },
+    {
+      "title": "Command, Variable, and Function Index",
+      "page": 977,
+      "level": 0
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "description": "paper: paper-diffusion",
+  "category": "paper",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "1 Introduction",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "2 Background",
+      "page": 2,
+      "level": 0
+    },
+    {
+      "title": "3 Diffusion models and denoising autoencoders",
+      "page": 3,
+      "level": 0
+    },
+    {
+      "title": "3.1 Forward process",
+      "page": 3,
+      "level": 1
+    },
+    {
+      "title": "3.2 Reverse process",
+      "page": 3,
+      "level": 1
+    },
+    {
+      "title": "3.3 Data scaling and reverse process decoder",
+      "page": 4,
+      "level": 1
+    },
+    {
+      "title": "3.4 Simplified training objective",
+      "page": 4,
+      "level": 1
+    },
+    {
+      "title": "4 Experiments",
+      "page": 5,
+      "level": 0
+    },
+    {
+      "title": "4.1 Sample quality",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "4.2 Reverse process parameterization and training objective ablation",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "4.3 Progressive coding",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "4.4 Interpolation",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "5 Related Work",
+      "page": 8,
+      "level": 0
+    },
+    {
+      "title": "6 Conclusion",
+      "page": 9,
+      "level": 0
+    },
+    {
+      "title": "A Extended derivations",
+      "page": 13,
+      "level": 0
+    },
+    {
+      "title": "B Experimental details",
+      "page": 14,
+      "level": 0
+    },
+    {
+      "title": "C Discussion on related work",
+      "page": 15,
+      "level": 0
+    },
+    {
+      "title": "D Samples",
+      "page": 15,
+      "level": 0
+    }
+  ]
+}

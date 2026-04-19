@@ -1,0 +1,142 @@
+{
+  "description": "novel: novel-dracula",
+  "category": "novel",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Chapter 1",
+      "page": 2,
+      "level": 1
+    },
+    {
+      "title": "Chapter 2",
+      "page": 22,
+      "level": 1
+    },
+    {
+      "title": "Chapter 3",
+      "page": 40,
+      "level": 1
+    },
+    {
+      "title": "Chapter 4",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Chapter 5",
+      "page": 79,
+      "level": 1
+    },
+    {
+      "title": "Chapter 6",
+      "page": 91,
+      "level": 1
+    },
+    {
+      "title": "Chapter 7",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "Chapter 8",
+      "page": 129,
+      "level": 1
+    },
+    {
+      "title": "Chapter 9",
+      "page": 150,
+      "level": 1
+    },
+    {
+      "title": "Chapter 10",
+      "page": 170,
+      "level": 1
+    },
+    {
+      "title": "Chapter 11",
+      "page": 190,
+      "level": 1
+    },
+    {
+      "title": "Chapter 12",
+      "page": 208,
+      "level": 1
+    },
+    {
+      "title": "Chapter 13",
+      "page": 233,
+      "level": 1
+    },
+    {
+      "title": "Chapter 14",
+      "page": 255,
+      "level": 1
+    },
+    {
+      "title": "Chapter 15",
+      "page": 277,
+      "level": 1
+    },
+    {
+      "title": "Chapter 16",
+      "page": 297,
+      "level": 1
+    },
+    {
+      "title": "Chapter 17",
+      "page": 312,
+      "level": 1
+    },
+    {
+      "title": "Chapter 18",
+      "page": 331,
+      "level": 1
+    },
+    {
+      "title": "Chapter 19",
+      "page": 354,
+      "level": 1
+    },
+    {
+      "title": "Chapter 20",
+      "page": 373,
+      "level": 1
+    },
+    {
+      "title": "Chapter 21",
+      "page": 394,
+      "level": 1
+    },
+    {
+      "title": "Chapter 22",
+      "page": 415,
+      "level": 1
+    },
+    {
+      "title": "Chapter 23",
+      "page": 433,
+      "level": 1
+    },
+    {
+      "title": "Chapter 24",
+      "page": 452,
+      "level": 1
+    },
+    {
+      "title": "Chapter 25",
+      "page": 472,
+      "level": 1
+    },
+    {
+      "title": "Chapter 26",
+      "page": 493,
+      "level": 1
+    },
+    {
+      "title": "Chapter 27",
+      "page": 517,
+      "level": 1
+    }
+  ]
+}

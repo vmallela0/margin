@@ -1,0 +1,21 @@
+{
+  "description": "Textbook: running header on every page, two-line chapter openings (label + subtitle).",
+  "chapters": [
+    {
+      "title": "Chapter 1: First Principles",
+      "page": 1
+    },
+    {
+      "title": "Chapter 2: Foundations",
+      "page": 7
+    },
+    {
+      "title": "Chapter 3: Patterns",
+      "page": 13
+    },
+    {
+      "title": "Chapter 4: Advanced Topics",
+      "page": 19
+    }
+  ]
+}

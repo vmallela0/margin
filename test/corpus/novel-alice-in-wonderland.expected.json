@@ -1,0 +1,72 @@
+{
+  "description": "novel: novel-alice-in-wonderland",
+  "category": "novel",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Alice’s Adventures in Wonderland",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "Chapter I. Down the Rabbit-Hole",
+      "page": 4,
+      "level": 1
+    },
+    {
+      "title": "Chapter II. The Pool of Tears",
+      "page": 12,
+      "level": 1
+    },
+    {
+      "title": "Chapter III. A Caucus-Race and a Long Tale",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "Chapter IV. The Rabbit Sends in a Little Bill",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Chapter V. Advice from a Caterpillar",
+      "page": 37,
+      "level": 1
+    },
+    {
+      "title": "Chapter VI. Pig and Pepper",
+      "page": 46,
+      "level": 1
+    },
+    {
+      "title": "Chapter VII. A Mad Tea-Party",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "Chapter VIII. The Queen’s Croquet-Ground",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Chapter IX. The Mock Turtle’s Story",
+      "page": 76,
+      "level": 1
+    },
+    {
+      "title": "Chapter X. The Lobster Quadrille",
+      "page": 86,
+      "level": 1
+    },
+    {
+      "title": "Chapter XI. Who Stole the Tarts?",
+      "page": 95,
+      "level": 1
+    },
+    {
+      "title": "Chapter XII. Alice’s Evidence",
+      "page": 103,
+      "level": 1
+    }
+  ]
+}

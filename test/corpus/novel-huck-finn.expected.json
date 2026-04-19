@@ -1,0 +1,227 @@
+{
+  "description": "novel: novel-huck-finn",
+  "category": "novel",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "The Adventures of Huckleberry Finn",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "NOTICE",
+      "page": 2,
+      "level": 1
+    },
+    {
+      "title": "EXPLANATORY",
+      "page": 3,
+      "level": 1
+    },
+    {
+      "title": "Chapter I",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "Chapter II",
+      "page": 10,
+      "level": 1
+    },
+    {
+      "title": "Chapter III",
+      "page": 18,
+      "level": 1
+    },
+    {
+      "title": "Chapter IV",
+      "page": 24,
+      "level": 1
+    },
+    {
+      "title": "Chapter V",
+      "page": 29,
+      "level": 1
+    },
+    {
+      "title": "Chapter VI",
+      "page": 35,
+      "level": 1
+    },
+    {
+      "title": "Chapter VII",
+      "page": 45,
+      "level": 1
+    },
+    {
+      "title": "Chapter VIII",
+      "page": 54,
+      "level": 1
+    },
+    {
+      "title": "Chapter IX",
+      "page": 69,
+      "level": 1
+    },
+    {
+      "title": "Chapter X",
+      "page": 75,
+      "level": 1
+    },
+    {
+      "title": "Chapter XI",
+      "page": 80,
+      "level": 1
+    },
+    {
+      "title": "Chapter XII",
+      "page": 90,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIII",
+      "page": 100,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIV",
+      "page": 108,
+      "level": 1
+    },
+    {
+      "title": "Chapter XV",
+      "page": 114,
+      "level": 1
+    },
+    {
+      "title": "Chapter XVI",
+      "page": 122,
+      "level": 1
+    },
+    {
+      "title": "Chapter XVII",
+      "page": 134,
+      "level": 1
+    },
+    {
+      "title": "Chapter XVIII",
+      "page": 147,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIX",
+      "page": 163,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXI",
+      "page": 186,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXII",
+      "page": 200,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXIII",
+      "page": 208,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXIV",
+      "page": 216,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXV",
+      "page": 224,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXVI",
+      "page": 234,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXVII",
+      "page": 245,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXVIII",
+      "page": 254,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXIX",
+      "page": 267,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXX",
+      "page": 280,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXI",
+      "page": 285,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXII",
+      "page": 297,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXIII",
+      "page": 305,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXIV",
+      "page": 315,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXV",
+      "page": 323,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXVI",
+      "page": 333,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXVII",
+      "page": 341,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXVIII",
+      "page": 350,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXIX",
+      "page": 359,
+      "level": 1
+    },
+    {
+      "title": "Chapter XL",
+      "page": 367,
+      "level": 1
+    },
+    {
+      "title": "Chapter XLI",
+      "page": 375,
+      "level": 1
+    },
+    {
+      "title": "Chapter XLII",
+      "page": 384,
+      "level": 1
+    }
+  ]
+}

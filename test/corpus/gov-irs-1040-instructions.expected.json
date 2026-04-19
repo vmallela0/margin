@@ -1,0 +1,1697 @@
+{
+  "description": "report: gov-irs-1040-instructions",
+  "category": "report",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Contents",
+      "page": 2,
+      "level": 0
+    },
+    {
+      "title": "What’s New",
+      "page": 6,
+      "level": 0
+    },
+    {
+      "title": "Introduction",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "Filing Requirements",
+      "page": 8,
+      "level": 0
+    },
+    {
+      "title": "Introduction",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "Do You Have To File?",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "When and Where Should You File?",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "What if You Can’t File on Time?",
+      "page": 8,
+      "level": 2
+    },
+    {
+      "title": "Private Delivery Services",
+      "page": 9,
+      "level": 2
+    },
+    {
+      "title": "Line Instructions for Forms 1040 and 1040-SR",
+      "page": 12,
+      "level": 0
+    },
+    {
+      "title": "Introduction",
+      "page": 12,
+      "level": 1
+    },
+    {
+      "title": "Name and Address",
+      "page": 12,
+      "level": 1
+    },
+    {
+      "title": "Name Change",
+      "page": 12,
+      "level": 2
+    },
+    {
+      "title": "Address Change",
+      "page": 12,
+      "level": 2
+    },
+    {
+      "title": "P.O. Box",
+      "page": 12,
+      "level": 2
+    },
+    {
+      "title": "Foreign Address",
+      "page": 12,
+      "level": 2
+    },
+    {
+      "title": "Death of a Taxpayer",
+      "page": 12,
+      "level": 2
+    },
+    {
+      "title": "Social Security Number (SSN)",
+      "page": 12,
+      "level": 1
+    },
+    {
+      "title": "IRS Individual Taxpayer Identification Numbers (ITINs) for Aliens",
+      "page": 13,
+      "level": 2
+    },
+    {
+      "title": "Nonresident Alien Spouse",
+      "page": 13,
+      "level": 2
+    },
+    {
+      "title": "2025 Residency",
+      "page": 13,
+      "level": 2
+    },
+    {
+      "title": "Presidential Election Campaign Fund",
+      "page": 13,
+      "level": 2
+    },
+    {
+      "title": "Filing Status",
+      "page": 13,
+      "level": 1
+    },
+    {
+      "title": "Single",
+      "page": 13,
+      "level": 2
+    },
+    {
+      "title": "Married Filing Jointly",
+      "page": 13,
+      "level": 2
+    },
+    {
+      "title": "Married Filing Separately",
+      "page": 14,
+      "level": 2
+    },
+    {
+      "title": "Head of Household",
+      "page": 14,
+      "level": 2
+    },
+    {
+      "title": "Qualifying Surviving Spouse",
+      "page": 15,
+      "level": 2
+    },
+    {
+      "title": "Digital Assets",
+      "page": 15,
+      "level": 2
+    },
+    {
+      "title": "How To Report Digital Asset Transactions",
+      "page": 16,
+      "level": 3
+    },
+    {
+      "title": "Dependents",
+      "page": 16,
+      "level": 1
+    },
+    {
+      "title": "Who Qualifies as Your Dependent",
+      "page": 17,
+      "level": 1
+    },
+    {
+      "title": "Definitions and Special Rules",
+      "page": 20,
+      "level": 2
+    },
+    {
+      "title": "Income",
+      "page": 23,
+      "level": 1
+    },
+    {
+      "title": "Forgiveness of Paycheck Protection Program (PPP) Loans",
+      "page": 23,
+      "level": 2
+    },
+    {
+      "title": "Foreign-Source Income",
+      "page": 23,
+      "level": 2
+    },
+    {
+      "title": "Chapter 11 Bankruptcy Cases",
+      "page": 23,
+      "level": 2
+    },
+    {
+      "title": "Community Property States",
+      "page": 23,
+      "level": 2
+    },
+    {
+      "title": "Rounding Off to Whole Dollars",
+      "page": 23,
+      "level": 2
+    },
+    {
+      "title": "Line 1a",
+      "page": 23,
+      "level": 2
+    },
+    {
+      "title": "Total Amount From Form(s) W-2, Box 1",
+      "page": 23,
+      "level": 3
+    },
+    {
+      "title": "Line 1b",
+      "page": 24,
+      "level": 2
+    },
+    {
+      "title": "Household Employee Wages Not Reported on Form(s) W-2",
+      "page": 24,
+      "level": 3
+    },
+    {
+      "title": "Line 1c",
+      "page": 24,
+      "level": 2
+    },
+    {
+      "title": "Tip Income Not Reported on Line 1a",
+      "page": 24,
+      "level": 3
+    },
+    {
+      "title": "Line 1d",
+      "page": 24,
+      "level": 2
+    },
+    {
+      "title": "Medicaid Waiver Payments Not Reported on Form(s) W-2, Box 1",
+      "page": 24,
+      "level": 3
+    },
+    {
+      "title": "Line 1e",
+      "page": 24,
+      "level": 2
+    },
+    {
+      "title": "Taxable Dependent Care Benefits From Form 2441, Line 26",
+      "page": 24,
+      "level": 3
+    },
+    {
+      "title": "Line 1f",
+      "page": 24,
+      "level": 2
+    },
+    {
+      "title": "Employer-Provided Adoption Benefits From Form 8839, Line 31",
+      "page": 24,
+      "level": 3
+    },
+    {
+      "title": "Line 1g",
+      "page": 24,
+      "level": 2
+    },
+    {
+      "title": "Wages From Form 8919, Line 6",
+      "page": 24,
+      "level": 3
+    },
+    {
+      "title": "Line 1h",
+      "page": 24,
+      "level": 2
+    },
+    {
+      "title": "Other Earned Income",
+      "page": 24,
+      "level": 3
+    },
+    {
+      "title": "Line 1i",
+      "page": 25,
+      "level": 2
+    },
+    {
+      "title": "Nontaxable Combat Pay Election",
+      "page": 25,
+      "level": 3
+    },
+    {
+      "title": "Were You a Statutory Employee?",
+      "page": 25,
+      "level": 2
+    },
+    {
+      "title": "Missing or Incorrect Form W-2?",
+      "page": 25,
+      "level": 2
+    },
+    {
+      "title": "Line 2a",
+      "page": 25,
+      "level": 2
+    },
+    {
+      "title": "Tax-Exempt Interest",
+      "page": 25,
+      "level": 3
+    },
+    {
+      "title": "Line 2b",
+      "page": 25,
+      "level": 2
+    },
+    {
+      "title": "Taxable Interest",
+      "page": 25,
+      "level": 3
+    },
+    {
+      "title": "Line 3a",
+      "page": 25,
+      "level": 2
+    },
+    {
+      "title": "Qualified Dividends",
+      "page": 25,
+      "level": 3
+    },
+    {
+      "title": "Line 3b",
+      "page": 26,
+      "level": 2
+    },
+    {
+      "title": "Ordinary Dividends",
+      "page": 26,
+      "level": 3
+    },
+    {
+      "title": "Nondividend Distributions",
+      "page": 26,
+      "level": 3
+    },
+    {
+      "title": "Lines 4a, 4b, and 4c",
+      "page": 26,
+      "level": 2
+    },
+    {
+      "title": "Lines 4a and 4b IRA Distributions",
+      "page": 26,
+      "level": 3
+    },
+    {
+      "title": "Line 4c",
+      "page": 28,
+      "level": 2
+    },
+    {
+      "title": "Lines 5a, 5b, and 5c",
+      "page": 28,
+      "level": 2
+    },
+    {
+      "title": "Lines 5a and 5b Pensions and Annuities",
+      "page": 28,
+      "level": 3
+    },
+    {
+      "title": "Fully Taxable Pensions and Annuities",
+      "page": 28,
+      "level": 4
+    },
+    {
+      "title": "Partially Taxable Pensions and Annuities",
+      "page": 28,
+      "level": 4
+    },
+    {
+      "title": "Insurance Premiums for Retired Public Safety Officers",
+      "page": 28,
+      "level": 4
+    },
+    {
+      "title": "Simplified Method",
+      "page": 30,
+      "level": 4
+    },
+    {
+      "title": "Annuity Starting Date",
+      "page": 30,
+      "level": 4
+    },
+    {
+      "title": "Age (or Combined Ages) at Annuity Starting Date",
+      "page": 30,
+      "level": 4
+    },
+    {
+      "title": "Cost",
+      "page": 30,
+      "level": 4
+    },
+    {
+      "title": "Rollovers",
+      "page": 30,
+      "level": 4
+    },
+    {
+      "title": "Lump-Sum Distributions",
+      "page": 30,
+      "level": 4
+    },
+    {
+      "title": "Line 5c",
+      "page": 30,
+      "level": 2
+    },
+    {
+      "title": "Lines 6a, 6b, 6c, and 6d",
+      "page": 31,
+      "level": 2
+    },
+    {
+      "title": "Lines 6a and 6b Social Security Benefits",
+      "page": 31,
+      "level": 3
+    },
+    {
+      "title": "Line 6c",
+      "page": 31,
+      "level": 3
+    },
+    {
+      "title": "Line 6d",
+      "page": 31,
+      "level": 3
+    },
+    {
+      "title": "Line 7a",
+      "page": 31,
+      "level": 2
+    },
+    {
+      "title": "Capital Gain or (Loss)",
+      "page": 31,
+      "level": 3
+    },
+    {
+      "title": "Line 7b",
+      "page": 33,
+      "level": 3
+    },
+    {
+      "title": "Total Income and Adjusted Gross Income",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "Line 10",
+      "page": 33,
+      "level": 2
+    },
+    {
+      "title": "Tax and Credits",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "Line 12a",
+      "page": 33,
+      "level": 2
+    },
+    {
+      "title": "Line 12b",
+      "page": 33,
+      "level": 2
+    },
+    {
+      "title": "Line 12c",
+      "page": 33,
+      "level": 2
+    },
+    {
+      "title": "Line 12d",
+      "page": 33,
+      "level": 2
+    },
+    {
+      "title": "Blindness",
+      "page": 33,
+      "level": 2
+    },
+    {
+      "title": "Line 12e Standard Deduction or Itemized Deductions",
+      "page": 34,
+      "level": 2
+    },
+    {
+      "title": "Standard Deduction",
+      "page": 34,
+      "level": 2
+    },
+    {
+      "title": "Itemized Deductions",
+      "page": 34,
+      "level": 2
+    },
+    {
+      "title": "Line 13a",
+      "page": 34,
+      "level": 2
+    },
+    {
+      "title": "Qualified Business Income Deduction (Section 199A Deduction)",
+      "page": 34,
+      "level": 3
+    },
+    {
+      "title": "Line 13b",
+      "page": 34,
+      "level": 2
+    },
+    {
+      "title": "Additional Deductions From Schedule 1-A, Line 38",
+      "page": 34,
+      "level": 3
+    },
+    {
+      "title": "Line 16",
+      "page": 34,
+      "level": 2
+    },
+    {
+      "title": "Tax",
+      "page": 34,
+      "level": 3
+    },
+    {
+      "title": "Line 19",
+      "page": 39,
+      "level": 2
+    },
+    {
+      "title": "Child Tax Credit and Credit for Other Dependents",
+      "page": 39,
+      "level": 3
+    },
+    {
+      "title": "Payments",
+      "page": 39,
+      "level": 1
+    },
+    {
+      "title": "Line 25 Federal Income Tax Withheld",
+      "page": 39,
+      "level": 2
+    },
+    {
+      "title": "Line 25a—Form(s) W-2",
+      "page": 39,
+      "level": 3
+    },
+    {
+      "title": "Line 25b—Form(s) 1099",
+      "page": 39,
+      "level": 3
+    },
+    {
+      "title": "Line 25c—Other Forms",
+      "page": 39,
+      "level": 3
+    },
+    {
+      "title": "Line 26",
+      "page": 39,
+      "level": 2
+    },
+    {
+      "title": "2025 Estimated Tax Payments",
+      "page": 39,
+      "level": 3
+    },
+    {
+      "title": "Lines 27a, 27b, and 27c— Earned Income Credit (EIC)",
+      "page": 40,
+      "level": 2
+    },
+    {
+      "title": "Line 27b",
+      "page": 43,
+      "level": 3
+    },
+    {
+      "title": "Line 27c",
+      "page": 43,
+      "level": 3
+    },
+    {
+      "title": "Definitions and Special Rules",
+      "page": 43,
+      "level": 3
+    },
+    {
+      "title": "Line 28",
+      "page": 61,
+      "level": 2
+    },
+    {
+      "title": "Additional Child Tax Credit",
+      "page": 61,
+      "level": 3
+    },
+    {
+      "title": "Line 29",
+      "page": 61,
+      "level": 2
+    },
+    {
+      "title": "American Opportunity Credit",
+      "page": 61,
+      "level": 3
+    },
+    {
+      "title": "Line 30",
+      "page": 61,
+      "level": 2
+    },
+    {
+      "title": "Refundable Adoption Credit",
+      "page": 61,
+      "level": 3
+    },
+    {
+      "title": "Refund",
+      "page": 61,
+      "level": 1
+    },
+    {
+      "title": "Line 34",
+      "page": 61,
+      "level": 2
+    },
+    {
+      "title": "Amount Overpaid",
+      "page": 61,
+      "level": 3
+    },
+    {
+      "title": "Refund Offset",
+      "page": 61,
+      "level": 3
+    },
+    {
+      "title": "Deposit Refund Into Multiple Accounts",
+      "page": 61,
+      "level": 3
+    },
+    {
+      "title": "Injured Spouse",
+      "page": 62,
+      "level": 3
+    },
+    {
+      "title": "Lines 35a Through 35d",
+      "page": 62,
+      "level": 2
+    },
+    {
+      "title": "Amount Refunded to You",
+      "page": 62,
+      "level": 3
+    },
+    {
+      "title": "Benefits of Direct Deposit",
+      "page": 62,
+      "level": 4
+    },
+    {
+      "title": "Line 35b",
+      "page": 63,
+      "level": 4
+    },
+    {
+      "title": "Line 35c",
+      "page": 63,
+      "level": 4
+    },
+    {
+      "title": "Line 35d",
+      "page": 63,
+      "level": 4
+    },
+    {
+      "title": "Reasons Your Direct Deposit Request Will Be Rejected",
+      "page": 63,
+      "level": 4
+    },
+    {
+      "title": "Line 36",
+      "page": 63,
+      "level": 2
+    },
+    {
+      "title": "Applied to Your 2026 Estimated Tax",
+      "page": 63,
+      "level": 3
+    },
+    {
+      "title": "Amount You Owe",
+      "page": 63,
+      "level": 1
+    },
+    {
+      "title": "Line 37",
+      "page": 64,
+      "level": 2
+    },
+    {
+      "title": "Amount You Owe",
+      "page": 64,
+      "level": 3
+    },
+    {
+      "title": "Pay Online",
+      "page": 64,
+      "level": 4
+    },
+    {
+      "title": "Pay by Phone",
+      "page": 64,
+      "level": 4
+    },
+    {
+      "title": "Pay by Mobile Device",
+      "page": 64,
+      "level": 4
+    },
+    {
+      "title": "Pay by Cash",
+      "page": 64,
+      "level": 4
+    },
+    {
+      "title": "Pay by Check or Money Order",
+      "page": 64,
+      "level": 4
+    },
+    {
+      "title": "What if You Can’t Pay?",
+      "page": 64,
+      "level": 3
+    },
+    {
+      "title": "Line 38",
+      "page": 65,
+      "level": 2
+    },
+    {
+      "title": "Estimated Tax Penalty",
+      "page": 65,
+      "level": 3
+    },
+    {
+      "title": "Figuring the Penalty",
+      "page": 65,
+      "level": 4
+    },
+    {
+      "title": "Third Party Designee",
+      "page": 65,
+      "level": 2
+    },
+    {
+      "title": "Sign Your Return",
+      "page": 65,
+      "level": 1
+    },
+    {
+      "title": "Court-Appointed Conservator, Guardian, or Other Fiduciary",
+      "page": 66,
+      "level": 2
+    },
+    {
+      "title": "Child’s Return",
+      "page": 66,
+      "level": 2
+    },
+    {
+      "title": "Requirements for a Paper Return",
+      "page": 66,
+      "level": 2
+    },
+    {
+      "title": "Requirements for an Electronic Return",
+      "page": 66,
+      "level": 2
+    },
+    {
+      "title": "Identity Protection PIN",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Phone Number and Email Address",
+      "page": 66,
+      "level": 2
+    },
+    {
+      "title": "Paid Preparer Must Sign Your Return",
+      "page": 67,
+      "level": 1
+    },
+    {
+      "title": "Assemble Your Return",
+      "page": 67,
+      "level": 1
+    },
+    {
+      "title": "2025 Tax Table",
+      "page": 68,
+      "level": 0
+    },
+    {
+      "title": "General Information",
+      "page": 81,
+      "level": 0
+    },
+    {
+      "title": "Introduction",
+      "page": 81,
+      "level": 1
+    },
+    {
+      "title": "How To Avoid Common Mistakes",
+      "page": 81,
+      "level": 1
+    },
+    {
+      "title": "Innocent Spouse Relief",
+      "page": 81,
+      "level": 1
+    },
+    {
+      "title": "Income Tax Withholding and Estimated Tax Payments for 2026",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "Secure Your Tax Records From Identity Theft",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "How Do You Make a Gift To Reduce Debt Held By the Public?",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "How Long Should Records Be Kept?",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "Amended Return",
+      "page": 83,
+      "level": 1
+    },
+    {
+      "title": "Need a Copy of Your Tax Return Information?",
+      "page": 83,
+      "level": 1
+    },
+    {
+      "title": "Past Due Returns",
+      "page": 83,
+      "level": 1
+    },
+    {
+      "title": "How To Get Tax Help",
+      "page": 83,
+      "level": 1
+    },
+    {
+      "title": "Interest and Penalties",
+      "page": 86,
+      "level": 1
+    },
+    {
+      "title": "Interest",
+      "page": 86,
+      "level": 2
+    },
+    {
+      "title": "Penalties",
+      "page": 86,
+      "level": 2
+    },
+    {
+      "title": "Refund Information",
+      "page": 87,
+      "level": 0
+    },
+    {
+      "title": "Instructions for Schedule 1 Additional Income and Adjustments to Income",
+      "page": 88,
+      "level": 0
+    },
+    {
+      "title": "General Instructions",
+      "page": 88,
+      "level": 1
+    },
+    {
+      "title": "Form(s) 1099-K",
+      "page": 88,
+      "level": 2
+    },
+    {
+      "title": "Additional Income",
+      "page": 88,
+      "level": 1
+    },
+    {
+      "title": "Line 1",
+      "page": 88,
+      "level": 2
+    },
+    {
+      "title": "Taxable Refunds, Credits, or Offsets of State and Local Income Taxes",
+      "page": 88,
+      "level": 3
+    },
+    {
+      "title": "Lines 2a and 2b",
+      "page": 89,
+      "level": 2
+    },
+    {
+      "title": "Alimony Received",
+      "page": 89,
+      "level": 3
+    },
+    {
+      "title": "Line 2a",
+      "page": 89,
+      "level": 4
+    },
+    {
+      "title": "Line 2b",
+      "page": 89,
+      "level": 4
+    },
+    {
+      "title": "Line 3",
+      "page": 89,
+      "level": 2
+    },
+    {
+      "title": "Business Income or (Loss)",
+      "page": 89,
+      "level": 3
+    },
+    {
+      "title": "Line 4",
+      "page": 89,
+      "level": 2
+    },
+    {
+      "title": "Other Gains or (Losses)",
+      "page": 89,
+      "level": 3
+    },
+    {
+      "title": "Line 7",
+      "page": 89,
+      "level": 2
+    },
+    {
+      "title": "Unemployment Compensation",
+      "page": 89,
+      "level": 3
+    },
+    {
+      "title": "Lines 8a Through 8z",
+      "page": 89,
+      "level": 2
+    },
+    {
+      "title": "Other Income",
+      "page": 89,
+      "level": 3
+    },
+    {
+      "title": "Line 8a",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8b",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8c",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8d",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8e",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8f",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8h",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8i",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8j",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8k",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8l",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8m",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8n",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8o",
+      "page": 91,
+      "level": 3
+    },
+    {
+      "title": "Line 8p",
+      "page": 92,
+      "level": 3
+    },
+    {
+      "title": "Line 8q",
+      "page": 92,
+      "level": 3
+    },
+    {
+      "title": "Line 8r",
+      "page": 92,
+      "level": 3
+    },
+    {
+      "title": "Line 8s",
+      "page": 92,
+      "level": 3
+    },
+    {
+      "title": "Line 8t",
+      "page": 92,
+      "level": 3
+    },
+    {
+      "title": "Line 8u",
+      "page": 92,
+      "level": 3
+    },
+    {
+      "title": "Line 8v",
+      "page": 92,
+      "level": 3
+    },
+    {
+      "title": "Line 8z",
+      "page": 92,
+      "level": 3
+    },
+    {
+      "title": "Adjustments to Income",
+      "page": 93,
+      "level": 1
+    },
+    {
+      "title": "Line 11",
+      "page": 93,
+      "level": 2
+    },
+    {
+      "title": "Educator Expenses",
+      "page": 93,
+      "level": 3
+    },
+    {
+      "title": "Line 12",
+      "page": 93,
+      "level": 2
+    },
+    {
+      "title": "Certain Business Expenses of Reservists, Performing Artists, and Fee-Basis Government Officials",
+      "page": 93,
+      "level": 3
+    },
+    {
+      "title": "Line 13",
+      "page": 93,
+      "level": 2
+    },
+    {
+      "title": "Health Savings Account (HSA) Deduction",
+      "page": 93,
+      "level": 3
+    },
+    {
+      "title": "Line 14",
+      "page": 93,
+      "level": 2
+    },
+    {
+      "title": "Moving Expenses",
+      "page": 93,
+      "level": 3
+    },
+    {
+      "title": "Line 15",
+      "page": 93,
+      "level": 2
+    },
+    {
+      "title": "Deductible Part of Self-Employment Tax",
+      "page": 93,
+      "level": 3
+    },
+    {
+      "title": "Line 16",
+      "page": 93,
+      "level": 2
+    },
+    {
+      "title": "Self-Employed SEP, SIMPLE, and Qualified Plans",
+      "page": 93,
+      "level": 3
+    },
+    {
+      "title": "Line 17",
+      "page": 94,
+      "level": 2
+    },
+    {
+      "title": "Self-Employed Health Insurance Deduction",
+      "page": 94,
+      "level": 3
+    },
+    {
+      "title": "Line 18",
+      "page": 95,
+      "level": 2
+    },
+    {
+      "title": "Penalty on Early Withdrawal of Savings",
+      "page": 95,
+      "level": 3
+    },
+    {
+      "title": "Lines 19a, 19b, and 19c",
+      "page": 95,
+      "level": 2
+    },
+    {
+      "title": "Alimony Paid",
+      "page": 95,
+      "level": 3
+    },
+    {
+      "title": "Line 19a",
+      "page": 95,
+      "level": 4
+    },
+    {
+      "title": "Line 19c",
+      "page": 95,
+      "level": 3
+    },
+    {
+      "title": "Line 20",
+      "page": 95,
+      "level": 2
+    },
+    {
+      "title": "IRA Deduction",
+      "page": 95,
+      "level": 3
+    },
+    {
+      "title": "Line 21",
+      "page": 98,
+      "level": 2
+    },
+    {
+      "title": "Student Loan Interest Deduction",
+      "page": 98,
+      "level": 3
+    },
+    {
+      "title": "Line 22",
+      "page": 99,
+      "level": 2
+    },
+    {
+      "title": "Line 23",
+      "page": 99,
+      "level": 2
+    },
+    {
+      "title": "Archer MSA Deduction",
+      "page": 99,
+      "level": 3
+    },
+    {
+      "title": "Lines 24a Through 24z",
+      "page": 99,
+      "level": 2
+    },
+    {
+      "title": "Line 24a",
+      "page": 99,
+      "level": 3
+    },
+    {
+      "title": "Line 24b",
+      "page": 99,
+      "level": 3
+    },
+    {
+      "title": "Line 24c",
+      "page": 99,
+      "level": 3
+    },
+    {
+      "title": "Line 24d",
+      "page": 99,
+      "level": 3
+    },
+    {
+      "title": "Line 24e",
+      "page": 99,
+      "level": 3
+    },
+    {
+      "title": "Line 24f",
+      "page": 100,
+      "level": 3
+    },
+    {
+      "title": "Line 24g",
+      "page": 100,
+      "level": 3
+    },
+    {
+      "title": "Line 24h",
+      "page": 100,
+      "level": 3
+    },
+    {
+      "title": "Line 24i",
+      "page": 100,
+      "level": 3
+    },
+    {
+      "title": "Line 24j",
+      "page": 100,
+      "level": 3
+    },
+    {
+      "title": "Line 24k",
+      "page": 100,
+      "level": 3
+    },
+    {
+      "title": "Line 24z",
+      "page": 100,
+      "level": 3
+    },
+    {
+      "title": "Instructions for Schedule 1-A Additional Deductions",
+      "page": 101,
+      "level": 0
+    },
+    {
+      "title": "General Instructions",
+      "page": 101,
+      "level": 1
+    },
+    {
+      "title": "Part I Modified Adjusted Gross Income (MAGI) Amount",
+      "page": 101,
+      "level": 1
+    },
+    {
+      "title": "Part II No Tax on Tips",
+      "page": 101,
+      "level": 1
+    },
+    {
+      "title": "Qualified Tips",
+      "page": 101,
+      "level": 2
+    },
+    {
+      "title": "Part III No Tax on Overtime",
+      "page": 106,
+      "level": 1
+    },
+    {
+      "title": "Part IV No Tax on Car Loan Interest",
+      "page": 109,
+      "level": 1
+    },
+    {
+      "title": "Part V Enhanced Deduction for Seniors",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "Instructions for Schedule 2 Additional Taxes",
+      "page": 111,
+      "level": 0
+    },
+    {
+      "title": "General Instructions",
+      "page": 111,
+      "level": 1
+    },
+    {
+      "title": "Specific Instructions",
+      "page": 111,
+      "level": 1
+    },
+    {
+      "title": "Lines 1a Through 1z",
+      "page": 111,
+      "level": 2
+    },
+    {
+      "title": "Additions to Tax",
+      "page": 111,
+      "level": 3
+    },
+    {
+      "title": "Line 2",
+      "page": 112,
+      "level": 2
+    },
+    {
+      "title": "Alternative Minimum Tax (AMT)",
+      "page": 112,
+      "level": 3
+    },
+    {
+      "title": "Line 4",
+      "page": 112,
+      "level": 2
+    },
+    {
+      "title": "Self-employment Tax",
+      "page": 112,
+      "level": 3
+    },
+    {
+      "title": "Line 5",
+      "page": 112,
+      "level": 2
+    },
+    {
+      "title": "Unreported Social Security and Medicare Tax From Form 4137",
+      "page": 112,
+      "level": 3
+    },
+    {
+      "title": "Line 6",
+      "page": 112,
+      "level": 2
+    },
+    {
+      "title": "Uncollected Social Security and Medicare Tax From Form 8919",
+      "page": 112,
+      "level": 3
+    },
+    {
+      "title": "Line 8",
+      "page": 112,
+      "level": 2
+    },
+    {
+      "title": "Additional Tax on IRAs, Other Qualified Retirement Plans, etc.",
+      "page": 112,
+      "level": 3
+    },
+    {
+      "title": "Line 9",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Household Employment Taxes",
+      "page": 113,
+      "level": 3
+    },
+    {
+      "title": "Line 10",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Reserved for Future Use",
+      "page": 113,
+      "level": 3
+    },
+    {
+      "title": "Line 11",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Additional Medicare Tax",
+      "page": 113,
+      "level": 3
+    },
+    {
+      "title": "Line 12",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Net Investment Income Tax",
+      "page": 113,
+      "level": 3
+    },
+    {
+      "title": "Line 13",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Line 14",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Interest on Tax Due on Installment Income From the Sale of Certain Residential Lots and Timeshares ",
+      "page": 113,
+      "level": 3
+    },
+    {
+      "title": "Line 15",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Interest on the Deferred Tax on Gain From Certain Installment Sales With a Sales Price Over $150,000",
+      "page": 113,
+      "level": 3
+    },
+    {
+      "title": "Line 16",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Recapture of Low-Income Housing Credit",
+      "page": 113,
+      "level": 3
+    },
+    {
+      "title": "Lines 17a Through 17z",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Other Additional Taxes",
+      "page": 113,
+      "level": 3
+    },
+    {
+      "title": "Line 19",
+      "page": 114,
+      "level": 2
+    },
+    {
+      "title": "Recapture of Net EPE From Form 4255",
+      "page": 114,
+      "level": 3
+    },
+    {
+      "title": "Instructions for Schedule 3 Additional Credits and Payments",
+      "page": 115,
+      "level": 0
+    },
+    {
+      "title": "General Instructions",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Specific Instructions",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Line 1",
+      "page": 115,
+      "level": 2
+    },
+    {
+      "title": "Foreign Tax Credit",
+      "page": 115,
+      "level": 3
+    },
+    {
+      "title": "Line 2",
+      "page": 115,
+      "level": 2
+    },
+    {
+      "title": "Credit for Child and Dependent Care Expenses",
+      "page": 115,
+      "level": 3
+    },
+    {
+      "title": "Line 3",
+      "page": 115,
+      "level": 2
+    },
+    {
+      "title": "Education Credits",
+      "page": 115,
+      "level": 3
+    },
+    {
+      "title": "Line 4",
+      "page": 115,
+      "level": 2
+    },
+    {
+      "title": "Retirement Savings Contributions Credit (Saver’s Credit)",
+      "page": 115,
+      "level": 3
+    },
+    {
+      "title": "Line 5",
+      "page": 116,
+      "level": 2
+    },
+    {
+      "title": "Residential Energy Credits",
+      "page": 116,
+      "level": 3
+    },
+    {
+      "title": "Lines 6a Through 6z",
+      "page": 116,
+      "level": 2
+    },
+    {
+      "title": "Other Nonrefundable Credits",
+      "page": 116,
+      "level": 3
+    },
+    {
+      "title": "Line 9",
+      "page": 116,
+      "level": 2
+    },
+    {
+      "title": "Net Premium Tax Credit",
+      "page": 116,
+      "level": 3
+    },
+    {
+      "title": "Line 10",
+      "page": 117,
+      "level": 2
+    },
+    {
+      "title": "Amount Paid With Request for Extension To File",
+      "page": 117,
+      "level": 3
+    },
+    {
+      "title": "Line 11",
+      "page": 117,
+      "level": 2
+    },
+    {
+      "title": "Excess Social Security and Tier 1 RRTA Tax Withheld",
+      "page": 117,
+      "level": 3
+    },
+    {
+      "title": "Line 12",
+      "page": 117,
+      "level": 2
+    },
+    {
+      "title": "Credit for Federal Tax on Fuels",
+      "page": 117,
+      "level": 3
+    },
+    {
+      "title": "Lines 13a Through 13z Other Payments or Refundable Credits",
+      "page": 117,
+      "level": 2
+    },
+    {
+      "title": "Line 13b",
+      "page": 117,
+      "level": 3
+    },
+    {
+      "title": "Line 13c",
+      "page": 117,
+      "level": 3
+    },
+    {
+      "title": "Line 13d",
+      "page": 117,
+      "level": 3
+    },
+    {
+      "title": "Line 13z",
+      "page": 117,
+      "level": 3
+    },
+    {
+      "title": "Tax Topics",
+      "page": 118,
+      "level": 0
+    },
+    {
+      "title": "Disclosure, Privacy Act, and Paperwork Reduction Act Notice",
+      "page": 120,
+      "level": 0
+    },
+    {
+      "title": "We Welcome Comments on Forms",
+      "page": 120,
+      "level": 1
+    },
+    {
+      "title": "Estimates of Taxpayer Burden",
+      "page": 120,
+      "level": 1
+    },
+    {
+      "title": "Major Categories of Federal Income and Outlays for Fiscal Year 2024",
+      "page": 122,
+      "level": 0
+    },
+    {
+      "title": "Footnotes for Certain Federal Outlays",
+      "page": 122,
+      "level": 1
+    },
+    {
+      "title": "Index",
+      "page": 123,
+      "level": 0
+    }
+  ]
+}

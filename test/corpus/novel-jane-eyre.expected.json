@@ -1,0 +1,202 @@
+{
+  "description": "novel: novel-jane-eyre",
+  "category": "novel",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Jane Eyre",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "Preface",
+      "page": 2,
+      "level": 1
+    },
+    {
+      "title": "Chapter I",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "Chapter II",
+      "page": 14,
+      "level": 1
+    },
+    {
+      "title": "Chapter III",
+      "page": 24,
+      "level": 1
+    },
+    {
+      "title": "Chapter IV",
+      "page": 37,
+      "level": 1
+    },
+    {
+      "title": "Chapter V",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Chapter VI",
+      "page": 78,
+      "level": 1
+    },
+    {
+      "title": "Chapter VII",
+      "page": 89,
+      "level": 1
+    },
+    {
+      "title": "Chapter VIII",
+      "page": 102,
+      "level": 1
+    },
+    {
+      "title": "Chapter IX",
+      "page": 114,
+      "level": 1
+    },
+    {
+      "title": "Chapter X",
+      "page": 126,
+      "level": 1
+    },
+    {
+      "title": "Chapter XI",
+      "page": 142,
+      "level": 1
+    },
+    {
+      "title": "Chapter XII",
+      "page": 165,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIII",
+      "page": 180,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIV",
+      "page": 196,
+      "level": 1
+    },
+    {
+      "title": "Chapter XV",
+      "page": 214,
+      "level": 1
+    },
+    {
+      "title": "Chapter XVI",
+      "page": 232,
+      "level": 1
+    },
+    {
+      "title": "Chapter XVII",
+      "page": 246,
+      "level": 1
+    },
+    {
+      "title": "Chapter XVIII",
+      "page": 276,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIX",
+      "page": 298,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXI",
+      "page": 335,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXII",
+      "page": 367,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXIII",
+      "page": 377,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXIV",
+      "page": 392,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXV",
+      "page": 419,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXVI",
+      "page": 437,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXVII",
+      "page": 453,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXVIII",
+      "page": 491,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXIX",
+      "page": 515,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXX",
+      "page": 532,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXI",
+      "page": 546,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXII",
+      "page": 557,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXIII",
+      "page": 574,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXIV",
+      "page": 593,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXV",
+      "page": 626,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXVI",
+      "page": 642,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXVII",
+      "page": 656,
+      "level": 1
+    },
+    {
+      "title": "CHAPTER XXXVIII— CONCLUSION",
+      "page": 685,
+      "level": 1
+    }
+  ]
+}

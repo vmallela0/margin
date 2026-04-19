@@ -1,0 +1,277 @@
+{
+  "description": "paper: paper-rlhf",
+  "category": "paper",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "1 Introduction",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "2 Related work",
+      "page": 4,
+      "level": 0
+    },
+    {
+      "title": "3 Methods and experimental details",
+      "page": 6,
+      "level": 0
+    },
+    {
+      "title": "3.1 High-level methodology",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "3.2 Dataset",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "3.3 Tasks",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "3.4 Human data collection",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "3.5 Models",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "3.6 Evaluation",
+      "page": 9,
+      "level": 1
+    },
+    {
+      "title": "4 Results",
+      "page": 10,
+      "level": 0
+    },
+    {
+      "title": "4.1 Results on the API distribution",
+      "page": 11,
+      "level": 1
+    },
+    {
+      "title": "4.2 Results on public NLP datasets",
+      "page": 13,
+      "level": 1
+    },
+    {
+      "title": "4.3 Qualitative results",
+      "page": 15,
+      "level": 1
+    },
+    {
+      "title": "5 Discussion",
+      "page": 17,
+      "level": 0
+    },
+    {
+      "title": "5.1 Implications for alignment research",
+      "page": 17,
+      "level": 1
+    },
+    {
+      "title": "5.2 Who are we aligning to?",
+      "page": 18,
+      "level": 1
+    },
+    {
+      "title": "5.3 Limitations",
+      "page": 19,
+      "level": 1
+    },
+    {
+      "title": "5.4 Open questions",
+      "page": 19,
+      "level": 1
+    },
+    {
+      "title": "5.5 Broader impacts",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "A Additional prompt data details",
+      "page": 26,
+      "level": 0
+    },
+    {
+      "title": "A.1 Labeler-written prompts",
+      "page": 26,
+      "level": 1
+    },
+    {
+      "title": "A.2 API user prompts",
+      "page": 26,
+      "level": 1
+    },
+    {
+      "title": "A.2.1 Illustrative user prompts from InstructGPT distribution",
+      "page": 26,
+      "level": 2
+    },
+    {
+      "title": "A.2.2 Illustrative user prompts from GPT-3 distribution",
+      "page": 30,
+      "level": 2
+    },
+    {
+      "title": "A.3 Dataset sizes",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "A.4 Data diversity",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "B Additional human data collection details",
+      "page": 36,
+      "level": 0
+    },
+    {
+      "title": "B.1 Labeler selection",
+      "page": 36,
+      "level": 1
+    },
+    {
+      "title": "B.2 Labeling instructions",
+      "page": 36,
+      "level": 1
+    },
+    {
+      "title": "B.3 Labeler demographic data",
+      "page": 36,
+      "level": 1
+    },
+    {
+      "title": "B.4 Labeler satisfaction survey",
+      "page": 38,
+      "level": 1
+    },
+    {
+      "title": "B.5 Web interface",
+      "page": 38,
+      "level": 1
+    },
+    {
+      "title": "C Additional model details",
+      "page": 40,
+      "level": 0
+    },
+    {
+      "title": "C.1 Details of SFT training",
+      "page": 40,
+      "level": 1
+    },
+    {
+      "title": "C.2 Details of RM training",
+      "page": 41,
+      "level": 1
+    },
+    {
+      "title": "C.3 Details of the initialization models for RLHF",
+      "page": 42,
+      "level": 1
+    },
+    {
+      "title": "C.4 Details of RLHF training",
+      "page": 42,
+      "level": 1
+    },
+    {
+      "title": "C.5 FLAN and T0 models",
+      "page": 42,
+      "level": 1
+    },
+    {
+      "title": "D Automatic evaluation details",
+      "page": 44,
+      "level": 0
+    },
+    {
+      "title": "D.1 Toxicity and bias evaluation details",
+      "page": 44,
+      "level": 1
+    },
+    {
+      "title": "D.2 Prompt structure and evaluation features for each eval dataset",
+      "page": 44,
+      "level": 1
+    },
+    {
+      "title": "E Additional results",
+      "page": 51,
+      "level": 0
+    },
+    {
+      "title": "E.1 Performance on public NLP datasets",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "E.2 Reward model generalization across sets of labelers",
+      "page": 52,
+      "level": 1
+    },
+    {
+      "title": "E.3 Metadata results as a function of model size",
+      "page": 52,
+      "level": 1
+    },
+    {
+      "title": "E.4 Likert scores",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "E.5 Measuring bias",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "E.6 Fixing regressions on public NLP datasets",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "E.7 Optimal KL reward coefficient",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "E.8 PPO init models",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "E.9 Learning rate optimization for PPO models",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "E.10 RealToxicityPrompts results as a function of input toxicity",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "E.11 Additional ablations",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "F Model samples",
+      "page": 61,
+      "level": 0
+    }
+  ]
+}

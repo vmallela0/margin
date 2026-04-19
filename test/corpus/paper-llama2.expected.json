@@ -1,0 +1,152 @@
+{
+  "description": "paper: paper-llama2",
+  "category": "paper",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Introduction",
+      "page": 3,
+      "level": 0
+    },
+    {
+      "title": "Pretraining",
+      "page": 5,
+      "level": 0
+    },
+    {
+      "title": "Pretraining Data",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "Training Details",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "Llama 2 Pretrained Model Evaluation",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "Fine-tuning",
+      "page": 8,
+      "level": 0
+    },
+    {
+      "title": "Supervised Fine-Tuning (SFT)",
+      "page": 9,
+      "level": 1
+    },
+    {
+      "title": "Reinforcement Learning with Human Feedback (RLHF)",
+      "page": 9,
+      "level": 1
+    },
+    {
+      "title": "System Message for Multi-Turn Consistency",
+      "page": 16,
+      "level": 1
+    },
+    {
+      "title": "RLHF Results",
+      "page": 17,
+      "level": 1
+    },
+    {
+      "title": "Safety",
+      "page": 20,
+      "level": 0
+    },
+    {
+      "title": "Safety in Pretraining",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "Safety Fine-Tuning",
+      "page": 23,
+      "level": 1
+    },
+    {
+      "title": "Red Teaming",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Safety Evaluation of Llama 2-Chat",
+      "page": 29,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 32,
+      "level": 0
+    },
+    {
+      "title": "Learnings and Observations",
+      "page": 32,
+      "level": 1
+    },
+    {
+      "title": "Limitations and Ethical Considerations",
+      "page": 34,
+      "level": 1
+    },
+    {
+      "title": "Responsible Release Strategy",
+      "page": 35,
+      "level": 1
+    },
+    {
+      "title": "Related Work",
+      "page": 35,
+      "level": 0
+    },
+    {
+      "title": "Conclusion",
+      "page": 36,
+      "level": 0
+    },
+    {
+      "title": "Appendix",
+      "page": 46,
+      "level": 0
+    },
+    {
+      "title": "Contributions",
+      "page": 46,
+      "level": 1
+    },
+    {
+      "title": "Additional Details for Pretraining",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Additional Details for Fine-tuning",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "Additional Details for Safety",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "Data Annotation",
+      "page": 72,
+      "level": 1
+    },
+    {
+      "title": "Dataset Contamination",
+      "page": 75,
+      "level": 1
+    },
+    {
+      "title": "Model Card",
+      "page": 77,
+      "level": 1
+    }
+  ]
+}

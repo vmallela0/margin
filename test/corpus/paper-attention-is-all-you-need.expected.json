@@ -1,0 +1,117 @@
+{
+  "description": "paper: paper-attention-is-all-you-need",
+  "category": "paper",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Introduction",
+      "page": 2,
+      "level": 0
+    },
+    {
+      "title": "Background",
+      "page": 2,
+      "level": 0
+    },
+    {
+      "title": "Model Architecture",
+      "page": 2,
+      "level": 0
+    },
+    {
+      "title": "Encoder and Decoder Stacks",
+      "page": 3,
+      "level": 1
+    },
+    {
+      "title": "Attention",
+      "page": 3,
+      "level": 1
+    },
+    {
+      "title": "Scaled Dot-Product Attention",
+      "page": 4,
+      "level": 2
+    },
+    {
+      "title": "Multi-Head Attention",
+      "page": 4,
+      "level": 2
+    },
+    {
+      "title": "Applications of Attention in our Model",
+      "page": 5,
+      "level": 2
+    },
+    {
+      "title": "Position-wise Feed-Forward Networks",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "Embeddings and Softmax",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "Positional Encoding",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "Why Self-Attention",
+      "page": 6,
+      "level": 0
+    },
+    {
+      "title": "Training",
+      "page": 7,
+      "level": 0
+    },
+    {
+      "title": "Training Data and Batching",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "Hardware and Schedule",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "Optimizer",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "Regularization",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "Results",
+      "page": 8,
+      "level": 0
+    },
+    {
+      "title": "Machine Translation",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "Model Variations",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "English Constituency Parsing",
+      "page": 9,
+      "level": 1
+    },
+    {
+      "title": "Conclusion",
+      "page": 10,
+      "level": 0
+    }
+  ]
+}

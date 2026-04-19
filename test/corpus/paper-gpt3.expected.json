@@ -1,0 +1,167 @@
+{
+  "description": "paper: paper-gpt3",
+  "category": "paper",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "1 Introduction",
+      "page": 3,
+      "level": 0
+    },
+    {
+      "title": "2 Approach",
+      "page": 6,
+      "level": 0
+    },
+    {
+      "title": "2.1 Model and Architectures",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "2.2 Training Dataset",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "2.3 Training Process",
+      "page": 9,
+      "level": 1
+    },
+    {
+      "title": "2.4 Evaluation",
+      "page": 10,
+      "level": 1
+    },
+    {
+      "title": "3 Results",
+      "page": 10,
+      "level": 0
+    },
+    {
+      "title": "3.1 Language Modeling, Cloze, and Completion Tasks",
+      "page": 11,
+      "level": 1
+    },
+    {
+      "title": "3.2 Closed Book Question Answering",
+      "page": 13,
+      "level": 1
+    },
+    {
+      "title": "3.3 Translation",
+      "page": 14,
+      "level": 1
+    },
+    {
+      "title": "3.4 Winograd-Style Tasks",
+      "page": 16,
+      "level": 1
+    },
+    {
+      "title": "3.5 Common Sense Reasoning",
+      "page": 17,
+      "level": 1
+    },
+    {
+      "title": "3.6 Reading Comprehension",
+      "page": 18,
+      "level": 1
+    },
+    {
+      "title": "3.7 SuperGLUE",
+      "page": 18,
+      "level": 1
+    },
+    {
+      "title": "3.8 NLI",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "3.9 Synthetic and Qualitative Tasks",
+      "page": 21,
+      "level": 1
+    },
+    {
+      "title": "4 Measuring and Preventing Memorization Of Benchmarks",
+      "page": 29,
+      "level": 0
+    },
+    {
+      "title": "5 Limitations",
+      "page": 33,
+      "level": 0
+    },
+    {
+      "title": "6 Broader Impacts",
+      "page": 34,
+      "level": 0
+    },
+    {
+      "title": "6.1 Misuse of Language Models",
+      "page": 35,
+      "level": 1
+    },
+    {
+      "title": "6.2 Fairness, Bias, and Representation",
+      "page": 36,
+      "level": 1
+    },
+    {
+      "title": "6.3 Energy Usage",
+      "page": 39,
+      "level": 1
+    },
+    {
+      "title": "7 Related Work",
+      "page": 39,
+      "level": 0
+    },
+    {
+      "title": "8 Conclusion",
+      "page": 40,
+      "level": 0
+    },
+    {
+      "title": "A Details of Common Crawl Filtering",
+      "page": 43,
+      "level": 0
+    },
+    {
+      "title": "B Details of Model Training",
+      "page": 43,
+      "level": 0
+    },
+    {
+      "title": "C Details of Test Set Contamination Studies",
+      "page": 43,
+      "level": 0
+    },
+    {
+      "title": "D Total Compute Used to Train Language Models",
+      "page": 46,
+      "level": 0
+    },
+    {
+      "title": "E Human Quality Assessment of Synthetic News Articles",
+      "page": 46,
+      "level": 0
+    },
+    {
+      "title": "F Additional Samples from GPT-3",
+      "page": 48,
+      "level": 0
+    },
+    {
+      "title": "G Details of Task Phrasing and Specifications",
+      "page": 50,
+      "level": 0
+    },
+    {
+      "title": "H Results on All Tasks for All Model Sizes",
+      "page": 63,
+      "level": 0
+    }
+  ]
+}

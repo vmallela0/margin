@@ -1,0 +1,3557 @@
+{
+  "description": "manual: manual-emacs",
+  "category": "manual",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Preface",
+      "page": 25,
+      "level": 0
+    },
+    {
+      "title": "Distribution",
+      "page": 26,
+      "level": 0
+    },
+    {
+      "title": "Acknowledgments",
+      "page": 26,
+      "level": 1
+    },
+    {
+      "title": "Introduction",
+      "page": 29,
+      "level": 0
+    },
+    {
+      "title": "1 The Organization of the Screen",
+      "page": 30,
+      "level": 0
+    },
+    {
+      "title": "Point",
+      "page": 30,
+      "level": 1
+    },
+    {
+      "title": "The Echo Area",
+      "page": 31,
+      "level": 1
+    },
+    {
+      "title": "The Mode Line",
+      "page": 32,
+      "level": 1
+    },
+    {
+      "title": "The Menu Bar",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "2 Characters, Keys and Commands",
+      "page": 35,
+      "level": 0
+    },
+    {
+      "title": "Kinds of User Input",
+      "page": 35,
+      "level": 1
+    },
+    {
+      "title": "Keys",
+      "page": 35,
+      "level": 1
+    },
+    {
+      "title": "Mouse Input",
+      "page": 36,
+      "level": 1
+    },
+    {
+      "title": "Keys and Commands",
+      "page": 37,
+      "level": 1
+    },
+    {
+      "title": "Touchscreen Input and Virtual Keyboards",
+      "page": 37,
+      "level": 1
+    },
+    {
+      "title": "Using Emacs on Touchscreens",
+      "page": 38,
+      "level": 2
+    },
+    {
+      "title": "Using Emacs with Virtual Keyboards",
+      "page": 39,
+      "level": 2
+    },
+    {
+      "title": "3 Entering and Exiting Emacs",
+      "page": 41,
+      "level": 0
+    },
+    {
+      "title": "Entering Emacs",
+      "page": 41,
+      "level": 1
+    },
+    {
+      "title": "Exiting Emacs",
+      "page": 42,
+      "level": 1
+    },
+    {
+      "title": "4 Basic Editing Commands",
+      "page": 43,
+      "level": 0
+    },
+    {
+      "title": "Inserting Text",
+      "page": 43,
+      "level": 1
+    },
+    {
+      "title": "Changing the Location of Point",
+      "page": 44,
+      "level": 1
+    },
+    {
+      "title": "Erasing Text",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Undoing Changes",
+      "page": 48,
+      "level": 1
+    },
+    {
+      "title": "Files",
+      "page": 48,
+      "level": 1
+    },
+    {
+      "title": "Help",
+      "page": 49,
+      "level": 1
+    },
+    {
+      "title": "Blank Lines",
+      "page": 49,
+      "level": 1
+    },
+    {
+      "title": "Continuation Lines",
+      "page": 49,
+      "level": 1
+    },
+    {
+      "title": "Cursor Position Information",
+      "page": 50,
+      "level": 1
+    },
+    {
+      "title": "Numeric Arguments",
+      "page": 52,
+      "level": 1
+    },
+    {
+      "title": "Repeating a Command",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "5 The Minibuffer",
+      "page": 55,
+      "level": 0
+    },
+    {
+      "title": "Using the Minibuffer",
+      "page": 55,
+      "level": 1
+    },
+    {
+      "title": "Minibuffers for File Names",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "Editing in the Minibuffer",
+      "page": 57,
+      "level": 1
+    },
+    {
+      "title": "Completion",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "Completion Example",
+      "page": 58,
+      "level": 2
+    },
+    {
+      "title": "Completion Commands",
+      "page": 58,
+      "level": 2
+    },
+    {
+      "title": "Completion Exit",
+      "page": 60,
+      "level": 2
+    },
+    {
+      "title": "How Completion Alternatives Are Chosen",
+      "page": 61,
+      "level": 2
+    },
+    {
+      "title": "Completion Options",
+      "page": 62,
+      "level": 2
+    },
+    {
+      "title": "Minibuffer History",
+      "page": 64,
+      "level": 1
+    },
+    {
+      "title": "Repeating Minibuffer Commands",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Entering passwords",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Yes or No Prompts",
+      "page": 67,
+      "level": 1
+    },
+    {
+      "title": "6 Running Commands by Name",
+      "page": 68,
+      "level": 0
+    },
+    {
+      "title": "7 Help",
+      "page": 70,
+      "level": 0
+    },
+    {
+      "title": "Documentation for a Key",
+      "page": 73,
+      "level": 1
+    },
+    {
+      "title": "Help by Command or Variable Name",
+      "page": 73,
+      "level": 1
+    },
+    {
+      "title": "Apropos",
+      "page": 75,
+      "level": 1
+    },
+    {
+      "title": "Help Mode Commands",
+      "page": 76,
+      "level": 1
+    },
+    {
+      "title": "Keyword Search for Packages",
+      "page": 77,
+      "level": 1
+    },
+    {
+      "title": "Help for International Language Support",
+      "page": 78,
+      "level": 1
+    },
+    {
+      "title": "Other Help Commands",
+      "page": 78,
+      "level": 1
+    },
+    {
+      "title": "Help Files",
+      "page": 79,
+      "level": 1
+    },
+    {
+      "title": "Help on Active Text and Tooltips",
+      "page": 80,
+      "level": 1
+    },
+    {
+      "title": "8 The Mark and the Region",
+      "page": 81,
+      "level": 0
+    },
+    {
+      "title": "Setting the Mark",
+      "page": 81,
+      "level": 1
+    },
+    {
+      "title": "Commands to Mark Textual Objects",
+      "page": 83,
+      "level": 1
+    },
+    {
+      "title": "Operating on the Region",
+      "page": 84,
+      "level": 1
+    },
+    {
+      "title": "The Mark Ring",
+      "page": 85,
+      "level": 1
+    },
+    {
+      "title": "The Global Mark Ring",
+      "page": 85,
+      "level": 1
+    },
+    {
+      "title": "Shift Selection",
+      "page": 86,
+      "level": 1
+    },
+    {
+      "title": "Disabling Transient Mark Mode",
+      "page": 86,
+      "level": 1
+    },
+    {
+      "title": "9 Killing and Moving Text",
+      "page": 88,
+      "level": 0
+    },
+    {
+      "title": "Deletion and Killing",
+      "page": 88,
+      "level": 1
+    },
+    {
+      "title": "Deletion",
+      "page": 88,
+      "level": 2
+    },
+    {
+      "title": "Killing by Lines",
+      "page": 89,
+      "level": 2
+    },
+    {
+      "title": "Other Kill Commands",
+      "page": 90,
+      "level": 2
+    },
+    {
+      "title": "Options for Killing",
+      "page": 91,
+      "level": 2
+    },
+    {
+      "title": "Yanking",
+      "page": 91,
+      "level": 1
+    },
+    {
+      "title": "The Kill Ring",
+      "page": 92,
+      "level": 2
+    },
+    {
+      "title": "Yanking Earlier Kills",
+      "page": 92,
+      "level": 2
+    },
+    {
+      "title": "Appending Kills",
+      "page": 93,
+      "level": 2
+    },
+    {
+      "title": "``Cut and Paste'' Operations on Graphical Displays",
+      "page": 94,
+      "level": 1
+    },
+    {
+      "title": "Using the Clipboard",
+      "page": 94,
+      "level": 2
+    },
+    {
+      "title": "Cut and Paste with Other Window Applications",
+      "page": 95,
+      "level": 2
+    },
+    {
+      "title": "Secondary Selection",
+      "page": 96,
+      "level": 2
+    },
+    {
+      "title": "Accumulating Text",
+      "page": 97,
+      "level": 1
+    },
+    {
+      "title": "Rectangles",
+      "page": 98,
+      "level": 1
+    },
+    {
+      "title": "CUA Bindings",
+      "page": 100,
+      "level": 1
+    },
+    {
+      "title": "10 Registers",
+      "page": 102,
+      "level": 0
+    },
+    {
+      "title": "Saving Positions in Registers",
+      "page": 103,
+      "level": 1
+    },
+    {
+      "title": "Saving Text in Registers",
+      "page": 103,
+      "level": 1
+    },
+    {
+      "title": "Saving Rectangles in Registers",
+      "page": 104,
+      "level": 1
+    },
+    {
+      "title": "Saving Window and Frame Configurations in Registers",
+      "page": 104,
+      "level": 1
+    },
+    {
+      "title": "Keeping Numbers in Registers",
+      "page": 105,
+      "level": 1
+    },
+    {
+      "title": "Keeping File and Buffer Names in Registers",
+      "page": 105,
+      "level": 1
+    },
+    {
+      "title": "Keyboard Macro Registers",
+      "page": 105,
+      "level": 1
+    },
+    {
+      "title": "Bookmarks",
+      "page": 106,
+      "level": 1
+    },
+    {
+      "title": "11 Controlling the Display",
+      "page": 108,
+      "level": 0
+    },
+    {
+      "title": "Scrolling",
+      "page": 108,
+      "level": 1
+    },
+    {
+      "title": "Recentering",
+      "page": 109,
+      "level": 1
+    },
+    {
+      "title": "Automatic Scrolling",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "Horizontal Scrolling",
+      "page": 111,
+      "level": 1
+    },
+    {
+      "title": "Narrowing",
+      "page": 112,
+      "level": 1
+    },
+    {
+      "title": "View Mode",
+      "page": 113,
+      "level": 1
+    },
+    {
+      "title": "Follow Mode",
+      "page": 113,
+      "level": 1
+    },
+    {
+      "title": "Text Faces",
+      "page": 114,
+      "level": 1
+    },
+    {
+      "title": "Colors for Faces",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Color Names",
+      "page": 115,
+      "level": 2
+    },
+    {
+      "title": "RGB Triplets",
+      "page": 115,
+      "level": 2
+    },
+    {
+      "title": "Standard Faces",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Icons",
+      "page": 119,
+      "level": 1
+    },
+    {
+      "title": "Text Scale",
+      "page": 119,
+      "level": 1
+    },
+    {
+      "title": "Font Lock mode",
+      "page": 120,
+      "level": 1
+    },
+    {
+      "title": "Traditional Font Lock",
+      "page": 121,
+      "level": 2
+    },
+    {
+      "title": "Parser-based Font Lock",
+      "page": 121,
+      "level": 2
+    },
+    {
+      "title": "Interactive Highlighting",
+      "page": 122,
+      "level": 1
+    },
+    {
+      "title": "Window Fringes",
+      "page": 124,
+      "level": 1
+    },
+    {
+      "title": "Displaying Boundaries",
+      "page": 125,
+      "level": 1
+    },
+    {
+      "title": "Useless Whitespace",
+      "page": 126,
+      "level": 1
+    },
+    {
+      "title": "Selective Display",
+      "page": 127,
+      "level": 1
+    },
+    {
+      "title": "Optional Mode Line Features",
+      "page": 128,
+      "level": 1
+    },
+    {
+      "title": "How Text Is Displayed",
+      "page": 129,
+      "level": 1
+    },
+    {
+      "title": "Displaying the Cursor",
+      "page": 130,
+      "level": 1
+    },
+    {
+      "title": "Line Truncation",
+      "page": 131,
+      "level": 1
+    },
+    {
+      "title": "Visual Line Mode",
+      "page": 132,
+      "level": 1
+    },
+    {
+      "title": "Customization of Display",
+      "page": 133,
+      "level": 1
+    },
+    {
+      "title": "12 Searching and Replacement",
+      "page": 136,
+      "level": 0
+    },
+    {
+      "title": "Incremental Search",
+      "page": 136,
+      "level": 1
+    },
+    {
+      "title": "Basics of Incremental Search",
+      "page": 136,
+      "level": 2
+    },
+    {
+      "title": "Repeating Incremental Search",
+      "page": 137,
+      "level": 2
+    },
+    {
+      "title": "Isearch Yanking",
+      "page": 138,
+      "level": 2
+    },
+    {
+      "title": "Errors in Incremental Search",
+      "page": 139,
+      "level": 2
+    },
+    {
+      "title": "Special Input for Incremental Search",
+      "page": 140,
+      "level": 2
+    },
+    {
+      "title": "Not Exiting Incremental Search",
+      "page": 141,
+      "level": 2
+    },
+    {
+      "title": "Searching the Minibuffer",
+      "page": 143,
+      "level": 2
+    },
+    {
+      "title": "Nonincremental Search",
+      "page": 143,
+      "level": 1
+    },
+    {
+      "title": "Word Search",
+      "page": 144,
+      "level": 1
+    },
+    {
+      "title": "Symbol Search",
+      "page": 145,
+      "level": 1
+    },
+    {
+      "title": "Regular Expression Search",
+      "page": 146,
+      "level": 1
+    },
+    {
+      "title": "Syntax of Regular Expressions",
+      "page": 147,
+      "level": 1
+    },
+    {
+      "title": "Backslash in Regular Expressions",
+      "page": 150,
+      "level": 1
+    },
+    {
+      "title": "Regular Expression Example",
+      "page": 152,
+      "level": 1
+    },
+    {
+      "title": "Lax Matching During Searching",
+      "page": 152,
+      "level": 1
+    },
+    {
+      "title": "Replacement Commands",
+      "page": 154,
+      "level": 1
+    },
+    {
+      "title": "Unconditional Replacement",
+      "page": 154,
+      "level": 2
+    },
+    {
+      "title": "Regexp Replacement",
+      "page": 154,
+      "level": 2
+    },
+    {
+      "title": "Replace Commands and Lax Matches",
+      "page": 155,
+      "level": 2
+    },
+    {
+      "title": "Query Replace",
+      "page": 156,
+      "level": 2
+    },
+    {
+      "title": "Other Search-and-Loop Commands",
+      "page": 159,
+      "level": 1
+    },
+    {
+      "title": "Tailoring Search to Your Needs",
+      "page": 161,
+      "level": 1
+    },
+    {
+      "title": "13 Commands for Fixing Typos",
+      "page": 164,
+      "level": 0
+    },
+    {
+      "title": "Undo",
+      "page": 164,
+      "level": 1
+    },
+    {
+      "title": "Transposing Text",
+      "page": 165,
+      "level": 1
+    },
+    {
+      "title": "Case Conversion",
+      "page": 166,
+      "level": 1
+    },
+    {
+      "title": "Checking and Correcting Spelling",
+      "page": 167,
+      "level": 1
+    },
+    {
+      "title": "14 Keyboard Macros",
+      "page": 171,
+      "level": 0
+    },
+    {
+      "title": "Basic Use",
+      "page": 171,
+      "level": 1
+    },
+    {
+      "title": "The Keyboard Macro Ring",
+      "page": 173,
+      "level": 1
+    },
+    {
+      "title": "The Keyboard Macro Counter",
+      "page": 174,
+      "level": 1
+    },
+    {
+      "title": "Executing Macros with Variations",
+      "page": 175,
+      "level": 1
+    },
+    {
+      "title": "Naming and Saving Keyboard Macros",
+      "page": 176,
+      "level": 1
+    },
+    {
+      "title": "Editing a Keyboard Macro",
+      "page": 177,
+      "level": 1
+    },
+    {
+      "title": "Stepwise Editing a Keyboard Macro",
+      "page": 177,
+      "level": 1
+    },
+    {
+      "title": "Listing and Editing Keyboard Macros",
+      "page": 178,
+      "level": 1
+    },
+    {
+      "title": "15 File Handling",
+      "page": 181,
+      "level": 0
+    },
+    {
+      "title": "File Names",
+      "page": 181,
+      "level": 1
+    },
+    {
+      "title": "Visiting Files",
+      "page": 182,
+      "level": 1
+    },
+    {
+      "title": "Saving Files",
+      "page": 185,
+      "level": 1
+    },
+    {
+      "title": "Commands for Saving Files",
+      "page": 186,
+      "level": 2
+    },
+    {
+      "title": "Backup Files",
+      "page": 187,
+      "level": 2
+    },
+    {
+      "title": "Single or Numbered Backups",
+      "page": 188,
+      "level": 3
+    },
+    {
+      "title": "Automatic Deletion of Backups",
+      "page": 189,
+      "level": 3
+    },
+    {
+      "title": "Copying vs. Renaming",
+      "page": 189,
+      "level": 3
+    },
+    {
+      "title": "Customizing Saving of Files",
+      "page": 190,
+      "level": 2
+    },
+    {
+      "title": "Protection against Simultaneous Editing",
+      "page": 191,
+      "level": 2
+    },
+    {
+      "title": "Shadowing Files",
+      "page": 192,
+      "level": 2
+    },
+    {
+      "title": "Updating Time Stamps Automatically",
+      "page": 193,
+      "level": 2
+    },
+    {
+      "title": "Customizing the Time Stamp",
+      "page": 193,
+      "level": 3
+    },
+    {
+      "title": "Forcing Time Stamps for One File",
+      "page": 194,
+      "level": 3
+    },
+    {
+      "title": "Reverting a Buffer",
+      "page": 195,
+      "level": 1
+    },
+    {
+      "title": "Auto Revert: Keeping buffers automatically up-to-date",
+      "page": 196,
+      "level": 1
+    },
+    {
+      "title": "Auto-Saving: Protection Against Disasters",
+      "page": 196,
+      "level": 1
+    },
+    {
+      "title": "Auto-Save Files",
+      "page": 197,
+      "level": 2
+    },
+    {
+      "title": "Controlling Auto-Saving",
+      "page": 198,
+      "level": 2
+    },
+    {
+      "title": "Recovering Data from Auto-Saves",
+      "page": 198,
+      "level": 2
+    },
+    {
+      "title": "File Name Aliases",
+      "page": 199,
+      "level": 1
+    },
+    {
+      "title": "File Directories",
+      "page": 200,
+      "level": 1
+    },
+    {
+      "title": "Comparing Files",
+      "page": 201,
+      "level": 1
+    },
+    {
+      "title": "Diff Mode",
+      "page": 202,
+      "level": 1
+    },
+    {
+      "title": "Copying, Naming and Renaming Files",
+      "page": 204,
+      "level": 1
+    },
+    {
+      "title": "Miscellaneous File Operations",
+      "page": 205,
+      "level": 1
+    },
+    {
+      "title": "Accessing Compressed Files",
+      "page": 206,
+      "level": 1
+    },
+    {
+      "title": "File Archives",
+      "page": 206,
+      "level": 1
+    },
+    {
+      "title": "Remote Files",
+      "page": 207,
+      "level": 1
+    },
+    {
+      "title": "Quoted File Names",
+      "page": 208,
+      "level": 1
+    },
+    {
+      "title": "File Name Cache",
+      "page": 209,
+      "level": 1
+    },
+    {
+      "title": "Convenience Features for Finding Files",
+      "page": 209,
+      "level": 1
+    },
+    {
+      "title": "Viewing Image Files",
+      "page": 210,
+      "level": 1
+    },
+    {
+      "title": "Filesets",
+      "page": 212,
+      "level": 1
+    },
+    {
+      "title": "16 Using Multiple Buffers",
+      "page": 214,
+      "level": 0
+    },
+    {
+      "title": "Creating and Selecting Buffers",
+      "page": 214,
+      "level": 1
+    },
+    {
+      "title": "Listing Existing Buffers",
+      "page": 216,
+      "level": 1
+    },
+    {
+      "title": "Miscellaneous Buffer Operations",
+      "page": 216,
+      "level": 1
+    },
+    {
+      "title": "Killing Buffers",
+      "page": 217,
+      "level": 1
+    },
+    {
+      "title": "Operating on Several Buffers",
+      "page": 218,
+      "level": 1
+    },
+    {
+      "title": "Indirect Buffers",
+      "page": 220,
+      "level": 1
+    },
+    {
+      "title": "Convenience Features and Customization of Buffer Handling",
+      "page": 221,
+      "level": 1
+    },
+    {
+      "title": "Making Buffer Names Unique",
+      "page": 221,
+      "level": 2
+    },
+    {
+      "title": "Fast minibuffer selection",
+      "page": 222,
+      "level": 2
+    },
+    {
+      "title": "Customizing Buffer Menus",
+      "page": 223,
+      "level": 2
+    },
+    {
+      "title": "17 Multiple Windows",
+      "page": 224,
+      "level": 0
+    },
+    {
+      "title": "Concepts of Emacs Windows",
+      "page": 224,
+      "level": 1
+    },
+    {
+      "title": "Splitting Windows",
+      "page": 224,
+      "level": 1
+    },
+    {
+      "title": "Using Other Windows",
+      "page": 225,
+      "level": 1
+    },
+    {
+      "title": "Displaying in Another Window",
+      "page": 226,
+      "level": 1
+    },
+    {
+      "title": "Deleting and Resizing Windows",
+      "page": 227,
+      "level": 1
+    },
+    {
+      "title": "Displaying a Buffer in a Window",
+      "page": 228,
+      "level": 1
+    },
+    {
+      "title": "How display-buffer works",
+      "page": 229,
+      "level": 2
+    },
+    {
+      "title": "Displaying non-editable buffers.",
+      "page": 230,
+      "level": 2
+    },
+    {
+      "title": "Convenience Features for Window Handling",
+      "page": 231,
+      "level": 1
+    },
+    {
+      "title": "Window Tab Line",
+      "page": 232,
+      "level": 1
+    },
+    {
+      "title": "Window Tool Bar",
+      "page": 232,
+      "level": 1
+    },
+    {
+      "title": "18 Frames and Graphical Displays",
+      "page": 234,
+      "level": 0
+    },
+    {
+      "title": "Mouse Commands for Editing",
+      "page": 234,
+      "level": 1
+    },
+    {
+      "title": "Mouse Commands for Words and Lines",
+      "page": 236,
+      "level": 1
+    },
+    {
+      "title": "Following References with the Mouse",
+      "page": 237,
+      "level": 1
+    },
+    {
+      "title": "Mouse Clicks for Menus",
+      "page": 238,
+      "level": 1
+    },
+    {
+      "title": "Mode Line Mouse Commands",
+      "page": 238,
+      "level": 1
+    },
+    {
+      "title": "Creating Frames",
+      "page": 239,
+      "level": 1
+    },
+    {
+      "title": "Frame Commands",
+      "page": 240,
+      "level": 1
+    },
+    {
+      "title": "Fonts",
+      "page": 241,
+      "level": 1
+    },
+    {
+      "title": "Speedbar Frames",
+      "page": 244,
+      "level": 1
+    },
+    {
+      "title": "Multiple Displays",
+      "page": 245,
+      "level": 1
+    },
+    {
+      "title": "Frame Parameters",
+      "page": 245,
+      "level": 1
+    },
+    {
+      "title": "Scroll Bars",
+      "page": 246,
+      "level": 1
+    },
+    {
+      "title": "Window Dividers",
+      "page": 247,
+      "level": 1
+    },
+    {
+      "title": "Drag and Drop",
+      "page": 248,
+      "level": 1
+    },
+    {
+      "title": "Menu Bars",
+      "page": 249,
+      "level": 1
+    },
+    {
+      "title": "Tool Bars",
+      "page": 249,
+      "level": 1
+    },
+    {
+      "title": "Tab Bars",
+      "page": 250,
+      "level": 1
+    },
+    {
+      "title": "Using Dialog Boxes",
+      "page": 253,
+      "level": 1
+    },
+    {
+      "title": "Tooltips",
+      "page": 253,
+      "level": 1
+    },
+    {
+      "title": "Mouse Avoidance",
+      "page": 254,
+      "level": 1
+    },
+    {
+      "title": "Text Terminals",
+      "page": 255,
+      "level": 1
+    },
+    {
+      "title": "Using a Mouse in Text Terminals",
+      "page": 255,
+      "level": 1
+    },
+    {
+      "title": "19 International Character Set Support",
+      "page": 256,
+      "level": 0
+    },
+    {
+      "title": "Introduction to International Character Sets",
+      "page": 256,
+      "level": 1
+    },
+    {
+      "title": "Language Environments",
+      "page": 258,
+      "level": 1
+    },
+    {
+      "title": "Input Methods",
+      "page": 260,
+      "level": 1
+    },
+    {
+      "title": "Selecting an Input Method",
+      "page": 262,
+      "level": 1
+    },
+    {
+      "title": "Coding Systems",
+      "page": 263,
+      "level": 1
+    },
+    {
+      "title": "Recognizing Coding Systems",
+      "page": 265,
+      "level": 1
+    },
+    {
+      "title": "Specifying a File's Coding System",
+      "page": 267,
+      "level": 1
+    },
+    {
+      "title": "Choosing Coding Systems for Output",
+      "page": 267,
+      "level": 1
+    },
+    {
+      "title": "Specifying a Coding System for File Text",
+      "page": 268,
+      "level": 1
+    },
+    {
+      "title": "Coding Systems for Interprocess Communication",
+      "page": 269,
+      "level": 1
+    },
+    {
+      "title": "Coding Systems for File Names",
+      "page": 270,
+      "level": 1
+    },
+    {
+      "title": "Coding Systems for X Keyboard Input",
+      "page": 271,
+      "level": 1
+    },
+    {
+      "title": "Coding Systems for Terminal I/O",
+      "page": 271,
+      "level": 1
+    },
+    {
+      "title": "Fontsets",
+      "page": 272,
+      "level": 1
+    },
+    {
+      "title": "Defining Fontsets",
+      "page": 273,
+      "level": 1
+    },
+    {
+      "title": "Modifying Fontsets",
+      "page": 274,
+      "level": 1
+    },
+    {
+      "title": "Undisplayable Characters",
+      "page": 276,
+      "level": 1
+    },
+    {
+      "title": "Unibyte Editing Mode",
+      "page": 276,
+      "level": 1
+    },
+    {
+      "title": "Charsets",
+      "page": 278,
+      "level": 1
+    },
+    {
+      "title": "Bidirectional Editing",
+      "page": 278,
+      "level": 1
+    },
+    {
+      "title": "20 Major and Minor Modes",
+      "page": 281,
+      "level": 0
+    },
+    {
+      "title": "Major Modes",
+      "page": 281,
+      "level": 1
+    },
+    {
+      "title": "Minor Modes",
+      "page": 282,
+      "level": 1
+    },
+    {
+      "title": "Choosing File Modes",
+      "page": 284,
+      "level": 1
+    },
+    {
+      "title": "21 Indentation",
+      "page": 288,
+      "level": 0
+    },
+    {
+      "title": "Indentation Commands",
+      "page": 288,
+      "level": 1
+    },
+    {
+      "title": "Tab Stops",
+      "page": 289,
+      "level": 1
+    },
+    {
+      "title": "Tabs vs. Spaces",
+      "page": 290,
+      "level": 1
+    },
+    {
+      "title": "Convenience Features for Indentation",
+      "page": 290,
+      "level": 1
+    },
+    {
+      "title": "Code Alignment",
+      "page": 291,
+      "level": 1
+    },
+    {
+      "title": "22 Commands for Human Languages",
+      "page": 295,
+      "level": 0
+    },
+    {
+      "title": "Words",
+      "page": 295,
+      "level": 1
+    },
+    {
+      "title": "Sentences",
+      "page": 296,
+      "level": 1
+    },
+    {
+      "title": "Paragraphs",
+      "page": 297,
+      "level": 1
+    },
+    {
+      "title": "Pages",
+      "page": 298,
+      "level": 1
+    },
+    {
+      "title": "Quotation Marks",
+      "page": 299,
+      "level": 1
+    },
+    {
+      "title": "Filling Text",
+      "page": 300,
+      "level": 1
+    },
+    {
+      "title": "Auto Fill Mode",
+      "page": 300,
+      "level": 2
+    },
+    {
+      "title": "Explicit Fill Commands",
+      "page": 301,
+      "level": 2
+    },
+    {
+      "title": "The Fill Prefix",
+      "page": 302,
+      "level": 2
+    },
+    {
+      "title": "Adaptive Filling",
+      "page": 303,
+      "level": 2
+    },
+    {
+      "title": "Case Conversion Commands",
+      "page": 304,
+      "level": 1
+    },
+    {
+      "title": "Text Mode",
+      "page": 305,
+      "level": 1
+    },
+    {
+      "title": "Outline Mode",
+      "page": 306,
+      "level": 1
+    },
+    {
+      "title": "Outline Minor Mode",
+      "page": 306,
+      "level": 2
+    },
+    {
+      "title": "Format of Outlines",
+      "page": 307,
+      "level": 2
+    },
+    {
+      "title": "Outline Motion Commands",
+      "page": 308,
+      "level": 2
+    },
+    {
+      "title": "Outline Visibility Commands",
+      "page": 308,
+      "level": 2
+    },
+    {
+      "title": "Viewing One Outline in Multiple Views",
+      "page": 310,
+      "level": 2
+    },
+    {
+      "title": "Folding Editing",
+      "page": 310,
+      "level": 2
+    },
+    {
+      "title": "Org Mode",
+      "page": 311,
+      "level": 1
+    },
+    {
+      "title": "Org as an organizer",
+      "page": 312,
+      "level": 2
+    },
+    {
+      "title": "Org as an authoring system",
+      "page": 312,
+      "level": 2
+    },
+    {
+      "title": "TeX Mode",
+      "page": 313,
+      "level": 1
+    },
+    {
+      "title": "TeX Editing Commands",
+      "page": 314,
+      "level": 2
+    },
+    {
+      "title": "LaTeX Editing Commands",
+      "page": 315,
+      "level": 2
+    },
+    {
+      "title": "TeX Printing Commands",
+      "page": 315,
+      "level": 2
+    },
+    {
+      "title": "TeX Mode Miscellany",
+      "page": 317,
+      "level": 2
+    },
+    {
+      "title": "SGML and HTML Modes",
+      "page": 317,
+      "level": 1
+    },
+    {
+      "title": "Nroff Mode",
+      "page": 319,
+      "level": 1
+    },
+    {
+      "title": "Enriched Text",
+      "page": 319,
+      "level": 1
+    },
+    {
+      "title": "Enriched Mode",
+      "page": 320,
+      "level": 2
+    },
+    {
+      "title": "Hard and Soft Newlines",
+      "page": 320,
+      "level": 2
+    },
+    {
+      "title": "Editing Format Information",
+      "page": 320,
+      "level": 2
+    },
+    {
+      "title": "Faces in Enriched Text",
+      "page": 321,
+      "level": 2
+    },
+    {
+      "title": "Indentation in Enriched Text",
+      "page": 322,
+      "level": 2
+    },
+    {
+      "title": "Justification in Enriched Text",
+      "page": 322,
+      "level": 2
+    },
+    {
+      "title": "Setting Other Text Properties",
+      "page": 323,
+      "level": 2
+    },
+    {
+      "title": "Editing Text-based Tables",
+      "page": 323,
+      "level": 1
+    },
+    {
+      "title": "What is a Text-based Table?",
+      "page": 324,
+      "level": 2
+    },
+    {
+      "title": "Creating a Table",
+      "page": 324,
+      "level": 2
+    },
+    {
+      "title": "Table Recognition",
+      "page": 324,
+      "level": 2
+    },
+    {
+      "title": "Commands for Table Cells",
+      "page": 325,
+      "level": 2
+    },
+    {
+      "title": "Cell Justification",
+      "page": 326,
+      "level": 2
+    },
+    {
+      "title": "Table Rows and Columns",
+      "page": 326,
+      "level": 2
+    },
+    {
+      "title": "Converting Between Plain Text and Tables",
+      "page": 326,
+      "level": 2
+    },
+    {
+      "title": "Table Miscellany",
+      "page": 327,
+      "level": 2
+    },
+    {
+      "title": "Two-Column Editing",
+      "page": 328,
+      "level": 1
+    },
+    {
+      "title": "23 Editing Programs",
+      "page": 330,
+      "level": 0
+    },
+    {
+      "title": "Major Modes for Programming Languages",
+      "page": 330,
+      "level": 1
+    },
+    {
+      "title": "Top-Level Definitions, or Defuns",
+      "page": 331,
+      "level": 1
+    },
+    {
+      "title": "Left Margin Convention",
+      "page": 331,
+      "level": 2
+    },
+    {
+      "title": "Moving by Defuns",
+      "page": 331,
+      "level": 2
+    },
+    {
+      "title": "Moving by Sentences",
+      "page": 332,
+      "level": 2
+    },
+    {
+      "title": "Imenu",
+      "page": 333,
+      "level": 2
+    },
+    {
+      "title": "Which Function Mode",
+      "page": 334,
+      "level": 2
+    },
+    {
+      "title": "Indentation for Programs",
+      "page": 334,
+      "level": 1
+    },
+    {
+      "title": "Basic Program Indentation Commands",
+      "page": 334,
+      "level": 2
+    },
+    {
+      "title": "Indenting Several Lines",
+      "page": 335,
+      "level": 2
+    },
+    {
+      "title": "Customizing Lisp Indentation",
+      "page": 336,
+      "level": 2
+    },
+    {
+      "title": "Commands for C Indentation",
+      "page": 336,
+      "level": 2
+    },
+    {
+      "title": "Customizing C Indentation",
+      "page": 337,
+      "level": 2
+    },
+    {
+      "title": "Commands for Editing with Parentheses",
+      "page": 338,
+      "level": 1
+    },
+    {
+      "title": "Expressions with Balanced Parentheses",
+      "page": 338,
+      "level": 2
+    },
+    {
+      "title": "Moving in the Parenthesis Structure",
+      "page": 339,
+      "level": 2
+    },
+    {
+      "title": "Matching Parentheses",
+      "page": 340,
+      "level": 2
+    },
+    {
+      "title": "Manipulating Comments",
+      "page": 342,
+      "level": 1
+    },
+    {
+      "title": "Comment Commands",
+      "page": 343,
+      "level": 2
+    },
+    {
+      "title": "Multiple Lines of Comments",
+      "page": 344,
+      "level": 2
+    },
+    {
+      "title": "Options Controlling Comments",
+      "page": 345,
+      "level": 2
+    },
+    {
+      "title": "Documentation Lookup",
+      "page": 345,
+      "level": 1
+    },
+    {
+      "title": "Info Documentation Lookup",
+      "page": 346,
+      "level": 2
+    },
+    {
+      "title": "Man Page Lookup",
+      "page": 346,
+      "level": 2
+    },
+    {
+      "title": "Programming Language Documentation Lookup",
+      "page": 347,
+      "level": 2
+    },
+    {
+      "title": "Hideshow minor mode",
+      "page": 349,
+      "level": 1
+    },
+    {
+      "title": "Completion for Symbol Names",
+      "page": 350,
+      "level": 1
+    },
+    {
+      "title": "MixedCase Words",
+      "page": 350,
+      "level": 1
+    },
+    {
+      "title": "Semantic",
+      "page": 351,
+      "level": 1
+    },
+    {
+      "title": "Other Features Useful for Editing Programs",
+      "page": 352,
+      "level": 1
+    },
+    {
+      "title": "C and Related Modes",
+      "page": 352,
+      "level": 1
+    },
+    {
+      "title": "C Mode Motion Commands",
+      "page": 352,
+      "level": 2
+    },
+    {
+      "title": "Electric C Characters",
+      "page": 353,
+      "level": 2
+    },
+    {
+      "title": "Hungry Delete Feature in C",
+      "page": 354,
+      "level": 2
+    },
+    {
+      "title": "Other Commands for C Mode",
+      "page": 354,
+      "level": 2
+    },
+    {
+      "title": "Asm Mode",
+      "page": 356,
+      "level": 1
+    },
+    {
+      "title": "24 Compiling and Testing Programs",
+      "page": 357,
+      "level": 0
+    },
+    {
+      "title": "Running Compilations under Emacs",
+      "page": 357,
+      "level": 1
+    },
+    {
+      "title": "Compilation Mode",
+      "page": 358,
+      "level": 1
+    },
+    {
+      "title": "Subshells for Compilation",
+      "page": 361,
+      "level": 1
+    },
+    {
+      "title": "Searching with Grep under Emacs",
+      "page": 361,
+      "level": 1
+    },
+    {
+      "title": "Finding Syntax Errors On The Fly",
+      "page": 363,
+      "level": 1
+    },
+    {
+      "title": "Running Debuggers Under Emacs",
+      "page": 363,
+      "level": 1
+    },
+    {
+      "title": "Starting GUD",
+      "page": 364,
+      "level": 2
+    },
+    {
+      "title": "Debugger Operation",
+      "page": 364,
+      "level": 2
+    },
+    {
+      "title": "Commands of GUD",
+      "page": 365,
+      "level": 2
+    },
+    {
+      "title": "GUD Customization",
+      "page": 368,
+      "level": 2
+    },
+    {
+      "title": "GDB Graphical Interface",
+      "page": 368,
+      "level": 2
+    },
+    {
+      "title": "GDB User Interface Layout",
+      "page": 369,
+      "level": 3
+    },
+    {
+      "title": "Source Buffers",
+      "page": 370,
+      "level": 3
+    },
+    {
+      "title": "Breakpoints Buffer",
+      "page": 370,
+      "level": 3
+    },
+    {
+      "title": "Threads Buffer",
+      "page": 371,
+      "level": 3
+    },
+    {
+      "title": "Stack Buffer",
+      "page": 372,
+      "level": 3
+    },
+    {
+      "title": "Other GDB Buffers",
+      "page": 372,
+      "level": 3
+    },
+    {
+      "title": "Watch Expressions",
+      "page": 373,
+      "level": 3
+    },
+    {
+      "title": "Multithreaded Debugging",
+      "page": 374,
+      "level": 3
+    },
+    {
+      "title": "Executing Lisp Expressions",
+      "page": 375,
+      "level": 1
+    },
+    {
+      "title": "Libraries of Lisp Code for Emacs",
+      "page": 375,
+      "level": 1
+    },
+    {
+      "title": "Evaluating Emacs Lisp Expressions",
+      "page": 377,
+      "level": 1
+    },
+    {
+      "title": "Lisp Interaction Buffers",
+      "page": 379,
+      "level": 1
+    },
+    {
+      "title": "Running an External Lisp",
+      "page": 379,
+      "level": 1
+    },
+    {
+      "title": "25 Maintaining Large Programs",
+      "page": 381,
+      "level": 0
+    },
+    {
+      "title": "Version Control",
+      "page": 381,
+      "level": 1
+    },
+    {
+      "title": "Introduction to Version Control",
+      "page": 382,
+      "level": 2
+    },
+    {
+      "title": "Understanding the Problems it Addresses",
+      "page": 382,
+      "level": 3
+    },
+    {
+      "title": "Supported Version Control Systems",
+      "page": 382,
+      "level": 3
+    },
+    {
+      "title": "Concepts of Version Control",
+      "page": 383,
+      "level": 3
+    },
+    {
+      "title": "Merge-based vs Lock-based Version Control",
+      "page": 383,
+      "level": 3
+    },
+    {
+      "title": "Changeset-based vs File-based Version Control",
+      "page": 384,
+      "level": 3
+    },
+    {
+      "title": "Decentralized vs Centralized Repositories",
+      "page": 384,
+      "level": 3
+    },
+    {
+      "title": "Types of Log File",
+      "page": 385,
+      "level": 3
+    },
+    {
+      "title": "Version Control and the Mode Line",
+      "page": 385,
+      "level": 2
+    },
+    {
+      "title": "Basic Editing under Version Control",
+      "page": 386,
+      "level": 2
+    },
+    {
+      "title": "Basic Version Control with Merging",
+      "page": 386,
+      "level": 3
+    },
+    {
+      "title": "Basic Version Control with Locking",
+      "page": 387,
+      "level": 3
+    },
+    {
+      "title": "Advanced Control in C-x v v",
+      "page": 388,
+      "level": 3
+    },
+    {
+      "title": "Features of the Log Entry Buffer",
+      "page": 389,
+      "level": 2
+    },
+    {
+      "title": "Registering a File for Version Control",
+      "page": 390,
+      "level": 2
+    },
+    {
+      "title": "Examining And Comparing Old Revisions",
+      "page": 390,
+      "level": 2
+    },
+    {
+      "title": "VC Change Log",
+      "page": 392,
+      "level": 2
+    },
+    {
+      "title": "Undoing Version Control Actions",
+      "page": 394,
+      "level": 2
+    },
+    {
+      "title": "Ignore Version Control Files",
+      "page": 395,
+      "level": 2
+    },
+    {
+      "title": "VC Directory Mode",
+      "page": 395,
+      "level": 2
+    },
+    {
+      "title": "The VC Directory Buffer",
+      "page": 395,
+      "level": 3
+    },
+    {
+      "title": "VC Directory Commands",
+      "page": 396,
+      "level": 3
+    },
+    {
+      "title": "Version Control Branches",
+      "page": 398,
+      "level": 2
+    },
+    {
+      "title": "Switching between Branches",
+      "page": 398,
+      "level": 3
+    },
+    {
+      "title": "Pulling/Pushing Changes into/from a Branch",
+      "page": 399,
+      "level": 3
+    },
+    {
+      "title": "Merging Branches",
+      "page": 400,
+      "level": 3
+    },
+    {
+      "title": "Creating New Branches",
+      "page": 400,
+      "level": 3
+    },
+    {
+      "title": "Working with Projects",
+      "page": 401,
+      "level": 1
+    },
+    {
+      "title": "Project Commands That Operate on Files",
+      "page": 401,
+      "level": 2
+    },
+    {
+      "title": "Project Commands That Operate on Buffers",
+      "page": 403,
+      "level": 2
+    },
+    {
+      "title": "Switching Projects",
+      "page": 404,
+      "level": 2
+    },
+    {
+      "title": "Managing the Project List File",
+      "page": 404,
+      "level": 2
+    },
+    {
+      "title": "Change Logs",
+      "page": 404,
+      "level": 1
+    },
+    {
+      "title": "Change Log Commands",
+      "page": 404,
+      "level": 2
+    },
+    {
+      "title": "Format of ChangeLog",
+      "page": 405,
+      "level": 2
+    },
+    {
+      "title": "Find Identifier References",
+      "page": 406,
+      "level": 1
+    },
+    {
+      "title": "Find Identifiers",
+      "page": 407,
+      "level": 2
+    },
+    {
+      "title": "Looking Up Identifiers",
+      "page": 407,
+      "level": 3
+    },
+    {
+      "title": "Commands Available in the *xref* Buffer",
+      "page": 409,
+      "level": 3
+    },
+    {
+      "title": "Searching and Replacing with Identifiers",
+      "page": 410,
+      "level": 3
+    },
+    {
+      "title": "Identifier Inquiries",
+      "page": 411,
+      "level": 3
+    },
+    {
+      "title": "Tags Tables",
+      "page": 412,
+      "level": 2
+    },
+    {
+      "title": "Source File Tag Syntax",
+      "page": 412,
+      "level": 3
+    },
+    {
+      "title": "Creating Tags Tables",
+      "page": 415,
+      "level": 3
+    },
+    {
+      "title": "Etags Regexps",
+      "page": 416,
+      "level": 3
+    },
+    {
+      "title": "Selecting a Tags Table",
+      "page": 418,
+      "level": 2
+    },
+    {
+      "title": "Emacs Development Environment",
+      "page": 419,
+      "level": 1
+    },
+    {
+      "title": "Bug Reference",
+      "page": 420,
+      "level": 1
+    },
+    {
+      "title": "26 Abbrevs",
+      "page": 423,
+      "level": 0
+    },
+    {
+      "title": "Abbrev Concepts",
+      "page": 423,
+      "level": 1
+    },
+    {
+      "title": "Defining Abbrevs",
+      "page": 423,
+      "level": 1
+    },
+    {
+      "title": "Controlling Abbrev Expansion",
+      "page": 424,
+      "level": 1
+    },
+    {
+      "title": "Abbrevs Suggestions",
+      "page": 425,
+      "level": 1
+    },
+    {
+      "title": "Examining and Editing Abbrevs",
+      "page": 426,
+      "level": 1
+    },
+    {
+      "title": "Saving Abbrevs",
+      "page": 427,
+      "level": 1
+    },
+    {
+      "title": "Dynamic Abbrev Expansion",
+      "page": 427,
+      "level": 1
+    },
+    {
+      "title": "Customizing Dynamic Abbreviation",
+      "page": 428,
+      "level": 1
+    },
+    {
+      "title": "27 Dired, the Directory Editor",
+      "page": 430,
+      "level": 0
+    },
+    {
+      "title": "Entering Dired",
+      "page": 430,
+      "level": 1
+    },
+    {
+      "title": "Navigation in the Dired Buffer",
+      "page": 431,
+      "level": 1
+    },
+    {
+      "title": "Deleting Files with Dired",
+      "page": 432,
+      "level": 1
+    },
+    {
+      "title": "Flagging Many Files at Once",
+      "page": 433,
+      "level": 1
+    },
+    {
+      "title": "Visiting Files in Dired",
+      "page": 434,
+      "level": 1
+    },
+    {
+      "title": "Dired Marks vs. Flags",
+      "page": 435,
+      "level": 1
+    },
+    {
+      "title": "Operating on Files",
+      "page": 437,
+      "level": 1
+    },
+    {
+      "title": "Shell Commands in Dired",
+      "page": 441,
+      "level": 1
+    },
+    {
+      "title": "Shell Command Guessing",
+      "page": 442,
+      "level": 1
+    },
+    {
+      "title": "Transforming File Names in Dired",
+      "page": 443,
+      "level": 1
+    },
+    {
+      "title": "File Comparison with Dired",
+      "page": 444,
+      "level": 1
+    },
+    {
+      "title": "Subdirectories in Dired",
+      "page": 444,
+      "level": 1
+    },
+    {
+      "title": "Moving Over Subdirectories",
+      "page": 445,
+      "level": 1
+    },
+    {
+      "title": "Hiding Subdirectories",
+      "page": 445,
+      "level": 1
+    },
+    {
+      "title": "Updating the Dired Buffer",
+      "page": 446,
+      "level": 1
+    },
+    {
+      "title": "Dired and find",
+      "page": 447,
+      "level": 1
+    },
+    {
+      "title": "Editing the Dired Buffer",
+      "page": 447,
+      "level": 1
+    },
+    {
+      "title": "Viewing Image Thumbnails in Dired",
+      "page": 448,
+      "level": 1
+    },
+    {
+      "title": "Other Dired Features",
+      "page": 450,
+      "level": 1
+    },
+    {
+      "title": "28 The Calendar and the Diary",
+      "page": 452,
+      "level": 0
+    },
+    {
+      "title": "Movement in the Calendar",
+      "page": 452,
+      "level": 1
+    },
+    {
+      "title": "Motion by Standard Lengths of Time",
+      "page": 452,
+      "level": 2
+    },
+    {
+      "title": "Beginning or End of Week, Month or Year",
+      "page": 453,
+      "level": 2
+    },
+    {
+      "title": "Specified Dates",
+      "page": 453,
+      "level": 2
+    },
+    {
+      "title": "Scrolling in the Calendar",
+      "page": 454,
+      "level": 1
+    },
+    {
+      "title": "Counting Days",
+      "page": 454,
+      "level": 1
+    },
+    {
+      "title": "Miscellaneous Calendar Commands",
+      "page": 455,
+      "level": 1
+    },
+    {
+      "title": "Writing Calendar Files",
+      "page": 455,
+      "level": 1
+    },
+    {
+      "title": "Holidays",
+      "page": 457,
+      "level": 1
+    },
+    {
+      "title": "Times of Sunrise and Sunset",
+      "page": 458,
+      "level": 1
+    },
+    {
+      "title": "Phases of the Moon",
+      "page": 459,
+      "level": 1
+    },
+    {
+      "title": "Conversion To and From Other Calendars",
+      "page": 459,
+      "level": 1
+    },
+    {
+      "title": "Supported Calendar Systems",
+      "page": 459,
+      "level": 2
+    },
+    {
+      "title": "Converting To Other Calendars",
+      "page": 460,
+      "level": 2
+    },
+    {
+      "title": "Converting From Other Calendars",
+      "page": 461,
+      "level": 2
+    },
+    {
+      "title": "The Diary",
+      "page": 462,
+      "level": 1
+    },
+    {
+      "title": "The Diary File",
+      "page": 462,
+      "level": 2
+    },
+    {
+      "title": "Displaying the Diary",
+      "page": 463,
+      "level": 2
+    },
+    {
+      "title": "Date Formats",
+      "page": 464,
+      "level": 2
+    },
+    {
+      "title": "Commands to Add to the Diary",
+      "page": 465,
+      "level": 2
+    },
+    {
+      "title": "Special Diary Entries",
+      "page": 466,
+      "level": 2
+    },
+    {
+      "title": "Appointments",
+      "page": 467,
+      "level": 2
+    },
+    {
+      "title": "Importing and Exporting Diary Entries",
+      "page": 468,
+      "level": 2
+    },
+    {
+      "title": "Daylight Saving Time",
+      "page": 469,
+      "level": 1
+    },
+    {
+      "title": "Summing Time Intervals",
+      "page": 470,
+      "level": 1
+    },
+    {
+      "title": "29 Sending Mail",
+      "page": 471,
+      "level": 0
+    },
+    {
+      "title": "The Format of the Mail Buffer",
+      "page": 471,
+      "level": 1
+    },
+    {
+      "title": "Mail Header Fields",
+      "page": 472,
+      "level": 1
+    },
+    {
+      "title": "Mail Aliases",
+      "page": 473,
+      "level": 1
+    },
+    {
+      "title": "Mail Commands",
+      "page": 474,
+      "level": 1
+    },
+    {
+      "title": "Mail Sending",
+      "page": 474,
+      "level": 2
+    },
+    {
+      "title": "Mail Header Editing",
+      "page": 475,
+      "level": 2
+    },
+    {
+      "title": "Citing Mail",
+      "page": 476,
+      "level": 2
+    },
+    {
+      "title": "Mail Miscellany",
+      "page": 477,
+      "level": 2
+    },
+    {
+      "title": "Mail Signature",
+      "page": 477,
+      "level": 1
+    },
+    {
+      "title": "Mail Amusements",
+      "page": 478,
+      "level": 1
+    },
+    {
+      "title": "Mail-Composition Methods",
+      "page": 478,
+      "level": 1
+    },
+    {
+      "title": "30 Reading Mail with Rmail",
+      "page": 480,
+      "level": 0
+    },
+    {
+      "title": "Basic Concepts of Rmail",
+      "page": 480,
+      "level": 1
+    },
+    {
+      "title": "Scrolling Within a Message",
+      "page": 480,
+      "level": 1
+    },
+    {
+      "title": "Moving Among Messages",
+      "page": 481,
+      "level": 1
+    },
+    {
+      "title": "Deleting Messages",
+      "page": 482,
+      "level": 1
+    },
+    {
+      "title": "Rmail Files and Inboxes",
+      "page": 483,
+      "level": 1
+    },
+    {
+      "title": "Multiple Rmail Files",
+      "page": 484,
+      "level": 1
+    },
+    {
+      "title": "Copying Messages Out to Files",
+      "page": 485,
+      "level": 1
+    },
+    {
+      "title": "Labels",
+      "page": 487,
+      "level": 1
+    },
+    {
+      "title": "Rmail Attributes",
+      "page": 488,
+      "level": 1
+    },
+    {
+      "title": "Sending Replies",
+      "page": 488,
+      "level": 1
+    },
+    {
+      "title": "Summaries",
+      "page": 490,
+      "level": 1
+    },
+    {
+      "title": "Making Summaries",
+      "page": 490,
+      "level": 2
+    },
+    {
+      "title": "Editing in Summaries",
+      "page": 491,
+      "level": 2
+    },
+    {
+      "title": "Sorting the Rmail File",
+      "page": 493,
+      "level": 1
+    },
+    {
+      "title": "Display of Messages",
+      "page": 494,
+      "level": 1
+    },
+    {
+      "title": "Rmail and Coding Systems",
+      "page": 495,
+      "level": 1
+    },
+    {
+      "title": "Editing Within a Message",
+      "page": 496,
+      "level": 1
+    },
+    {
+      "title": "Digest Messages",
+      "page": 496,
+      "level": 1
+    },
+    {
+      "title": "Reading Rot13 Messages",
+      "page": 497,
+      "level": 1
+    },
+    {
+      "title": "movemail program",
+      "page": 497,
+      "level": 1
+    },
+    {
+      "title": "Retrieving Mail from Remote Mailboxes",
+      "page": 498,
+      "level": 1
+    },
+    {
+      "title": "Retrieving Mail from Local Mailboxes in Various Formats",
+      "page": 499,
+      "level": 1
+    },
+    {
+      "title": "31 Miscellaneous Commands",
+      "page": 500,
+      "level": 0
+    },
+    {
+      "title": "Email and Usenet News with Gnus",
+      "page": 500,
+      "level": 1
+    },
+    {
+      "title": "Gnus Buffers",
+      "page": 500,
+      "level": 2
+    },
+    {
+      "title": "When Gnus Starts Up",
+      "page": 500,
+      "level": 2
+    },
+    {
+      "title": "Using the Gnus Group Buffer",
+      "page": 501,
+      "level": 2
+    },
+    {
+      "title": "Using the Gnus Summary Buffer",
+      "page": 501,
+      "level": 2
+    },
+    {
+      "title": "Host Security",
+      "page": 502,
+      "level": 1
+    },
+    {
+      "title": "Network Security",
+      "page": 503,
+      "level": 1
+    },
+    {
+      "title": "Document Viewing",
+      "page": 505,
+      "level": 1
+    },
+    {
+      "title": "DocView Navigation",
+      "page": 506,
+      "level": 2
+    },
+    {
+      "title": "DocView Searching",
+      "page": 506,
+      "level": 2
+    },
+    {
+      "title": "DocView Slicing",
+      "page": 506,
+      "level": 2
+    },
+    {
+      "title": "DocView Conversion",
+      "page": 507,
+      "level": 2
+    },
+    {
+      "title": "Running Shell Commands from Emacs",
+      "page": 507,
+      "level": 1
+    },
+    {
+      "title": "Single Shell Commands",
+      "page": 508,
+      "level": 2
+    },
+    {
+      "title": "Interactive Subshell",
+      "page": 510,
+      "level": 2
+    },
+    {
+      "title": "Shell Mode",
+      "page": 511,
+      "level": 2
+    },
+    {
+      "title": "Shell Prompts",
+      "page": 513,
+      "level": 2
+    },
+    {
+      "title": "Shell Command History",
+      "page": 514,
+      "level": 2
+    },
+    {
+      "title": "Shell History Ring",
+      "page": 514,
+      "level": 3
+    },
+    {
+      "title": "Shell History Copying",
+      "page": 515,
+      "level": 3
+    },
+    {
+      "title": "Shell History References",
+      "page": 515,
+      "level": 3
+    },
+    {
+      "title": "Directory Tracking",
+      "page": 516,
+      "level": 2
+    },
+    {
+      "title": "Shell Mode Options",
+      "page": 516,
+      "level": 2
+    },
+    {
+      "title": "Emacs Terminal Emulator",
+      "page": 517,
+      "level": 2
+    },
+    {
+      "title": "Term Mode",
+      "page": 518,
+      "level": 2
+    },
+    {
+      "title": "Remote Host Shell",
+      "page": 519,
+      "level": 2
+    },
+    {
+      "title": "Serial Terminal",
+      "page": 519,
+      "level": 2
+    },
+    {
+      "title": "Using Emacs as a Server",
+      "page": 519,
+      "level": 1
+    },
+    {
+      "title": "TCP Emacs server",
+      "page": 521,
+      "level": 2
+    },
+    {
+      "title": "Invoking emacsclient",
+      "page": 522,
+      "level": 2
+    },
+    {
+      "title": "emacsclient Options",
+      "page": 523,
+      "level": 2
+    },
+    {
+      "title": "Printing Hard Copies",
+      "page": 527,
+      "level": 1
+    },
+    {
+      "title": "PostScript Hardcopy",
+      "page": 528,
+      "level": 2
+    },
+    {
+      "title": "Variables for PostScript Hardcopy",
+      "page": 529,
+      "level": 2
+    },
+    {
+      "title": "Printing Package",
+      "page": 530,
+      "level": 2
+    },
+    {
+      "title": "Sorting Text",
+      "page": 530,
+      "level": 1
+    },
+    {
+      "title": "Editing Binary Files",
+      "page": 532,
+      "level": 1
+    },
+    {
+      "title": "Saving Emacs Sessions",
+      "page": 533,
+      "level": 1
+    },
+    {
+      "title": "Recursive Editing Levels",
+      "page": 535,
+      "level": 1
+    },
+    {
+      "title": "Hyperlinking and Web Navigation Features",
+      "page": 536,
+      "level": 1
+    },
+    {
+      "title": "Web Browsing with EWW",
+      "page": 536,
+      "level": 2
+    },
+    {
+      "title": "Embedded WebKit Widgets",
+      "page": 536,
+      "level": 2
+    },
+    {
+      "title": "Following URLs",
+      "page": 537,
+      "level": 2
+    },
+    {
+      "title": "Activating URLs",
+      "page": 537,
+      "level": 2
+    },
+    {
+      "title": "Finding Files and URLs at Point",
+      "page": 537,
+      "level": 2
+    },
+    {
+      "title": "Games and Other Amusements",
+      "page": 539,
+      "level": 1
+    },
+    {
+      "title": "32 Emacs Lisp Packages",
+      "page": 541,
+      "level": 0
+    },
+    {
+      "title": "The Package Menu Buffer",
+      "page": 541,
+      "level": 1
+    },
+    {
+      "title": "Package Statuses",
+      "page": 543,
+      "level": 1
+    },
+    {
+      "title": "Package Installation",
+      "page": 544,
+      "level": 1
+    },
+    {
+      "title": "Package Files and Directory Layout",
+      "page": 547,
+      "level": 1
+    },
+    {
+      "title": "Fetching Package Sources",
+      "page": 548,
+      "level": 1
+    },
+    {
+      "title": "Specifying Package Sources",
+      "page": 549,
+      "level": 2
+    },
+    {
+      "title": "33 Customization",
+      "page": 551,
+      "level": 0
+    },
+    {
+      "title": "Easy Customization Interface",
+      "page": 551,
+      "level": 1
+    },
+    {
+      "title": "Customization Groups",
+      "page": 551,
+      "level": 2
+    },
+    {
+      "title": "Browsing and Searching for Settings",
+      "page": 552,
+      "level": 2
+    },
+    {
+      "title": "Changing a Variable",
+      "page": 552,
+      "level": 2
+    },
+    {
+      "title": "Saving Customizations",
+      "page": 555,
+      "level": 2
+    },
+    {
+      "title": "Customizing Faces",
+      "page": 555,
+      "level": 2
+    },
+    {
+      "title": "Customizing Specific Items",
+      "page": 556,
+      "level": 2
+    },
+    {
+      "title": "Custom Themes",
+      "page": 557,
+      "level": 2
+    },
+    {
+      "title": "Creating Custom Themes",
+      "page": 559,
+      "level": 2
+    },
+    {
+      "title": "Variables",
+      "page": 559,
+      "level": 1
+    },
+    {
+      "title": "Examining and Setting Variables",
+      "page": 560,
+      "level": 2
+    },
+    {
+      "title": "Hooks",
+      "page": 561,
+      "level": 2
+    },
+    {
+      "title": "Local Variables",
+      "page": 563,
+      "level": 2
+    },
+    {
+      "title": "Local Variables in Files",
+      "page": 564,
+      "level": 2
+    },
+    {
+      "title": "Specifying File Variables",
+      "page": 564,
+      "level": 3
+    },
+    {
+      "title": "Safety of File Variables",
+      "page": 566,
+      "level": 3
+    },
+    {
+      "title": "Per-Directory Local Variables",
+      "page": 567,
+      "level": 2
+    },
+    {
+      "title": "Per-Directory Variables via EditorConfig",
+      "page": 570,
+      "level": 3
+    },
+    {
+      "title": "Per-Connection Local Variables",
+      "page": 570,
+      "level": 2
+    },
+    {
+      "title": "Customizing Key Bindings",
+      "page": 571,
+      "level": 1
+    },
+    {
+      "title": "Keymaps",
+      "page": 571,
+      "level": 2
+    },
+    {
+      "title": "Prefix Keymaps",
+      "page": 572,
+      "level": 2
+    },
+    {
+      "title": "Local Keymaps",
+      "page": 573,
+      "level": 2
+    },
+    {
+      "title": "Minibuffer Keymaps",
+      "page": 573,
+      "level": 2
+    },
+    {
+      "title": "Changing Key Bindings Interactively",
+      "page": 574,
+      "level": 2
+    },
+    {
+      "title": "Rebinding Keys in Your Init File",
+      "page": 575,
+      "level": 2
+    },
+    {
+      "title": "Modifier Keys",
+      "page": 576,
+      "level": 2
+    },
+    {
+      "title": "Rebinding Function Keys",
+      "page": 577,
+      "level": 2
+    },
+    {
+      "title": "Named ASCII Control Characters",
+      "page": 578,
+      "level": 2
+    },
+    {
+      "title": "Rebinding Mouse Buttons",
+      "page": 578,
+      "level": 2
+    },
+    {
+      "title": "Disabling Commands",
+      "page": 580,
+      "level": 2
+    },
+    {
+      "title": "The Emacs Initialization File",
+      "page": 581,
+      "level": 1
+    },
+    {
+      "title": "Init File Syntax",
+      "page": 582,
+      "level": 2
+    },
+    {
+      "title": "Init File Examples",
+      "page": 583,
+      "level": 2
+    },
+    {
+      "title": "Terminal-specific Initialization",
+      "page": 585,
+      "level": 2
+    },
+    {
+      "title": "How Emacs Finds Your Init File",
+      "page": 586,
+      "level": 2
+    },
+    {
+      "title": "Non-ASCII Characters in Init Files",
+      "page": 587,
+      "level": 2
+    },
+    {
+      "title": "The Early Init File",
+      "page": 587,
+      "level": 2
+    },
+    {
+      "title": "Keeping Persistent Authentication Information",
+      "page": 588,
+      "level": 1
+    },
+    {
+      "title": "34 Dealing with Common Problems",
+      "page": 589,
+      "level": 0
+    },
+    {
+      "title": "Quitting and Aborting",
+      "page": 589,
+      "level": 1
+    },
+    {
+      "title": "Dealing with Emacs Trouble",
+      "page": 590,
+      "level": 1
+    },
+    {
+      "title": "Recursive Editing Levels",
+      "page": 590,
+      "level": 2
+    },
+    {
+      "title": "Garbage on the Screen",
+      "page": 591,
+      "level": 2
+    },
+    {
+      "title": "Garbage in the Text",
+      "page": 591,
+      "level": 2
+    },
+    {
+      "title": "Running out of Memory",
+      "page": 591,
+      "level": 2
+    },
+    {
+      "title": "When Emacs Crashes",
+      "page": 592,
+      "level": 2
+    },
+    {
+      "title": "Recovery After a Crash",
+      "page": 593,
+      "level": 2
+    },
+    {
+      "title": "Emergency Escape",
+      "page": 594,
+      "level": 2
+    },
+    {
+      "title": "If DEL Fails to Delete",
+      "page": 594,
+      "level": 2
+    },
+    {
+      "title": "Reporting Bugs",
+      "page": 595,
+      "level": 1
+    },
+    {
+      "title": "Reading Existing Bug Reports and Known Problems",
+      "page": 596,
+      "level": 2
+    },
+    {
+      "title": "When Is There a Bug",
+      "page": 596,
+      "level": 2
+    },
+    {
+      "title": "Understanding Bug Reporting",
+      "page": 597,
+      "level": 2
+    },
+    {
+      "title": "Checklist for Bug Reports",
+      "page": 598,
+      "level": 2
+    },
+    {
+      "title": "Sending Patches for GNU Emacs",
+      "page": 603,
+      "level": 2
+    },
+    {
+      "title": "Contributing to Emacs Development",
+      "page": 605,
+      "level": 1
+    },
+    {
+      "title": "Coding Standards",
+      "page": 607,
+      "level": 2
+    },
+    {
+      "title": "Copyright Assignment",
+      "page": 607,
+      "level": 2
+    },
+    {
+      "title": "How To Get Help with GNU Emacs",
+      "page": 607,
+      "level": 1
+    },
+    {
+      "title": "A GNU GENERAL PUBLIC LICENSE",
+      "page": 608,
+      "level": 0
+    },
+    {
+      "title": "B GNU Free Documentation License",
+      "page": 619,
+      "level": 0
+    },
+    {
+      "title": "C Command Line Arguments for Emacs Invocation",
+      "page": 627,
+      "level": 0
+    },
+    {
+      "title": "Action Arguments",
+      "page": 627,
+      "level": 1
+    },
+    {
+      "title": "Initial Options",
+      "page": 629,
+      "level": 1
+    },
+    {
+      "title": "Command Argument Example",
+      "page": 632,
+      "level": 1
+    },
+    {
+      "title": "Environment Variables",
+      "page": 632,
+      "level": 1
+    },
+    {
+      "title": "General Variables",
+      "page": 633,
+      "level": 2
+    },
+    {
+      "title": "Miscellaneous Variables",
+      "page": 636,
+      "level": 2
+    },
+    {
+      "title": "The MS-Windows System Registry",
+      "page": 637,
+      "level": 2
+    },
+    {
+      "title": "Specifying the Display Name",
+      "page": 638,
+      "level": 1
+    },
+    {
+      "title": "Font Specification Options",
+      "page": 638,
+      "level": 1
+    },
+    {
+      "title": "Window Color Options",
+      "page": 639,
+      "level": 1
+    },
+    {
+      "title": "Options for Window Size and Position",
+      "page": 640,
+      "level": 1
+    },
+    {
+      "title": "Internal and Outer Borders",
+      "page": 642,
+      "level": 1
+    },
+    {
+      "title": "Frame Titles",
+      "page": 642,
+      "level": 1
+    },
+    {
+      "title": "Icons",
+      "page": 643,
+      "level": 1
+    },
+    {
+      "title": "Other Display Options",
+      "page": 643,
+      "level": 1
+    },
+    {
+      "title": "D X Options and Resources",
+      "page": 644,
+      "level": 0
+    },
+    {
+      "title": "X Resources",
+      "page": 644,
+      "level": 1
+    },
+    {
+      "title": "Table of X Resources for Emacs",
+      "page": 645,
+      "level": 1
+    },
+    {
+      "title": "GTK+ resources",
+      "page": 647,
+      "level": 1
+    },
+    {
+      "title": "GTK+ Resource Basics",
+      "page": 648,
+      "level": 2
+    },
+    {
+      "title": "GTK+ widget names",
+      "page": 648,
+      "level": 2
+    },
+    {
+      "title": "GTK+ Widget Names in Emacs",
+      "page": 649,
+      "level": 2
+    },
+    {
+      "title": "GTK+ styles",
+      "page": 650,
+      "level": 2
+    },
+    {
+      "title": "E Emacs 29 Antinews",
+      "page": 652,
+      "level": 0
+    },
+    {
+      "title": "F Emacs and macOS / GNUstep",
+      "page": 654,
+      "level": 0
+    },
+    {
+      "title": "Basic Emacs usage under macOS and GNUstep",
+      "page": 654,
+      "level": 1
+    },
+    {
+      "title": "Grabbing environment variables",
+      "page": 654,
+      "level": 2
+    },
+    {
+      "title": "Mac / GNUstep Customization",
+      "page": 655,
+      "level": 1
+    },
+    {
+      "title": "Modifier keys",
+      "page": 655,
+      "level": 2
+    },
+    {
+      "title": "Frame Variables",
+      "page": 655,
+      "level": 2
+    },
+    {
+      "title": "macOS Trackpad/Mousewheel Variables",
+      "page": 656,
+      "level": 2
+    },
+    {
+      "title": "Windowing System Events under macOS / GNUstep",
+      "page": 656,
+      "level": 1
+    },
+    {
+      "title": "GNUstep Support",
+      "page": 657,
+      "level": 1
+    },
+    {
+      "title": "G Emacs and Haiku",
+      "page": 658,
+      "level": 0
+    },
+    {
+      "title": "Haiku Installation and Startup",
+      "page": 658,
+      "level": 1
+    },
+    {
+      "title": "Font Backends and Selection under Haiku",
+      "page": 659,
+      "level": 1
+    },
+    {
+      "title": "H Emacs and Android",
+      "page": 660,
+      "level": 0
+    },
+    {
+      "title": "Android History",
+      "page": 660,
+      "level": 1
+    },
+    {
+      "title": "Starting Emacs on Android",
+      "page": 660,
+      "level": 1
+    },
+    {
+      "title": "What Files Emacs Can Access on Android",
+      "page": 662,
+      "level": 1
+    },
+    {
+      "title": "Accessing Files from Other Programs on Android",
+      "page": 663,
+      "level": 1
+    },
+    {
+      "title": "Running Emacs under Android",
+      "page": 664,
+      "level": 1
+    },
+    {
+      "title": "The Android Window System",
+      "page": 670,
+      "level": 1
+    },
+    {
+      "title": "Font Backends and Selection under Android",
+      "page": 673,
+      "level": 1
+    },
+    {
+      "title": "Troubleshooting Startup Problems on Android",
+      "page": 674,
+      "level": 1
+    },
+    {
+      "title": "Installing Extra Software on Android",
+      "page": 674,
+      "level": 1
+    },
+    {
+      "title": "I Emacs and Microsoft Windows/MS-DOS",
+      "page": 676,
+      "level": 0
+    },
+    {
+      "title": "How to Start Emacs on MS-Windows",
+      "page": 676,
+      "level": 1
+    },
+    {
+      "title": "Text Files and Binary Files",
+      "page": 677,
+      "level": 1
+    },
+    {
+      "title": "File Names on MS-Windows",
+      "page": 678,
+      "level": 1
+    },
+    {
+      "title": "Emulation of ls on MS-Windows",
+      "page": 679,
+      "level": 1
+    },
+    {
+      "title": "HOME and Startup Directories on MS-Windows",
+      "page": 679,
+      "level": 1
+    },
+    {
+      "title": "Keyboard Usage on MS-Windows",
+      "page": 680,
+      "level": 1
+    },
+    {
+      "title": "Mouse Usage on MS-Windows",
+      "page": 681,
+      "level": 1
+    },
+    {
+      "title": "Subprocesses on Windows 9X/ME and Windows NT/2K/XP/Vista/7/8/10",
+      "page": 681,
+      "level": 1
+    },
+    {
+      "title": "Printing and MS-Windows",
+      "page": 682,
+      "level": 1
+    },
+    {
+      "title": "Specifying Fonts on MS-Windows",
+      "page": 684,
+      "level": 1
+    },
+    {
+      "title": "Miscellaneous Windows-specific features",
+      "page": 686,
+      "level": 1
+    },
+    {
+      "title": "The GNU Manifesto",
+      "page": 688,
+      "level": 0
+    },
+    {
+      "title": "What's GNU Gnu's Not Unix!",
+      "page": 688,
+      "level": 1
+    },
+    {
+      "title": "Why I Must Write GNU",
+      "page": 689,
+      "level": 1
+    },
+    {
+      "title": "Why GNU Will Be Compatible with Unix",
+      "page": 689,
+      "level": 1
+    },
+    {
+      "title": "How GNU Will Be Available",
+      "page": 689,
+      "level": 1
+    },
+    {
+      "title": "Why Many Other Programmers Want to Help",
+      "page": 689,
+      "level": 1
+    },
+    {
+      "title": "How You Can Contribute",
+      "page": 690,
+      "level": 1
+    },
+    {
+      "title": "Why All Computer Users Will Benefit",
+      "page": 690,
+      "level": 1
+    },
+    {
+      "title": "Some Easily Rebutted Objections to GNU's Goals",
+      "page": 691,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 696,
+      "level": 0
+    },
+    {
+      "title": "Key (Character) Index",
+      "page": 720,
+      "level": 0
+    },
+    {
+      "title": "Command and Function Index",
+      "page": 731,
+      "level": 0
+    },
+    {
+      "title": "Variable Index",
+      "page": 748,
+      "level": 0
+    },
+    {
+      "title": "Concept Index",
+      "page": 759,
+      "level": 0
+    }
+  ]
+}

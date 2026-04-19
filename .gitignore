@@ -1,0 +1,8 @@
+node_modules/
+dist/
+
+# Corpus PDFs are large — only the expected JSON ground truth is tracked
+test/corpus/*.pdf
+
+# Debug scripts
+test/_debug-*.ts

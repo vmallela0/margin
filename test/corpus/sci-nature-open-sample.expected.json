@@ -1,0 +1,52 @@
+{
+  "description": "paper: sci-nature-open-sample",
+  "category": "paper",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Array programming with NumPy\r",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "NumPy arrays\r",
+      "page": 1,
+      "level": 1
+    },
+    {
+      "title": "Fig. 1 The NumPy array incorporates several fundamental array concepts.",
+      "page": 2,
+      "level": 1
+    },
+    {
+      "title": "Scientific Python ecosystem\r",
+      "page": 3,
+      "level": 1
+    },
+    {
+      "title": "Fig. 2 NumPy is the base of the scientific Python ecosystem.",
+      "page": 3,
+      "level": 1
+    },
+    {
+      "title": "Array proliferation and interoperability\r",
+      "page": 4,
+      "level": 1
+    },
+    {
+      "title": "Fig. 3 NumPy’s API and array protocols expose new arrays to the ecosystem.",
+      "page": 4,
+      "level": 1
+    },
+    {
+      "title": "Discussion\r",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "Acknowledgements",
+      "page": 6,
+      "level": 1
+    }
+  ]
+}

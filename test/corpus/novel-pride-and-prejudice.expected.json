@@ -1,0 +1,317 @@
+{
+  "description": "novel: novel-pride-and-prejudice",
+  "category": "novel",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Pride and Prejudice",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "Chapter 1",
+      "page": 2,
+      "level": 1
+    },
+    {
+      "title": "Chapter 2",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "Chapter 3",
+      "page": 10,
+      "level": 1
+    },
+    {
+      "title": "Chapter 4",
+      "page": 17,
+      "level": 1
+    },
+    {
+      "title": "Chapter 5",
+      "page": 21,
+      "level": 1
+    },
+    {
+      "title": "Chapter 6",
+      "page": 25,
+      "level": 1
+    },
+    {
+      "title": "Chapter 7",
+      "page": 34,
+      "level": 1
+    },
+    {
+      "title": "Chapter 8",
+      "page": 42,
+      "level": 1
+    },
+    {
+      "title": "Chapter 9",
+      "page": 50,
+      "level": 1
+    },
+    {
+      "title": "Chapter 10",
+      "page": 57,
+      "level": 1
+    },
+    {
+      "title": "Chapter 11",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Chapter 12",
+      "page": 72,
+      "level": 1
+    },
+    {
+      "title": "Chapter 13",
+      "page": 75,
+      "level": 1
+    },
+    {
+      "title": "Chapter 14",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "Chapter 15",
+      "page": 87,
+      "level": 1
+    },
+    {
+      "title": "Chapter 16",
+      "page": 94,
+      "level": 1
+    },
+    {
+      "title": "Chapter 17",
+      "page": 107,
+      "level": 1
+    },
+    {
+      "title": "Chapter 18",
+      "page": 112,
+      "level": 1
+    },
+    {
+      "title": "Chapter 19",
+      "page": 131,
+      "level": 1
+    },
+    {
+      "title": "Chapter 20",
+      "page": 138,
+      "level": 1
+    },
+    {
+      "title": "Chapter 21",
+      "page": 145,
+      "level": 1
+    },
+    {
+      "title": "Chapter 22",
+      "page": 153,
+      "level": 1
+    },
+    {
+      "title": "Chapter 23",
+      "page": 160,
+      "level": 1
+    },
+    {
+      "title": "Chapter 24",
+      "page": 167,
+      "level": 1
+    },
+    {
+      "title": "Chapter 25",
+      "page": 175,
+      "level": 1
+    },
+    {
+      "title": "Chapter 26",
+      "page": 181,
+      "level": 1
+    },
+    {
+      "title": "Chapter 27",
+      "page": 190,
+      "level": 1
+    },
+    {
+      "title": "Chapter 28",
+      "page": 195,
+      "level": 1
+    },
+    {
+      "title": "Chapter 29",
+      "page": 201,
+      "level": 1
+    },
+    {
+      "title": "Chapter 30",
+      "page": 211,
+      "level": 1
+    },
+    {
+      "title": "Chapter 31",
+      "page": 216,
+      "level": 1
+    },
+    {
+      "title": "Chapter 32",
+      "page": 222,
+      "level": 1
+    },
+    {
+      "title": "Chapter 33",
+      "page": 228,
+      "level": 1
+    },
+    {
+      "title": "Chapter 34",
+      "page": 235,
+      "level": 1
+    },
+    {
+      "title": "Chapter 35",
+      "page": 243,
+      "level": 1
+    },
+    {
+      "title": "Chapter 36",
+      "page": 254,
+      "level": 1
+    },
+    {
+      "title": "Chapter 37",
+      "page": 262,
+      "level": 1
+    },
+    {
+      "title": "Chapter 38",
+      "page": 268,
+      "level": 1
+    },
+    {
+      "title": "Chapter 19",
+      "page": 272,
+      "level": 1
+    },
+    {
+      "title": "Chapter 20",
+      "page": 278,
+      "level": 1
+    },
+    {
+      "title": "Chapter 41",
+      "page": 285,
+      "level": 1
+    },
+    {
+      "title": "Chapter 42",
+      "page": 294,
+      "level": 1
+    },
+    {
+      "title": "Chapter 43",
+      "page": 301,
+      "level": 1
+    },
+    {
+      "title": "Chapter 44",
+      "page": 319,
+      "level": 1
+    },
+    {
+      "title": "Chapter 45",
+      "page": 328,
+      "level": 1
+    },
+    {
+      "title": "Chapter 46",
+      "page": 335,
+      "level": 1
+    },
+    {
+      "title": "Chapter 47",
+      "page": 346,
+      "level": 1
+    },
+    {
+      "title": "Chapter 48",
+      "page": 361,
+      "level": 1
+    },
+    {
+      "title": "Chapter 49",
+      "page": 370,
+      "level": 1
+    },
+    {
+      "title": "Chapter 50",
+      "page": 379,
+      "level": 1
+    },
+    {
+      "title": "Chapter 51",
+      "page": 387,
+      "level": 1
+    },
+    {
+      "title": "Chapter 52",
+      "page": 395,
+      "level": 1
+    },
+    {
+      "title": "Chapter 53",
+      "page": 406,
+      "level": 1
+    },
+    {
+      "title": "Chapter 54",
+      "page": 417,
+      "level": 1
+    },
+    {
+      "title": "Chapter 55",
+      "page": 423,
+      "level": 1
+    },
+    {
+      "title": "Chapter 56",
+      "page": 432,
+      "level": 1
+    },
+    {
+      "title": "Chapter 57",
+      "page": 443,
+      "level": 1
+    },
+    {
+      "title": "Chapter 58",
+      "page": 450,
+      "level": 1
+    },
+    {
+      "title": "Chapter 59",
+      "page": 459,
+      "level": 1
+    },
+    {
+      "title": "Chapter 60",
+      "page": 468,
+      "level": 1
+    },
+    {
+      "title": "Chapter 61",
+      "page": 474,
+      "level": 1
+    }
+  ]
+}

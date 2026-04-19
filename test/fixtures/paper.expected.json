@@ -1,0 +1,29 @@
+{
+  "description": "Arxiv-style paper: bold numbered sections, larger font than body.",
+  "chapters": [
+    {
+      "title": "1. Introduction",
+      "page": 1
+    },
+    {
+      "title": "2. Related Work",
+      "page": 3
+    },
+    {
+      "title": "3. Methods",
+      "page": 5
+    },
+    {
+      "title": "4. Results",
+      "page": 7
+    },
+    {
+      "title": "5. Discussion",
+      "page": 9
+    },
+    {
+      "title": "6. Conclusion",
+      "page": 11
+    }
+  ]
+}

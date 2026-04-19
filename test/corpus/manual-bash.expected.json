@@ -1,0 +1,722 @@
+{
+  "description": "manual: manual-bash",
+  "category": "manual",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Introduction",
+      "page": 7,
+      "level": 0
+    },
+    {
+      "title": "What is Bash?",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "What is a shell?",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "Definitions",
+      "page": 9,
+      "level": 0
+    },
+    {
+      "title": "Basic Shell Features",
+      "page": 11,
+      "level": 0
+    },
+    {
+      "title": "Shell Syntax",
+      "page": 11,
+      "level": 1
+    },
+    {
+      "title": "Shell Operation",
+      "page": 11,
+      "level": 2
+    },
+    {
+      "title": "Quoting",
+      "page": 12,
+      "level": 2
+    },
+    {
+      "title": "Escape Character",
+      "page": 12,
+      "level": 3
+    },
+    {
+      "title": "Single Quotes",
+      "page": 12,
+      "level": 3
+    },
+    {
+      "title": "Double Quotes",
+      "page": 12,
+      "level": 3
+    },
+    {
+      "title": "ANSI-C Quoting",
+      "page": 12,
+      "level": 3
+    },
+    {
+      "title": "Locale-Specific Translation",
+      "page": 13,
+      "level": 3
+    },
+    {
+      "title": "Comments",
+      "page": 15,
+      "level": 2
+    },
+    {
+      "title": "Shell Commands",
+      "page": 15,
+      "level": 1
+    },
+    {
+      "title": "Reserved Words",
+      "page": 15,
+      "level": 2
+    },
+    {
+      "title": "Simple Commands",
+      "page": 15,
+      "level": 2
+    },
+    {
+      "title": "Pipelines",
+      "page": 16,
+      "level": 2
+    },
+    {
+      "title": "Lists of Commands",
+      "page": 17,
+      "level": 2
+    },
+    {
+      "title": "Compound Commands",
+      "page": 17,
+      "level": 2
+    },
+    {
+      "title": "Looping Constructs",
+      "page": 18,
+      "level": 3
+    },
+    {
+      "title": "Conditional Constructs",
+      "page": 18,
+      "level": 3
+    },
+    {
+      "title": "Grouping Commands",
+      "page": 24,
+      "level": 3
+    },
+    {
+      "title": "Coprocesses",
+      "page": 24,
+      "level": 2
+    },
+    {
+      "title": "GNU Parallel",
+      "page": 25,
+      "level": 2
+    },
+    {
+      "title": "Shell Functions",
+      "page": 25,
+      "level": 1
+    },
+    {
+      "title": "Shell Parameters",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Positional Parameters",
+      "page": 29,
+      "level": 2
+    },
+    {
+      "title": "Special Parameters",
+      "page": 29,
+      "level": 2
+    },
+    {
+      "title": "Shell Expansions",
+      "page": 30,
+      "level": 1
+    },
+    {
+      "title": "Brace Expansion",
+      "page": 31,
+      "level": 2
+    },
+    {
+      "title": "Tilde Expansion",
+      "page": 32,
+      "level": 2
+    },
+    {
+      "title": "Shell Parameter Expansion",
+      "page": 33,
+      "level": 2
+    },
+    {
+      "title": "Command Substitution",
+      "page": 42,
+      "level": 2
+    },
+    {
+      "title": "Arithmetic Expansion",
+      "page": 43,
+      "level": 2
+    },
+    {
+      "title": "Process Substitution",
+      "page": 43,
+      "level": 2
+    },
+    {
+      "title": "Word Splitting",
+      "page": 44,
+      "level": 2
+    },
+    {
+      "title": "Filename Expansion",
+      "page": 45,
+      "level": 2
+    },
+    {
+      "title": "Pattern Matching",
+      "page": 45,
+      "level": 3
+    },
+    {
+      "title": "Quote Removal",
+      "page": 47,
+      "level": 2
+    },
+    {
+      "title": "Redirections",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Redirecting Input",
+      "page": 48,
+      "level": 2
+    },
+    {
+      "title": "Redirecting Output",
+      "page": 49,
+      "level": 2
+    },
+    {
+      "title": "Appending Redirected Output",
+      "page": 49,
+      "level": 2
+    },
+    {
+      "title": "Redirecting Standard Output and Standard Error",
+      "page": 49,
+      "level": 2
+    },
+    {
+      "title": "Appending Standard Output and Standard Error",
+      "page": 49,
+      "level": 2
+    },
+    {
+      "title": "Here Documents",
+      "page": 50,
+      "level": 2
+    },
+    {
+      "title": "Here Strings",
+      "page": 50,
+      "level": 2
+    },
+    {
+      "title": "Duplicating File Descriptors",
+      "page": 50,
+      "level": 2
+    },
+    {
+      "title": "Moving File Descriptors",
+      "page": 51,
+      "level": 2
+    },
+    {
+      "title": "Opening File Descriptors for Reading and Writing",
+      "page": 51,
+      "level": 2
+    },
+    {
+      "title": "Executing Commands",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "Simple Command Expansion",
+      "page": 51,
+      "level": 2
+    },
+    {
+      "title": "Command Search and Execution",
+      "page": 52,
+      "level": 2
+    },
+    {
+      "title": "Command Execution Environment",
+      "page": 52,
+      "level": 2
+    },
+    {
+      "title": "Environment",
+      "page": 53,
+      "level": 2
+    },
+    {
+      "title": "Exit Status",
+      "page": 54,
+      "level": 2
+    },
+    {
+      "title": "Signals",
+      "page": 55,
+      "level": 2
+    },
+    {
+      "title": "Shell Scripts",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "Shell Builtin Commands",
+      "page": 58,
+      "level": 0
+    },
+    {
+      "title": "Bourne Shell Builtins",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "Bash Builtin Commands",
+      "page": 67,
+      "level": 1
+    },
+    {
+      "title": "Modifying Shell Behavior",
+      "page": 79,
+      "level": 1
+    },
+    {
+      "title": "The Set Builtin",
+      "page": 80,
+      "level": 2
+    },
+    {
+      "title": "The Shopt Builtin",
+      "page": 84,
+      "level": 2
+    },
+    {
+      "title": "Special Builtins",
+      "page": 91,
+      "level": 1
+    },
+    {
+      "title": "Shell Variables",
+      "page": 92,
+      "level": 0
+    },
+    {
+      "title": "Bourne Shell Variables",
+      "page": 92,
+      "level": 1
+    },
+    {
+      "title": "Bash Variables",
+      "page": 93,
+      "level": 1
+    },
+    {
+      "title": "Bash Features",
+      "page": 106,
+      "level": 0
+    },
+    {
+      "title": "Invoking Bash",
+      "page": 106,
+      "level": 1
+    },
+    {
+      "title": "Bash Startup Files",
+      "page": 108,
+      "level": 1
+    },
+    {
+      "title": "Interactive Shells",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "What is an Interactive Shell?",
+      "page": 110,
+      "level": 2
+    },
+    {
+      "title": "Is this Shell Interactive?",
+      "page": 110,
+      "level": 2
+    },
+    {
+      "title": "Interactive Shell Behavior",
+      "page": 110,
+      "level": 2
+    },
+    {
+      "title": "Bash Conditional Expressions",
+      "page": 111,
+      "level": 1
+    },
+    {
+      "title": "Shell Arithmetic",
+      "page": 113,
+      "level": 1
+    },
+    {
+      "title": "Aliases",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Arrays",
+      "page": 116,
+      "level": 1
+    },
+    {
+      "title": "The Directory Stack",
+      "page": 118,
+      "level": 1
+    },
+    {
+      "title": "Directory Stack Builtins",
+      "page": 118,
+      "level": 2
+    },
+    {
+      "title": "Controlling the Prompt",
+      "page": 120,
+      "level": 1
+    },
+    {
+      "title": "The Restricted Shell",
+      "page": 121,
+      "level": 1
+    },
+    {
+      "title": "Bash and POSIX",
+      "page": 122,
+      "level": 1
+    },
+    {
+      "title": "What is POSIX?",
+      "page": 122,
+      "level": 2
+    },
+    {
+      "title": "Bash POSIX Mode",
+      "page": 122,
+      "level": 2
+    },
+    {
+      "title": "Shell Compatibility Mode",
+      "page": 127,
+      "level": 1
+    },
+    {
+      "title": "Job Control",
+      "page": 131,
+      "level": 0
+    },
+    {
+      "title": "Job Control Basics",
+      "page": 131,
+      "level": 1
+    },
+    {
+      "title": "Job Control Builtins",
+      "page": 132,
+      "level": 1
+    },
+    {
+      "title": "Job Control Variables",
+      "page": 135,
+      "level": 1
+    },
+    {
+      "title": "Command Line Editing",
+      "page": 136,
+      "level": 0
+    },
+    {
+      "title": "Introduction to Line Editing",
+      "page": 136,
+      "level": 1
+    },
+    {
+      "title": "Readline Interaction",
+      "page": 136,
+      "level": 1
+    },
+    {
+      "title": "Readline Bare Essentials",
+      "page": 137,
+      "level": 2
+    },
+    {
+      "title": "Readline Movement Commands",
+      "page": 137,
+      "level": 2
+    },
+    {
+      "title": "Readline Killing Commands",
+      "page": 138,
+      "level": 2
+    },
+    {
+      "title": "Readline Arguments",
+      "page": 138,
+      "level": 2
+    },
+    {
+      "title": "Searching for Commands in the History",
+      "page": 139,
+      "level": 2
+    },
+    {
+      "title": "Readline Init File",
+      "page": 139,
+      "level": 1
+    },
+    {
+      "title": "Readline Init File Syntax",
+      "page": 139,
+      "level": 2
+    },
+    {
+      "title": "Conditional Init Constructs",
+      "page": 149,
+      "level": 2
+    },
+    {
+      "title": "Sample Init File",
+      "page": 150,
+      "level": 2
+    },
+    {
+      "title": "Bindable Readline Commands",
+      "page": 153,
+      "level": 1
+    },
+    {
+      "title": "Commands For Moving",
+      "page": 153,
+      "level": 2
+    },
+    {
+      "title": "Commands For Manipulating The History",
+      "page": 154,
+      "level": 2
+    },
+    {
+      "title": "Commands For Changing Text",
+      "page": 156,
+      "level": 2
+    },
+    {
+      "title": "Killing And Yanking",
+      "page": 157,
+      "level": 2
+    },
+    {
+      "title": "Specifying Numeric Arguments",
+      "page": 159,
+      "level": 2
+    },
+    {
+      "title": "Letting Readline Type For You",
+      "page": 159,
+      "level": 2
+    },
+    {
+      "title": "Keyboard Macros",
+      "page": 161,
+      "level": 2
+    },
+    {
+      "title": "Some Miscellaneous Commands",
+      "page": 161,
+      "level": 2
+    },
+    {
+      "title": "Readline vi Mode",
+      "page": 164,
+      "level": 1
+    },
+    {
+      "title": "Programmable Completion",
+      "page": 164,
+      "level": 1
+    },
+    {
+      "title": "Programmable Completion Builtins",
+      "page": 167,
+      "level": 1
+    },
+    {
+      "title": "A Programmable Completion Example",
+      "page": 171,
+      "level": 1
+    },
+    {
+      "title": "Using History Interactively",
+      "page": 174,
+      "level": 0
+    },
+    {
+      "title": "Bash History Facilities",
+      "page": 174,
+      "level": 1
+    },
+    {
+      "title": "Bash History Builtins",
+      "page": 175,
+      "level": 1
+    },
+    {
+      "title": "History Expansion",
+      "page": 177,
+      "level": 1
+    },
+    {
+      "title": "Event Designators",
+      "page": 178,
+      "level": 2
+    },
+    {
+      "title": "Word Designators",
+      "page": 179,
+      "level": 2
+    },
+    {
+      "title": "Modifiers",
+      "page": 180,
+      "level": 2
+    },
+    {
+      "title": "Installing Bash",
+      "page": 181,
+      "level": 0
+    },
+    {
+      "title": "Basic Installation",
+      "page": 181,
+      "level": 1
+    },
+    {
+      "title": "Compilers and Options",
+      "page": 182,
+      "level": 1
+    },
+    {
+      "title": "Compiling For Multiple Architectures",
+      "page": 182,
+      "level": 1
+    },
+    {
+      "title": "Installation Names",
+      "page": 183,
+      "level": 1
+    },
+    {
+      "title": "Specifying the System Type",
+      "page": 183,
+      "level": 1
+    },
+    {
+      "title": "Sharing Defaults",
+      "page": 183,
+      "level": 1
+    },
+    {
+      "title": "Operation Controls",
+      "page": 184,
+      "level": 1
+    },
+    {
+      "title": "Optional Features",
+      "page": 184,
+      "level": 1
+    },
+    {
+      "title": "Reporting Bugs",
+      "page": 190,
+      "level": 0
+    },
+    {
+      "title": "Major Differences From The Bourne Shell",
+      "page": 191,
+      "level": 0
+    },
+    {
+      "title": "Implementation Differences From The SVR4.2 Shell",
+      "page": 196,
+      "level": 1
+    },
+    {
+      "title": "GNU Free Documentation License",
+      "page": 198,
+      "level": 0
+    },
+    {
+      "title": "Indexes",
+      "page": 206,
+      "level": 0
+    },
+    {
+      "title": "Index of Shell Builtin Commands",
+      "page": 206,
+      "level": 1
+    },
+    {
+      "title": "Index of Shell Reserved Words",
+      "page": 207,
+      "level": 1
+    },
+    {
+      "title": "Parameter and Variable Index",
+      "page": 208,
+      "level": 1
+    },
+    {
+      "title": "Function Index",
+      "page": 210,
+      "level": 1
+    },
+    {
+      "title": "Concept Index",
+      "page": 212,
+      "level": 1
+    }
+  ]
+}

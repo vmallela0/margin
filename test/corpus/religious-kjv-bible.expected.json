@@ -1,0 +1,337 @@
+{
+  "description": "religious: religious-kjv-bible",
+  "category": "religious",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Genesis",
+      "page": 5,
+      "level": 0
+    },
+    {
+      "title": "Exodus",
+      "page": 73,
+      "level": 0
+    },
+    {
+      "title": "Leviticus",
+      "page": 129,
+      "level": 0
+    },
+    {
+      "title": "Numbers",
+      "page": 170,
+      "level": 0
+    },
+    {
+      "title": "Deuteronomy",
+      "page": 228,
+      "level": 0
+    },
+    {
+      "title": "Joshua",
+      "page": 276,
+      "level": 0
+    },
+    {
+      "title": "Judges",
+      "page": 309,
+      "level": 0
+    },
+    {
+      "title": "Ruth",
+      "page": 342,
+      "level": 0
+    },
+    {
+      "title": "1 Samuel",
+      "page": 347,
+      "level": 0
+    },
+    {
+      "title": "2 Samuel",
+      "page": 391,
+      "level": 0
+    },
+    {
+      "title": "1 Kings",
+      "page": 428,
+      "level": 0
+    },
+    {
+      "title": "2 Kings",
+      "page": 470,
+      "level": 0
+    },
+    {
+      "title": "1 Chronicles",
+      "page": 509,
+      "level": 0
+    },
+    {
+      "title": "2 Chronicles",
+      "page": 548,
+      "level": 0
+    },
+    {
+      "title": "Ezra",
+      "page": 595,
+      "level": 0
+    },
+    {
+      "title": "Nehemiah",
+      "page": 609,
+      "level": 0
+    },
+    {
+      "title": "Esther",
+      "page": 629,
+      "level": 0
+    },
+    {
+      "title": "Job",
+      "page": 639,
+      "level": 0
+    },
+    {
+      "title": "Psalms",
+      "page": 676,
+      "level": 0
+    },
+    {
+      "title": "Proverbs",
+      "page": 768,
+      "level": 0
+    },
+    {
+      "title": "Ecclesiastes",
+      "page": 800,
+      "level": 0
+    },
+    {
+      "title": "Song of Solomon",
+      "page": 811,
+      "level": 0
+    },
+    {
+      "title": "Isaiah",
+      "page": 816,
+      "level": 0
+    },
+    {
+      "title": "Jeremiah",
+      "page": 883,
+      "level": 0
+    },
+    {
+      "title": "Lamentations",
+      "page": 956,
+      "level": 0
+    },
+    {
+      "title": "Ezekiel",
+      "page": 963,
+      "level": 0
+    },
+    {
+      "title": "Daniel",
+      "page": 1031,
+      "level": 0
+    },
+    {
+      "title": "Hosea",
+      "page": 1052,
+      "level": 0
+    },
+    {
+      "title": "Joel",
+      "page": 1062,
+      "level": 0
+    },
+    {
+      "title": "Amos",
+      "page": 1066,
+      "level": 0
+    },
+    {
+      "title": "Obadiah",
+      "page": 1074,
+      "level": 0
+    },
+    {
+      "title": "Jonah",
+      "page": 1076,
+      "level": 0
+    },
+    {
+      "title": "Micah",
+      "page": 1079,
+      "level": 0
+    },
+    {
+      "title": "Nahum",
+      "page": 1085,
+      "level": 0
+    },
+    {
+      "title": "Habakkuk",
+      "page": 1088,
+      "level": 0
+    },
+    {
+      "title": "Zephaniah",
+      "page": 1091,
+      "level": 0
+    },
+    {
+      "title": "Haggai",
+      "page": 1094,
+      "level": 0
+    },
+    {
+      "title": "Zechariah",
+      "page": 1096,
+      "level": 0
+    },
+    {
+      "title": "Malachi",
+      "page": 1108,
+      "level": 0
+    },
+    {
+      "title": "Matthew",
+      "page": 1112,
+      "level": 0
+    },
+    {
+      "title": "Mark",
+      "page": 1153,
+      "level": 0
+    },
+    {
+      "title": "Luke",
+      "page": 1180,
+      "level": 0
+    },
+    {
+      "title": "John",
+      "page": 1224,
+      "level": 0
+    },
+    {
+      "title": "Acts",
+      "page": 1257,
+      "level": 0
+    },
+    {
+      "title": "Romans",
+      "page": 1300,
+      "level": 0
+    },
+    {
+      "title": "1 Corinthians",
+      "page": 1317,
+      "level": 0
+    },
+    {
+      "title": "2 Corinthians",
+      "page": 1334,
+      "level": 0
+    },
+    {
+      "title": "Galatians",
+      "page": 1345,
+      "level": 0
+    },
+    {
+      "title": "Ephesians",
+      "page": 1351,
+      "level": 0
+    },
+    {
+      "title": "Philippians",
+      "page": 1357,
+      "level": 0
+    },
+    {
+      "title": "Colossians",
+      "page": 1361,
+      "level": 0
+    },
+    {
+      "title": "1 Thessalonians",
+      "page": 1365,
+      "level": 0
+    },
+    {
+      "title": "2 Thessalonians",
+      "page": 1369,
+      "level": 0
+    },
+    {
+      "title": "1 Timothy",
+      "page": 1371,
+      "level": 0
+    },
+    {
+      "title": "2 Timothy",
+      "page": 1376,
+      "level": 0
+    },
+    {
+      "title": "Titus",
+      "page": 1380,
+      "level": 0
+    },
+    {
+      "title": "Philemon",
+      "page": 1382,
+      "level": 0
+    },
+    {
+      "title": "Hebrews",
+      "page": 1383,
+      "level": 0
+    },
+    {
+      "title": "James",
+      "page": 1396,
+      "level": 0
+    },
+    {
+      "title": "1 Peter",
+      "page": 1401,
+      "level": 0
+    },
+    {
+      "title": "2 Peter",
+      "page": 1406,
+      "level": 0
+    },
+    {
+      "title": "1 John",
+      "page": 1409,
+      "level": 0
+    },
+    {
+      "title": "2 John",
+      "page": 1414,
+      "level": 0
+    },
+    {
+      "title": "3 John",
+      "page": 1415,
+      "level": 0
+    },
+    {
+      "title": "Jude",
+      "page": 1416,
+      "level": 0
+    },
+    {
+      "title": "Revelation",
+      "page": 1418,
+      "level": 0
+    }
+  ]
+}

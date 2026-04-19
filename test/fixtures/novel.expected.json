@@ -1,0 +1,29 @@
+{
+  "description": "Classic novel: centered roman numerals, same font as body, whitespace-marked openings.",
+  "chapters": [
+    {
+      "title": "I",
+      "page": 1
+    },
+    {
+      "title": "II",
+      "page": 6
+    },
+    {
+      "title": "III",
+      "page": 11
+    },
+    {
+      "title": "IV",
+      "page": 16
+    },
+    {
+      "title": "V",
+      "page": 21
+    },
+    {
+      "title": "VI",
+      "page": 26
+    }
+  ]
+}

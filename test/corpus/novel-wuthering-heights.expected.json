@@ -1,0 +1,177 @@
+{
+  "description": "novel: novel-wuthering-heights",
+  "category": "novel",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Wuthering Heights ",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "Chapter I",
+      "page": 3,
+      "level": 1
+    },
+    {
+      "title": "Chapter II",
+      "page": 11,
+      "level": 1
+    },
+    {
+      "title": "Chapter III",
+      "page": 24,
+      "level": 1
+    },
+    {
+      "title": "Chapter IV",
+      "page": 41,
+      "level": 1
+    },
+    {
+      "title": "Chapter V",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "Chapter VI",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "Chapter VII",
+      "page": 65,
+      "level": 1
+    },
+    {
+      "title": "Chapter VIII",
+      "page": 80,
+      "level": 1
+    },
+    {
+      "title": "Chapter IX",
+      "page": 93,
+      "level": 1
+    },
+    {
+      "title": "Chapter X",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Chapter XI",
+      "page": 138,
+      "level": 1
+    },
+    {
+      "title": "Chapter XII",
+      "page": 153,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIII",
+      "page": 171,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIV",
+      "page": 186,
+      "level": 1
+    },
+    {
+      "title": "Chapter XV",
+      "page": 198,
+      "level": 1
+    },
+    {
+      "title": "Chapter XVI",
+      "page": 209,
+      "level": 1
+    },
+    {
+      "title": "Chapter XVII",
+      "page": 216,
+      "level": 1
+    },
+    {
+      "title": "Chapter XVIII",
+      "page": 240,
+      "level": 1
+    },
+    {
+      "title": "Chapter XIX",
+      "page": 253,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXI",
+      "page": 267,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXII",
+      "page": 290,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXIII",
+      "page": 299,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXIV",
+      "page": 310,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXV",
+      "page": 324,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXVI",
+      "page": 329,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXVII",
+      "page": 335,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXVIII",
+      "page": 352,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXIX",
+      "page": 361,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXX",
+      "page": 369,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXI",
+      "page": 378,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXII",
+      "page": 386,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXIII",
+      "page": 401,
+      "level": 1
+    },
+    {
+      "title": "Chapter XXXIV",
+      "page": 413,
+      "level": 1
+    }
+  ]
+}

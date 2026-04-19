@@ -1,0 +1,797 @@
+{
+  "description": "textbook: textbook-think-stats",
+  "category": "textbook",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Preface",
+      "page": 5,
+      "level": 0
+    },
+    {
+      "title": "How I wrote this book",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "Using the code",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "Exploratory data analysis",
+      "page": 21,
+      "level": 0
+    },
+    {
+      "title": "A statistical approach",
+      "page": 22,
+      "level": 1
+    },
+    {
+      "title": "The National Survey of Family Growth",
+      "page": 23,
+      "level": 1
+    },
+    {
+      "title": "Importing the data",
+      "page": 24,
+      "level": 1
+    },
+    {
+      "title": "DataFrames",
+      "page": 25,
+      "level": 1
+    },
+    {
+      "title": "Variables",
+      "page": 27,
+      "level": 1
+    },
+    {
+      "title": "Transformation",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Validation",
+      "page": 30,
+      "level": 1
+    },
+    {
+      "title": "Interpretation",
+      "page": 32,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 35,
+      "level": 1
+    },
+    {
+      "title": "Distributions",
+      "page": 37,
+      "level": 0
+    },
+    {
+      "title": "Histograms",
+      "page": 37,
+      "level": 1
+    },
+    {
+      "title": "Representing histograms",
+      "page": 38,
+      "level": 1
+    },
+    {
+      "title": "Plotting histograms",
+      "page": 39,
+      "level": 1
+    },
+    {
+      "title": "NSFG variables",
+      "page": 39,
+      "level": 1
+    },
+    {
+      "title": "Outliers",
+      "page": 42,
+      "level": 1
+    },
+    {
+      "title": "First babies",
+      "page": 43,
+      "level": 1
+    },
+    {
+      "title": "Summarizing distributions",
+      "page": 45,
+      "level": 1
+    },
+    {
+      "title": "Variance",
+      "page": 46,
+      "level": 1
+    },
+    {
+      "title": "Effect size",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Reporting results",
+      "page": 48,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 48,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 49,
+      "level": 1
+    },
+    {
+      "title": "Probability mass functions",
+      "page": 51,
+      "level": 0
+    },
+    {
+      "title": "Pmfs",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "Plotting PMFs",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "Other visualizations",
+      "page": 55,
+      "level": 1
+    },
+    {
+      "title": "The class size paradox",
+      "page": 55,
+      "level": 1
+    },
+    {
+      "title": "DataFrame indexing",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 61,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 63,
+      "level": 1
+    },
+    {
+      "title": "Cumulative distribution functions",
+      "page": 65,
+      "level": 0
+    },
+    {
+      "title": "The limits of PMFs",
+      "page": 65,
+      "level": 1
+    },
+    {
+      "title": "Percentiles",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "CDFs",
+      "page": 68,
+      "level": 1
+    },
+    {
+      "title": "Representing CDFs",
+      "page": 69,
+      "level": 1
+    },
+    {
+      "title": "Comparing CDFs",
+      "page": 70,
+      "level": 1
+    },
+    {
+      "title": "Percentile-based statistics",
+      "page": 71,
+      "level": 1
+    },
+    {
+      "title": "Random numbers",
+      "page": 72,
+      "level": 1
+    },
+    {
+      "title": "Comparing percentile ranks",
+      "page": 74,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 75,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 75,
+      "level": 1
+    },
+    {
+      "title": "Modeling distributions",
+      "page": 77,
+      "level": 0
+    },
+    {
+      "title": "The exponential distribution",
+      "page": 77,
+      "level": 1
+    },
+    {
+      "title": "The normal distribution",
+      "page": 80,
+      "level": 1
+    },
+    {
+      "title": "Normal probability plot",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "The lognormal distribution",
+      "page": 85,
+      "level": 1
+    },
+    {
+      "title": "The Pareto distribution",
+      "page": 87,
+      "level": 1
+    },
+    {
+      "title": "Generating random numbers",
+      "page": 89,
+      "level": 1
+    },
+    {
+      "title": "Why model?",
+      "page": 90,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 91,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 93,
+      "level": 1
+    },
+    {
+      "title": "Probability density functions",
+      "page": 95,
+      "level": 0
+    },
+    {
+      "title": "PDFs",
+      "page": 95,
+      "level": 1
+    },
+    {
+      "title": "Kernel density estimation",
+      "page": 97,
+      "level": 1
+    },
+    {
+      "title": "The distribution framework",
+      "page": 99,
+      "level": 1
+    },
+    {
+      "title": "Hist implementation",
+      "page": 100,
+      "level": 1
+    },
+    {
+      "title": "Pmf implementation",
+      "page": 101,
+      "level": 1
+    },
+    {
+      "title": "Cdf implementation",
+      "page": 102,
+      "level": 1
+    },
+    {
+      "title": "Moments",
+      "page": 104,
+      "level": 1
+    },
+    {
+      "title": "Skewness",
+      "page": 105,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 108,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 109,
+      "level": 1
+    },
+    {
+      "title": "Relationships between variables",
+      "page": 111,
+      "level": 0
+    },
+    {
+      "title": "Scatter plots",
+      "page": 111,
+      "level": 1
+    },
+    {
+      "title": "Characterizing relationships",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Correlation",
+      "page": 116,
+      "level": 1
+    },
+    {
+      "title": "Covariance",
+      "page": 117,
+      "level": 1
+    },
+    {
+      "title": "Pearson's correlation",
+      "page": 118,
+      "level": 1
+    },
+    {
+      "title": "Nonlinear relationships",
+      "page": 120,
+      "level": 1
+    },
+    {
+      "title": "Spearman's rank correlation",
+      "page": 121,
+      "level": 1
+    },
+    {
+      "title": "Correlation and causation",
+      "page": 122,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 123,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 123,
+      "level": 1
+    },
+    {
+      "title": "Estimation",
+      "page": 125,
+      "level": 0
+    },
+    {
+      "title": "The estimation game",
+      "page": 125,
+      "level": 1
+    },
+    {
+      "title": "Guess the variance",
+      "page": 127,
+      "level": 1
+    },
+    {
+      "title": "Sampling distributions",
+      "page": 129,
+      "level": 1
+    },
+    {
+      "title": "Sampling bias",
+      "page": 132,
+      "level": 1
+    },
+    {
+      "title": "Exponential distributions",
+      "page": 133,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 135,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 136,
+      "level": 1
+    },
+    {
+      "title": "Hypothesis testing",
+      "page": 137,
+      "level": 0
+    },
+    {
+      "title": "Classical hypothesis testing",
+      "page": 137,
+      "level": 1
+    },
+    {
+      "title": "HypothesisTest",
+      "page": 139,
+      "level": 1
+    },
+    {
+      "title": "Testing a difference in means",
+      "page": 141,
+      "level": 1
+    },
+    {
+      "title": "Other test statistics",
+      "page": 143,
+      "level": 1
+    },
+    {
+      "title": "Testing a correlation",
+      "page": 144,
+      "level": 1
+    },
+    {
+      "title": "Testing proportions",
+      "page": 145,
+      "level": 1
+    },
+    {
+      "title": "Chi-squared tests",
+      "page": 147,
+      "level": 1
+    },
+    {
+      "title": "First babies again",
+      "page": 148,
+      "level": 1
+    },
+    {
+      "title": "Errors",
+      "page": 150,
+      "level": 1
+    },
+    {
+      "title": "Power",
+      "page": 150,
+      "level": 1
+    },
+    {
+      "title": "Replication",
+      "page": 152,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 153,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 154,
+      "level": 1
+    },
+    {
+      "title": "Linear least squares",
+      "page": 157,
+      "level": 0
+    },
+    {
+      "title": "Least squares fit",
+      "page": 157,
+      "level": 1
+    },
+    {
+      "title": "Implementation",
+      "page": 159,
+      "level": 1
+    },
+    {
+      "title": "Residuals",
+      "page": 160,
+      "level": 1
+    },
+    {
+      "title": "Estimation",
+      "page": 161,
+      "level": 1
+    },
+    {
+      "title": "Goodness of fit",
+      "page": 164,
+      "level": 1
+    },
+    {
+      "title": "Testing a linear model",
+      "page": 166,
+      "level": 1
+    },
+    {
+      "title": "Weighted resampling",
+      "page": 168,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 170,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 170,
+      "level": 1
+    },
+    {
+      "title": "Regression",
+      "page": 173,
+      "level": 0
+    },
+    {
+      "title": "StatsModels",
+      "page": 174,
+      "level": 1
+    },
+    {
+      "title": "Multiple regression",
+      "page": 176,
+      "level": 1
+    },
+    {
+      "title": "Nonlinear relationships",
+      "page": 178,
+      "level": 1
+    },
+    {
+      "title": "Data mining",
+      "page": 179,
+      "level": 1
+    },
+    {
+      "title": "Prediction",
+      "page": 181,
+      "level": 1
+    },
+    {
+      "title": "Logistic regression",
+      "page": 183,
+      "level": 1
+    },
+    {
+      "title": "Estimating parameters",
+      "page": 185,
+      "level": 1
+    },
+    {
+      "title": "Implementation",
+      "page": 186,
+      "level": 1
+    },
+    {
+      "title": "Accuracy",
+      "page": 188,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 189,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 190,
+      "level": 1
+    },
+    {
+      "title": "Time series analysis",
+      "page": 193,
+      "level": 0
+    },
+    {
+      "title": "Importing and cleaning",
+      "page": 194,
+      "level": 1
+    },
+    {
+      "title": "Plotting",
+      "page": 196,
+      "level": 1
+    },
+    {
+      "title": "Linear regression",
+      "page": 198,
+      "level": 1
+    },
+    {
+      "title": "Moving averages",
+      "page": 200,
+      "level": 1
+    },
+    {
+      "title": "Missing values",
+      "page": 202,
+      "level": 1
+    },
+    {
+      "title": "Serial correlation",
+      "page": 203,
+      "level": 1
+    },
+    {
+      "title": "Autocorrelation",
+      "page": 205,
+      "level": 1
+    },
+    {
+      "title": "Prediction",
+      "page": 207,
+      "level": 1
+    },
+    {
+      "title": "Further reading",
+      "page": 212,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 212,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 213,
+      "level": 1
+    },
+    {
+      "title": "Survival analysis",
+      "page": 215,
+      "level": 0
+    },
+    {
+      "title": "Survival curves",
+      "page": 215,
+      "level": 1
+    },
+    {
+      "title": "Hazard function",
+      "page": 218,
+      "level": 1
+    },
+    {
+      "title": "Inferring survival curves",
+      "page": 219,
+      "level": 1
+    },
+    {
+      "title": "Kaplan-Meier estimation",
+      "page": 220,
+      "level": 1
+    },
+    {
+      "title": "The marriage curve",
+      "page": 222,
+      "level": 1
+    },
+    {
+      "title": "Estimating the survival curve",
+      "page": 223,
+      "level": 1
+    },
+    {
+      "title": "Confidence intervals",
+      "page": 224,
+      "level": 1
+    },
+    {
+      "title": "Cohort effects",
+      "page": 226,
+      "level": 1
+    },
+    {
+      "title": "Extrapolation",
+      "page": 229,
+      "level": 1
+    },
+    {
+      "title": "Expected remaining lifetime",
+      "page": 230,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 234,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 234,
+      "level": 1
+    },
+    {
+      "title": "Analytic methods",
+      "page": 237,
+      "level": 0
+    },
+    {
+      "title": "Normal distributions",
+      "page": 237,
+      "level": 1
+    },
+    {
+      "title": "Sampling distributions",
+      "page": 239,
+      "level": 1
+    },
+    {
+      "title": "Representing normal distributions",
+      "page": 240,
+      "level": 1
+    },
+    {
+      "title": "Central limit theorem",
+      "page": 241,
+      "level": 1
+    },
+    {
+      "title": "Testing the CLT",
+      "page": 242,
+      "level": 1
+    },
+    {
+      "title": "Applying the CLT",
+      "page": 247,
+      "level": 1
+    },
+    {
+      "title": "Correlation test",
+      "page": 248,
+      "level": 1
+    },
+    {
+      "title": "Chi-squared test",
+      "page": 250,
+      "level": 1
+    },
+    {
+      "title": "Discussion",
+      "page": 252,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 253,
+      "level": 1
+    }
+  ]
+}

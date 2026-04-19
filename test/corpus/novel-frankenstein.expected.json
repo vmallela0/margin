@@ -1,0 +1,152 @@
+{
+  "description": "novel: novel-frankenstein",
+  "category": "novel",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Frankenstein",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "Letter 1",
+      "page": 2,
+      "level": 1
+    },
+    {
+      "title": "Letter 2",
+      "page": 7,
+      "level": 1
+    },
+    {
+      "title": "Letter 3",
+      "page": 12,
+      "level": 1
+    },
+    {
+      "title": "Letter 4",
+      "page": 14,
+      "level": 1
+    },
+    {
+      "title": "Chapter 1",
+      "page": 24,
+      "level": 1
+    },
+    {
+      "title": "Chapter 2",
+      "page": 31,
+      "level": 1
+    },
+    {
+      "title": "Chapter 3",
+      "page": 39,
+      "level": 1
+    },
+    {
+      "title": "Chapter 4",
+      "page": 49,
+      "level": 1
+    },
+    {
+      "title": "Chapter 5",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "Chapter 6",
+      "page": 67,
+      "level": 1
+    },
+    {
+      "title": "Chapter 7",
+      "page": 77,
+      "level": 1
+    },
+    {
+      "title": "Chapter 8",
+      "page": 90,
+      "level": 1
+    },
+    {
+      "title": "Chapter 9",
+      "page": 101,
+      "level": 1
+    },
+    {
+      "title": "Chapter 10",
+      "page": 109,
+      "level": 1
+    },
+    {
+      "title": "Chapter 11",
+      "page": 118,
+      "level": 1
+    },
+    {
+      "title": "Chapter 12",
+      "page": 128,
+      "level": 1
+    },
+    {
+      "title": "Chapter 13",
+      "page": 136,
+      "level": 1
+    },
+    {
+      "title": "Chapter 14",
+      "page": 144,
+      "level": 1
+    },
+    {
+      "title": "Chapter 15",
+      "page": 151,
+      "level": 1
+    },
+    {
+      "title": "Chapter 16",
+      "page": 162,
+      "level": 1
+    },
+    {
+      "title": "Chapter 17",
+      "page": 174,
+      "level": 1
+    },
+    {
+      "title": "Chapter 18",
+      "page": 181,
+      "level": 1
+    },
+    {
+      "title": "Chapter 19",
+      "page": 192,
+      "level": 1
+    },
+    {
+      "title": "Chapter 20",
+      "page": 202,
+      "level": 1
+    },
+    {
+      "title": "Chapter 21",
+      "page": 214,
+      "level": 1
+    },
+    {
+      "title": "Chapter 22",
+      "page": 227,
+      "level": 1
+    },
+    {
+      "title": "Chapter 23",
+      "page": 240,
+      "level": 1
+    },
+    {
+      "title": "Chapter 24",
+      "page": 249,
+      "level": 1
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Margin",
+  "version": "0.1.0",
+  "description": "A calm place to read PDFs — highlights, flashcards, SM-2 review.",
+  "action": {
+    "default_title": "Open Margin"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "contextMenus",
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": ["reader.html", "newtab.html", "pdf.worker.mjs", "assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

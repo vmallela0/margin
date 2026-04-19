@@ -1,0 +1,2652 @@
+{
+  "description": "manual: manual-gawk",
+  "category": "manual",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Table of Contents",
+      "page": 9,
+      "level": 0
+    },
+    {
+      "title": "Foreword to the Third Edition",
+      "page": 21,
+      "level": 0
+    },
+    {
+      "title": "Foreword to the Fourth Edition",
+      "page": 23,
+      "level": 0
+    },
+    {
+      "title": "Preface",
+      "page": 25,
+      "level": 0
+    },
+    {
+      "title": "History of awk and gawk",
+      "page": 26,
+      "level": 1
+    },
+    {
+      "title": "A Rose by Any Other Name",
+      "page": 26,
+      "level": 1
+    },
+    {
+      "title": "Using This Book",
+      "page": 27,
+      "level": 1
+    },
+    {
+      "title": "Typographical Conventions",
+      "page": 29,
+      "level": 1
+    },
+    {
+      "title": "Dark Corners",
+      "page": 30,
+      "level": 2
+    },
+    {
+      "title": "The GNU Project and This Book",
+      "page": 30,
+      "level": 1
+    },
+    {
+      "title": "How to Contribute",
+      "page": 31,
+      "level": 1
+    },
+    {
+      "title": "Acknowledgments",
+      "page": 31,
+      "level": 1
+    },
+    {
+      "title": "1 Getting Started with awk",
+      "page": 37,
+      "level": 0
+    },
+    {
+      "title": "How to Run awk Programs",
+      "page": 37,
+      "level": 1
+    },
+    {
+      "title": "One-Shot Throwaway awk Programs",
+      "page": 37,
+      "level": 2
+    },
+    {
+      "title": "Running awk Without Input Files",
+      "page": 38,
+      "level": 2
+    },
+    {
+      "title": "Running Long Programs",
+      "page": 38,
+      "level": 2
+    },
+    {
+      "title": "Executable awk Programs",
+      "page": 39,
+      "level": 2
+    },
+    {
+      "title": "Comments in awk Programs",
+      "page": 40,
+      "level": 2
+    },
+    {
+      "title": "Shell Quoting Issues",
+      "page": 41,
+      "level": 2
+    },
+    {
+      "title": "Quoting in MS-Windows Batch Files",
+      "page": 43,
+      "level": 3
+    },
+    {
+      "title": "Data files for the Examples",
+      "page": 44,
+      "level": 1
+    },
+    {
+      "title": "Some Simple Examples",
+      "page": 45,
+      "level": 1
+    },
+    {
+      "title": "An Example with Two Rules",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "A More Complex Example",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "awk Statements Versus Lines",
+      "page": 48,
+      "level": 1
+    },
+    {
+      "title": "Other Features of awk",
+      "page": 50,
+      "level": 1
+    },
+    {
+      "title": "When to Use awk",
+      "page": 50,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "2 Running awk and gawk",
+      "page": 53,
+      "level": 0
+    },
+    {
+      "title": "Invoking awk",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "Command-Line Options",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "Other Command-Line Arguments",
+      "page": 60,
+      "level": 1
+    },
+    {
+      "title": "Naming Standard Input",
+      "page": 62,
+      "level": 1
+    },
+    {
+      "title": "The Environment Variables gawk Uses",
+      "page": 62,
+      "level": 1
+    },
+    {
+      "title": "The AWKPATH Environment Variable",
+      "page": 62,
+      "level": 2
+    },
+    {
+      "title": "The AWKLIBPATH Environment Variable",
+      "page": 63,
+      "level": 2
+    },
+    {
+      "title": "Other Environment Variables",
+      "page": 64,
+      "level": 2
+    },
+    {
+      "title": "gawk's Exit Status",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Including Other Files into Your Program",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Loading Dynamic Extensions into Your Program",
+      "page": 67,
+      "level": 1
+    },
+    {
+      "title": "Obsolete Options and/or Features",
+      "page": 68,
+      "level": 1
+    },
+    {
+      "title": "Undocumented Options and Features",
+      "page": 68,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 68,
+      "level": 1
+    },
+    {
+      "title": "3 Regular Expressions",
+      "page": 71,
+      "level": 0
+    },
+    {
+      "title": "How to Use Regular Expressions",
+      "page": 71,
+      "level": 1
+    },
+    {
+      "title": "Escape Sequences",
+      "page": 72,
+      "level": 1
+    },
+    {
+      "title": "Regular Expression Operators",
+      "page": 74,
+      "level": 1
+    },
+    {
+      "title": "Regexp Operators in awk",
+      "page": 74,
+      "level": 2
+    },
+    {
+      "title": "Some Notes On Interval Expressions",
+      "page": 77,
+      "level": 2
+    },
+    {
+      "title": "Shortest Match, or ``Non-greedy'' Regexp Operators",
+      "page": 78,
+      "level": 2
+    },
+    {
+      "title": "Using Bracket Expressions",
+      "page": 80,
+      "level": 1
+    },
+    {
+      "title": "How Much Text Matches?",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "Using Dynamic Regexps",
+      "page": 83,
+      "level": 1
+    },
+    {
+      "title": "gawk-Specific Regexp Operators",
+      "page": 84,
+      "level": 1
+    },
+    {
+      "title": "Case Sensitivity in Matching",
+      "page": 86,
+      "level": 1
+    },
+    {
+      "title": "Selecting the Regexp Matching Engine",
+      "page": 87,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 87,
+      "level": 1
+    },
+    {
+      "title": "4 Reading Input Files",
+      "page": 89,
+      "level": 0
+    },
+    {
+      "title": "How Input Is Split into Records",
+      "page": 89,
+      "level": 1
+    },
+    {
+      "title": "Record Splitting with Standard awk",
+      "page": 89,
+      "level": 2
+    },
+    {
+      "title": "Record Splitting with gawk",
+      "page": 91,
+      "level": 2
+    },
+    {
+      "title": "Examining Fields",
+      "page": 93,
+      "level": 1
+    },
+    {
+      "title": "Nonconstant Field Numbers",
+      "page": 94,
+      "level": 1
+    },
+    {
+      "title": "Changing the Contents of a Field",
+      "page": 95,
+      "level": 1
+    },
+    {
+      "title": "Specifying How Fields Are Separated",
+      "page": 97,
+      "level": 1
+    },
+    {
+      "title": "Whitespace Normally Separates Fields",
+      "page": 98,
+      "level": 2
+    },
+    {
+      "title": "Using Regular Expressions to Separate Fields",
+      "page": 98,
+      "level": 2
+    },
+    {
+      "title": "Making Each Character a Separate Field",
+      "page": 99,
+      "level": 2
+    },
+    {
+      "title": "Working With Comma Separated Value Files",
+      "page": 100,
+      "level": 2
+    },
+    {
+      "title": "Setting FS from the Command Line",
+      "page": 101,
+      "level": 2
+    },
+    {
+      "title": "Making the Full Line Be a Single Field",
+      "page": 102,
+      "level": 2
+    },
+    {
+      "title": "Field-Splitting Summary",
+      "page": 103,
+      "level": 2
+    },
+    {
+      "title": "Reading Fixed-Width Data",
+      "page": 104,
+      "level": 1
+    },
+    {
+      "title": "Processing Fixed-Width Data",
+      "page": 104,
+      "level": 2
+    },
+    {
+      "title": "Skipping Intervening Fields",
+      "page": 106,
+      "level": 2
+    },
+    {
+      "title": "Capturing Optional Trailing Data",
+      "page": 106,
+      "level": 2
+    },
+    {
+      "title": "Field Values With Fixed-Width Data",
+      "page": 106,
+      "level": 2
+    },
+    {
+      "title": "Defining Fields by Content",
+      "page": 107,
+      "level": 1
+    },
+    {
+      "title": "FS Versus FPAT: A Subtle Difference",
+      "page": 109,
+      "level": 2
+    },
+    {
+      "title": "Checking How gawk Is Splitting Records",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "Multiple-Line Records",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "Explicit Input with getline",
+      "page": 112,
+      "level": 1
+    },
+    {
+      "title": "Using getline with No Arguments",
+      "page": 113,
+      "level": 2
+    },
+    {
+      "title": "Using getline into a Variable",
+      "page": 114,
+      "level": 2
+    },
+    {
+      "title": "Using getline from a File",
+      "page": 115,
+      "level": 2
+    },
+    {
+      "title": "Using getline into a Variable from a File",
+      "page": 115,
+      "level": 2
+    },
+    {
+      "title": "Using getline from a Pipe",
+      "page": 116,
+      "level": 2
+    },
+    {
+      "title": "Using getline into a Variable from a Pipe",
+      "page": 117,
+      "level": 2
+    },
+    {
+      "title": "Using getline from a Coprocess",
+      "page": 117,
+      "level": 2
+    },
+    {
+      "title": "Using getline into a Variable from a Coprocess",
+      "page": 118,
+      "level": 2
+    },
+    {
+      "title": "Points to Remember About getline",
+      "page": 118,
+      "level": 2
+    },
+    {
+      "title": "Summary of getline Variants",
+      "page": 119,
+      "level": 2
+    },
+    {
+      "title": "Reading Input with a Timeout",
+      "page": 119,
+      "level": 1
+    },
+    {
+      "title": "Retrying Reads After Certain Input Errors",
+      "page": 121,
+      "level": 1
+    },
+    {
+      "title": "Directories on the Command Line",
+      "page": 121,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 121,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 122,
+      "level": 1
+    },
+    {
+      "title": "5 Printing Output",
+      "page": 123,
+      "level": 0
+    },
+    {
+      "title": "The print Statement",
+      "page": 123,
+      "level": 1
+    },
+    {
+      "title": "print Statement Examples",
+      "page": 123,
+      "level": 1
+    },
+    {
+      "title": "Output Separators",
+      "page": 125,
+      "level": 1
+    },
+    {
+      "title": "Controlling Numeric Output with print",
+      "page": 126,
+      "level": 1
+    },
+    {
+      "title": "Using printf Statements for Fancier Printing",
+      "page": 126,
+      "level": 1
+    },
+    {
+      "title": "Introduction to the printf Statement",
+      "page": 126,
+      "level": 2
+    },
+    {
+      "title": "Format-Control Letters",
+      "page": 127,
+      "level": 2
+    },
+    {
+      "title": "Modifiers for printf Formats",
+      "page": 129,
+      "level": 2
+    },
+    {
+      "title": "Examples Using printf",
+      "page": 131,
+      "level": 2
+    },
+    {
+      "title": "Redirecting Output of print and printf",
+      "page": 132,
+      "level": 1
+    },
+    {
+      "title": "Special Files for Standard Preopened Data Streams",
+      "page": 135,
+      "level": 1
+    },
+    {
+      "title": "Special File names in gawk",
+      "page": 136,
+      "level": 1
+    },
+    {
+      "title": "Accessing Other Open Files with gawk",
+      "page": 136,
+      "level": 2
+    },
+    {
+      "title": "Special Files for Network Communications",
+      "page": 136,
+      "level": 2
+    },
+    {
+      "title": "Special File name Caveats",
+      "page": 137,
+      "level": 2
+    },
+    {
+      "title": "Closing Input and Output Redirections",
+      "page": 137,
+      "level": 1
+    },
+    {
+      "title": "Using close()'s Return Value",
+      "page": 139,
+      "level": 2
+    },
+    {
+      "title": "Speeding Up Pipe Output",
+      "page": 140,
+      "level": 1
+    },
+    {
+      "title": "Enabling Nonfatal Output",
+      "page": 140,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 141,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 141,
+      "level": 1
+    },
+    {
+      "title": "6 Expressions",
+      "page": 143,
+      "level": 0
+    },
+    {
+      "title": "Constants, Variables, and Conversions",
+      "page": 143,
+      "level": 1
+    },
+    {
+      "title": "Constant Expressions",
+      "page": 143,
+      "level": 2
+    },
+    {
+      "title": "Numeric and String Constants",
+      "page": 143,
+      "level": 3
+    },
+    {
+      "title": "Octal and Hexadecimal Numbers",
+      "page": 144,
+      "level": 3
+    },
+    {
+      "title": "Regular Expression Constants",
+      "page": 146,
+      "level": 3
+    },
+    {
+      "title": "Using Regular Expression Constants",
+      "page": 146,
+      "level": 2
+    },
+    {
+      "title": "Standard Regular Expression Constants",
+      "page": 146,
+      "level": 3
+    },
+    {
+      "title": "Strongly Typed Regexp Constants",
+      "page": 147,
+      "level": 3
+    },
+    {
+      "title": "Variables",
+      "page": 149,
+      "level": 2
+    },
+    {
+      "title": "Using Variables in a Program",
+      "page": 149,
+      "level": 3
+    },
+    {
+      "title": "Assigning Variables on the Command Line",
+      "page": 149,
+      "level": 3
+    },
+    {
+      "title": "Conversion of Strings and Numbers",
+      "page": 150,
+      "level": 2
+    },
+    {
+      "title": "How awk Converts Between Strings and Numbers",
+      "page": 150,
+      "level": 3
+    },
+    {
+      "title": "Locales Can Influence Conversion",
+      "page": 151,
+      "level": 3
+    },
+    {
+      "title": "Operators: Doing Something with Values",
+      "page": 152,
+      "level": 1
+    },
+    {
+      "title": "Arithmetic Operators",
+      "page": 152,
+      "level": 2
+    },
+    {
+      "title": "String Concatenation",
+      "page": 154,
+      "level": 2
+    },
+    {
+      "title": "Assignment Expressions",
+      "page": 155,
+      "level": 2
+    },
+    {
+      "title": "Increment and Decrement Operators",
+      "page": 157,
+      "level": 2
+    },
+    {
+      "title": "Truth Values and Conditions",
+      "page": 159,
+      "level": 1
+    },
+    {
+      "title": "True and False in awk",
+      "page": 159,
+      "level": 2
+    },
+    {
+      "title": "Variable Typing and Comparison Expressions",
+      "page": 159,
+      "level": 2
+    },
+    {
+      "title": "String Type versus Numeric Type",
+      "page": 159,
+      "level": 3
+    },
+    {
+      "title": "Comparison Operators",
+      "page": 162,
+      "level": 3
+    },
+    {
+      "title": "String Comparison Based on Locale Collating Order",
+      "page": 163,
+      "level": 3
+    },
+    {
+      "title": "Boolean Expressions",
+      "page": 164,
+      "level": 2
+    },
+    {
+      "title": "Conditional Expressions",
+      "page": 165,
+      "level": 2
+    },
+    {
+      "title": "Function Calls",
+      "page": 166,
+      "level": 1
+    },
+    {
+      "title": "Operator Precedence (How Operators Nest)",
+      "page": 168,
+      "level": 1
+    },
+    {
+      "title": "Where You Are Makes a Difference",
+      "page": 169,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 169,
+      "level": 1
+    },
+    {
+      "title": "7 Patterns, Actions, and Variables",
+      "page": 171,
+      "level": 0
+    },
+    {
+      "title": "Pattern Elements",
+      "page": 171,
+      "level": 1
+    },
+    {
+      "title": "Regular Expressions as Patterns",
+      "page": 171,
+      "level": 2
+    },
+    {
+      "title": "Expressions as Patterns",
+      "page": 171,
+      "level": 2
+    },
+    {
+      "title": "Specifying Record Ranges with Patterns",
+      "page": 173,
+      "level": 2
+    },
+    {
+      "title": "The BEGIN and END Special Patterns",
+      "page": 174,
+      "level": 2
+    },
+    {
+      "title": "Startup and Cleanup Actions",
+      "page": 174,
+      "level": 3
+    },
+    {
+      "title": "Input/Output from BEGIN and END Rules",
+      "page": 175,
+      "level": 3
+    },
+    {
+      "title": "The BEGINFILE and ENDFILE Special Patterns",
+      "page": 175,
+      "level": 2
+    },
+    {
+      "title": "The Empty Pattern",
+      "page": 176,
+      "level": 2
+    },
+    {
+      "title": "Using Shell Variables in Programs",
+      "page": 176,
+      "level": 1
+    },
+    {
+      "title": "Actions",
+      "page": 177,
+      "level": 1
+    },
+    {
+      "title": "Control Statements in Actions",
+      "page": 178,
+      "level": 1
+    },
+    {
+      "title": "The if-else Statement",
+      "page": 178,
+      "level": 2
+    },
+    {
+      "title": "The while Statement",
+      "page": 179,
+      "level": 2
+    },
+    {
+      "title": "The do-while Statement",
+      "page": 180,
+      "level": 2
+    },
+    {
+      "title": "The for Statement",
+      "page": 180,
+      "level": 2
+    },
+    {
+      "title": "The switch Statement",
+      "page": 181,
+      "level": 2
+    },
+    {
+      "title": "The break Statement",
+      "page": 183,
+      "level": 2
+    },
+    {
+      "title": "The continue Statement",
+      "page": 184,
+      "level": 2
+    },
+    {
+      "title": "The next Statement",
+      "page": 184,
+      "level": 2
+    },
+    {
+      "title": "The nextfile Statement",
+      "page": 185,
+      "level": 2
+    },
+    {
+      "title": "The exit Statement",
+      "page": 186,
+      "level": 2
+    },
+    {
+      "title": "Predefined Variables",
+      "page": 187,
+      "level": 1
+    },
+    {
+      "title": "Built-in Variables That Control awk",
+      "page": 187,
+      "level": 2
+    },
+    {
+      "title": "Built-in Variables That Convey Information",
+      "page": 189,
+      "level": 2
+    },
+    {
+      "title": "Using ARGC and ARGV",
+      "page": 197,
+      "level": 2
+    },
+    {
+      "title": "Summary",
+      "page": 199,
+      "level": 1
+    },
+    {
+      "title": "8 Arrays in awk",
+      "page": 201,
+      "level": 0
+    },
+    {
+      "title": "The Basics of Arrays",
+      "page": 201,
+      "level": 1
+    },
+    {
+      "title": "Introduction to Arrays",
+      "page": 201,
+      "level": 2
+    },
+    {
+      "title": "Referring to an Array Element",
+      "page": 203,
+      "level": 2
+    },
+    {
+      "title": "Assigning Array Elements",
+      "page": 204,
+      "level": 2
+    },
+    {
+      "title": "Basic Array Example",
+      "page": 204,
+      "level": 2
+    },
+    {
+      "title": "Scanning All Elements of an Array",
+      "page": 205,
+      "level": 2
+    },
+    {
+      "title": "Using Predefined Array Scanning Orders with gawk",
+      "page": 206,
+      "level": 2
+    },
+    {
+      "title": "Using Numbers to Subscript Arrays",
+      "page": 209,
+      "level": 1
+    },
+    {
+      "title": "Using Uninitialized Variables as Subscripts",
+      "page": 210,
+      "level": 1
+    },
+    {
+      "title": "The delete Statement",
+      "page": 210,
+      "level": 1
+    },
+    {
+      "title": "Multidimensional Arrays",
+      "page": 212,
+      "level": 1
+    },
+    {
+      "title": "Scanning Multidimensional Arrays",
+      "page": 213,
+      "level": 2
+    },
+    {
+      "title": "Arrays of Arrays",
+      "page": 213,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 215,
+      "level": 1
+    },
+    {
+      "title": "9 Functions",
+      "page": 217,
+      "level": 0
+    },
+    {
+      "title": "Built-in Functions",
+      "page": 217,
+      "level": 1
+    },
+    {
+      "title": "Calling Built-in Functions",
+      "page": 217,
+      "level": 2
+    },
+    {
+      "title": "Generating Boolean Values",
+      "page": 218,
+      "level": 2
+    },
+    {
+      "title": "Numeric Functions",
+      "page": 218,
+      "level": 2
+    },
+    {
+      "title": "String-Manipulation Functions",
+      "page": 220,
+      "level": 2
+    },
+    {
+      "title": "More about \\ and & with sub(), gsub(), and gensub()",
+      "page": 229,
+      "level": 3
+    },
+    {
+      "title": "Input/Output Functions",
+      "page": 231,
+      "level": 2
+    },
+    {
+      "title": "Time Functions",
+      "page": 235,
+      "level": 2
+    },
+    {
+      "title": "Bit-Manipulation Functions",
+      "page": 240,
+      "level": 2
+    },
+    {
+      "title": "Getting Type Information",
+      "page": 243,
+      "level": 2
+    },
+    {
+      "title": "String-Translation Functions",
+      "page": 244,
+      "level": 2
+    },
+    {
+      "title": "User-Defined Functions",
+      "page": 245,
+      "level": 1
+    },
+    {
+      "title": "Function Definition Syntax",
+      "page": 245,
+      "level": 2
+    },
+    {
+      "title": "Function Definition Examples",
+      "page": 247,
+      "level": 2
+    },
+    {
+      "title": "Calling User-Defined Functions",
+      "page": 248,
+      "level": 2
+    },
+    {
+      "title": "Writing a Function Call",
+      "page": 248,
+      "level": 3
+    },
+    {
+      "title": "Controlling Variable Scope",
+      "page": 249,
+      "level": 3
+    },
+    {
+      "title": "Passing Function Arguments by Value Or by Reference",
+      "page": 251,
+      "level": 3
+    },
+    {
+      "title": "Other Points About Calling Functions",
+      "page": 252,
+      "level": 3
+    },
+    {
+      "title": "The return Statement",
+      "page": 253,
+      "level": 2
+    },
+    {
+      "title": "Variable Typing Is Dynamic",
+      "page": 254,
+      "level": 1
+    },
+    {
+      "title": "Dynamic Typing In Standard awk",
+      "page": 254,
+      "level": 2
+    },
+    {
+      "title": "Dynamic Typing In gawk",
+      "page": 255,
+      "level": 2
+    },
+    {
+      "title": "A Note On Shadowed Variables",
+      "page": 257,
+      "level": 1
+    },
+    {
+      "title": "Indirect Function Calls",
+      "page": 258,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 264,
+      "level": 1
+    },
+    {
+      "title": "10 A Library of awk Functions",
+      "page": 267,
+      "level": 0
+    },
+    {
+      "title": "Naming Library Function Global Variables",
+      "page": 268,
+      "level": 1
+    },
+    {
+      "title": "General Programming",
+      "page": 269,
+      "level": 1
+    },
+    {
+      "title": "Converting Strings to Numbers",
+      "page": 269,
+      "level": 2
+    },
+    {
+      "title": "Assertions",
+      "page": 270,
+      "level": 2
+    },
+    {
+      "title": "Rounding Numbers",
+      "page": 272,
+      "level": 2
+    },
+    {
+      "title": "The Cliff Random Number Generator",
+      "page": 273,
+      "level": 2
+    },
+    {
+      "title": "Translating Between Characters and Numbers",
+      "page": 273,
+      "level": 2
+    },
+    {
+      "title": "Merging an Array into a String",
+      "page": 275,
+      "level": 2
+    },
+    {
+      "title": "Managing the Time of Day",
+      "page": 275,
+      "level": 2
+    },
+    {
+      "title": "Reading a Whole File at Once",
+      "page": 277,
+      "level": 2
+    },
+    {
+      "title": "Quoting Strings to Pass to the Shell",
+      "page": 278,
+      "level": 2
+    },
+    {
+      "title": "Checking Whether A Value Is Numeric",
+      "page": 279,
+      "level": 2
+    },
+    {
+      "title": "Producing CSV Data",
+      "page": 279,
+      "level": 2
+    },
+    {
+      "title": "Data file Management",
+      "page": 281,
+      "level": 1
+    },
+    {
+      "title": "Noting Data file Boundaries",
+      "page": 281,
+      "level": 2
+    },
+    {
+      "title": "Rereading the Current File",
+      "page": 282,
+      "level": 2
+    },
+    {
+      "title": "Checking for Readable Data files",
+      "page": 284,
+      "level": 2
+    },
+    {
+      "title": "Checking for Zero-Length Files",
+      "page": 284,
+      "level": 2
+    },
+    {
+      "title": "Treating Assignments as File names",
+      "page": 285,
+      "level": 2
+    },
+    {
+      "title": "Processing Command-Line Options",
+      "page": 286,
+      "level": 1
+    },
+    {
+      "title": "Reading the User Database",
+      "page": 293,
+      "level": 1
+    },
+    {
+      "title": "Reading the Group Database",
+      "page": 297,
+      "level": 1
+    },
+    {
+      "title": "Traversing Arrays of Arrays",
+      "page": 301,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 303,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 303,
+      "level": 1
+    },
+    {
+      "title": "11 Practical awk Programs",
+      "page": 305,
+      "level": 0
+    },
+    {
+      "title": "Running the Example Programs",
+      "page": 305,
+      "level": 1
+    },
+    {
+      "title": "Reinventing Wheels for Fun and Profit",
+      "page": 305,
+      "level": 1
+    },
+    {
+      "title": "Cutting Out Fields and Columns",
+      "page": 305,
+      "level": 2
+    },
+    {
+      "title": "Searching for Regular Expressions in Files",
+      "page": 310,
+      "level": 2
+    },
+    {
+      "title": "Printing Out User Information",
+      "page": 314,
+      "level": 2
+    },
+    {
+      "title": "Splitting a Large File into Pieces",
+      "page": 320,
+      "level": 2
+    },
+    {
+      "title": "Duplicating Output into Multiple Files",
+      "page": 324,
+      "level": 2
+    },
+    {
+      "title": "Printing Nonduplicated Lines of Text",
+      "page": 326,
+      "level": 2
+    },
+    {
+      "title": "Counting Things",
+      "page": 330,
+      "level": 2
+    },
+    {
+      "title": "Modern Character Sets",
+      "page": 330,
+      "level": 3
+    },
+    {
+      "title": "A Brief Introduction To Extensions",
+      "page": 330,
+      "level": 3
+    },
+    {
+      "title": "Code for wc.awk",
+      "page": 331,
+      "level": 3
+    },
+    {
+      "title": "A Grab Bag of awk Programs",
+      "page": 333,
+      "level": 1
+    },
+    {
+      "title": "Finding Duplicated Words in a Document",
+      "page": 333,
+      "level": 2
+    },
+    {
+      "title": "An Alarm Clock Program",
+      "page": 334,
+      "level": 2
+    },
+    {
+      "title": "Transliterating Characters",
+      "page": 337,
+      "level": 2
+    },
+    {
+      "title": "Printing Mailing Labels",
+      "page": 339,
+      "level": 2
+    },
+    {
+      "title": "Generating Word-Usage Counts",
+      "page": 341,
+      "level": 2
+    },
+    {
+      "title": "Removing Duplicates from Unsorted Text",
+      "page": 342,
+      "level": 2
+    },
+    {
+      "title": "Extracting Programs from Texinfo Source Files",
+      "page": 343,
+      "level": 2
+    },
+    {
+      "title": "A Simple Stream Editor",
+      "page": 347,
+      "level": 2
+    },
+    {
+      "title": "An Easy Way to Use Library Functions",
+      "page": 348,
+      "level": 2
+    },
+    {
+      "title": "Finding Anagrams from a Dictionary",
+      "page": 355,
+      "level": 2
+    },
+    {
+      "title": "And Now for Something Completely Different",
+      "page": 356,
+      "level": 2
+    },
+    {
+      "title": "Demonstrating Shortest and Longest Match Operators",
+      "page": 357,
+      "level": 2
+    },
+    {
+      "title": "Summary",
+      "page": 358,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 358,
+      "level": 1
+    },
+    {
+      "title": "12 Advanced Features of gawk",
+      "page": 363,
+      "level": 0
+    },
+    {
+      "title": "Allowing Nondecimal Input Data",
+      "page": 363,
+      "level": 1
+    },
+    {
+      "title": "Boolean Typed Values",
+      "page": 364,
+      "level": 1
+    },
+    {
+      "title": "Controlling Array Traversal and Array Sorting",
+      "page": 364,
+      "level": 1
+    },
+    {
+      "title": "Controlling Array Traversal",
+      "page": 365,
+      "level": 2
+    },
+    {
+      "title": "Sorting Array Values and Indices with gawk",
+      "page": 369,
+      "level": 2
+    },
+    {
+      "title": "Two-Way Communications with Another Process",
+      "page": 371,
+      "level": 1
+    },
+    {
+      "title": "Using gawk for Network Programming",
+      "page": 374,
+      "level": 1
+    },
+    {
+      "title": "Profiling Your awk Programs",
+      "page": 376,
+      "level": 1
+    },
+    {
+      "title": "Preserving Data Between Runs",
+      "page": 380,
+      "level": 1
+    },
+    {
+      "title": "Builtin Features versus Extensions",
+      "page": 383,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 383,
+      "level": 1
+    },
+    {
+      "title": "13 Internationalization with gawk",
+      "page": 385,
+      "level": 0
+    },
+    {
+      "title": "Internationalization and Localization",
+      "page": 385,
+      "level": 1
+    },
+    {
+      "title": "GNU gettext",
+      "page": 385,
+      "level": 1
+    },
+    {
+      "title": "Internationalizing awk Programs",
+      "page": 387,
+      "level": 1
+    },
+    {
+      "title": "Translating awk Programs",
+      "page": 389,
+      "level": 1
+    },
+    {
+      "title": "Extracting Marked Strings",
+      "page": 389,
+      "level": 2
+    },
+    {
+      "title": "Rearranging printf Arguments",
+      "page": 390,
+      "level": 2
+    },
+    {
+      "title": "awk Portability Issues",
+      "page": 391,
+      "level": 2
+    },
+    {
+      "title": "A Simple Internationalization Example",
+      "page": 392,
+      "level": 1
+    },
+    {
+      "title": "gawk Can Speak Your Language",
+      "page": 394,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 394,
+      "level": 1
+    },
+    {
+      "title": "14 Debugging awk Programs",
+      "page": 395,
+      "level": 0
+    },
+    {
+      "title": "Introduction to the gawk Debugger",
+      "page": 395,
+      "level": 1
+    },
+    {
+      "title": "Debugging in General",
+      "page": 395,
+      "level": 2
+    },
+    {
+      "title": "Debugging Concepts",
+      "page": 395,
+      "level": 2
+    },
+    {
+      "title": "awk Debugging",
+      "page": 396,
+      "level": 2
+    },
+    {
+      "title": "Sample gawk Debugging Session",
+      "page": 397,
+      "level": 1
+    },
+    {
+      "title": "How to Start the Debugger",
+      "page": 397,
+      "level": 2
+    },
+    {
+      "title": "Finding the Bug",
+      "page": 397,
+      "level": 2
+    },
+    {
+      "title": "Main Debugger Commands",
+      "page": 400,
+      "level": 1
+    },
+    {
+      "title": "Control of Breakpoints",
+      "page": 401,
+      "level": 2
+    },
+    {
+      "title": "Control of Execution",
+      "page": 402,
+      "level": 2
+    },
+    {
+      "title": "Viewing and Changing Data",
+      "page": 403,
+      "level": 2
+    },
+    {
+      "title": "Working with the Stack",
+      "page": 405,
+      "level": 2
+    },
+    {
+      "title": "Obtaining Information About the Program and the Debugger State",
+      "page": 405,
+      "level": 2
+    },
+    {
+      "title": "Miscellaneous Commands",
+      "page": 407,
+      "level": 2
+    },
+    {
+      "title": "Readline Support",
+      "page": 409,
+      "level": 1
+    },
+    {
+      "title": "Limitations",
+      "page": 409,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 410,
+      "level": 1
+    },
+    {
+      "title": "15 Namespaces in gawk",
+      "page": 411,
+      "level": 0
+    },
+    {
+      "title": "Standard awk's Single Namespace",
+      "page": 411,
+      "level": 1
+    },
+    {
+      "title": "Qualified Names",
+      "page": 411,
+      "level": 1
+    },
+    {
+      "title": "The Default Namespace",
+      "page": 411,
+      "level": 1
+    },
+    {
+      "title": "Changing The Namespace",
+      "page": 412,
+      "level": 1
+    },
+    {
+      "title": "Namespace and Component Naming Rules",
+      "page": 412,
+      "level": 1
+    },
+    {
+      "title": "Internal Name Management",
+      "page": 413,
+      "level": 1
+    },
+    {
+      "title": "Namespace Example",
+      "page": 414,
+      "level": 1
+    },
+    {
+      "title": "Including A File Without Changing The Namespace",
+      "page": 415,
+      "level": 1
+    },
+    {
+      "title": "Namespaces and Other gawk Features",
+      "page": 417,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 418,
+      "level": 1
+    },
+    {
+      "title": "16 Arithmetic and Arbitrary-Precision Arithmetic with gawk",
+      "page": 419,
+      "level": 0
+    },
+    {
+      "title": "A General Description of Computer Arithmetic",
+      "page": 419,
+      "level": 1
+    },
+    {
+      "title": "Other Stuff to Know",
+      "page": 420,
+      "level": 1
+    },
+    {
+      "title": "Arbitrary-Precision Arithmetic Features in gawk",
+      "page": 422,
+      "level": 1
+    },
+    {
+      "title": "Arbitrary Precision Arithmetic is On Parole!",
+      "page": 422,
+      "level": 2
+    },
+    {
+      "title": "Arbitrary Precision Introduction",
+      "page": 422,
+      "level": 2
+    },
+    {
+      "title": "Floating-Point Arithmetic: Caveat Emptor!",
+      "page": 422,
+      "level": 1
+    },
+    {
+      "title": "Floating-Point Arithmetic Is Not Exact",
+      "page": 423,
+      "level": 2
+    },
+    {
+      "title": "Many Numbers Cannot Be Represented Exactly",
+      "page": 423,
+      "level": 3
+    },
+    {
+      "title": "Be Careful Comparing Values",
+      "page": 423,
+      "level": 3
+    },
+    {
+      "title": "Errors Accumulate",
+      "page": 424,
+      "level": 3
+    },
+    {
+      "title": "Floating Point Values They Didn't Talk About In School",
+      "page": 425,
+      "level": 3
+    },
+    {
+      "title": "Getting the Accuracy You Need",
+      "page": 425,
+      "level": 2
+    },
+    {
+      "title": "Try a Few Extra Bits of Precision and Rounding",
+      "page": 426,
+      "level": 2
+    },
+    {
+      "title": "Setting the Precision",
+      "page": 427,
+      "level": 2
+    },
+    {
+      "title": "Setting the Rounding Mode",
+      "page": 428,
+      "level": 2
+    },
+    {
+      "title": "Arbitrary-Precision Integer Arithmetic with gawk",
+      "page": 429,
+      "level": 1
+    },
+    {
+      "title": "How To Check If MPFR Is Available",
+      "page": 430,
+      "level": 1
+    },
+    {
+      "title": "Standards Versus Existing Practice",
+      "page": 431,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 432,
+      "level": 1
+    },
+    {
+      "title": "17 Writing Extensions for gawk",
+      "page": 435,
+      "level": 0
+    },
+    {
+      "title": "Introduction",
+      "page": 435,
+      "level": 1
+    },
+    {
+      "title": "Extension Licensing",
+      "page": 435,
+      "level": 1
+    },
+    {
+      "title": "How It Works at a High Level",
+      "page": 435,
+      "level": 1
+    },
+    {
+      "title": "API Description",
+      "page": 437,
+      "level": 1
+    },
+    {
+      "title": "Introduction",
+      "page": 437,
+      "level": 2
+    },
+    {
+      "title": "General-Purpose Data Types",
+      "page": 440,
+      "level": 2
+    },
+    {
+      "title": "Memory Allocation Functions and Convenience Macros",
+      "page": 443,
+      "level": 2
+    },
+    {
+      "title": "Constructor Functions",
+      "page": 445,
+      "level": 2
+    },
+    {
+      "title": "Managing MPFR and GMP Values",
+      "page": 446,
+      "level": 2
+    },
+    {
+      "title": "Registration Functions",
+      "page": 447,
+      "level": 2
+    },
+    {
+      "title": "Registering An Extension Function",
+      "page": 447,
+      "level": 3
+    },
+    {
+      "title": "Registering An Exit Callback Function",
+      "page": 449,
+      "level": 3
+    },
+    {
+      "title": "Registering An Extension Version String",
+      "page": 449,
+      "level": 3
+    },
+    {
+      "title": "Customized Input Parsers",
+      "page": 449,
+      "level": 3
+    },
+    {
+      "title": "Customized Output Wrappers",
+      "page": 454,
+      "level": 3
+    },
+    {
+      "title": "Customized Two-way Processors",
+      "page": 456,
+      "level": 3
+    },
+    {
+      "title": "Printing Messages",
+      "page": 457,
+      "level": 2
+    },
+    {
+      "title": "Updating ERRNO",
+      "page": 457,
+      "level": 2
+    },
+    {
+      "title": "Requesting Values",
+      "page": 458,
+      "level": 2
+    },
+    {
+      "title": "Accessing and Updating Parameters",
+      "page": 458,
+      "level": 2
+    },
+    {
+      "title": "Symbol Table Access",
+      "page": 459,
+      "level": 2
+    },
+    {
+      "title": "Variable Access and Update by Name",
+      "page": 459,
+      "level": 3
+    },
+    {
+      "title": "Variable Access and Update by Cookie",
+      "page": 460,
+      "level": 3
+    },
+    {
+      "title": "Creating and Using Cached Values",
+      "page": 462,
+      "level": 3
+    },
+    {
+      "title": "Array Manipulation",
+      "page": 464,
+      "level": 2
+    },
+    {
+      "title": "Array Data Types",
+      "page": 464,
+      "level": 3
+    },
+    {
+      "title": "Array Functions",
+      "page": 465,
+      "level": 3
+    },
+    {
+      "title": "Working With All The Elements of an Array",
+      "page": 467,
+      "level": 3
+    },
+    {
+      "title": "How To Create and Populate Arrays",
+      "page": 470,
+      "level": 3
+    },
+    {
+      "title": "Accessing and Manipulating Redirections",
+      "page": 472,
+      "level": 2
+    },
+    {
+      "title": "API Variables",
+      "page": 473,
+      "level": 2
+    },
+    {
+      "title": "API Version Constants and Variables",
+      "page": 473,
+      "level": 3
+    },
+    {
+      "title": "GMP and MPFR Version Information",
+      "page": 474,
+      "level": 3
+    },
+    {
+      "title": "Informational Variables",
+      "page": 475,
+      "level": 3
+    },
+    {
+      "title": "Boilerplate Code",
+      "page": 475,
+      "level": 2
+    },
+    {
+      "title": "Changes From Version 1 of the API",
+      "page": 477,
+      "level": 2
+    },
+    {
+      "title": "How gawk Finds Extensions",
+      "page": 477,
+      "level": 1
+    },
+    {
+      "title": "Example: Some File Functions",
+      "page": 478,
+      "level": 1
+    },
+    {
+      "title": "Using chdir() and stat()",
+      "page": 478,
+      "level": 2
+    },
+    {
+      "title": "C Code for chdir() and stat()",
+      "page": 480,
+      "level": 2
+    },
+    {
+      "title": "Integrating the Extensions",
+      "page": 486,
+      "level": 2
+    },
+    {
+      "title": "The Sample Extensions in the gawk Distribution",
+      "page": 487,
+      "level": 1
+    },
+    {
+      "title": "File-Related Functions",
+      "page": 488,
+      "level": 2
+    },
+    {
+      "title": "Interface to fnmatch()",
+      "page": 490,
+      "level": 2
+    },
+    {
+      "title": "Interface to fork(), wait(), and waitpid()",
+      "page": 491,
+      "level": 2
+    },
+    {
+      "title": "Enabling In-Place File Editing",
+      "page": 492,
+      "level": 2
+    },
+    {
+      "title": "Character and Numeric values: ord() and chr()",
+      "page": 493,
+      "level": 2
+    },
+    {
+      "title": "Reading Directories",
+      "page": 494,
+      "level": 2
+    },
+    {
+      "title": "Reversing Output",
+      "page": 495,
+      "level": 2
+    },
+    {
+      "title": "Two-Way I/O Example",
+      "page": 495,
+      "level": 2
+    },
+    {
+      "title": "Dumping and Restoring an Array",
+      "page": 495,
+      "level": 2
+    },
+    {
+      "title": "Reading an Entire File",
+      "page": 496,
+      "level": 2
+    },
+    {
+      "title": "Extension Time Functions",
+      "page": 497,
+      "level": 2
+    },
+    {
+      "title": "API Tests",
+      "page": 497,
+      "level": 2
+    },
+    {
+      "title": "The gawkextlib Project",
+      "page": 498,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 498,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 500,
+      "level": 1
+    },
+    {
+      "title": "A The Evolution of the awk Language",
+      "page": 503,
+      "level": 0
+    },
+    {
+      "title": "Major Changes Between V7 and SVR3.1",
+      "page": 503,
+      "level": 1
+    },
+    {
+      "title": "Changes Between SVR3.1 and SVR4",
+      "page": 504,
+      "level": 1
+    },
+    {
+      "title": "Changes Between SVR4 and POSIX awk",
+      "page": 504,
+      "level": 1
+    },
+    {
+      "title": "Extensions in Brian Kernighan's awk",
+      "page": 505,
+      "level": 1
+    },
+    {
+      "title": "Extensions in gawk Not in POSIX awk",
+      "page": 505,
+      "level": 1
+    },
+    {
+      "title": "History of gawk Features",
+      "page": 508,
+      "level": 1
+    },
+    {
+      "title": "Common Extensions Summary",
+      "page": 516,
+      "level": 1
+    },
+    {
+      "title": "Regexp Ranges and Locales: A Long Sad Story",
+      "page": 517,
+      "level": 1
+    },
+    {
+      "title": "Major Contributors to gawk",
+      "page": 518,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 520,
+      "level": 1
+    },
+    {
+      "title": "B Installing gawk",
+      "page": 523,
+      "level": 0
+    },
+    {
+      "title": "The gawk Distribution",
+      "page": 523,
+      "level": 1
+    },
+    {
+      "title": "Getting the gawk Distribution",
+      "page": 523,
+      "level": 2
+    },
+    {
+      "title": "Extracting the Distribution",
+      "page": 523,
+      "level": 2
+    },
+    {
+      "title": "Contents of the gawk Distribution",
+      "page": 524,
+      "level": 2
+    },
+    {
+      "title": "Compiling and Installing gawk on Unix-Like Systems",
+      "page": 527,
+      "level": 1
+    },
+    {
+      "title": "Compiling gawk for Unix-Like Systems",
+      "page": 527,
+      "level": 2
+    },
+    {
+      "title": "Building With MPFR",
+      "page": 528,
+      "level": 3
+    },
+    {
+      "title": "Shell Startup Files",
+      "page": 528,
+      "level": 2
+    },
+    {
+      "title": "Additional Configuration Options",
+      "page": 528,
+      "level": 2
+    },
+    {
+      "title": "The Configuration Process",
+      "page": 529,
+      "level": 2
+    },
+    {
+      "title": "Compiling from Git",
+      "page": 530,
+      "level": 2
+    },
+    {
+      "title": "Building the Documentation",
+      "page": 530,
+      "level": 2
+    },
+    {
+      "title": "Installation on Other Operating Systems",
+      "page": 531,
+      "level": 1
+    },
+    {
+      "title": "Installation on MS-Windows",
+      "page": 531,
+      "level": 2
+    },
+    {
+      "title": "Installing a Prepared Distribution for MS-Windows Systems",
+      "page": 531,
+      "level": 3
+    },
+    {
+      "title": "Compiling gawk for PC Operating Systems",
+      "page": 531,
+      "level": 3
+    },
+    {
+      "title": "Using gawk on PC Operating Systems",
+      "page": 531,
+      "level": 3
+    },
+    {
+      "title": "Using gawk In The Cygwin Environment",
+      "page": 534,
+      "level": 3
+    },
+    {
+      "title": "Using gawk In The MSYS Environment",
+      "page": 534,
+      "level": 3
+    },
+    {
+      "title": "Compiling and Installing gawk on OpenVMS",
+      "page": 534,
+      "level": 2
+    },
+    {
+      "title": "Compiling gawk on OpenVMS",
+      "page": 534,
+      "level": 3
+    },
+    {
+      "title": "Compiling gawk Dynamic Extensions on OpenVMS",
+      "page": 535,
+      "level": 3
+    },
+    {
+      "title": "Installing gawk on OpenVMS",
+      "page": 536,
+      "level": 3
+    },
+    {
+      "title": "Running gawk on OpenVMS",
+      "page": 536,
+      "level": 3
+    },
+    {
+      "title": "The OpenVMS GNV Project",
+      "page": 538,
+      "level": 3
+    },
+    {
+      "title": "Reporting Problems and Bugs",
+      "page": 538,
+      "level": 1
+    },
+    {
+      "title": "Defining What Is and What Is Not A Bug",
+      "page": 538,
+      "level": 2
+    },
+    {
+      "title": "Submitting Bug Reports",
+      "page": 539,
+      "level": 2
+    },
+    {
+      "title": "Please Don't Post Bug Reports to USENET",
+      "page": 541,
+      "level": 2
+    },
+    {
+      "title": "What To Do If You Think There Is A Performance Issue",
+      "page": 541,
+      "level": 2
+    },
+    {
+      "title": "Where To Send Non-bug Questions",
+      "page": 542,
+      "level": 2
+    },
+    {
+      "title": "Reporting Problems with Non-Unix Ports",
+      "page": 543,
+      "level": 2
+    },
+    {
+      "title": "Other Freely Available awk Implementations",
+      "page": 543,
+      "level": 1
+    },
+    {
+      "title": "Summary",
+      "page": 547,
+      "level": 1
+    },
+    {
+      "title": "C Implementation Notes",
+      "page": 549,
+      "level": 0
+    },
+    {
+      "title": "Downward Compatibility and Debugging",
+      "page": 549,
+      "level": 1
+    },
+    {
+      "title": "Making Additions to gawk",
+      "page": 549,
+      "level": 1
+    },
+    {
+      "title": "Accessing The gawk Git Repository",
+      "page": 549,
+      "level": 2
+    },
+    {
+      "title": "Adding New Features",
+      "page": 550,
+      "level": 2
+    },
+    {
+      "title": "Porting gawk to a New Operating System",
+      "page": 552,
+      "level": 2
+    },
+    {
+      "title": "Why Generated Files Are Kept In Git",
+      "page": 553,
+      "level": 2
+    },
+    {
+      "title": "Probable Future Extensions",
+      "page": 555,
+      "level": 1
+    },
+    {
+      "title": "Some Limitations of the Implementation",
+      "page": 555,
+      "level": 1
+    },
+    {
+      "title": "Extension API Design",
+      "page": 555,
+      "level": 1
+    },
+    {
+      "title": "Problems With The Old Mechanism",
+      "page": 556,
+      "level": 2
+    },
+    {
+      "title": "Goals For A New Mechanism",
+      "page": 556,
+      "level": 2
+    },
+    {
+      "title": "Other Design Decisions",
+      "page": 557,
+      "level": 2
+    },
+    {
+      "title": "Room For Future Growth",
+      "page": 558,
+      "level": 2
+    },
+    {
+      "title": "Summary",
+      "page": 558,
+      "level": 1
+    },
+    {
+      "title": "D Basic Programming Concepts",
+      "page": 559,
+      "level": 0
+    },
+    {
+      "title": "What a Program Does",
+      "page": 559,
+      "level": 1
+    },
+    {
+      "title": "Data Values in a Computer",
+      "page": 560,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 563,
+      "level": 0
+    },
+    {
+      "title": "GNU General Public License",
+      "page": 577,
+      "level": 0
+    },
+    {
+      "title": "GNU Free Documentation License",
+      "page": 589,
+      "level": 0
+    },
+    {
+      "title": "ADDENDUM: How to use this License for your documents",
+      "page": 595,
+      "level": 1
+    },
+    {
+      "title": "Index",
+      "page": 597,
+      "level": 0
+    },
+    {
+      "title": "!",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "\"",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "#",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "$",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "%",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "&",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "'",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "(",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "*",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "+",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": ",",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": "-",
+      "page": 597,
+      "level": 1
+    },
+    {
+      "title": ".",
+      "page": 598,
+      "level": 1
+    },
+    {
+      "title": "/",
+      "page": 598,
+      "level": 1
+    },
+    {
+      "title": ":",
+      "page": 598,
+      "level": 1
+    },
+    {
+      "title": ";",
+      "page": 598,
+      "level": 1
+    },
+    {
+      "title": "<",
+      "page": 598,
+      "level": 1
+    },
+    {
+      "title": "=",
+      "page": 598,
+      "level": 1
+    },
+    {
+      "title": ">",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "?",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "[",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "^",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "_",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "@",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "\\",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "{",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "|",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "~",
+      "page": 599,
+      "level": 1
+    },
+    {
+      "title": "A",
+      "page": 600,
+      "level": 1
+    },
+    {
+      "title": "B",
+      "page": 601,
+      "level": 1
+    },
+    {
+      "title": "C",
+      "page": 602,
+      "level": 1
+    },
+    {
+      "title": "D",
+      "page": 604,
+      "level": 1
+    },
+    {
+      "title": "E",
+      "page": 606,
+      "level": 1
+    },
+    {
+      "title": "F",
+      "page": 608,
+      "level": 1
+    },
+    {
+      "title": "G",
+      "page": 609,
+      "level": 1
+    },
+    {
+      "title": "H",
+      "page": 611,
+      "level": 1
+    },
+    {
+      "title": "I",
+      "page": 611,
+      "level": 1
+    },
+    {
+      "title": "J",
+      "page": 612,
+      "level": 1
+    },
+    {
+      "title": "K",
+      "page": 612,
+      "level": 1
+    },
+    {
+      "title": "L",
+      "page": 612,
+      "level": 1
+    },
+    {
+      "title": "M",
+      "page": 613,
+      "level": 1
+    },
+    {
+      "title": "N",
+      "page": 613,
+      "level": 1
+    },
+    {
+      "title": "O",
+      "page": 614,
+      "level": 1
+    },
+    {
+      "title": "P",
+      "page": 614,
+      "level": 1
+    },
+    {
+      "title": "Q",
+      "page": 616,
+      "level": 1
+    },
+    {
+      "title": "R",
+      "page": 616,
+      "level": 1
+    },
+    {
+      "title": "S",
+      "page": 617,
+      "level": 1
+    },
+    {
+      "title": "T",
+      "page": 620,
+      "level": 1
+    },
+    {
+      "title": "U",
+      "page": 620,
+      "level": 1
+    },
+    {
+      "title": "V",
+      "page": 621,
+      "level": 1
+    },
+    {
+      "title": "W",
+      "page": 621,
+      "level": 1
+    },
+    {
+      "title": "X",
+      "page": 622,
+      "level": 1
+    },
+    {
+      "title": "Y",
+      "page": 622,
+      "level": 1
+    },
+    {
+      "title": "Z",
+      "page": 622,
+      "level": 1
+    }
+  ]
+}

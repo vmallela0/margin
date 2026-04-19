@@ -1,0 +1,17 @@
+{
+  "description": "Front matter offset: title/copyright/dedication/blank before body. Body starts at PDF page 5.",
+  "chapters": [
+    {
+      "title": "Beginnings",
+      "page": 5
+    },
+    {
+      "title": "The Journey",
+      "page": 9
+    },
+    {
+      "title": "Arrival",
+      "page": 13
+    }
+  ]
+}

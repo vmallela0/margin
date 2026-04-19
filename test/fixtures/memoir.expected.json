@@ -1,0 +1,25 @@
+{
+  "description": "Memoir: named sections (Prologue / Chapter N / Epilogue) in italic, small size bump.",
+  "chapters": [
+    {
+      "title": "Prologue",
+      "page": 1
+    },
+    {
+      "title": "Chapter One",
+      "page": 4
+    },
+    {
+      "title": "Chapter Two",
+      "page": 9
+    },
+    {
+      "title": "Chapter Three",
+      "page": 14
+    },
+    {
+      "title": "Epilogue",
+      "page": 19
+    }
+  ]
+}

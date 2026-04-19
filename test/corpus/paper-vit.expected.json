@@ -1,0 +1,157 @@
+{
+  "description": "paper: paper-vit",
+  "category": "paper",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "1 Introduction",
+      "page": 1,
+      "level": 0
+    },
+    {
+      "title": "2 Related Work",
+      "page": 2,
+      "level": 0
+    },
+    {
+      "title": "3 Method",
+      "page": 3,
+      "level": 0
+    },
+    {
+      "title": "3.1 Vision Transformer (ViT)",
+      "page": 3,
+      "level": 1
+    },
+    {
+      "title": "3.2 Fine-tuning and Higher Resolution",
+      "page": 4,
+      "level": 1
+    },
+    {
+      "title": "4 Experiments",
+      "page": 4,
+      "level": 0
+    },
+    {
+      "title": "4.1 Setup",
+      "page": 4,
+      "level": 1
+    },
+    {
+      "title": "4.2 Comparison to State of the Art",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "4.3 Pre-training Data Requirements",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "4.4 Scaling Study",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "4.5 Inspecting Vision Transformer",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "4.6 Self-supervision",
+      "page": 8,
+      "level": 1
+    },
+    {
+      "title": "5 Conclusion",
+      "page": 9,
+      "level": 0
+    },
+    {
+      "title": "A Multihead Self-attention",
+      "page": 13,
+      "level": 0
+    },
+    {
+      "title": "B Experiment details",
+      "page": 13,
+      "level": 0
+    },
+    {
+      "title": "B.1 Training",
+      "page": 13,
+      "level": 1
+    },
+    {
+      "title": "B.1.1 Fine-tuning",
+      "page": 13,
+      "level": 2
+    },
+    {
+      "title": "B.1.2 Self-supervision",
+      "page": 14,
+      "level": 2
+    },
+    {
+      "title": "C Additional Results",
+      "page": 14,
+      "level": 0
+    },
+    {
+      "title": "D Additional Analyses",
+      "page": 15,
+      "level": 0
+    },
+    {
+      "title": "D.1 SGD vs. Adam for ResNets",
+      "page": 15,
+      "level": 1
+    },
+    {
+      "title": "D.2 Transformer shape",
+      "page": 16,
+      "level": 1
+    },
+    {
+      "title": "D.3 Head Type and class token",
+      "page": 16,
+      "level": 1
+    },
+    {
+      "title": "D.4 Positional Embedding",
+      "page": 17,
+      "level": 1
+    },
+    {
+      "title": "D.5 Empirical Computational Costs",
+      "page": 18,
+      "level": 1
+    },
+    {
+      "title": "D.6 Axial Attention",
+      "page": 19,
+      "level": 1
+    },
+    {
+      "title": "D.7 Attention Distance",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "D.8 Attention Maps",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "D.9 ObjectNet Results",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "D.10 VTAB Breakdown",
+      "page": 20,
+      "level": 1
+    }
+  ]
+}

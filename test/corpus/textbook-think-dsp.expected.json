@@ -1,0 +1,477 @@
+{
+  "description": "textbook: textbook-think-dsp",
+  "category": "textbook",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Preface",
+      "page": 5,
+      "level": 0
+    },
+    {
+      "title": "Who is this book for?",
+      "page": 5,
+      "level": 1
+    },
+    {
+      "title": "Using the code",
+      "page": 6,
+      "level": 1
+    },
+    {
+      "title": "Sounds and signals",
+      "page": 13,
+      "level": 0
+    },
+    {
+      "title": "Periodic signals",
+      "page": 14,
+      "level": 1
+    },
+    {
+      "title": "Spectral decomposition",
+      "page": 15,
+      "level": 1
+    },
+    {
+      "title": "Signals",
+      "page": 17,
+      "level": 1
+    },
+    {
+      "title": "Reading and writing Waves",
+      "page": 19,
+      "level": 1
+    },
+    {
+      "title": "Spectrums",
+      "page": 19,
+      "level": 1
+    },
+    {
+      "title": "Wave objects",
+      "page": 20,
+      "level": 1
+    },
+    {
+      "title": "Signal objects",
+      "page": 21,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 23,
+      "level": 1
+    },
+    {
+      "title": "Harmonics",
+      "page": 25,
+      "level": 0
+    },
+    {
+      "title": "Triangle waves",
+      "page": 25,
+      "level": 1
+    },
+    {
+      "title": "Square waves",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Aliasing",
+      "page": 29,
+      "level": 1
+    },
+    {
+      "title": "Computing the spectrum",
+      "page": 31,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "Non-periodic signals",
+      "page": 35,
+      "level": 0
+    },
+    {
+      "title": "Linear chirp",
+      "page": 35,
+      "level": 1
+    },
+    {
+      "title": "Exponential chirp",
+      "page": 37,
+      "level": 1
+    },
+    {
+      "title": "Spectrum of a chirp",
+      "page": 38,
+      "level": 1
+    },
+    {
+      "title": "Spectrogram",
+      "page": 39,
+      "level": 1
+    },
+    {
+      "title": "The Gabor limit",
+      "page": 40,
+      "level": 1
+    },
+    {
+      "title": "Leakage",
+      "page": 41,
+      "level": 1
+    },
+    {
+      "title": "Windowing",
+      "page": 43,
+      "level": 1
+    },
+    {
+      "title": "Implementing spectrograms",
+      "page": 44,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 46,
+      "level": 1
+    },
+    {
+      "title": "Noise",
+      "page": 49,
+      "level": 0
+    },
+    {
+      "title": "Uncorrelated noise",
+      "page": 49,
+      "level": 1
+    },
+    {
+      "title": "Integrated spectrum",
+      "page": 52,
+      "level": 1
+    },
+    {
+      "title": "Brownian noise",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "Pink Noise",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "Gaussian noise",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Autocorrelation",
+      "page": 63,
+      "level": 0
+    },
+    {
+      "title": "Correlation",
+      "page": 63,
+      "level": 1
+    },
+    {
+      "title": "Serial correlation",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Autocorrelation",
+      "page": 67,
+      "level": 1
+    },
+    {
+      "title": "Autocorrelation of periodic signals",
+      "page": 68,
+      "level": 1
+    },
+    {
+      "title": "Correlation as dot product",
+      "page": 72,
+      "level": 1
+    },
+    {
+      "title": "Using NumPy",
+      "page": 72,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 74,
+      "level": 1
+    },
+    {
+      "title": "Discrete cosine transform",
+      "page": 75,
+      "level": 0
+    },
+    {
+      "title": "Synthesis",
+      "page": 76,
+      "level": 1
+    },
+    {
+      "title": "Synthesis with arrays",
+      "page": 76,
+      "level": 1
+    },
+    {
+      "title": "Analysis",
+      "page": 78,
+      "level": 1
+    },
+    {
+      "title": "Orthogonal matrices",
+      "page": 79,
+      "level": 1
+    },
+    {
+      "title": "DCT-IV",
+      "page": 81,
+      "level": 1
+    },
+    {
+      "title": "Inverse DCT",
+      "page": 83,
+      "level": 1
+    },
+    {
+      "title": "The Dct class",
+      "page": 83,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 85,
+      "level": 1
+    },
+    {
+      "title": "Discrete Fourier Transform",
+      "page": 87,
+      "level": 0
+    },
+    {
+      "title": "Complex exponentials",
+      "page": 88,
+      "level": 1
+    },
+    {
+      "title": "Complex signals",
+      "page": 89,
+      "level": 1
+    },
+    {
+      "title": "The synthesis problem",
+      "page": 90,
+      "level": 1
+    },
+    {
+      "title": "Synthesis with matrices",
+      "page": 92,
+      "level": 1
+    },
+    {
+      "title": "The analysis problem",
+      "page": 94,
+      "level": 1
+    },
+    {
+      "title": "Efficient analysis",
+      "page": 95,
+      "level": 1
+    },
+    {
+      "title": "DFT",
+      "page": 96,
+      "level": 1
+    },
+    {
+      "title": "The DFT is periodic",
+      "page": 97,
+      "level": 1
+    },
+    {
+      "title": "DFT of real signals",
+      "page": 98,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 99,
+      "level": 1
+    },
+    {
+      "title": "Filtering and Convolution",
+      "page": 101,
+      "level": 0
+    },
+    {
+      "title": "Smoothing",
+      "page": 101,
+      "level": 1
+    },
+    {
+      "title": "Convolution",
+      "page": 103,
+      "level": 1
+    },
+    {
+      "title": "The frequency domain",
+      "page": 105,
+      "level": 1
+    },
+    {
+      "title": "The convolution theorem",
+      "page": 106,
+      "level": 1
+    },
+    {
+      "title": "Gaussian filter",
+      "page": 107,
+      "level": 1
+    },
+    {
+      "title": "Efficient convolution",
+      "page": 109,
+      "level": 1
+    },
+    {
+      "title": "Efficient autocorrelation",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 112,
+      "level": 1
+    },
+    {
+      "title": "Differentiation and Integration",
+      "page": 113,
+      "level": 0
+    },
+    {
+      "title": "Finite differences",
+      "page": 113,
+      "level": 1
+    },
+    {
+      "title": "The frequency domain",
+      "page": 114,
+      "level": 1
+    },
+    {
+      "title": "Differentiation",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Integration",
+      "page": 118,
+      "level": 1
+    },
+    {
+      "title": "Cumulative sum",
+      "page": 120,
+      "level": 1
+    },
+    {
+      "title": "Integrating noise",
+      "page": 123,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 124,
+      "level": 1
+    },
+    {
+      "title": "LTI systems",
+      "page": 125,
+      "level": 0
+    },
+    {
+      "title": "Signals and systems",
+      "page": 125,
+      "level": 1
+    },
+    {
+      "title": "Windows and filters",
+      "page": 127,
+      "level": 1
+    },
+    {
+      "title": "Acoustic response",
+      "page": 128,
+      "level": 1
+    },
+    {
+      "title": "Systems and convolution",
+      "page": 131,
+      "level": 1
+    },
+    {
+      "title": "Proof of the Convolution Theorem",
+      "page": 134,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 136,
+      "level": 1
+    },
+    {
+      "title": "Modulation and sampling",
+      "page": 139,
+      "level": 0
+    },
+    {
+      "title": "Convolution with impulses",
+      "page": 139,
+      "level": 1
+    },
+    {
+      "title": "Amplitude modulation",
+      "page": 140,
+      "level": 1
+    },
+    {
+      "title": "Sampling",
+      "page": 143,
+      "level": 1
+    },
+    {
+      "title": "Aliasing",
+      "page": 146,
+      "level": 1
+    },
+    {
+      "title": "Interpolation",
+      "page": 149,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 151,
+      "level": 1
+    }
+  ]
+}

@@ -1,0 +1,1207 @@
+{
+  "description": "textbook: textbook-think-python",
+  "category": "textbook",
+  "source": "embedded-outline",
+  "chapters": [
+    {
+      "title": "Preface",
+      "page": 5,
+      "level": 0
+    },
+    {
+      "title": "The way of the program",
+      "page": 23,
+      "level": 0
+    },
+    {
+      "title": "What is a program?",
+      "page": 23,
+      "level": 1
+    },
+    {
+      "title": "Running Python",
+      "page": 24,
+      "level": 1
+    },
+    {
+      "title": "The first program",
+      "page": 25,
+      "level": 1
+    },
+    {
+      "title": "Arithmetic operators",
+      "page": 25,
+      "level": 1
+    },
+    {
+      "title": "Values and types",
+      "page": 26,
+      "level": 1
+    },
+    {
+      "title": "Formal and natural languages",
+      "page": 26,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 28,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 29,
+      "level": 1
+    },
+    {
+      "title": "Variables, expressions and statements",
+      "page": 31,
+      "level": 0
+    },
+    {
+      "title": "Assignment statements",
+      "page": 31,
+      "level": 1
+    },
+    {
+      "title": "Variable names",
+      "page": 31,
+      "level": 1
+    },
+    {
+      "title": "Expressions and statements",
+      "page": 32,
+      "level": 1
+    },
+    {
+      "title": "Script mode",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "Order of operations",
+      "page": 33,
+      "level": 1
+    },
+    {
+      "title": "String operations",
+      "page": 34,
+      "level": 1
+    },
+    {
+      "title": "Comments",
+      "page": 34,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 35,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 36,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 36,
+      "level": 1
+    },
+    {
+      "title": "Functions",
+      "page": 39,
+      "level": 0
+    },
+    {
+      "title": "Function calls",
+      "page": 39,
+      "level": 1
+    },
+    {
+      "title": "Math functions",
+      "page": 40,
+      "level": 1
+    },
+    {
+      "title": "Composition",
+      "page": 41,
+      "level": 1
+    },
+    {
+      "title": "Adding new functions",
+      "page": 41,
+      "level": 1
+    },
+    {
+      "title": "Definitions and uses",
+      "page": 42,
+      "level": 1
+    },
+    {
+      "title": "Flow of execution",
+      "page": 43,
+      "level": 1
+    },
+    {
+      "title": "Parameters and arguments",
+      "page": 43,
+      "level": 1
+    },
+    {
+      "title": "Variables and parameters are local",
+      "page": 44,
+      "level": 1
+    },
+    {
+      "title": "Stack diagrams",
+      "page": 45,
+      "level": 1
+    },
+    {
+      "title": "Fruitful functions and void functions",
+      "page": 46,
+      "level": 1
+    },
+    {
+      "title": "Why functions?",
+      "page": 46,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 47,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 48,
+      "level": 1
+    },
+    {
+      "title": "Case study: interface design",
+      "page": 51,
+      "level": 0
+    },
+    {
+      "title": "The turtle module",
+      "page": 51,
+      "level": 1
+    },
+    {
+      "title": "Simple repetition",
+      "page": 52,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 53,
+      "level": 1
+    },
+    {
+      "title": "Encapsulation",
+      "page": 54,
+      "level": 1
+    },
+    {
+      "title": "Generalization",
+      "page": 54,
+      "level": 1
+    },
+    {
+      "title": "Interface design",
+      "page": 55,
+      "level": 1
+    },
+    {
+      "title": "Refactoring",
+      "page": 56,
+      "level": 1
+    },
+    {
+      "title": "A development plan",
+      "page": 57,
+      "level": 1
+    },
+    {
+      "title": "docstring",
+      "page": 57,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 58,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 59,
+      "level": 1
+    },
+    {
+      "title": "Conditionals and recursion",
+      "page": 61,
+      "level": 0
+    },
+    {
+      "title": "Floor division and modulus",
+      "page": 61,
+      "level": 1
+    },
+    {
+      "title": "Boolean expressions",
+      "page": 62,
+      "level": 1
+    },
+    {
+      "title": "Logical operators",
+      "page": 62,
+      "level": 1
+    },
+    {
+      "title": "Conditional execution",
+      "page": 63,
+      "level": 1
+    },
+    {
+      "title": "Alternative execution",
+      "page": 63,
+      "level": 1
+    },
+    {
+      "title": "Chained conditionals",
+      "page": 63,
+      "level": 1
+    },
+    {
+      "title": "Nested conditionals",
+      "page": 64,
+      "level": 1
+    },
+    {
+      "title": "Recursion",
+      "page": 65,
+      "level": 1
+    },
+    {
+      "title": "Stack diagrams for recursive functions",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Infinite recursion",
+      "page": 66,
+      "level": 1
+    },
+    {
+      "title": "Keyboard input",
+      "page": 67,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 68,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 69,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 69,
+      "level": 1
+    },
+    {
+      "title": "Fruitful functions",
+      "page": 73,
+      "level": 0
+    },
+    {
+      "title": "Return values",
+      "page": 73,
+      "level": 1
+    },
+    {
+      "title": "Incremental development",
+      "page": 74,
+      "level": 1
+    },
+    {
+      "title": "Composition",
+      "page": 76,
+      "level": 1
+    },
+    {
+      "title": "Boolean functions",
+      "page": 76,
+      "level": 1
+    },
+    {
+      "title": "More recursion",
+      "page": 77,
+      "level": 1
+    },
+    {
+      "title": "Leap of faith",
+      "page": 79,
+      "level": 1
+    },
+    {
+      "title": "One more example",
+      "page": 79,
+      "level": 1
+    },
+    {
+      "title": "Checking types",
+      "page": 80,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 81,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 82,
+      "level": 1
+    },
+    {
+      "title": "Iteration",
+      "page": 85,
+      "level": 0
+    },
+    {
+      "title": "Reassignment",
+      "page": 85,
+      "level": 1
+    },
+    {
+      "title": "Updating variables",
+      "page": 86,
+      "level": 1
+    },
+    {
+      "title": "The while statement",
+      "page": 86,
+      "level": 1
+    },
+    {
+      "title": "break",
+      "page": 88,
+      "level": 1
+    },
+    {
+      "title": "Square roots",
+      "page": 88,
+      "level": 1
+    },
+    {
+      "title": "Algorithms",
+      "page": 89,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 90,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 90,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 91,
+      "level": 1
+    },
+    {
+      "title": "Strings",
+      "page": 93,
+      "level": 0
+    },
+    {
+      "title": "A string is a sequence",
+      "page": 93,
+      "level": 1
+    },
+    {
+      "title": "len",
+      "page": 94,
+      "level": 1
+    },
+    {
+      "title": "Traversal with a for loop",
+      "page": 94,
+      "level": 1
+    },
+    {
+      "title": "String slices",
+      "page": 95,
+      "level": 1
+    },
+    {
+      "title": "Strings are immutable",
+      "page": 96,
+      "level": 1
+    },
+    {
+      "title": "Searching",
+      "page": 96,
+      "level": 1
+    },
+    {
+      "title": "Looping and counting",
+      "page": 97,
+      "level": 1
+    },
+    {
+      "title": "String methods",
+      "page": 97,
+      "level": 1
+    },
+    {
+      "title": "The in operator",
+      "page": 98,
+      "level": 1
+    },
+    {
+      "title": "String comparison",
+      "page": 99,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 99,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 101,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 101,
+      "level": 1
+    },
+    {
+      "title": "Case study: word play",
+      "page": 105,
+      "level": 0
+    },
+    {
+      "title": "Reading word lists",
+      "page": 105,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 106,
+      "level": 1
+    },
+    {
+      "title": "Search",
+      "page": 107,
+      "level": 1
+    },
+    {
+      "title": "Looping with indices",
+      "page": 108,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 109,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 109,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 110,
+      "level": 1
+    },
+    {
+      "title": "Lists",
+      "page": 111,
+      "level": 0
+    },
+    {
+      "title": "A list is a sequence",
+      "page": 111,
+      "level": 1
+    },
+    {
+      "title": "Lists are mutable",
+      "page": 112,
+      "level": 1
+    },
+    {
+      "title": "Traversing a list",
+      "page": 113,
+      "level": 1
+    },
+    {
+      "title": "List operations",
+      "page": 113,
+      "level": 1
+    },
+    {
+      "title": "List slices",
+      "page": 113,
+      "level": 1
+    },
+    {
+      "title": "List methods",
+      "page": 114,
+      "level": 1
+    },
+    {
+      "title": "Map, filter and reduce",
+      "page": 115,
+      "level": 1
+    },
+    {
+      "title": "Deleting elements",
+      "page": 116,
+      "level": 1
+    },
+    {
+      "title": "Lists and strings",
+      "page": 116,
+      "level": 1
+    },
+    {
+      "title": "Objects and values",
+      "page": 117,
+      "level": 1
+    },
+    {
+      "title": "Aliasing",
+      "page": 118,
+      "level": 1
+    },
+    {
+      "title": "List arguments",
+      "page": 119,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 120,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 122,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 122,
+      "level": 1
+    },
+    {
+      "title": "Dictionaries",
+      "page": 125,
+      "level": 0
+    },
+    {
+      "title": "A dictionary is a mapping",
+      "page": 125,
+      "level": 1
+    },
+    {
+      "title": "Dictionary as a collection of counters",
+      "page": 126,
+      "level": 1
+    },
+    {
+      "title": "Looping and dictionaries",
+      "page": 128,
+      "level": 1
+    },
+    {
+      "title": "Reverse lookup",
+      "page": 128,
+      "level": 1
+    },
+    {
+      "title": "Dictionaries and lists",
+      "page": 129,
+      "level": 1
+    },
+    {
+      "title": "Memos",
+      "page": 131,
+      "level": 1
+    },
+    {
+      "title": "Global variables",
+      "page": 132,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 133,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 134,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 135,
+      "level": 1
+    },
+    {
+      "title": "Tuples",
+      "page": 137,
+      "level": 0
+    },
+    {
+      "title": "Tuples are immutable",
+      "page": 137,
+      "level": 1
+    },
+    {
+      "title": "Tuple assignment",
+      "page": 138,
+      "level": 1
+    },
+    {
+      "title": "Tuples as return values",
+      "page": 139,
+      "level": 1
+    },
+    {
+      "title": "Variable-length argument tuples",
+      "page": 140,
+      "level": 1
+    },
+    {
+      "title": "Lists and tuples",
+      "page": 140,
+      "level": 1
+    },
+    {
+      "title": "Dictionaries and tuples",
+      "page": 142,
+      "level": 1
+    },
+    {
+      "title": "Sequences of sequences",
+      "page": 143,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 144,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 144,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 145,
+      "level": 1
+    },
+    {
+      "title": "Case study: data structure selection",
+      "page": 147,
+      "level": 0
+    },
+    {
+      "title": "Word frequency analysis",
+      "page": 147,
+      "level": 1
+    },
+    {
+      "title": "Random numbers",
+      "page": 148,
+      "level": 1
+    },
+    {
+      "title": "Word histogram",
+      "page": 149,
+      "level": 1
+    },
+    {
+      "title": "Most common words",
+      "page": 150,
+      "level": 1
+    },
+    {
+      "title": "Optional parameters",
+      "page": 151,
+      "level": 1
+    },
+    {
+      "title": "Dictionary subtraction",
+      "page": 151,
+      "level": 1
+    },
+    {
+      "title": "Random words",
+      "page": 152,
+      "level": 1
+    },
+    {
+      "title": "Markov analysis",
+      "page": 152,
+      "level": 1
+    },
+    {
+      "title": "Data structures",
+      "page": 154,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 155,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 156,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 156,
+      "level": 1
+    },
+    {
+      "title": "Files",
+      "page": 159,
+      "level": 0
+    },
+    {
+      "title": "Persistence",
+      "page": 159,
+      "level": 1
+    },
+    {
+      "title": "Reading and writing",
+      "page": 159,
+      "level": 1
+    },
+    {
+      "title": "Format operator",
+      "page": 160,
+      "level": 1
+    },
+    {
+      "title": "Filenames and paths",
+      "page": 161,
+      "level": 1
+    },
+    {
+      "title": "Catching exceptions",
+      "page": 162,
+      "level": 1
+    },
+    {
+      "title": "Databases",
+      "page": 163,
+      "level": 1
+    },
+    {
+      "title": "Pickling",
+      "page": 164,
+      "level": 1
+    },
+    {
+      "title": "Pipes",
+      "page": 164,
+      "level": 1
+    },
+    {
+      "title": "Writing modules",
+      "page": 165,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 166,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 167,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 167,
+      "level": 1
+    },
+    {
+      "title": "Classes and objects",
+      "page": 169,
+      "level": 0
+    },
+    {
+      "title": "Programmer-defined types",
+      "page": 169,
+      "level": 1
+    },
+    {
+      "title": "Attributes",
+      "page": 170,
+      "level": 1
+    },
+    {
+      "title": "Rectangles",
+      "page": 171,
+      "level": 1
+    },
+    {
+      "title": "Instances as return values",
+      "page": 172,
+      "level": 1
+    },
+    {
+      "title": "Objects are mutable",
+      "page": 173,
+      "level": 1
+    },
+    {
+      "title": "Copying",
+      "page": 173,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 174,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 175,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 176,
+      "level": 1
+    },
+    {
+      "title": "Classes and functions",
+      "page": 177,
+      "level": 0
+    },
+    {
+      "title": "Time",
+      "page": 177,
+      "level": 1
+    },
+    {
+      "title": "Pure functions",
+      "page": 178,
+      "level": 1
+    },
+    {
+      "title": "Modifiers",
+      "page": 179,
+      "level": 1
+    },
+    {
+      "title": "Prototyping versus planning",
+      "page": 180,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 181,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 182,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 182,
+      "level": 1
+    },
+    {
+      "title": "Classes and methods",
+      "page": 183,
+      "level": 0
+    },
+    {
+      "title": "Object-oriented features",
+      "page": 183,
+      "level": 1
+    },
+    {
+      "title": "Printing objects",
+      "page": 184,
+      "level": 1
+    },
+    {
+      "title": "Another example",
+      "page": 185,
+      "level": 1
+    },
+    {
+      "title": "A more complicated example",
+      "page": 186,
+      "level": 1
+    },
+    {
+      "title": "The init method",
+      "page": 186,
+      "level": 1
+    },
+    {
+      "title": "The __str__ method",
+      "page": 187,
+      "level": 1
+    },
+    {
+      "title": "Operator overloading",
+      "page": 187,
+      "level": 1
+    },
+    {
+      "title": "Type-based dispatch",
+      "page": 188,
+      "level": 1
+    },
+    {
+      "title": "Polymorphism",
+      "page": 189,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 190,
+      "level": 1
+    },
+    {
+      "title": "Interface and implementation",
+      "page": 191,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 191,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 192,
+      "level": 1
+    },
+    {
+      "title": "Inheritance",
+      "page": 193,
+      "level": 0
+    },
+    {
+      "title": "Card objects",
+      "page": 193,
+      "level": 1
+    },
+    {
+      "title": "Class attributes",
+      "page": 194,
+      "level": 1
+    },
+    {
+      "title": "Comparing cards",
+      "page": 195,
+      "level": 1
+    },
+    {
+      "title": "Decks",
+      "page": 196,
+      "level": 1
+    },
+    {
+      "title": "Printing the deck",
+      "page": 196,
+      "level": 1
+    },
+    {
+      "title": "Add, remove, shuffle and sort",
+      "page": 197,
+      "level": 1
+    },
+    {
+      "title": "Inheritance",
+      "page": 198,
+      "level": 1
+    },
+    {
+      "title": "Class diagrams",
+      "page": 199,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 200,
+      "level": 1
+    },
+    {
+      "title": "Data encapsulation",
+      "page": 201,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 202,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 203,
+      "level": 1
+    },
+    {
+      "title": "The Goodies",
+      "page": 205,
+      "level": 0
+    },
+    {
+      "title": "Conditional expressions",
+      "page": 205,
+      "level": 1
+    },
+    {
+      "title": "List comprehensions",
+      "page": 206,
+      "level": 1
+    },
+    {
+      "title": "Generator expressions",
+      "page": 207,
+      "level": 1
+    },
+    {
+      "title": "any and all",
+      "page": 207,
+      "level": 1
+    },
+    {
+      "title": "Sets",
+      "page": 208,
+      "level": 1
+    },
+    {
+      "title": "Counters",
+      "page": 209,
+      "level": 1
+    },
+    {
+      "title": "defaultdict",
+      "page": 210,
+      "level": 1
+    },
+    {
+      "title": "Named tuples",
+      "page": 211,
+      "level": 1
+    },
+    {
+      "title": "Gathering keyword args",
+      "page": 212,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 213,
+      "level": 1
+    },
+    {
+      "title": "Exercises",
+      "page": 214,
+      "level": 1
+    },
+    {
+      "title": "Debugging",
+      "page": 215,
+      "level": 0
+    },
+    {
+      "title": "Syntax errors",
+      "page": 215,
+      "level": 1
+    },
+    {
+      "title": "Runtime errors",
+      "page": 217,
+      "level": 1
+    },
+    {
+      "title": "Semantic errors",
+      "page": 220,
+      "level": 1
+    },
+    {
+      "title": "Analysis of Algorithms",
+      "page": 223,
+      "level": 0
+    },
+    {
+      "title": "Order of growth",
+      "page": 224,
+      "level": 1
+    },
+    {
+      "title": "Analysis of basic Python operations",
+      "page": 226,
+      "level": 1
+    },
+    {
+      "title": "Analysis of search algorithms",
+      "page": 227,
+      "level": 1
+    },
+    {
+      "title": "Hashtables",
+      "page": 228,
+      "level": 1
+    },
+    {
+      "title": "Glossary",
+      "page": 231,
+      "level": 1
+    }
+  ]
+}
