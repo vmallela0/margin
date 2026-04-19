@@ -25,14 +25,43 @@ export function normalizeSourceUrl(url: string): string {
 }
 
 export async function loadFromUrl(url: string): Promise<PDFDocumentProxy> {
-  // Fetch the data ourselves so the browser never shows a native Basic Auth
-  // dialog on 401. Passing a URL directly to pdfjs uses XHR, which triggers
-  // the browser's credential prompt and caches the challenge against the
-  // extension origin — affecting every subsequent request.
+  // Fetch ourselves so the browser never shows a native Basic Auth dialog on
+  // 401 (pdfjs uses XHR which triggers the credential prompt).
   const res = await fetch(normalizeSourceUrl(url), { credentials: "omit" });
-  if (!res.ok) throw new Error(`HTTP ${res.status} fetching PDF`);
-  const data = await res.arrayBuffer();
+  if (!res.ok) throw new Error(`HTTP ${res.status} — ${res.statusText}`);
+  const raw = await res.arrayBuffer();
+  const data = await resolveGitLfs(normalizeSourceUrl(url), raw);
   return pdfjs.getDocument({ data, isEvalSupported: false }).promise;
+}
+
+// If the fetched bytes are a Git LFS pointer, exchange it for the real object
+// via GitHub's LFS batch endpoint (works for public repos without a token).
+async function resolveGitLfs(fetchUrl: string, data: ArrayBuffer): Promise<ArrayBuffer> {
+  const head = new TextDecoder("utf-8", { fatal: false }).decode(new Uint8Array(data).subarray(0, 100));
+  if (!head.startsWith("version https://git-lfs.github.com/spec/v1")) return data;
+
+  const oid = head.match(/oid sha256:([a-f0-9]{64})/)?.[1];
+  const size = Number(head.match(/size (\d+)/)?.[1]);
+  const repoMatch = fetchUrl.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+\/[^/]+)\//);
+  if (!oid || !size || !repoMatch) {
+    throw new Error("File is stored with Git LFS — download it from GitHub and open it directly in Margin.");
+  }
+
+  const batchRes = await fetch(`https://github.com/${repoMatch[1]}.git/info/lfs/objects/batch`, {
+    method: "POST",
+    credentials: "omit",
+    headers: { Accept: "application/vnd.git-lfs+json", "Content-Type": "application/vnd.git-lfs+json" },
+    body: JSON.stringify({ operation: "download", transfers: ["basic"], objects: [{ oid, size }] }),
+  });
+  if (!batchRes.ok) throw new Error("Git LFS batch request failed — download the file and open it directly.");
+
+  const batch = await batchRes.json();
+  const href = batch?.objects?.[0]?.actions?.download?.href;
+  if (!href) throw new Error("Git LFS object has no download URL — the repo may be private.");
+
+  const lfsRes = await fetch(href, { credentials: "omit" });
+  if (!lfsRes.ok) throw new Error(`Git LFS fetch failed (HTTP ${lfsRes.status})`);
+  return lfsRes.arrayBuffer();
 }
 
 export async function loadFromBlob(blob: Blob): Promise<PDFDocumentProxy> {
