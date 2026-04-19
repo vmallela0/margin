@@ -8,12 +8,28 @@ if (typeof chrome !== "undefined" && chrome.runtime?.getURL) {
   pdfjs.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL("pdf.worker.mjs");
 }
 
+// Rewrite hosting-platform URLs to their direct download equivalents.
+export function normalizeSourceUrl(url: string): string {
+  // GitHub blob viewer → raw content
+  // https://github.com/user/repo/blob/branch/path.pdf
+  // → https://raw.githubusercontent.com/user/repo/branch/path.pdf
+  const ghBlob = url.match(/^https?:\/\/github\.com\/([^/]+\/[^/]+)\/blob\/(.+)$/);
+  if (ghBlob) return `https://raw.githubusercontent.com/${ghBlob[1]}/${ghBlob[2]}`;
+
+  // arXiv abstract page → PDF
+  // https://arxiv.org/abs/2103.14696 → https://arxiv.org/pdf/2103.14696
+  const arxivAbs = url.match(/^https?:\/\/arxiv\.org\/abs\/(.+)$/);
+  if (arxivAbs) return `https://arxiv.org/pdf/${arxivAbs[1]}`;
+
+  return url;
+}
+
 export async function loadFromUrl(url: string): Promise<PDFDocumentProxy> {
   // Fetch the data ourselves so the browser never shows a native Basic Auth
   // dialog on 401. Passing a URL directly to pdfjs uses XHR, which triggers
   // the browser's credential prompt and caches the challenge against the
   // extension origin — affecting every subsequent request.
-  const res = await fetch(url, { credentials: "omit" });
+  const res = await fetch(normalizeSourceUrl(url), { credentials: "omit" });
   if (!res.ok) throw new Error(`HTTP ${res.status} fetching PDF`);
   const data = await res.arrayBuffer();
   return pdfjs.getDocument({ data, isEvalSupported: false }).promise;
