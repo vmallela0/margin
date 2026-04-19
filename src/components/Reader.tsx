@@ -199,24 +199,15 @@ export function Reader() {
     return () => ro.disconnect();
   }, [scrollRef.current, railOpen]);
 
-  // Current visible page — track via scroll position.
-  // Finds the page whose top edge is at or above the 30% mark of the viewport
-  // (natural reading focal point). Much more reliable than IntersectionObserver
-  // which only fires on threshold crossings and can miss frames.
+  // Current visible page — ratio of scrollTop to max scroll, mapped to page range.
+  // O(1), fires on every scroll frame, no DOM querying needed.
   useEffect(() => {
     const el = scrollRef.current;
     if (!el || numPages === 0) return;
     const update = () => {
-      const { top: containerTop, height } = el.getBoundingClientRect();
-      const target = containerTop + height * 0.3;
-      const pages = el.querySelectorAll<HTMLElement>(".pdf-page");
-      let best = 1;
-      for (const page of pages) {
-        const r = page.getBoundingClientRect();
-        if (r.top <= target) best = Number(page.dataset.page);
-        else break;
-      }
-      setCurrentPage(best);
+      const max = el.scrollHeight - el.clientHeight;
+      const ratio = max > 0 ? el.scrollTop / max : 0;
+      setCurrentPage(Math.max(1, Math.min(numPages, Math.round(ratio * (numPages - 1)) + 1)));
     };
     el.addEventListener("scroll", update, { passive: true });
     update();
@@ -552,7 +543,7 @@ export function Reader() {
               />
             ))}
           </div>
-          <Minimap scrollRef={scrollRef} numPages={numPages} highlights={highlights} />
+          <ChapterRuler scrollRef={scrollRef} outline={outline} numPages={numPages} onJumpPage={jumpToPage} />
         </div>
       </div>
       {railOpen ? (
@@ -707,84 +698,64 @@ function suggestBack(_text: string): string {
   return "";
 }
 
-function Minimap({
+function ChapterRuler({
   scrollRef,
+  outline,
   numPages,
-  highlights,
+  onJumpPage,
 }: {
   scrollRef: React.RefObject<HTMLDivElement>;
+  outline: OutlineItem[];
   numPages: number;
-  highlights: Highlight[];
+  onJumpPage: (page: number) => void;
 }) {
-  const mapRef = useRef<HTMLDivElement>(null);
-  const [s, setS] = useState({ top: 0, full: 1, client: 1 });
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    const update = () => setS({ top: el.scrollTop, full: el.scrollHeight, client: el.clientHeight });
+    const update = () => {
+      const max = el.scrollHeight - el.clientHeight;
+      setProgress(max > 0 ? el.scrollTop / max : 0);
+    };
     el.addEventListener("scroll", update, { passive: true });
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
     update();
-    return () => { el.removeEventListener("scroll", update); ro.disconnect(); };
-  }, []);
+    return () => el.removeEventListener("scroll", update);
+  }, [scrollRef.current]);
 
-  const hlByPage = useMemo(() => {
-    const m = new Map<number, Highlight[]>();
-    for (const h of highlights) {
-      if (!m.has(h.page)) m.set(h.page, []);
-      m.get(h.page)!.push(h);
-    }
-    return m;
-  }, [highlights]);
+  const marks = useMemo(() => {
+    const out: { page: number; level: number; title: string }[] = [];
+    const walk = (items: OutlineItem[]) => {
+      for (const it of items) {
+        if (it.page) out.push({ page: it.page, level: it.level, title: it.title });
+        walk(it.children);
+      }
+    };
+    walk(outline);
+    return out;
+  }, [outline]);
 
-  const handlePointer = (e: React.PointerEvent<HTMLDivElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const el = scrollRef.current;
     if (!el) return;
-    const jump = (clientY: number) => {
-      const rect = mapRef.current!.getBoundingClientRect();
-      const ratio = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
-      el.scrollTop = ratio * el.scrollHeight - el.clientHeight / 2;
-    };
-    jump(e.clientY);
-    e.currentTarget.setPointerCapture(e.pointerId);
-    const onMove = (ev: PointerEvent) => jump(ev.clientY);
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", () => window.removeEventListener("pointermove", onMove), { once: true });
+    const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
+    const fraction = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+    el.scrollTop = fraction * (el.scrollHeight - el.clientHeight);
   };
 
-  const vpTopPct = (s.top / s.full) * 100;
-  const vpHeightPct = (s.client / s.full) * 100;
-
   return (
-    <div className="minimap" ref={mapRef} onPointerDown={handlePointer}>
-      {Array.from({ length: numPages }, (_, i) => {
-        const pageNum = i + 1;
-        const hls = hlByPage.get(pageNum) ?? [];
-        return (
-          <div
-            key={i}
-            className="minimap-pg"
-            style={{ top: `${(i / numPages) * 100}%`, height: `${(1 / numPages) * 100}%` }}
-          >
-            {hls.map((h, j) => {
-              const isBuiltin = (BUILTIN_COLORS as readonly string[]).includes(h.color);
-              return (
-                <span
-                  key={j}
-                  className={`minimap-hl${isBuiltin ? ` ${h.color}` : ""}`}
-                  style={{
-                    top: `${(h.rects[0]?.y ?? 0.3) * 100}%`,
-                    ...(!isBuiltin ? { background: h.color } : {}),
-                  }}
-                />
-              );
-            })}
-          </div>
-        );
-      })}
-      <div className="minimap-vp" style={{ top: `${vpTopPct}%`, height: `${vpHeightPct}%` }} />
+    <div className="chapter-ruler" onClick={handleClick} title="Click to jump">
+      <div className="chapter-ruler-fill" style={{ height: `${progress * 100}%` }} />
+      {numPages > 0 && marks.map((m, i) => (
+        <div
+          key={i}
+          className={`chapter-ruler-mark${m.level === 0 ? " major" : ""}`}
+          style={{ top: `${(m.page / numPages) * 100}%` }}
+          title={m.title}
+          onClick={(e) => { e.stopPropagation(); onJumpPage(m.page); }}
+        />
+      ))}
+      <div className="chapter-ruler-thumb" style={{ top: `${progress * 100}%` }} />
     </div>
   );
 }
