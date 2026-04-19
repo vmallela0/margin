@@ -71,6 +71,7 @@ export function CommandPalette({
             placeholder={placeholder}
           />
         </div>
+        <div className="cmd-body">
         {filtered.length === 0 && <div className="empty">No commands.</div>}
         {sections.map(([label, list]) => (
           <div key={label} className="section">
@@ -94,6 +95,7 @@ export function CommandPalette({
             })}
           </div>
         ))}
+        </div>
       </div>
     </div>
   );

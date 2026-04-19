@@ -101,6 +101,10 @@ export const PdfPage = forwardRef<PdfPageHandle, {
       canvas.height = Math.floor(viewport.height * ratio);
       canvas.style.width = `${Math.floor(viewport.width)}px`;
       canvas.style.height = `${Math.floor(viewport.height)}px`;
+      // Fill white immediately after resize — resizing clears canvas to black
+      // when alpha:false, which flashes through before the render completes.
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       if (taskRef.current) {
         try { taskRef.current.cancel(); } catch {}

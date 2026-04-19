@@ -570,11 +570,14 @@ html, body { height: 100%; overflow: hidden; }
 
 .cmd-panel {
   width: min(560px, 92vw);
+  max-height: min(600px, 80vh);
   background: var(--paper);
   border: 1px solid var(--rule-2);
   border-radius: 6px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   animation: fade-in 140ms ease-out;
 }
 .cmd-panel .header {
@@ -592,6 +595,11 @@ html, body { height: 100%; overflow: hidden; }
   font-size: 15px;
   color: var(--ink);
   outline: none;
+}
+.cmd-panel .cmd-body {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
 }
 .cmd-panel .section {
   padding: 6px 0;
