@@ -1,6 +1,6 @@
 {
   "name": "margin",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A calm Chrome extension for reading PDFs — highlights, flashcards, SM-2.",
   "private": true,
   "type": "module",

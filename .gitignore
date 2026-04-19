@@ -1,5 +1,6 @@
 node_modules/
 dist/
+releases/
 
 # Corpus PDFs are large — only the expected JSON ground truth is tracked
 test/corpus/*.pdf

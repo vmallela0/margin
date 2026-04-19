@@ -1,10 +1,23 @@
 {
   "manifest_version": 3,
   "name": "Margin",
-  "version": "0.1.0",
-  "description": "A calm place to read PDFs — highlights, flashcards, SM-2 review.",
+  "version": "1.0.0",
+  "description": "A calm place to read PDFs — highlights, flashcards, and SM-2 spaced-repetition review. 100% local.",
+  "minimum_chrome_version": "114",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
-    "default_title": "Open Margin"
+    "default_title": "Open Margin",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
   "background": {
     "service_worker": "background.js",
@@ -22,7 +35,7 @@
   "host_permissions": ["<all_urls>"],
   "web_accessible_resources": [
     {
-      "resources": ["reader.html", "newtab.html", "pdf.worker.mjs", "assets/*"],
+      "resources": ["reader.html", "newtab.html", "pdf.worker.mjs", "assets/*", "icons/*"],
       "matches": ["<all_urls>"]
     }
   ]

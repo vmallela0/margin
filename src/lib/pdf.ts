@@ -209,18 +209,6 @@ export async function detectChaptersFromText(pdf: PDFDocumentProxy): Promise<Out
   // within 2 pages are deduped.
   const merged = mergeAllSources(clusterChapters, scoredChapters, numberedChapters);
 
-  // eslint-disable-next-line no-console
-  console.log("[margin] chapter detect", {
-    numPages: pdf.numPages,
-    bodySize,
-    bodyFontId,
-    cluster: clusterChapters.length,
-    scored: scoredChapters.length,
-    numbered: numberedChapters.length,
-    final: merged.length,
-    runningHeaders: [...runningHeaders].slice(0, 3),
-    chapters: merged.slice(0, 20).map((c) => ({ title: c.title, page: c.page, level: c.level })),
-  });
 
   return merged;
 }

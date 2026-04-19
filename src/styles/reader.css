@@ -604,6 +604,8 @@ html, body { height: 100%; overflow: hidden; }
   overflow-y: auto;
   flex: 1;
   min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-2) transparent;
 }
 .cmd-panel .section {
   padding: 6px 0;

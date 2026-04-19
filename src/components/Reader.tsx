@@ -134,20 +134,13 @@ export function Reader() {
         // ready; the user can already scroll and highlight before then.
         const runDetect = async () => {
           try {
-            const rawOutline = await doc.getOutline();
             let ol = await flattenOutline(doc);
-            console.log("[margin] embedded outline", {
-              rawCount: rawOutline?.length ?? 0,
-              flattened: ol.map((e) => ({ title: e.title, page: e.page, level: e.level })),
-            });
             if (ol.length < 3) {
               const detected = await detectChaptersFromText(doc);
               if (detected.length > ol.length) ol = detected;
             }
             setOutline(ol);
-          } catch (err) {
-            console.error("[margin] outline detection failed", err);
-          }
+          } catch {}
         };
         const w = window as unknown as { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number };
         if (typeof w.requestIdleCallback === "function") {
@@ -156,7 +149,6 @@ export function Reader() {
           setTimeout(runDetect, 0);
         }
       } catch (e: any) {
-        console.error(e);
         setLoadError(e?.message ?? "Failed to open PDF.");
       }
     })();
@@ -482,7 +474,7 @@ export function Reader() {
   }
 
   return (
-    <div className="reader-root" style={{ gridTemplateColumns: railOpen ? "1fr 360px" : "1fr 0" }}>
+    <div className="reader-root" style={{ gridTemplateColumns: railOpen ? "1fr 300px" : "1fr 0" }}>
       <div className="reader-main">
         <div className="reader-toolbar">
           <button className="back" onClick={() => location.href = chrome.runtime.getURL("newtab.html")}>← library</button>

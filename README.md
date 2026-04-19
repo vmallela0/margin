@@ -104,6 +104,18 @@ The dev build injects a reload script that polls `dist/version.txt` every 800ms 
 
 ---
 
+## Releasing to the Chrome Web Store
+
+```bash
+./scripts/package.sh
+```
+
+Produces `releases/margin-v<version>.zip`, which is what you upload to the [Developer Dashboard](https://chrome.google.com/webstore/devconsole). See [store/STORE_LISTING.md](store/STORE_LISTING.md) for the copy/paste-ready description, permission justifications, and submission checklist. Privacy disclosures live in [PRIVACY.md](PRIVACY.md) — host this somewhere public (GitHub Pages works) and point the dashboard's privacy-policy URL at it.
+
+To cut a new version, bump `version` in both `manifest.json` and `package.json`, then re-run the package script.
+
+---
+
 ## How Chapter Detection Works
 
 This is the core hard problem in Margin. PDFs have no guaranteed structure, so the detector uses three independent paths and merges them.

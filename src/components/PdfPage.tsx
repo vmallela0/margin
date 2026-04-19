@@ -167,9 +167,7 @@ export const PdfPage = forwardRef<PdfPageHandle, {
         setText(joined);
         setRendered(true);
       }
-    })().catch((e) => {
-      if (e?.name !== "RenderingCancelledException") console.error("page render", pageNumber, e);
-    });
+    })().catch(() => {});
 
     return () => {
       cancelled = true;
