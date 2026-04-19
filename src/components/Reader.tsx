@@ -48,6 +48,8 @@ export function Reader() {
   const [cards, setCards] = useState<Flashcard[]>([]);
   const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
   const [currentPage, setCurrentPage] = useState(1);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [pageInputVal, setPageInputVal] = useState<string | null>(null);
   const [zoom, setZoom] = useState(1);
   const [railOpen, setRailOpen] = useState(true);
   const [railTab, setRailTab] = useState<RailTab>("outline");
@@ -197,20 +199,28 @@ export function Reader() {
     return () => ro.disconnect();
   }, [scrollRef.current, railOpen]);
 
-  // Current visible page — ratio of scrollTop to max scroll, mapped to page range.
-  // O(1), fires on every scroll frame, no DOM querying needed.
+  // Current visible page + ruler progress. Uses offsetTop instead of scroll
+  // ratio — the ratio formula breaks with varying page heights or unrendered
+  // placeholders. offsetTop is stable regardless of render state.
   useEffect(() => {
     const el = scrollRef.current;
     if (!el || numPages === 0) return;
     const update = () => {
       const max = el.scrollHeight - el.clientHeight;
-      const ratio = max > 0 ? el.scrollTop / max : 0;
-      setCurrentPage(Math.max(1, Math.min(numPages, Math.round(ratio * (numPages - 1)) + 1)));
+      setScrollProgress(max > 0 ? el.scrollTop / max : 0);
+      const viewTop = el.scrollTop + 60;
+      const pages = el.querySelectorAll<HTMLElement>(".pdf-page[data-page]");
+      let page = 1;
+      for (const p of pages) {
+        if (p.offsetTop <= viewTop) page = Number(p.dataset.page);
+        else break;
+      }
+      setCurrentPage(page);
     };
     el.addEventListener("scroll", update, { passive: true });
     update();
     return () => el.removeEventListener("scroll", update);
-  }, [numPages]);
+  }, [numPages, firstVp]);
 
   // Execute pending jumps after pages are ready
   useEffect(() => {
@@ -482,10 +492,27 @@ export function Reader() {
           <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
             <input
               className="page-input"
-              value={currentPage}
-              onChange={(e) => {
+              type="number"
+              min={1}
+              max={numPages}
+              value={pageInputVal ?? currentPage}
+              onFocus={() => setPageInputVal(String(currentPage))}
+              onChange={(e) => setPageInputVal(e.target.value)}
+              onBlur={(e) => {
                 const n = Number(e.target.value);
                 if (!Number.isNaN(n) && n >= 1 && n <= numPages) jumpToPage(n);
+                setPageInputVal(null);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  const n = Number((e.target as HTMLInputElement).value);
+                  if (!Number.isNaN(n) && n >= 1 && n <= numPages) jumpToPage(n);
+                  setPageInputVal(null);
+                  (e.target as HTMLInputElement).blur();
+                } else if (e.key === "Escape") {
+                  setPageInputVal(null);
+                  (e.target as HTMLInputElement).blur();
+                }
               }}
             />
             <span className="meta-s" style={{ fontSize: 10 }}>/ {numPages}</span>
@@ -541,7 +568,7 @@ export function Reader() {
               />
             ))}
           </div>
-          <ChapterRuler scrollRef={scrollRef} outline={outline} numPages={numPages} onJumpPage={jumpToPage} />
+          <ChapterRuler scrollRef={scrollRef} outline={outline} numPages={numPages} onJumpPage={jumpToPage} progress={scrollProgress} />
         </div>
       </div>
       {railOpen ? (
@@ -701,26 +728,14 @@ function ChapterRuler({
   outline,
   numPages,
   onJumpPage,
+  progress,
 }: {
   scrollRef: React.RefObject<HTMLDivElement>;
   outline: OutlineItem[];
   numPages: number;
   onJumpPage: (page: number) => void;
+  progress: number;
 }) {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const update = () => {
-      const max = el.scrollHeight - el.clientHeight;
-      setProgress(max > 0 ? el.scrollTop / max : 0);
-    };
-    el.addEventListener("scroll", update, { passive: true });
-    update();
-    return () => el.removeEventListener("scroll", update);
-  }, [scrollRef.current]);
-
   const marks = useMemo(() => {
     const out: { page: number; level: number; title: string }[] = [];
     const walk = (items: OutlineItem[]) => {

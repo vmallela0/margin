@@ -194,6 +194,7 @@ html, body { height: 100%; overflow: hidden; }
   background: var(--paper-2);
   scroll-behavior: smooth;
   scrollbar-width: none;
+  position: relative;
 }
 .pdf-scroll::-webkit-scrollbar { display: none; }
 
@@ -954,3 +955,10 @@ html, body { height: 100%; overflow: hidden; }
   outline: none;
 }
 .thread-input:focus { border-color: var(--accent); }
+
+/* Hide number spinner on page input */
+.reader-toolbar .page-input::-webkit-inner-spin-button,
+.reader-toolbar .page-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+.reader-toolbar .page-input { -moz-appearance: textfield; }
+
+@view-transition { navigation: auto; }

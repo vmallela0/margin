@@ -22,13 +22,8 @@ function shelfFor(book: Book): "current" | "pinned" | "recent" {
   return "recent";
 }
 
-async function openReader(book: Book) {
-  const url = chrome.runtime.getURL(`reader.html?book=${encodeURIComponent(book.id)}`);
-  const current = await chrome.tabs.getCurrent();
-  await chrome.tabs.create({ url, active: true });
-  if (current?.id != null) {
-    try { await chrome.tabs.remove(current.id); } catch {}
-  }
+function openReader(book: Book) {
+  location.href = chrome.runtime.getURL(`reader.html?book=${encodeURIComponent(book.id)}`);
 }
 
 export function Library() {
