@@ -1,5 +1,5 @@
-import { useLayoutEffect, useMemo, useRef } from "react";
-import type { CustomColor, Flashcard, Highlight } from "../lib/types";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import type { CustomColor, Flashcard, Highlight, ThreadEntry } from "../lib/types";
 import type { OutlineItem } from "../lib/pdf";
 import { resolveHighlightBg } from "../lib/colors";
 
@@ -16,6 +16,7 @@ export function Rail({
   onJumpPage,
   onJumpHighlight,
   onDeleteCard,
+  onUpdateHighlight,
   onClose,
   bookTitle,
 }: {
@@ -29,12 +30,12 @@ export function Rail({
   onJumpPage: (page: number) => void;
   onJumpHighlight: (h: Highlight) => void;
   onDeleteCard: (id: string) => void;
+  onUpdateHighlight: (h: Highlight) => void;
   onClose: () => void;
   bookTitle: string;
 }) {
   const flatOutline = useMemo(() => flattenForDisplay(outline), [outline]);
 
-  // Determine current chapter: deepest outline entry whose page <= currentPage.
   const currentIdx = useMemo(() => {
     let idx = -1;
     for (let i = 0; i < flatOutline.length; i++) {
@@ -47,7 +48,6 @@ export function Rail({
   const listRef = useRef<HTMLDivElement>(null);
   const currentRef = useRef<HTMLAnchorElement>(null);
 
-  // When the outline tab opens or current chapter changes, scroll current into view.
   useLayoutEffect(() => {
     if (tab !== "outline") return;
     if (!currentRef.current || !listRef.current) return;
@@ -116,14 +116,16 @@ export function Rail({
                 .slice()
                 .sort((a, b) => a.page - b.page || a.createdAt - b.createdAt)
                 .map((h) => (
-                  <div key={h.id} className="note">
-                    <div className="text">
-                      <span className="swatch" style={{ background: resolveHighlightBg(h.color, customColors) }} />
-                      {truncate(h.text, 180)}
-                    </div>
-                    {h.note && <div className="note-body">— {h.note}</div>}
-                    <div className="anchor" onClick={() => onJumpHighlight(h)}>→ p.{h.page}</div>
-                  </div>
+                  <NoteRow
+                    key={h.id}
+                    highlight={h}
+                    customColors={customColors}
+                    onJump={() => onJumpHighlight(h)}
+                    onAddThread={(text) => {
+                      const entry: ThreadEntry = { text, createdAt: Date.now() };
+                      onUpdateHighlight({ ...h, threads: [...(h.threads ?? []), entry] });
+                    }}
+                  />
                 ))}
             </div>
           )
@@ -163,6 +165,84 @@ export function Rail({
         )}
       </div>
     </aside>
+  );
+}
+
+function NoteRow({
+  highlight: h,
+  customColors,
+  onJump,
+  onAddThread,
+}: {
+  highlight: Highlight;
+  customColors: CustomColor[];
+  onJump: () => void;
+  onAddThread: (text: string) => void;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const [threadDraft, setThreadDraft] = useState("");
+  const [hovering, setHovering] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const submitThread = () => {
+    const t = threadDraft.trim();
+    if (!t) return;
+    onAddThread(t);
+    setThreadDraft("");
+  };
+
+  return (
+    <div
+      className={`note${expanded ? " expanded" : ""}`}
+      onMouseEnter={() => setHovering(true)}
+      onMouseLeave={() => setHovering(false)}
+    >
+      {/* Hover tooltip for the note text */}
+      {hovering && h.note && (
+        <div className="note-tooltip">{h.note}</div>
+      )}
+
+      <div className="text" onClick={() => setExpanded((v) => !v)} style={{ cursor: "pointer" }}>
+        <span className="swatch" style={{ background: resolveHighlightBg(h.color, customColors) }} />
+        {truncate(h.text, expanded ? 9999 : 160)}
+      </div>
+
+      {h.note && <div className="note-body">— {h.note}</div>}
+
+      {/* Thread entries */}
+      {(h.threads ?? []).map((t, i) => (
+        <div key={i} className="thread-entry">
+          <span className="thread-line" />
+          <span className="thread-text">{t.text}</span>
+        </div>
+      ))}
+
+      <div className="note-footer">
+        <span className="anchor" onClick={onJump}>→ p.{h.page}</span>
+        <button
+          className="thread-add-btn"
+          onClick={() => { setExpanded(true); setTimeout(() => inputRef.current?.focus(), 0); }}
+          title="Add a thread comment"
+        >⤷ reply</button>
+      </div>
+
+      {expanded && (
+        <div className="thread-input-row">
+          <input
+            ref={inputRef}
+            className="thread-input"
+            placeholder="Add a comment…"
+            value={threadDraft}
+            onChange={(e) => setThreadDraft(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") submitThread();
+              if (e.key === "Escape") { setExpanded(false); setThreadDraft(""); }
+            }}
+          />
+          <button className="btn primary" style={{ padding: "3px 8px", fontSize: 11 }} onClick={submitThread}>↵</button>
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -17,6 +17,11 @@ export interface CustomColor {
 
 export type Rect = { x: number; y: number; w: number; h: number };
 
+export interface ThreadEntry {
+  text: string;
+  createdAt: number;
+}
+
 export interface Highlight {
   id: string;
   bookId: string;
@@ -25,6 +30,7 @@ export interface Highlight {
   color: HighlightColor;
   text: string;
   note?: string;
+  threads?: ThreadEntry[];
   createdAt: number;
 }
 

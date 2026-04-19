@@ -4,7 +4,7 @@ html, body { height: 100%; overflow: hidden; }
 
 .reader-root {
   display: grid;
-  grid-template-columns: 34px 1fr auto;
+  grid-template-columns: 1fr auto;
   height: 100vh;
   overflow: hidden;
   background: var(--paper);
@@ -121,14 +121,21 @@ html, body { height: 100%; overflow: hidden; }
   flex-direction: column;
   overflow: hidden;
   min-height: 0;
+}
+
+.reader-scroll-area {
+  flex: 1;
+  min-height: 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .reader-toolbar {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 15px 18px 10px;
+  padding: 24px 24px 14px;
   border-bottom: 1px solid var(--rule);
   font-family: var(--sans);
 }
@@ -181,11 +188,14 @@ html, body { height: 100%; overflow: hidden; }
 .pdf-scroll {
   flex: 1;
   min-height: 0;
-  overflow: auto;
-  padding: 24px 0 96px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 40px 0 96px;
   background: var(--paper-2);
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
+.pdf-scroll::-webkit-scrollbar { display: none; }
 
 .pdf-page {
   margin: 0 auto 22px;
@@ -328,10 +338,6 @@ html, body { height: 100%; overflow: hidden; }
   gap: 8px;
 }
 
-.note-list .note {
-  padding: 10px 0;
-  border-bottom: 1px dashed var(--rule);
-}
 .note-list .note .swatch {
   display: inline-block;
   width: 10px;
@@ -345,13 +351,6 @@ html, body { height: 100%; overflow: hidden; }
   font-size: 12.5px;
   line-height: 1.45;
   color: var(--ink-2);
-}
-.note-list .note .anchor {
-  margin-top: 4px;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--ink-3);
-  cursor: pointer;
 }
 .note-list .note .note-body {
   margin-top: 4px;
@@ -779,3 +778,136 @@ html, body { height: 100%; overflow: hidden; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+/* ── Chapter ruler ── */
+.chapter-ruler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  cursor: pointer;
+  z-index: 20;
+}
+.chapter-ruler-fill {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  right: 4px;
+  background: var(--accent);
+  opacity: 0.22;
+  border-radius: 0 0 2px 2px;
+  pointer-events: none;
+}
+.chapter-ruler-mark {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  height: 1px;
+  background: var(--ink-4);
+  pointer-events: auto;
+}
+.chapter-ruler-mark.major {
+  left: 2px;
+  right: 2px;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.7;
+}
+.chapter-ruler-thumb {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: translateY(-1px);
+  pointer-events: none;
+}
+
+/* ── Note thread ── */
+.note-list .note {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--rule);
+}
+.note-tooltip {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-family: var(--serif);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 40;
+  pointer-events: none;
+}
+.note-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+.note-footer .anchor {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-3);
+  cursor: pointer;
+}
+.note-footer .anchor:hover { color: var(--accent); }
+.thread-add-btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-4);
+  cursor: pointer;
+  padding: 0;
+  letter-spacing: 0.04em;
+}
+.thread-add-btn:hover { color: var(--accent); }
+.thread-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 5px;
+}
+.thread-line {
+  flex: none;
+  width: 2px;
+  align-self: stretch;
+  background: var(--accent);
+  opacity: 0.35;
+  border-radius: 1px;
+  margin-left: 4px;
+}
+.thread-text {
+  font-family: var(--serif);
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.thread-input-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.thread-input {
+  flex: 1;
+  font-family: var(--serif);
+  font-size: 12px;
+  padding: 4px 8px;
+  background: var(--paper-2);
+  border: 1px solid var(--rule-2);
+  border-radius: 3px;
+  color: var(--ink);
+  outline: none;
+}
+.thread-input:focus { border-color: var(--accent); }

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { detectChaptersFromText, extractPdfTitle, flattenOutline, loadFromBlob, loadFromUrl, type OutlineItem, type PDFDocumentProxy } from "../lib/pdf";
 import type { Book, Flashcard, Highlight, HighlightColor, Rect, Settings, Theme } from "../lib/types";
+import type { ThreadEntry } from "../lib/types";
 import { DEFAULT_SETTINGS } from "../lib/types";
 import {
   addCard, addHighlight, deleteCard, deleteHighlight, getBook, getSettings,
@@ -10,7 +11,7 @@ import { getBlob } from "../lib/blobs";
 import { shortId } from "../lib/hash";
 import { newCardSM2 } from "../lib/sm2";
 import { PdfPage, type PdfPageHandle } from "./PdfPage";
-import { ChapterSidebar } from "./ChapterSidebar";
+// ChapterSidebar removed — replaced by right rail + chapter ruler
 import { Rail, type RailTab } from "./Rail";
 import { HighlightPopover } from "./HighlightPopover";
 import { FlashcardCreate } from "./FlashcardCreate";
@@ -48,7 +49,7 @@ export function Reader() {
   const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
   const [currentPage, setCurrentPage] = useState(1);
   const [zoom, setZoom] = useState(1);
-  const [railOpen, setRailOpen] = useState(false);
+  const [railOpen, setRailOpen] = useState(true);
   const [railTab, setRailTab] = useState<RailTab>("outline");
   const [overlay, setOverlay] = useState<Overlay>({ kind: "none" });
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -483,13 +484,7 @@ export function Reader() {
   }
 
   return (
-    <div className="reader-root" style={{ gridTemplateColumns: railOpen ? "192px 1fr 360px" : "192px 1fr 192px" }}>
-      <ChapterSidebar
-        outline={outline}
-        totalPages={numPages}
-        currentPage={currentPage}
-        onJump={jumpToPage}
-      />
+    <div className="reader-root" style={{ gridTemplateColumns: railOpen ? "1fr 360px" : "1fr 0" }}>
       <div className="reader-main">
         <div className="reader-toolbar">
           <button className="back" onClick={() => location.href = chrome.runtime.getURL("newtab.html")}>← library</button>
@@ -527,23 +522,26 @@ export function Reader() {
           <button className="tool" onClick={() => setOverlay({ kind: "settings" })} title="Settings">⚙</button>
           <button className="tool" onClick={() => setOverlay({ kind: "shortcuts" })} title="Shortcuts">?</button>
         </div>
-        <div className="pdf-scroll" ref={scrollRef}>
-          {Array.from({ length: numPages }, (_, i) => i + 1).map((n) => (
-            <PdfPage
-              key={n}
-              pdf={pdf}
-              pageNumber={n}
-              initialSize={firstVp}
-              scale={scale}
-              highlights={highlights.filter((h) => h.page === n)}
-              customColors={settings.customColors}
-              onHighlightClick={openHighlightEdit}
-              ref={(h) => {
-                if (h) pageHandles.current.set(n, h);
-                else pageHandles.current.delete(n);
-              }}
-            />
-          ))}
+        <div className="reader-scroll-area">
+          <div className="pdf-scroll" ref={scrollRef}>
+            {Array.from({ length: numPages }, (_, i) => i + 1).map((n) => (
+              <PdfPage
+                key={n}
+                pdf={pdf}
+                pageNumber={n}
+                initialSize={firstVp}
+                scale={scale}
+                highlights={highlights.filter((h) => h.page === n)}
+                customColors={settings.customColors}
+                onHighlightClick={openHighlightEdit}
+                ref={(h) => {
+                  if (h) pageHandles.current.set(n, h);
+                  else pageHandles.current.delete(n);
+                }}
+              />
+            ))}
+          </div>
+          <ChapterRuler scrollRef={scrollRef} outline={outline} numPages={numPages} onJumpPage={jumpToPage} />
         </div>
       </div>
       {railOpen ? (
@@ -559,6 +557,7 @@ export function Reader() {
           onJumpPage={jumpToPage}
           onJumpHighlight={(h) => jumpToPage(h.page, h.id)}
           onDeleteCard={(id) => deleteCard(id)}
+          onUpdateHighlight={(h) => { if (book) updateHighlight(h); }}
           onClose={() => setRailOpen(false)}
         />
       ) : (
@@ -695,4 +694,66 @@ function suggestFront(text: string): string {
 
 function suggestBack(_text: string): string {
   return "";
+}
+
+function ChapterRuler({
+  scrollRef,
+  outline,
+  numPages,
+  onJumpPage,
+}: {
+  scrollRef: React.RefObject<HTMLDivElement>;
+  outline: OutlineItem[];
+  numPages: number;
+  onJumpPage: (page: number) => void;
+}) {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const update = () => {
+      const max = el.scrollHeight - el.clientHeight;
+      setProgress(max > 0 ? el.scrollTop / max : 0);
+    };
+    el.addEventListener("scroll", update, { passive: true });
+    update();
+    return () => el.removeEventListener("scroll", update);
+  }, [scrollRef.current]);
+
+  const marks = useMemo(() => {
+    const out: { page: number; level: number; title: string }[] = [];
+    const walk = (items: OutlineItem[]) => {
+      for (const it of items) {
+        if (it.page) out.push({ page: it.page, level: it.level, title: it.title });
+        walk(it.children);
+      }
+    };
+    walk(outline);
+    return out;
+  }, [outline]);
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
+    const fraction = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+    el.scrollTop = fraction * (el.scrollHeight - el.clientHeight);
+  };
+
+  return (
+    <div className="chapter-ruler" onClick={handleClick} title="Click to jump">
+      <div className="chapter-ruler-fill" style={{ height: `${progress * 100}%` }} />
+      {numPages > 0 && marks.map((m, i) => (
+        <div
+          key={i}
+          className={`chapter-ruler-mark${m.level === 0 ? " major" : ""}`}
+          style={{ top: `${(m.page / numPages) * 100}%` }}
+          title={m.title}
+          onClick={(e) => { e.stopPropagation(); onJumpPage(m.page); }}
+        />
+      ))}
+      <div className="chapter-ruler-thumb" style={{ top: `${progress * 100}%` }} />
+    </div>
+  );
 }

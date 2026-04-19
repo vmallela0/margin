@@ -785,7 +785,12 @@ const APPENDIX_HEADING_RE = /^([A-Z](?:\.\d{1,2}){1,2})\s+([A-Z][^\n]{0,140})$/;
 const ALLCAPS_APPENDIX_HEADING_RE = /^([A-Z])\s+([A-Z]{2,}(?:\s+[A-Z0-9\-'&]{1,}){0,10})\s*$/;
 // "Chapter I Introduction.", "Chapter 12 Foo", "Chapter XIV Recapitulation"
 // Case-insensitive on the word "Chapter" so we catch "CHAPTER" all-caps too.
-const NAMED_CHAPTER_RE = /^(chapter|book|part|volume|section)\s+([IVXLCDMivxlcdm]{1,7}|\d{1,3})\b\.?\s*(.{0,140})$/i;
+// Word-form numbers used in older books: "Part Four. The Log Cabin", "Book Three", etc.
+const WORD_ORDINAL = "(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty(?:[- ](?:one|two|three|four|five|six|seven|eight|nine))?|thirty(?:[- ](?:one|two|three|four|five|six))?|forty|fifty)";
+const NAMED_CHAPTER_RE = new RegExp(
+  `^(chapter|book|part|volume|section)\\s+([IVXLCDMivxlcdm]{1,7}|\\d{1,3}|${WORD_ORDINAL})\\b\\.?\\s*(.{0,140})$`,
+  "i",
+);
 
 function scanNumberedSections(
   snaps: PageSnap[],
@@ -825,7 +830,8 @@ function scanNumberedSections(
       const rest = m[2].trim();
 
       // Reject obvious false positives.
-      if (rest.length < 2) continue;
+      // Named chapters ("Chapter I", "Part Four") are valid even with no subtitle.
+      if (!namedChapterPrefix && rest.length < 2) continue;
       if (/^(figure|table|algorithm|equation|listing|theorem|lemma|fig\.?|eq\.?)\b/i.test(rest)) continue;
       // Running page headers: "2 Mallela et al.", "4 Smith et al. · Title" — any
       // numbered heading where the body contains "et al." is an author citation,
