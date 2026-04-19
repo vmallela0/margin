@@ -23,7 +23,7 @@ The extension stores:
 ## What Margin Does Not Do
 
 - ❌ No analytics, telemetry, or tracking
-- ❌ No third-party services, scripts, or fonts loaded from external origins at runtime beyond Google Fonts (CSS-only, no data sent by Margin itself)
+- ❌ No third-party services, scripts, or fonts loaded from external origins — all fonts are bundled locally
 - ❌ No accounts, sign-in, or cloud sync
 - ❌ No selling, sharing, or transfer of data to third parties
 - ❌ No advertisements

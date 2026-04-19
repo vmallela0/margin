@@ -26,6 +26,9 @@
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "permissions": [
     "storage",
     "declarativeNetRequest",
@@ -35,7 +38,7 @@
   "host_permissions": ["<all_urls>"],
   "web_accessible_resources": [
     {
-      "resources": ["reader.html", "newtab.html", "pdf.worker.mjs", "assets/*", "icons/*"],
+      "resources": ["reader.html", "newtab.html", "pdf.worker.mjs", "assets/*", "fonts/*", "icons/*"],
       "matches": ["<all_urls>"]
     }
   ]

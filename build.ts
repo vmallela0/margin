@@ -47,6 +47,26 @@ async function build() {
   const worker = Bun.resolveSync("pdfjs-dist/build/pdf.worker.mjs", ROOT);
   await cp(worker, path.join(OUT, "pdf.worker.mjs"));
 
+  // Bundle fonts locally — eliminates runtime Google Fonts request
+  const FONT_DIR = path.join(OUT, "fonts");
+  await mkdir(FONT_DIR, { recursive: true });
+  const FONTSOURCE = path.join(ROOT, "node_modules/@fontsource");
+  const FONT_FILES = [
+    ["inter/files/inter-latin-400-normal.woff2", "inter-400.woff2"],
+    ["inter/files/inter-latin-500-normal.woff2", "inter-500.woff2"],
+    ["inter/files/inter-latin-600-normal.woff2", "inter-600.woff2"],
+    ["jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2", "jbm-400.woff2"],
+    ["jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff2", "jbm-500.woff2"],
+    ["source-serif-4/files/source-serif-4-latin-400-normal.woff2", "ss4-400.woff2"],
+    ["source-serif-4/files/source-serif-4-latin-500-normal.woff2", "ss4-500.woff2"],
+    ["source-serif-4/files/source-serif-4-latin-600-normal.woff2", "ss4-600.woff2"],
+    ["source-serif-4/files/source-serif-4-latin-400-italic.woff2", "ss4-400i.woff2"],
+  ];
+  for (const [src, dest] of FONT_FILES) {
+    await cp(path.join(FONTSOURCE, src), path.join(FONT_DIR, dest));
+  }
+  await cp(path.join(PUBLIC, "fonts.css"), path.join(OUT, "fonts.css"));
+
   if (await Bun.file(path.join(PUBLIC, "icons/icon128.png")).exists()) {
     await mkdir(path.join(OUT, "icons"), { recursive: true });
     for (const f of await readdir(path.join(PUBLIC, "icons"))) {
@@ -82,9 +102,7 @@ function htmlShell(o: { title: string; script: string; styles: string[] }) {
 <meta charset="utf-8" />
 <title>${o.title}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="fonts.css" />
 ${o.styles.map((s) => `<link rel="stylesheet" href="${s}" />`).join("\n")}
 </head>
 <body>

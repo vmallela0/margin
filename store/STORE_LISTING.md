@@ -50,6 +50,7 @@ Margin turns Chrome into the PDF reader you actually want. Every PDF you open �
 - **Format support** — PDF, DOCX, EPUB, Markdown, TXT, HTML, and RTF files are converted to PDF on ingest so the reader stays focused.
 - **Calm design** — paper-grain background, Source Serif type, three themes (day, paper, night).
 - **Keyboard-first** — ⌘K command palette, H to highlight, F for flashcard, ⌘. to toggle the rail, / to search.
+- **Replaces the new tab page** — your Margin library opens whenever you open a new tab. You can keep using the address bar normally; Margin just gives the blank tab a purpose.
 
 **Privacy**
 
@@ -72,7 +73,8 @@ Paste this verbatim into the "Single Purpose" / "Permission Justification" field
 - **contextMenus** — Adds "Open in Margin" to the right-click menu for `.pdf` links, and an "Open Margin library" item to the action button.
 - **tabs** — Opens the reader or library in a new tab when the user clicks a PDF link or the extension icon.
 - **host_permissions: `<all_urls>`** — Required so the PDF-redirect DNR rule matches PDF URLs on any website. The extension does not inspect page content, inject scripts, or fetch non-PDF data from these hosts.
-- **Remote code:** None. All code is bundled at build time; no eval, no external script loads.
+- **chrome_url_overrides (newtab)** — Replaces the new tab page with the user's Margin library. Disclosed in the store description. Chrome prompts the user for permission at install time.
+- **Remote code:** None. All code and fonts are bundled at build time; no eval, no external script or stylesheet loads.
 
 ---
 

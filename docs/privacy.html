@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Privacy Policy — Margin</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 24px 96px;
+    background: #FAF8F3;
+    color: #0F0F0F;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  .back { display: inline-block; font-size: 13px; color: #6E6A5E; text-decoration: none; margin-bottom: 36px; }
+  .back:hover { color: #0F0F0F; }
+  h1 { font-size: 24px; font-weight: 600; margin: 0 0 6px; }
+  .meta { font-size: 13px; color: #6E6A5E; margin: 0 0 40px; }
+  h2 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #6E6A5E; margin: 36px 0 10px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 14px; }
+  th { text-align: left; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #6E6A5E; padding: 0 12px 8px 0; border-bottom: 1px solid #EBE7D9; }
+  td { padding: 8px 12px 8px 0; border-bottom: 1px solid #EBE7D9; vertical-align: top; }
+  td:first-child { white-space: nowrap; font-family: 'SF Mono', ui-monospace, monospace; font-size: 13px; }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #EBE7D9;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #3A362E;
+    font-family: 'SF Mono', ui-monospace, monospace;
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="https://chromewebstore.google.com/detail/margin">← Chrome Web Store</a>
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">
+    <span class="badge">Margin</span>&nbsp;&nbsp;
+    Effective: 2026-04-18 &nbsp;·&nbsp; Contact: <a href="mailto:vedu.mallela@gmail.com">vedu.mallela@gmail.com</a>
+  </p>
+
+  <h2>TL;DR</h2>
+  <p>Margin does <strong>not</strong> collect, transmit, or sell any of your data. Everything you do in Margin stays on your computer.</p>
+
+  <h2>What Margin Stores Locally</h2>
+  <p>All data is stored on your device using Chrome's extension storage APIs (<code>chrome.storage.local</code> and IndexedDB). Nothing is ever sent to a server.</p>
+  <ul>
+    <li><strong>Your library</strong> — titles, covers, shelves, and the raw PDF bytes of books you've added</li>
+    <li><strong>Your highlights</strong> — text you've selected, notes you've attached, colors</li>
+    <li><strong>Your flashcards</strong> — fronts, backs, and spaced-repetition scheduling data (SM-2 state)</li>
+    <li><strong>Your reading positions</strong> — the last page of each book</li>
+    <li><strong>Your settings</strong> — theme, font, column width, custom highlight colors</li>
+  </ul>
+
+  <h2>What Margin Does Not Do</h2>
+  <ul>
+    <li>No analytics, telemetry, or tracking</li>
+    <li>No third-party services, scripts, or fonts loaded from external origins — all assets are bundled locally</li>
+    <li>No accounts, sign-in, or cloud sync</li>
+    <li>No selling, sharing, or transfer of data to third parties</li>
+    <li>No advertisements</li>
+  </ul>
+
+  <h2>Permissions Explained</h2>
+  <table>
+    <thead>
+      <tr><th>Permission</th><th>Why it's needed</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>storage</td><td>Saves your library, highlights, and settings locally on your device</td></tr>
+      <tr><td>declarativeNetRequest</td><td>Intercepts .pdf URLs and opens them in the Margin reader instead of Chrome's built-in viewer</td></tr>
+      <tr><td>contextMenus</td><td>Adds "Open in Margin" to the right-click menu on PDF links</td></tr>
+      <tr><td>tabs</td><td>Opens the reader tab when you click a PDF link or activate the extension</td></tr>
+      <tr><td>host_permissions: &lt;all_urls&gt;</td><td>Required to detect PDF URLs on any website so they can be redirected to the reader. The extension does not read, inject into, or monitor the content of any web page.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>New Tab Override</h2>
+  <p>Margin replaces your new tab page with your reading library. Chrome explicitly asks for your permission before this takes effect at install time. You can remove Margin at any time from <code>chrome://extensions</code> to restore the default new tab page.</p>
+
+  <h2>Data Deletion</h2>
+  <p>Uninstall Margin from <code>chrome://extensions</code> to remove all locally stored data. You can also delete individual books, highlights, or cards from inside the extension at any time.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>If this policy changes, a new version will be published at this URL with a new effective date.</p>
+</div>
+</body>
+</html>
