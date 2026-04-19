@@ -127,6 +127,17 @@ export function Reader() {
         }
 
         await upsertBook({ ...b, totalPages: doc.numPages, lastOpenedAt: Date.now() });
+
+        // Update tab title and address bar to show the real PDF URL instead of
+        // the opaque book ID. ?src= is already handled by the init logic so
+        // refreshing the tab still works correctly.
+        document.title = b.title;
+        if (b.source.kind === "url" && !getParam("src")) {
+          const p = new URLSearchParams();
+          p.set("src", b.source.url);
+          history.replaceState(null, "", `?${p.toString()}`);
+        }
+
         const qp = Number(getParam("p")) || b.lastPage || 1;
         const hlParam = getParam("h") ?? undefined;
         pendingJump.current = { page: qp, hlId: hlParam };
@@ -222,14 +233,21 @@ export function Reader() {
     return () => el.removeEventListener("scroll", update);
   }, [numPages, firstVp]);
 
-  // Execute pending jumps after pages are ready
+  // Keep tab title in sync (slug resolution can update book.title after init)
+  useEffect(() => {
+    if (book?.title) document.title = book.title;
+  }, [book?.title]);
+
+  // Execute pending jumps once the scroll container is mounted (firstVp signals
+  // that the reader has fully rendered — numPages alone isn't enough because
+  // scrollRef.current is still null when numPages first becomes non-zero).
   useEffect(() => {
     const j = pendingJump.current;
-    if (!j || numPages === 0) return;
+    if (!j || numPages === 0 || !firstVp) return;
     const id = requestAnimationFrame(() => jumpToPage(j.page, j.hlId));
     pendingJump.current = null;
     return () => cancelAnimationFrame(id);
-  }, [numPages]);
+  }, [numPages, firstVp]);
 
   // Selection → popover
   useEffect(() => {
