@@ -150,6 +150,15 @@ export function Library() {
     if (needsConvert) setIngestMsg(`Converting ${file.name}…`);
     try {
       const { blob, title, originalName } = await normalizeToPdf(file);
+      // Dedup: same filename + same size = same file
+      const existing = (await listBooks()).find(
+        (b) => b.source.kind === "blob" && b.source.fileName === originalName && b.source.size === blob.size,
+      );
+      if (existing) {
+        if (needsConvert) setIngestMsg(null);
+        openReader(existing);
+        return;
+      }
       await putBlob(id, blob);
       const book: Book = {
         id,
@@ -442,6 +451,12 @@ function ResumeHero({ books, cards, onOpen }: { books: Book[]; cards: Flashcard[
   );
 }
 
+const SAMPLE_PDFS = [
+  { title: "Attention Is All You Need", url: "https://arxiv.org/pdf/1706.03762", label: "2017 · 15 pp" },
+  { title: "An Image Is Worth 16×16 Words", url: "https://arxiv.org/pdf/2010.11929", label: "2020 · 22 pp" },
+  { title: "Constitutional AI: Harmlessness from AI Feedback", url: "https://arxiv.org/pdf/2212.08073", label: "2022 · 78 pp" },
+];
+
 function EmptyHero({
   onPaste,
   onPickFile,
@@ -455,20 +470,44 @@ function EmptyHero({
   return (
     <div className="empty-hero">
       <div className="wordmark">Margin</div>
-      <div className="tagline">A quiet place to read PDFs.</div>
-      <div className="paste">
+      <div className="tagline">A quiet place to read and think.</div>
+
+      <div className="empty-drop-zone">
+        <div className="empty-drop-icon">↓</div>
+        <div className="empty-drop-label">Drop any document here</div>
+        <div className="meta-s" style={{ marginTop: 4 }}>PDF · DOCX · EPUB · MD · TXT · HTML · RTF</div>
+      </div>
+
+      <div className="paste" style={{ marginTop: 16 }}>
         <input
           ref={inputRef}
           className="input"
-          placeholder="Paste a PDF link, or drop any document (PDF · DOCX · EPUB · MD · TXT · HTML · RTF)"
+          placeholder="…or paste a PDF link and press ↵"
           value={val}
           onChange={(e) => setVal(e.target.value)}
           onKeyDown={(e) => { if (e.key === "Enter") { onPaste(val); setVal(""); } }}
         />
         <span className="kbd2">↵</span>
       </div>
+
       <button className="btn" style={{ marginTop: 10 }} onClick={onPickFile}>Open a file…</button>
-      <div className="meta-s" style={{ marginTop: 12 }}>local-first · 0 books yet</div>
+
+      <div className="empty-samples">
+        <div className="empty-samples-label">Try a sample paper</div>
+        {SAMPLE_PDFS.map((s) => (
+          <button key={s.url} className="empty-sample-row" onClick={() => onPaste(s.url)}>
+            <span className="empty-sample-title">{s.title}</span>
+            <span className="empty-sample-meta">{s.label}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="empty-hints">
+        <div className="empty-hint"><span className="kbd2" style={{ fontSize: 9 }}>H</span><span>highlight</span></div>
+        <div className="empty-hint"><span className="kbd2" style={{ fontSize: 9 }}>F</span><span>flashcard</span></div>
+        <div className="empty-hint"><span className="kbd2" style={{ fontSize: 9 }}>A</span><span>ask book</span></div>
+        <div className="empty-hint"><span className="kbd2" style={{ fontSize: 9 }}>⌘K</span><span>anything</span></div>
+      </div>
     </div>
   );
 }

@@ -350,6 +350,7 @@ export function Reader() {
       if (e.key === "/") { e.preventDefault(); setOverlay({ kind: "search" }); return; }
       if (e.key === "?") { e.preventDefault(); setOverlay({ kind: "shortcuts" }); return; }
       if (e.key === "r" || e.key === "R") { e.preventDefault(); setOverlay({ kind: "review" }); return; }
+      if (e.key === "a" || e.key === "A") { e.preventDefault(); setRailTab("ask"); setRailOpen(true); return; }
       if (e.key === "[") { e.preventDefault(); jumpToChapter(-1); return; }
       if (e.key === "]") { e.preventDefault(); jumpToChapter(+1); return; }
     };
@@ -654,7 +655,7 @@ export function Reader() {
               />
             ))}
           </div>
-          <ChapterRuler scrollRef={scrollRef} outline={outline} numPages={numPages} onJumpPage={jumpToPage} progress={scrollProgress} />
+          <ChapterRuler scrollRef={scrollRef} outline={outline} numPages={numPages} currentPage={currentPage} onJumpPage={jumpToPage} progress={scrollProgress} />
         </div>
       </div>
       {railOpen ? (
@@ -664,6 +665,7 @@ export function Reader() {
           cards={bookCards}
           bookTitle={book.title}
           currentPage={currentPage}
+          numPages={numPages}
           customColors={settings.customColors}
           tab={railTab}
           onTabChange={setRailTab}
@@ -813,15 +815,21 @@ function ChapterRuler({
   scrollRef,
   outline,
   numPages,
+  currentPage,
   onJumpPage,
   progress,
 }: {
   scrollRef: React.RefObject<HTMLDivElement>;
   outline: OutlineItem[];
   numPages: number;
+  currentPage: number;
   onJumpPage: (page: number) => void;
   progress: number;
 }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const rulerRef = useRef<HTMLDivElement>(null);
+
   const marks = useMemo(() => {
     const out: { page: number; level: number; title: string }[] = [];
     const walk = (items: OutlineItem[]) => {
@@ -834,7 +842,42 @@ function ChapterRuler({
     return out;
   }, [outline]);
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const currentMarkIdx = useMemo(() => {
+    let idx = -1;
+    for (let i = 0; i < marks.length; i++) {
+      if (marks[i].page <= currentPage) idx = i;
+    }
+    return idx;
+  }, [marks, currentPage]);
+
+  const currentChapterFill = useMemo(() => {
+    if (currentMarkIdx < 0 || numPages === 0) return null;
+    const top = (marks[currentMarkIdx].page / numPages) * 100;
+    const end = (marks[currentMarkIdx + 1]?.page ?? numPages + 1) / numPages * 100;
+    return { top, height: end - top };
+  }, [marks, currentMarkIdx, numPages]);
+
+  useEffect(() => {
+    if (!isDragging) return;
+    const onMove = (e: MouseEvent) => {
+      const el = scrollRef.current;
+      const ruler = rulerRef.current;
+      if (!el || !ruler) return;
+      const rect = ruler.getBoundingClientRect();
+      const fraction = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+      el.scrollTop = fraction * (el.scrollHeight - el.clientHeight);
+    };
+    const onUp = () => { setIsDragging(false); };
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseup", onUp);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    };
+  }, [isDragging, scrollRef]);
+
+  const handleRulerClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isDragging) return;
     const el = scrollRef.current;
     if (!el) return;
     const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
@@ -843,18 +886,37 @@ function ChapterRuler({
   };
 
   return (
-    <div className="chapter-ruler" onClick={handleClick} title="Click to jump">
+    <div
+      ref={rulerRef}
+      className={`chapter-ruler${isExpanded || isDragging ? " expanded" : ""}`}
+      onMouseEnter={() => setIsExpanded(true)}
+      onMouseLeave={() => { if (!isDragging) setIsExpanded(false); }}
+      onClick={handleRulerClick}
+      title="Click to jump · drag to scrub"
+    >
       <div className="chapter-ruler-fill" style={{ height: `${progress * 100}%` }} />
+      {currentChapterFill && (
+        <div
+          className="chapter-ruler-chapter"
+          style={{ top: `${currentChapterFill.top}%`, height: `${currentChapterFill.height}%` }}
+        />
+      )}
       {numPages > 0 && marks.map((m, i) => (
         <div
           key={i}
-          className={`chapter-ruler-mark${m.level === 0 ? " major" : ""}`}
+          className={`chapter-ruler-mark${m.level === 0 ? " major" : ""}${i === currentMarkIdx ? " current-ch" : ""}`}
           style={{ top: `${(m.page / numPages) * 100}%` }}
-          title={m.title}
           onClick={(e) => { e.stopPropagation(); onJumpPage(m.page); }}
-        />
+        >
+          {isExpanded && <span className="chapter-ruler-label">{m.title}</span>}
+          <span className="chapter-ruler-tick" />
+        </div>
       ))}
-      <div className="chapter-ruler-thumb" style={{ top: `${progress * 100}%` }} />
+      <div
+        className="chapter-ruler-thumb"
+        style={{ top: `${progress * 100}%` }}
+        onMouseDown={(e) => { e.preventDefault(); e.stopPropagation(); setIsDragging(true); }}
+      />
     </div>
   );
 }
