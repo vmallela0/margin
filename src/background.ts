@@ -1,6 +1,10 @@
+import { listBooks, deleteBook, getSettings } from "./lib/storage";
+import { deleteBlob } from "./lib/blobs";
+
 const READER_URL = chrome.runtime.getURL("reader.html");
 const NEWTAB_URL = chrome.runtime.getURL("newtab.html");
 const PDF_REDIRECT_RULE_ID = 1;
+const RECYCLE_ALARM = "margin-recycle";
 
 async function installDNRRules() {
   await chrome.declarativeNetRequest.updateDynamicRules({
@@ -25,8 +29,36 @@ async function installDNRRules() {
   });
 }
 
+async function recycleUnshelved() {
+  const settings = await getSettings();
+  if (!settings.autoRecycleDays) return;
+  const cutoff = Date.now() - settings.autoRecycleDays * 86_400_000;
+  const books = await listBooks();
+  for (const book of books) {
+    if (book.shelf || book.pinned) continue;
+    const age = book.lastOpenedAt ?? book.addedAt;
+    if (age < cutoff) {
+      if (book.source.kind === "blob") await deleteBlob(book.id).catch(() => {});
+      await deleteBook(book.id);
+    }
+  }
+}
+
+function scheduleRecycleAlarm() {
+  chrome.alarms.get(RECYCLE_ALARM, (existing) => {
+    if (!existing) {
+      chrome.alarms.create(RECYCLE_ALARM, { delayInMinutes: 60, periodInMinutes: 1440 });
+    }
+  });
+}
+
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === RECYCLE_ALARM) recycleUnshelved().catch(() => {});
+});
+
 chrome.runtime.onInstalled.addListener(async () => {
   await installDNRRules();
+  scheduleRecycleAlarm();
 
   chrome.contextMenus.create({
     id: "margin-open-link",
@@ -44,6 +76,7 @@ chrome.runtime.onInstalled.addListener(async () => {
 
 chrome.runtime.onStartup.addListener(() => {
   installDNRRules().catch((e) => console.error("margin: dnr", e));
+  scheduleRecycleAlarm();
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {

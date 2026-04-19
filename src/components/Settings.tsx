@@ -73,6 +73,29 @@ export function SettingsSheet({ settings, onClose }: { settings: S; onClose: () 
         </div>
 
         <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 14 }}>
+          <div className="meta-s" style={{ marginBottom: 8 }}>Library</div>
+          <label style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <span className="lbl" style={{ fontSize: 13 }}>Auto-recycle unshelved</span>
+            <select
+              className="input"
+              style={{ padding: "4px 8px", fontSize: 12, width: "auto" }}
+              value={settings.autoRecycleDays ?? "off"}
+              onChange={(e) => {
+                const v = e.target.value;
+                patch({ autoRecycleDays: v === "off" ? null : Number(v) });
+              }}
+            >
+              <option value="off">Off</option>
+              <option value="7">7 days</option>
+              <option value="14">14 days</option>
+              <option value="30">30 days</option>
+              <option value="60">60 days</option>
+              <option value="90">90 days</option>
+            </select>
+          </label>
+        </div>
+
+        <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 14 }}>
           <div className="meta-s" style={{ marginBottom: 8 }}>Highlight colors</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
             {BUILTIN_COLORS.map((c) => (

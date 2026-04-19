@@ -105,6 +105,8 @@ export async function getSettings(): Promise<Settings> {
     ...stored,
     colorMeanings: { ...DEFAULT_SETTINGS.colorMeanings, ...(stored.colorMeanings ?? {}) },
     customColors: Array.isArray(stored.customColors) ? stored.customColors : [],
+    // Explicit undefined check: stored value of null means "disabled" (valid), undefined means "not yet set"
+    autoRecycleDays: stored.autoRecycleDays !== undefined ? stored.autoRecycleDays : DEFAULT_SETTINGS.autoRecycleDays,
   };
 }
 
