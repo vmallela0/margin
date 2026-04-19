@@ -126,9 +126,8 @@ html, body { height: 100%; overflow: hidden; }
 .reader-scroll-area {
   flex: 1;
   min-height: 0;
-  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .reader-toolbar {
@@ -807,50 +806,48 @@ html, body { height: 100%; overflow: hidden; }
   text-transform: uppercase;
 }
 
-/* ── Chapter ruler ── */
-.chapter-ruler {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 14px;
-  cursor: pointer;
-  z-index: 20;
+/* ── Minimap ── */
+.minimap {
+  flex: none;
+  width: 72px;
+  background: var(--paper-2);
+  border-left: 1px solid var(--rule);
+  position: relative;
+  cursor: crosshair;
+  overflow: hidden;
+  user-select: none;
 }
-.chapter-ruler-fill {
+.minimap-pg {
   position: absolute;
-  top: 0;
-  left: 4px;
-  right: 4px;
-  background: var(--accent);
-  opacity: 0.22;
-  border-radius: 0 0 2px 2px;
-  pointer-events: none;
+  left: 5px;
+  right: 5px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 1px;
+  overflow: hidden;
 }
-.chapter-ruler-mark {
+.minimap-hl {
   position: absolute;
-  left: 3px;
-  right: 3px;
-  height: 1px;
-  background: var(--ink-4);
-  pointer-events: auto;
-}
-.chapter-ruler-mark.major {
   left: 2px;
   right: 2px;
   height: 2px;
-  background: var(--accent);
-  opacity: 0.7;
+  border-radius: 1px;
+  opacity: 0.85;
 }
-.chapter-ruler-thumb {
+.minimap-hl.yellow { background: var(--hi-yellow); }
+.minimap-hl.pink   { background: var(--hi-pink); }
+.minimap-hl.blue   { background: var(--hi-blue); }
+.minimap-hl.green  { background: var(--hi-green); }
+.minimap-vp {
   position: absolute;
-  left: 2px;
-  right: 2px;
-  height: 3px;
-  background: var(--accent);
-  border-radius: 2px;
-  transform: translateY(-1px);
+  left: 0;
+  right: 0;
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
   pointer-events: none;
+  min-height: 18px;
+  box-sizing: border-box;
 }
 
 /* ── Note thread ── */

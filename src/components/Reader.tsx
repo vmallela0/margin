@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { detectChaptersFromText, extractPdfTitle, flattenOutline, loadFromBlob, loadFromUrl, type OutlineItem, type PDFDocumentProxy } from "../lib/pdf";
 import type { Book, Flashcard, Highlight, HighlightColor, Rect, Settings, Theme } from "../lib/types";
 import type { ThreadEntry } from "../lib/types";
-import { DEFAULT_SETTINGS } from "../lib/types";
+import { BUILTIN_COLORS, DEFAULT_SETTINGS } from "../lib/types";
 import {
   addCard, addHighlight, deleteCard, deleteHighlight, getBook, getSettings,
   listBooks, listCards, listHighlights, saveSettings, subscribe, updateHighlight, upsertBook,
@@ -199,33 +199,29 @@ export function Reader() {
     return () => ro.disconnect();
   }, [scrollRef.current, railOpen]);
 
-  // Current visible page via IntersectionObserver.
-  // We keep a persistent ratio map across callbacks so we always pick the
-  // most-visible page from all currently observed pages, not just the ones
-  // that happened to change in this tick.
+  // Current visible page — track via scroll position.
+  // Finds the page whose top edge is at or above the 30% mark of the viewport
+  // (natural reading focal point). Much more reliable than IntersectionObserver
+  // which only fires on threshold crossings and can miss frames.
   useEffect(() => {
     const el = scrollRef.current;
     if (!el || numPages === 0) return;
-    const ratios = new Map<number, number>();
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) {
-          const page = Number((e.target as HTMLElement).dataset.page);
-          ratios.set(page, e.intersectionRatio);
-        }
-        let bestPage = 1;
-        let bestRatio = -1;
-        for (const [page, ratio] of ratios) {
-          if (ratio > bestRatio) { bestRatio = ratio; bestPage = page; }
-        }
-        if (bestRatio > 0) setCurrentPage(bestPage);
-      },
-      { root: el, threshold: Array.from({ length: 21 }, (_, i) => i * 0.05) },
-    );
-    const nodes = el.querySelectorAll<HTMLElement>(".pdf-page");
-    nodes.forEach((n) => io.observe(n));
-    return () => io.disconnect();
-  }, [numPages, railOpen]);
+    const update = () => {
+      const { top: containerTop, height } = el.getBoundingClientRect();
+      const target = containerTop + height * 0.3;
+      const pages = el.querySelectorAll<HTMLElement>(".pdf-page");
+      let best = 1;
+      for (const page of pages) {
+        const r = page.getBoundingClientRect();
+        if (r.top <= target) best = Number(page.dataset.page);
+        else break;
+      }
+      setCurrentPage(best);
+    };
+    el.addEventListener("scroll", update, { passive: true });
+    update();
+    return () => el.removeEventListener("scroll", update);
+  }, [numPages]);
 
   // Execute pending jumps after pages are ready
   useEffect(() => {
@@ -556,7 +552,7 @@ export function Reader() {
               />
             ))}
           </div>
-          <ChapterRuler scrollRef={scrollRef} outline={outline} numPages={numPages} onJumpPage={jumpToPage} />
+          <Minimap scrollRef={scrollRef} numPages={numPages} highlights={highlights} />
         </div>
       </div>
       {railOpen ? (
@@ -711,64 +707,84 @@ function suggestBack(_text: string): string {
   return "";
 }
 
-function ChapterRuler({
+function Minimap({
   scrollRef,
-  outline,
   numPages,
-  onJumpPage,
+  highlights,
 }: {
   scrollRef: React.RefObject<HTMLDivElement>;
-  outline: OutlineItem[];
   numPages: number;
-  onJumpPage: (page: number) => void;
+  highlights: Highlight[];
 }) {
-  const [progress, setProgress] = useState(0);
+  const mapRef = useRef<HTMLDivElement>(null);
+  const [s, setS] = useState({ top: 0, full: 1, client: 1 });
 
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    const update = () => {
-      const max = el.scrollHeight - el.clientHeight;
-      setProgress(max > 0 ? el.scrollTop / max : 0);
-    };
+    const update = () => setS({ top: el.scrollTop, full: el.scrollHeight, client: el.clientHeight });
     el.addEventListener("scroll", update, { passive: true });
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
     update();
-    return () => el.removeEventListener("scroll", update);
-  }, [scrollRef.current]);
+    return () => { el.removeEventListener("scroll", update); ro.disconnect(); };
+  }, []);
 
-  const marks = useMemo(() => {
-    const out: { page: number; level: number; title: string }[] = [];
-    const walk = (items: OutlineItem[]) => {
-      for (const it of items) {
-        if (it.page) out.push({ page: it.page, level: it.level, title: it.title });
-        walk(it.children);
-      }
-    };
-    walk(outline);
-    return out;
-  }, [outline]);
+  const hlByPage = useMemo(() => {
+    const m = new Map<number, Highlight[]>();
+    for (const h of highlights) {
+      if (!m.has(h.page)) m.set(h.page, []);
+      m.get(h.page)!.push(h);
+    }
+    return m;
+  }, [highlights]);
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handlePointer = (e: React.PointerEvent<HTMLDivElement>) => {
     const el = scrollRef.current;
     if (!el) return;
-    const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
-    const fraction = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
-    el.scrollTop = fraction * (el.scrollHeight - el.clientHeight);
+    const jump = (clientY: number) => {
+      const rect = mapRef.current!.getBoundingClientRect();
+      const ratio = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
+      el.scrollTop = ratio * el.scrollHeight - el.clientHeight / 2;
+    };
+    jump(e.clientY);
+    e.currentTarget.setPointerCapture(e.pointerId);
+    const onMove = (ev: PointerEvent) => jump(ev.clientY);
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", () => window.removeEventListener("pointermove", onMove), { once: true });
   };
 
+  const vpTopPct = (s.top / s.full) * 100;
+  const vpHeightPct = (s.client / s.full) * 100;
+
   return (
-    <div className="chapter-ruler" onClick={handleClick} title="Click to jump">
-      <div className="chapter-ruler-fill" style={{ height: `${progress * 100}%` }} />
-      {numPages > 0 && marks.map((m, i) => (
-        <div
-          key={i}
-          className={`chapter-ruler-mark${m.level === 0 ? " major" : ""}`}
-          style={{ top: `${(m.page / numPages) * 100}%` }}
-          title={m.title}
-          onClick={(e) => { e.stopPropagation(); onJumpPage(m.page); }}
-        />
-      ))}
-      <div className="chapter-ruler-thumb" style={{ top: `${progress * 100}%` }} />
+    <div className="minimap" ref={mapRef} onPointerDown={handlePointer}>
+      {Array.from({ length: numPages }, (_, i) => {
+        const pageNum = i + 1;
+        const hls = hlByPage.get(pageNum) ?? [];
+        return (
+          <div
+            key={i}
+            className="minimap-pg"
+            style={{ top: `${(i / numPages) * 100}%`, height: `${(1 / numPages) * 100}%` }}
+          >
+            {hls.map((h, j) => {
+              const isBuiltin = (BUILTIN_COLORS as readonly string[]).includes(h.color);
+              return (
+                <span
+                  key={j}
+                  className={`minimap-hl${isBuiltin ? ` ${h.color}` : ""}`}
+                  style={{
+                    top: `${(h.rects[0]?.y ?? 0.3) * 100}%`,
+                    ...(!isBuiltin ? { background: h.color } : {}),
+                  }}
+                />
+              );
+            })}
+          </div>
+        );
+      })}
+      <div className="minimap-vp" style={{ top: `${vpTopPct}%`, height: `${vpHeightPct}%` }} />
     </div>
   );
 }
