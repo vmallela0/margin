@@ -97,14 +97,18 @@ export const PdfPage = forwardRef<PdfPageHandle, {
       const ctx = canvas.getContext("2d", { alpha: false });
       if (!ctx) return;
       const ratio = window.devicePixelRatio || 1;
-      canvas.width = Math.floor(viewport.width * ratio);
-      canvas.height = Math.floor(viewport.height * ratio);
+      const newW = Math.floor(viewport.width * ratio);
+      const newH = Math.floor(viewport.height * ratio);
+      // Only reset canvas dimensions if they actually changed — setting canvas.width
+      // always clears the bitmap to black (alpha:false), causing a visible flash.
+      if (canvas.width !== newW || canvas.height !== newH) {
+        canvas.width = newW;
+        canvas.height = newH;
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, newW, newH);
+      }
       canvas.style.width = `${Math.floor(viewport.width)}px`;
       canvas.style.height = `${Math.floor(viewport.height)}px`;
-      // Fill white immediately after resize — resizing clears canvas to black
-      // when alpha:false, which flashes through before the render completes.
-      ctx.fillStyle = "#ffffff";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       if (taskRef.current) {
         try { taskRef.current.cancel(); } catch {}

@@ -193,9 +193,15 @@ export function Reader() {
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    const ro = new ResizeObserver(() => setContainerWidth(el.clientWidth));
+    let last = el.clientWidth;
+    setContainerWidth(last);
+    const ro = new ResizeObserver(() => {
+      const w = el.clientWidth;
+      // Ignore sub-2px jitter (e.g. from textarea focus causing micro layout shifts)
+      // — those would change `scale`, clearing every canvas unnecessarily.
+      if (Math.abs(w - last) >= 2) { last = w; setContainerWidth(w); }
+    });
     ro.observe(el);
-    setContainerWidth(el.clientWidth);
     return () => ro.disconnect();
   }, [scrollRef.current, railOpen]);
 
