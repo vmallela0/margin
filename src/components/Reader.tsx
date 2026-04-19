@@ -199,23 +199,28 @@ export function Reader() {
     return () => ro.disconnect();
   }, [scrollRef.current, railOpen]);
 
-  // Current visible page via IntersectionObserver
+  // Current visible page via IntersectionObserver.
+  // We keep a persistent ratio map across callbacks so we always pick the
+  // most-visible page from all currently observed pages, not just the ones
+  // that happened to change in this tick.
   useEffect(() => {
     const el = scrollRef.current;
     if (!el || numPages === 0) return;
+    const ratios = new Map<number, number>();
     const io = new IntersectionObserver(
       (entries) => {
-        let bestPage = currentPage;
-        let bestRatio = 0;
         for (const e of entries) {
-          if (e.intersectionRatio > bestRatio) {
-            bestRatio = e.intersectionRatio;
-            bestPage = Number((e.target as HTMLElement).dataset.page);
-          }
+          const page = Number((e.target as HTMLElement).dataset.page);
+          ratios.set(page, e.intersectionRatio);
+        }
+        let bestPage = 1;
+        let bestRatio = -1;
+        for (const [page, ratio] of ratios) {
+          if (ratio > bestRatio) { bestRatio = ratio; bestPage = page; }
         }
         if (bestRatio > 0) setCurrentPage(bestPage);
       },
-      { root: el, threshold: [0.25, 0.5, 0.75] },
+      { root: el, threshold: Array.from({ length: 21 }, (_, i) => i * 0.05) },
     );
     const nodes = el.querySelectorAll<HTMLElement>(".pdf-page");
     nodes.forEach((n) => io.observe(n));
