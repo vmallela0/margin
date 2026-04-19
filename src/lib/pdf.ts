@@ -9,7 +9,14 @@ if (typeof chrome !== "undefined" && chrome.runtime?.getURL) {
 }
 
 export async function loadFromUrl(url: string): Promise<PDFDocumentProxy> {
-  return pdfjs.getDocument({ url, withCredentials: false, isEvalSupported: false }).promise;
+  // Fetch the data ourselves so the browser never shows a native Basic Auth
+  // dialog on 401. Passing a URL directly to pdfjs uses XHR, which triggers
+  // the browser's credential prompt and caches the challenge against the
+  // extension origin — affecting every subsequent request.
+  const res = await fetch(url, { credentials: "omit" });
+  if (!res.ok) throw new Error(`HTTP ${res.status} fetching PDF`);
+  const data = await res.arrayBuffer();
+  return pdfjs.getDocument({ data, isEvalSupported: false }).promise;
 }
 
 export async function loadFromBlob(blob: Blob): Promise<PDFDocumentProxy> {
