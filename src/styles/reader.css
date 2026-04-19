@@ -210,7 +210,7 @@ html, body { height: 100%; overflow: hidden; }
   overflow: hidden;
   animation: page-appear 220ms ease-out both;
 }
-.pdf-page canvas { display: block; }
+.pdf-page canvas { display: block; background: #ffffff; }
 .pdf-page.pending { background: var(--paper); }
 .pdf-page.pending::after {
   content: "";
