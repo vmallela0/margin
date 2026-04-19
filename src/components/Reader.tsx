@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { detectChaptersFromText, flattenOutline, loadFromBlob, loadFromUrl, type OutlineItem, type PDFDocumentProxy } from "../lib/pdf";
+import { detectChaptersFromText, extractPdfTitle, flattenOutline, loadFromBlob, loadFromUrl, type OutlineItem, type PDFDocumentProxy } from "../lib/pdf";
 import type { Book, Flashcard, Highlight, HighlightColor, Rect, Settings, Theme } from "../lib/types";
 import { DEFAULT_SETTINGS } from "../lib/types";
 import {
@@ -110,6 +110,18 @@ export function Reader() {
         const p1 = await doc.getPage(1);
         const v = p1.getViewport({ scale: 1 });
         setFirstVp({ w: v.width, h: v.height });
+
+        // If the book title looks like an auto-generated URL slug (e.g. an
+        // arxiv ID like "2103.14696"), try to extract the real title from the
+        // PDF metadata or first-page text and update the stored record.
+        const looksLikeSlug = /^\d[\d.]*$/.test(b.title.trim()) || /^[0-9a-f]{8,}$/i.test(b.title.trim());
+        if (looksLikeSlug) {
+          const realTitle = await extractPdfTitle(doc).catch(() => null);
+          if (realTitle) {
+            b = { ...b, title: realTitle };
+            setBook(b);
+          }
+        }
 
         await upsertBook({ ...b, totalPages: doc.numPages, lastOpenedAt: Date.now() });
         const qp = Number(getParam("p")) || b.lastPage || 1;
@@ -471,7 +483,7 @@ export function Reader() {
   }
 
   return (
-    <div className="reader-root" style={{ gridTemplateColumns: railOpen ? "192px 1fr 360px" : "192px 1fr 8px" }}>
+    <div className="reader-root" style={{ gridTemplateColumns: railOpen ? "192px 1fr 360px" : "192px 1fr 192px" }}>
       <ChapterSidebar
         outline={outline}
         totalPages={numPages}

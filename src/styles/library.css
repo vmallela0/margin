@@ -100,6 +100,24 @@
   color: var(--ink-3);
 }
 
+.shelf-title .h.renameable { cursor: text; }
+.shelf-title .h.renameable:hover { opacity: 0.7; }
+
+.shelf-rename-input {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--accent);
+  outline: none;
+  color: var(--ink);
+  padding: 0;
+  width: auto;
+  min-width: 60px;
+}
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

@@ -277,8 +277,19 @@ export function Library() {
           {shelves.pinned.length > 0 && (
             <Shelf name="Pinned" books={shelves.pinned} onOpen={openReader} onContext={setCtxMenu} />
           )}
-          {shelves.groups.map(([name, books]) => (
-            <Shelf key={name} name={name} books={books} onOpen={openReader} onContext={setCtxMenu} />
+          {shelves.groups.map(([name, groupBooks]) => (
+            <Shelf
+              key={name}
+              name={name}
+              books={groupBooks}
+              onOpen={openReader}
+              onContext={setCtxMenu}
+              onRename={async (newName) => {
+                await Promise.all(
+                  groupBooks.map((b) => upsertBook({ ...b, shelf: newName }))
+                );
+              }}
+            />
           ))}
           {shelves.recent.length > 0 && (
             <Shelf name="Recent" books={shelves.recent} small onOpen={openReader} onContext={setCtxMenu} />
@@ -318,17 +329,48 @@ function Shelf({
   small,
   onOpen,
   onContext,
+  onRename,
 }: {
   name: string;
   books: Book[];
   small?: boolean;
   onOpen: (b: Book) => void;
   onContext: (m: { x: number; y: number; book: Book }) => void;
+  onRename?: (newName: string) => void;
 }) {
+  const [editing, setEditing] = useState(false);
+  const [draft, setDraft] = useState(name);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const commit = () => {
+    const trimmed = draft.trim();
+    if (trimmed && trimmed !== name) onRename?.(trimmed);
+    setEditing(false);
+  };
+
   return (
     <section className="shelf">
       <div className="shelf-title">
-        <span className="h">{name}</span>
+        {editing ? (
+          <input
+            className="shelf-rename-input"
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            onBlur={commit}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") commit();
+              if (e.key === "Escape") { setDraft(name); setEditing(false); }
+            }}
+            ref={inputRef}
+            autoFocus
+          />
+        ) : (
+          <span
+            className={`h${onRename ? " renameable" : ""}`}
+            onDoubleClick={() => { if (onRename) { setDraft(name); setEditing(true); } }}
+            title={onRename ? "Double-click to rename" : undefined}
+          >{name}</span>
+        )}
         <span className="c">{books.length}</span>
       </div>
       <div className={`book-grid${small ? " small" : ""}`}>

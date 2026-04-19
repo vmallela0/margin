@@ -74,6 +74,51 @@ export async function pageTextContent(page: PDFPageProxy) {
   return page.getTextContent();
 }
 
+// Extracts the human-readable title of a PDF. Tries metadata first; falls back
+// to scanning the largest text on page 1. Returns null if nothing reliable is
+// found. Useful for giving arxiv papers (where the URL is just a number) a
+// proper display name.
+export async function extractPdfTitle(doc: PDFDocumentProxy): Promise<string | null> {
+  try {
+    const meta = await (doc as any).getMetadata();
+    const t = ((meta?.info?.Title ?? meta?.info?.title ?? "") as string).trim();
+    // Accept metadata title if it's non-trivial and not a bare arxiv ID / number
+    if (t.length > 4 && !/^\d[\d.]*$/.test(t) && !/^untitled/i.test(t)) return t;
+  } catch {}
+
+  // Scan page 1 for the largest text — almost always the paper title on
+  // academic PDFs. Only look in the top 70% of the page so we skip footers.
+  try {
+    const page = await doc.getPage(1);
+    const vp = page.getViewport({ scale: 1 });
+    const content = await page.getTextContent();
+    const bottomCutoff = vp.height * 0.30; // PDF y=0 is bottom; skip bottom 30%
+
+    const items = (content.items as any[])
+      .filter((it) => it.str?.trim().length > 0 && (it.transform?.[5] ?? 0) > bottomCutoff && it.height > 0)
+      .map((it) => ({ str: (it.str as string).trim(), h: it.height as number, y: it.transform[5] as number }));
+
+    if (!items.length) return null;
+
+    const maxH = Math.max(...items.map((it) => it.h));
+    // Grab items whose font size is ≥70% of the maximum — these are title-sized
+    const titleItems = items
+      .filter((it) => it.h >= maxH * 0.7)
+      .sort((a, b) => b.y - a.y); // top of page first (high y = near top in PDF coords)
+
+    if (!titleItems.length) return null;
+
+    const title = titleItems.map((it) => it.str).join(" ").replace(/\s+/g, " ").trim();
+    if (title.length < 4 || title.length > 300) return null;
+    // Reject if it looks like a number-only arxiv ID or garbled
+    if (!/[A-Za-z]{3,}/.test(title)) return null;
+
+    return title;
+  } catch {}
+
+  return null;
+}
+
 // -----------------------------------------------------------------------------
 // Chapter detection.
 //
@@ -782,6 +827,10 @@ function scanNumberedSections(
       // Reject obvious false positives.
       if (rest.length < 2) continue;
       if (/^(figure|table|algorithm|equation|listing|theorem|lemma|fig\.?|eq\.?)\b/i.test(rest)) continue;
+      // Running page headers: "2 Mallela et al.", "4 Smith et al. · Title" — any
+      // numbered heading where the body contains "et al." is an author citation,
+      // not a section title.
+      if (/\bet\.?\s*al\b/i.test(rest)) continue;
       // Dates masquerading as numbered sections: "17 April 2011", "3 Jan 2020".
       if (/^(january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|jun|jul|aug|sep|sept|oct|nov|dec)\b/i.test(rest) && /\b(?:19|20)\d{2}\b/.test(rest)) continue;
       if (/\.{3,}/.test(rest)) continue;  // TOC entry "Chapter 1 ........ 5"
