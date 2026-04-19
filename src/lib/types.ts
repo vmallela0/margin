@@ -78,6 +78,8 @@ export interface Settings {
   accent: string;
   colorMeanings: Record<string, string>;
   customColors: CustomColor[];
+  // null = disabled; number = days until unshelved books are auto-deleted
+  autoRecycleDays: number | null;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -89,6 +91,7 @@ export const DEFAULT_SETTINGS: Settings = {
   accent: "#4C52B3",
   colorMeanings: { ...COLOR_MEANING },
   customColors: [],
+  autoRecycleDays: 30,
 };
 
 export const ACCENTS = ["#4C52B3", "#A24648", "#5A7A4B", "#8A7030", "#2B2B2B"] as const;
