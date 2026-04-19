@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { Book, Settings } from "../lib/types";
+import type { Book, Flashcard, Settings } from "../lib/types";
 import { DEFAULT_SETTINGS } from "../lib/types";
 import { deleteBook, getSettings, listBooks, listCards, subscribe, upsertBook } from "../lib/storage";
 import { useStore } from "../lib/useStore";
@@ -266,6 +266,7 @@ export function Library() {
         </div>
       ) : (
         <main className="shelves">
+          <ResumeHero books={books} cards={cards} onOpen={openReader} />
           {shelves.current.length > 0 && (
             <Shelf name="Currently Reading" books={shelves.current} onOpen={openReader} onContext={setCtxMenu} />
           )}
@@ -398,6 +399,47 @@ function Shelf({
 
 function hostOf(url: string) {
   try { return new URL(url).hostname; } catch { return url; }
+}
+
+function ResumeHero({ books, cards, onOpen }: { books: Book[]; cards: Flashcard[]; onOpen: (b: Book) => void }) {
+  const hero = useMemo(
+    () => books.filter((b) => b.lastOpenedAt).sort((a, b) => (b.lastOpenedAt ?? 0) - (a.lastOpenedAt ?? 0))[0] ?? null,
+    [books],
+  );
+
+  if (!hero) return null;
+
+  const pct = hero.lastPage && hero.totalPages ? Math.round((hero.lastPage / hero.totalPages) * 100) : null;
+  const daysAgo = Math.floor((Date.now() - (hero.lastOpenedAt ?? 0)) / 86_400_000);
+  const timeAgo = daysAgo === 0 ? "today" : daysAgo === 1 ? "yesterday" : `${daysAgo}d ago`;
+  const dueCount = cards.filter((c) => c.bookId === hero.id && c.sm2.dueAt <= Date.now()).length;
+
+  return (
+    <div className="resume-hero" onClick={() => onOpen(hero)}>
+      <div className="resume-hero-label">Pick up where you left off</div>
+      <div className="resume-hero-inner">
+        <div className={`cover ${hero.coverVariant ?? "paper"}${hero.coverDataUrl ? " has-thumb" : ""}`} style={{ width: 52, flexShrink: 0, borderRadius: 2 }}>
+          {hero.coverDataUrl
+            ? <img className="cover-thumb" src={hero.coverDataUrl} alt="" draggable={false} />
+            : <div className="cover-title" style={{ fontSize: 8 }}>{hero.title}</div>}
+          {pct !== null && (
+            <div className="progress"><i style={{ width: `${pct}%` }} /></div>
+          )}
+        </div>
+        <div className="resume-body">
+          <div className="resume-title">{hero.title}</div>
+          <div className="resume-meta">
+            {timeAgo}
+            {hero.lastPage && hero.totalPages && ` · p.${hero.lastPage} of ${hero.totalPages}`}
+            {pct !== null && ` · ${pct}%`}
+          </div>
+          {dueCount > 0 && (
+            <div className="resume-due">● {dueCount} card{dueCount === 1 ? "" : "s"} due</div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function EmptyHero({

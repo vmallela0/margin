@@ -143,12 +143,15 @@ html, body { height: 100%; overflow: hidden; }
   background: transparent;
   border: 0;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--ink-3);
   cursor: pointer;
-  letter-spacing: 0.08em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  line-height: 1;
 }
-.reader-toolbar .back:hover { color: var(--ink); }
+.reader-toolbar .back:hover { color: var(--ink); background: var(--paper-2); }
+.reader-toolbar .back.on { color: var(--accent); }
 .reader-toolbar .title {
   font-family: var(--serif);
   font-size: 14px;
@@ -483,52 +486,89 @@ html, body { height: 100%; overflow: hidden; }
   color: var(--ink-3);
 }
 
-.highlight-popover {
+/* ── Inline highlight strip (replaces old modal popover) ── */
+.hl-strip {
   position: absolute;
   z-index: 40;
-  width: 320px;
-  padding: 10px;
+  animation: fade-in 120ms ease-out;
 }
-.highlight-popover .row {
+.hl-strip-row {
   display: flex;
   align-items: center;
-  gap: 6px;
-}
-.highlight-popover .swatch {
-  width: 22px;
-  height: 22px;
-  border-radius: 3px;
+  gap: 3px;
+  padding: 5px 8px;
+  background: var(--paper);
   border: 1px solid var(--rule-2);
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+}
+.hl-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 0;
   cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 100ms ease-out;
 }
-.highlight-popover .swatch.sel {
-  border: 1.5px solid var(--ink);
-  transform: scale(1.06);
+.hl-dot:hover { transform: scale(1.2); }
+.hl-dot.sel {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
-.highlight-popover .spacer { flex: 1; }
-.highlight-popover .divider {
-  border-top: 1px solid var(--rule);
-  margin: 10px 0;
+.hl-strip-div {
+  width: 1px;
+  height: 16px;
+  background: var(--rule-2);
+  margin: 0 3px;
+  flex-shrink: 0;
 }
-.highlight-popover textarea {
+.hl-act {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-2);
+  padding: 3px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.hl-act:hover { background: var(--paper-2); color: var(--ink); }
+.hl-act.on { background: var(--ink); color: var(--paper); }
+.hl-act.danger { color: #B14B4B; }
+.hl-act.danger:hover { background: rgba(177, 75, 75, 0.08); }
+.hl-strip-note {
+  margin-top: 8px;
+  background: var(--paper);
+  border: 1px solid var(--rule-2);
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 8px 10px;
+  width: 280px;
+  animation: fade-in 120ms ease-out;
+}
+.hl-strip-note textarea {
   width: 100%;
-  min-height: 52px;
-  resize: vertical;
+  min-height: 48px;
+  resize: none;
+  border: 0;
+  background: transparent;
   font-family: var(--serif);
   font-size: 13px;
-  border: 1px dashed var(--rule-2);
-  background: var(--paper);
   color: var(--ink);
-  padding: 6px 8px;
-  border-radius: 3px;
   outline: none;
+  padding: 0;
 }
-.highlight-popover textarea:focus { border-color: var(--accent); }
-.highlight-popover .footer {
+.hl-strip-note-footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 8px;
+  justify-content: space-between;
+  margin-top: 6px;
 }
 
 .flashcard-create {

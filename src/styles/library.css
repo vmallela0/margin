@@ -74,6 +74,61 @@
   justify-content: center;
 }
 
+/* ── Resume hero ── */
+.resume-hero {
+  cursor: pointer;
+  padding: 16px 20px;
+  border: 1px solid var(--rule-2);
+  border-radius: 6px;
+  background: var(--paper);
+  margin-bottom: 28px;
+  transition: box-shadow 140ms ease-out, border-color 140ms ease-out;
+}
+.resume-hero:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border-color: var(--ink-4);
+}
+.resume-hero-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: #B8603A;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.resume-hero-inner {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.resume-body {
+  flex: 1;
+  min-width: 0;
+}
+.resume-title {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.resume-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+.resume-due {
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #B8603A;
+}
+
 .shelf {
   margin-bottom: 32px;
 }

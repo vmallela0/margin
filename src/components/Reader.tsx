@@ -56,10 +56,24 @@ export function Reader() {
   const [overlay, setOverlay] = useState<Overlay>({ kind: "none" });
   const [loadError, setLoadError] = useState<string | null>(null);
   const [containerWidth, setContainerWidth] = useState(900);
+  const [idle, setIdle] = useState(false);
+  const [coachmark, setCoachmark] = useState(false);
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const pageHandles = useRef<Map<number, PdfPageHandle>>(new Map());
   const pendingJump = useRef<{ page: number; hlId?: string } | null>(null);
+  const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const bumpActivity = useCallback(() => {
+    setIdle(false);
+    if (idleTimer.current) clearTimeout(idleTimer.current);
+    idleTimer.current = setTimeout(() => setIdle(true), 1800);
+  }, []);
+
+  useEffect(() => {
+    bumpActivity();
+    return () => { if (idleTimer.current) clearTimeout(idleTimer.current); };
+  }, [bumpActivity]);
 
   const scale = useMemo(() => {
     if (!firstVp) return 1;
@@ -238,6 +252,22 @@ export function Reader() {
     if (book?.title) document.title = book.title;
   }, [book?.title]);
 
+  // Show ⌘K coachmark once, on first ever book open
+  useEffect(() => {
+    if (!firstVp || localStorage.getItem("margin:coachmark")) return;
+    const t = setTimeout(() => setCoachmark(true), 800);
+    return () => clearTimeout(t);
+  }, [firstVp]);
+
+  useEffect(() => {
+    if (!coachmark) return;
+    const t = setTimeout(() => {
+      setCoachmark(false);
+      localStorage.setItem("margin:coachmark", "1");
+    }, 4500);
+    return () => clearTimeout(t);
+  }, [coachmark]);
+
   // Execute pending jumps once the scroll container is mounted (firstVp signals
   // that the reader has fully rendered — numPages alone isn't enough because
   // scrollRef.current is still null when numPages first becomes non-zero).
@@ -291,6 +321,7 @@ export function Reader() {
     };
 
     const onKey = (e: KeyboardEvent) => {
+      bumpActivity();
       const mod = e.metaKey || e.ctrlKey;
 
       if (e.key === "Escape") {
@@ -325,7 +356,7 @@ export function Reader() {
 
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [overlay.kind, currentPage, outline, numPages]);
+  }, [overlay.kind, currentPage, outline, numPages, bumpActivity]);
 
   function cycleTheme() {
     const themes: Theme[] = ["paper", "sepia", "night"];
@@ -475,8 +506,25 @@ export function Reader() {
       section: "Actions",
       run: () => setOverlay({ kind: "summary" }),
     });
+    items.push({
+      id: "search", label: "Search across books",
+      section: "Actions", keys: "/",
+      run: () => setOverlay({ kind: "search" }),
+    });
+    items.push({
+      id: "zoom-in", label: "Zoom in", section: "View", keys: "⌘+",
+      run: () => setZoom((z) => Math.min(2.2, +(z + 0.1).toFixed(1))),
+    });
+    items.push({
+      id: "zoom-out", label: "Zoom out", section: "View", keys: "⌘−",
+      run: () => setZoom((z) => Math.max(0.5, +(z - 0.1).toFixed(1))),
+    });
+    items.push({
+      id: "zoom-reset", label: `Reset zoom · currently ${Math.round(zoom * 100)}%`, section: "View", keys: "⌘0",
+      run: () => setZoom(1),
+    });
     return items;
-  }, [book, outline, railOpen, cards, settings.theme]);
+  }, [book, outline, railOpen, cards, settings.theme, zoom]);
 
   const bookCards = useMemo(() => cards.filter((c) => c.bookId === book?.id), [cards, book?.id]);
   const editingHighlight = overlay.kind === "edit-highlight"
@@ -502,11 +550,21 @@ export function Reader() {
   }
 
   return (
-    <div className="reader-root" style={{ gridTemplateColumns: railOpen ? "1fr 300px" : "1fr 0" }}>
+    <div className="reader-root" style={{ gridTemplateColumns: railOpen ? "1fr 300px" : "1fr 0" }} onMouseMove={bumpActivity}>
       <div className="reader-main">
-        <div className="reader-toolbar">
-          <button className="back" onClick={() => location.href = chrome.runtime.getURL("newtab.html")}>← library</button>
+        <div
+          className="reader-toolbar"
+          style={{ opacity: idle ? 0 : 1, pointerEvents: idle ? "none" : "auto", transition: "opacity 0.5s ease" }}
+        >
+          <button
+            className={`back${railOpen ? " on" : ""}`}
+            onClick={() => { setRailTab("outline"); setRailOpen((v) => !(v && railTab === "outline")); }}
+            title="Toggle contents (⌘.)"
+          >
+            ☰
+          </button>
           <div className="title" title={book.title}>{book.title}</div>
+          <span className="spacer" />
           <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
             <input
               className="page-input"
@@ -535,32 +593,6 @@ export function Reader() {
             />
             <span className="meta-s" style={{ fontSize: 10 }}>/ {numPages}</span>
           </div>
-          <span className="spacer" />
-          <div className="zoom-controls">
-            <button className="tool" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.1).toFixed(1)))} title="Zoom out (⌘-)">−</button>
-            <span className="zoom-label" onClick={() => setZoom(1)} title="Reset zoom (⌘0)">{Math.round(zoom * 100)}%</span>
-            <button className="tool" onClick={() => setZoom((z) => Math.min(2.2, +(z + 0.1).toFixed(1)))} title="Zoom in (⌘+)">+</button>
-          </div>
-          <button
-            className={`tool${railOpen && railTab === "outline" ? " on" : ""}`}
-            onClick={() => {
-              setRailTab("outline");
-              setRailOpen((v) => !(v && railTab === "outline"));
-            }}
-            title="Contents (⌘.)"
-            style={{ display: "flex", alignItems: "center", gap: 5, paddingRight: 8 }}
-          >
-            <span style={{ fontSize: 13, lineHeight: 1 }}>☰</span>
-            <span style={{ fontSize: 11 }}>Contents</span>
-          </button>
-          <button className="tool" onClick={() => setOverlay({ kind: "cmd" })} title="⌘K">⌘K</button>
-          <button className="tool" onClick={() => setOverlay({ kind: "search" })} title="/">/</button>
-          <button className="tool" onClick={() => setOverlay({ kind: "review" })} title="Review">R</button>
-          <button className="tool" onClick={cycleTheme} title={`Theme: ${settings.theme}`} style={{ fontSize: 14 }}>
-            {settings.theme === "night" ? "☀" : "☾"}
-          </button>
-          <button className="tool" onClick={() => setOverlay({ kind: "settings" })} title="Settings">⚙</button>
-          <button className="tool" onClick={() => setOverlay({ kind: "shortcuts" })} title="Shortcuts">?</button>
         </div>
         <div className="reader-scroll-area" onWheel={(e) => {
           if (!e.metaKey && !e.ctrlKey) return;
@@ -568,6 +600,42 @@ export function Reader() {
           const delta = e.deltaY > 0 ? -0.1 : 0.1;
           setZoom((z) => Math.min(2.2, Math.max(0.5, +((z + delta).toFixed(1)))));
         }}>
+          {/* Ghost chrome — fades in as toolbar fades out */}
+          <div style={{
+            position: "absolute", top: 10, left: 14, zIndex: 10,
+            opacity: idle ? 0.65 : 0, transition: "opacity 0.5s ease",
+            pointerEvents: "none",
+            fontFamily: "var(--serif)", fontStyle: "italic", fontSize: 12, color: "var(--ink-3)",
+          }}>
+            {book.title}
+          </div>
+          <div style={{
+            position: "absolute", bottom: 10, right: 14, zIndex: 10,
+            opacity: idle ? 0.65 : 0, transition: "opacity 0.5s ease",
+            pointerEvents: "none",
+            fontFamily: "var(--mono)", fontSize: 10, color: "var(--ink-3)",
+          }}>
+            {currentPage} / {numPages}
+          </div>
+          {/* ⌘K coachmark — shown once on first ever book open */}
+          {coachmark && (
+            <div
+              style={{
+                position: "absolute", top: 14, left: "50%", transform: "translateX(-50%)",
+                padding: "5px 14px",
+                background: "var(--ink)", color: "var(--paper)", borderRadius: 999,
+                fontFamily: "var(--mono)", fontSize: 10, letterSpacing: "0.04em",
+                display: "flex", gap: 8, alignItems: "center",
+                zIndex: 30, cursor: "pointer", animation: "fade-in 200ms ease-out",
+              }}
+              onClick={() => { setCoachmark(false); localStorage.setItem("margin:coachmark", "1"); }}
+            >
+              <span className="kbd2" style={{ background: "rgba(255,255,255,0.15)", borderColor: "rgba(255,255,255,0.3)", color: "var(--paper)", fontSize: 9 }}>⌘K</span>
+              <span>for anything</span>
+              <span style={{ opacity: 0.5 }}>· ? for shortcuts</span>
+              <span style={{ opacity: 0.35, marginLeft: 4 }}>×</span>
+            </div>
+          )}
           <div className="pdf-scroll" ref={scrollRef}>
             {Array.from({ length: numPages }, (_, i) => i + 1).map((n) => (
               <PdfPage

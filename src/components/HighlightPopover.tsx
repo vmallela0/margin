@@ -34,19 +34,20 @@ export function HighlightPopover({
 }) {
   const [color, setColor] = useState<HighlightColor>(initialColor);
   const [note, setNote] = useState(initialNote);
+  const [noteOpen, setNoteOpen] = useState(!!initialNote);
   const ref = useRef<HTMLDivElement>(null);
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const noteRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
-    textareaRef.current?.focus();
-  }, []);
+    if (noteOpen && !initialNote) noteRef.current?.focus();
+  }, [noteOpen, initialNote]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") { e.preventDefault(); onClose(); }
-      if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
-        e.preventDefault(); onSave({ color, note });
-      }
+      if (e.key === "Escape") { e.preventDefault(); onClose(); return; }
+      if (document.activeElement === noteRef.current) return;
+      if (e.key === "n" || e.key === "N") { e.preventDefault(); setNoteOpen((v) => !v); }
+      if (e.key === "f" || e.key === "F") { e.preventDefault(); onMakeFlashcard({ color, note }); }
     };
     const onClickOutside = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) onClose();
@@ -57,49 +58,81 @@ export function HighlightPopover({
       window.removeEventListener("keydown", onKey);
       window.removeEventListener("mousedown", onClickOutside);
     };
-  }, [color, note, onSave, onClose]);
+  }, [color, note, onSave, onClose, onMakeFlashcard]);
 
   const choices = allHighlightChoices(customColors);
 
   return (
     <div
       ref={ref}
-      className="highlight-popover popover-hi"
+      className="hl-strip"
       style={{ left: x, top: y }}
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="row">
+      <div className="hl-strip-row">
         {choices.map((c) => (
           <button
             key={c.id}
             title={resolveMeaning(c.id, meanings, customColors)}
-            className={`swatch ${c.id === color ? "sel" : ""}`}
-            style={{ background: c.bg, padding: 0 }}
-            onClick={() => setColor(c.id)}
+            className={`hl-dot${c.id === color ? " sel" : ""}`}
+            style={{ background: c.bg }}
+            onClick={() => onSave({ color: c.id, note })}
           />
         ))}
-        <span className="spacer" />
-        <span className="kbd2" title="Highlight">H</span>
-        <span className="kbd2" title="Note">N</span>
-        <span className="kbd2" title="Flashcard" onClick={() => onMakeFlashcard({ color, note })} style={{ cursor: "pointer" }}>F</span>
+        <div className="hl-strip-div" />
+        <button
+          className={`hl-act${noteOpen ? " on" : ""}`}
+          onClick={() => setNoteOpen((v) => !v)}
+          title="Add note (N)"
+        >
+          <span className="kbd2" style={{ fontSize: 8, lineHeight: 1 }}>N</span>
+          <span>note</span>
+        </button>
+        <button
+          className="hl-act"
+          onClick={() => onMakeFlashcard({ color, note })}
+          title="Make flashcard (F)"
+        >
+          <span className="kbd2" style={{ fontSize: 8, lineHeight: 1 }}>F</span>
+          <span>card</span>
+        </button>
+        {canDelete && onDelete && (
+          <button className="hl-act danger" onClick={onDelete} title="Delete highlight">
+            del
+          </button>
+        )}
       </div>
-      <div className="divider" />
-      <textarea
-        ref={textareaRef}
-        placeholder="Add a note…"
-        value={note}
-        onChange={(e) => setNote(e.target.value)}
-      />
-      <div className="footer">
-        <span className="meta-s" style={{ fontSize: 9 }}>{resolveMeaning(color, meanings, customColors)}</span>
-        <div style={{ display: "flex", gap: 6 }}>
-          {canDelete && onDelete && (
-            <button className="btn" onClick={onDelete} style={{ color: "#B14B4B" }}>Delete</button>
-          )}
-          <button className="btn" onClick={onClose}>esc</button>
-          <button className="btn primary" onClick={() => onSave({ color, note })}>⌘↵</button>
+
+      {noteOpen && (
+        <div className="hl-strip-note">
+          <textarea
+            ref={noteRef}
+            autoFocus
+            placeholder="Add a note…"
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") { e.preventDefault(); onClose(); }
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                onSave({ color, note });
+              }
+            }}
+          />
+          <div className="hl-strip-note-footer">
+            <span className="meta-s" style={{ fontSize: 9 }}>
+              {resolveMeaning(color, meanings, customColors)}
+            </span>
+            <button
+              className="btn primary"
+              style={{ padding: "3px 10px", fontSize: 11 }}
+              onClick={() => onSave({ color, note })}
+            >
+              save ↵
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
