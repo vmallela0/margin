@@ -506,6 +506,11 @@ export function Reader() {
             <span className="meta-s" style={{ fontSize: 10 }}>/ {numPages}</span>
           </div>
           <span className="spacer" />
+          <div className="zoom-controls">
+            <button className="tool" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.1).toFixed(1)))} title="Zoom out (⌘-)">−</button>
+            <span className="zoom-label" onClick={() => setZoom(1)} title="Reset zoom (⌘0)">{Math.round(zoom * 100)}%</span>
+            <button className="tool" onClick={() => setZoom((z) => Math.min(2.2, +(z + 0.1).toFixed(1)))} title="Zoom in (⌘+)">+</button>
+          </div>
           <button
             className={`tool${railOpen && railTab === "outline" ? " on" : ""}`}
             onClick={() => {
@@ -527,7 +532,12 @@ export function Reader() {
           <button className="tool" onClick={() => setOverlay({ kind: "settings" })} title="Settings">⚙</button>
           <button className="tool" onClick={() => setOverlay({ kind: "shortcuts" })} title="Shortcuts">?</button>
         </div>
-        <div className="reader-scroll-area">
+        <div className="reader-scroll-area" onWheel={(e) => {
+          if (!e.metaKey && !e.ctrlKey) return;
+          e.preventDefault();
+          const delta = e.deltaY > 0 ? -0.1 : 0.1;
+          setZoom((z) => Math.min(2.2, Math.max(0.5, +((z + delta).toFixed(1)))));
+        }}>
           <div className="pdf-scroll" ref={scrollRef}>
             {Array.from({ length: numPages }, (_, i) => i + 1).map((n) => (
               <PdfPage

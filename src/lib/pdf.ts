@@ -856,12 +856,15 @@ function scanNumberedSections(
       { const wc = (rest.match(/[A-Za-z0-9\u00C0-\u024F]/g) ?? []).length;
         if (rest.length > 10 && wc / rest.length < 0.55) continue; }
 
-      // Reject if line is body-styled.
+      // Reject if line is body-styled — but ONLY for plain numbered sections.
+      // Named chapters ("Chapter I", "Part Four") carry the keyword as their
+      // own signal; requiring a font-size bump would silently drop Chapter I
+      // in books that typeset all headings in the body font.
       const sizeBump = line.size >= bodySize * 1.1;
       const fontDiff = line.fontId && line.fontId !== bodyFontId;
       const looksBold = /bold|black|heavy|medium/i.test(line.fontId ?? "");
       const smallCapsLike = /\b([A-Z])\s+[A-Z]/.test(line.text); // "I NTRODUCTION"
-      if (!sizeBump && !fontDiff && !looksBold && !smallCapsLike) continue;
+      if (!namedChapterPrefix && !sizeBump && !fontDiff && !looksBold && !smallCapsLike) continue;
 
       const depth = namedChapterPrefix ? 0 : (num.match(/\./g)?.length ?? 0);
 

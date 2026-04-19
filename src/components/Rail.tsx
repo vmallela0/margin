@@ -45,6 +45,16 @@ export function Rail({
     return idx;
   }, [flatOutline, currentPage]);
 
+  const [flashIdx, setFlashIdx] = useState<number | null>(null);
+  const flashTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleJump = (page: number, idx: number) => {
+    if (flashTimer.current) clearTimeout(flashTimer.current);
+    setFlashIdx(idx);
+    flashTimer.current = setTimeout(() => setFlashIdx(null), 1500);
+    onJumpPage(page);
+  };
+
   const listRef = useRef<HTMLDivElement>(null);
   const currentRef = useRef<HTMLAnchorElement>(null);
 
@@ -92,9 +102,9 @@ export function Rail({
                   <a
                     key={i}
                     ref={isCurrent ? currentRef : undefined}
-                    className={`outline-item${isCurrent ? " current" : ""} lvl-${Math.min(o.level, 5)}`}
+                    className={`outline-item${isCurrent ? " current" : ""}${flashIdx === i ? " flash" : ""} lvl-${Math.min(o.level, 5)}`}
                     style={{ paddingLeft: indent }}
-                    onClick={() => o.page && onJumpPage(o.page)}
+                    onClick={() => o.page && handleJump(o.page, i)}
                     title={o.title}
                   >
                     <span className="num">{o.level === 0 ? "▸" : "·"}</span>
