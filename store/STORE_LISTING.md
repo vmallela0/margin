@@ -47,7 +47,7 @@ Margin turns Chrome into the PDF reader you actually want. Every PDF you open �
 - **Highlighting that stays out of the way** — select text, pick a color, add a note. Highlights live in the right-side rail with inline threads for your comments.
 - **Flashcards from highlights** — press F on a selection to create a front/back card. Cards are scheduled with the SM-2 spaced-repetition algorithm, like Anki.
 - **A real library** — every PDF you open is saved. Shelves, pins, search across titles and highlights.
-- **Format support** — PDF, DOCX, EPUB, Markdown, TXT, HTML, and RTF files are converted to PDF on ingest so the reader stays focused.
+- **Format support** — Drag in documents in other formats and Margin converts them to PDF automatically, so the reader stays focused.
 - **Calm design** — paper-grain background, Source Serif type, three themes (day, paper, night).
 - **Keyboard-first** — ⌘K command palette, H to highlight, F for flashcard, ⌘. to toggle the rail, / to search.
 - **Replaces the new tab page** — your Margin library opens whenever you open a new tab. You can keep using the address bar normally; Margin just gives the blank tab a purpose.
